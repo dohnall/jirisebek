@@ -2,7 +2,7 @@
     <span class="section_heading_text">{$SECTION->get('value', 'header')}</span>
 </div>
 
-<p class="section_text mt32">{$SECTION->get('value', 'anotation')}</p>
+<p class="section_text mt32">{$SECTION->get('value', 'anotation')|nl2br}</p>
 
 <div class="gallery_wide mt32">
 {foreach from=$COMPONENTS.architecture_list item=row}

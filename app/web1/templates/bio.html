@@ -17,7 +17,7 @@
 </div>
 
 <div class="section_subheading mt56">{#personal_projects#}</div>
-<p class="content_text mt24">{$SECTION->get('value', 'projects_description')}</p>
+<p class="content_text mt24">{$SECTION->get('value', 'projects_description')|nl2br}</p>
 
 <div class="gallery_cube gallery_cube_3 mt32">
     {foreach from=$COMPONENTS.bio_art item=row}
