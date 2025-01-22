@@ -13,3 +13,4 @@
 [2019-11-13 11:31:22] [warn] PHP Warning, Msg: fread(): Length parameter must be greater than 0 in ()
 [2019-11-13 11:31:22] [warn] PHP Warning, Msg: fread(): Length parameter must be greater than 0 in ()
 [2023-09-03 21:41:43] [warn] PHP Warning, Msg: fopen(C:/wamp64/www/meucaslav.local/admin/js/wysiwyg/plugins/filemanager/language/fm/.xml): failed to open stream: No such file or directory in ()
+[2025-01-22 15:51:07] [warn] PHP Warning, Msg: fopen(C:/wamp64/www/jirisebek.local/admin/js/wysiwyg/plugins/filemanager/language/fm/.xml): failed to open stream: No such file or directory in ()

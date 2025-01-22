@@ -18,10 +18,10 @@
 </div>
 {/if}
 <div class="flexed_center">
-    <div class="section_subheading">Další projekty</div>
+    <div class="section_subheading">{#next_projects#}</div>
 </div>
 
-<div class="gallery_wide gallery_wide_zooms mt40">
+<div class="gallery_wide mt40">
     {foreach from=$COMPONENTS.architecture_detail item=row}
     {$image = $row->get('file', 'image')}
     <a href="{$row->get('url')}" class="gallery_wide_link">
