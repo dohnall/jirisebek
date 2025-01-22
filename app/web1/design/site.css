@@ -945,8 +945,15 @@ a.gallery_cube_link:hover > img {
     text-shadow: none !important;
 }
 
-.rotateLeftButton, .rotateRightButton, .fullscreenButton, .nGY2Icon-resize-full, .nGY2ViewerToolsTopLeft, .nGY2ViewerAreaNext, .nGY2ViewerAreaPrevious, .nGY2VThumbnailContainer {
+.rotateLeftButton, .rotateRightButton, .fullscreenButton, .nGY2Icon-resize-full, .nGY2ViewerToolsTopLeft, .nGY2VThumbnailContainer {
     display: none !important;
+}
+.nGY2 .nGY2ViewerAreaNext > i, .nGY2 .nGY2ViewerAreaPrevious > i {
+    background: rgba(0, 0, 0, 0) !important;
+}
+.nGY2 .nGY2ViewerMedia {
+    margin: 30px !important;
+    width: calc(100% - 60px) !important;
 }
 
 
