@@ -175,7 +175,11 @@
     <div class="carousel hp_carousel" id="carousel">
       {foreach from=$carousel item=row}
       <div class="slide">
-        <img src="{$FILES}w2000/{$row.file}" />
+        {if $row.description}
+        <a href="{$row.description}"><img src="{$FILES}w2000/{$row.file}" alt="{$row.alt}" /></a>
+        {else}
+        <img src="{$FILES}w2000/{$row.file}" alt="{$row.alt}" />
+        {/if}
       </div>
       {/foreach}
     </div>
