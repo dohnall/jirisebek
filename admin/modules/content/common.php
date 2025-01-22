@@ -252,7 +252,7 @@ if(isset($_POST['common_action']) && $_POST['common_action'] > 0) {
                         $hash = md5_file($_FILES['file']['tmp_name'][$code][$k]);
 						$filename = $hash.'.'.$ext;
 						move_uploaded_file($_FILES['file']['tmp_name'][$code][$k], LOCALFILES.$filename);
-						$_POST['item']['file'][$code]['file'][$k] = $filename;
+						$_POST['item']['file'][$code]['file'][$k] = $_FILES['file']['name'][$code][$k];
 						$_POST['item']['file'][$code]['hash'][$k] = $hash;
                         $_POST['item']['file'][$code]['description'][$k] = isset($_POST['item']['file'][$code]['description'][$k]) && $_POST['item']['file'][$code]['description'][$k] ? $_POST['item']['file'][$code]['description'][$k] : $_FILES['file']['name'][$code][$k];
 
@@ -293,7 +293,7 @@ if(isset($_POST['common_action']) && $_POST['common_action'] > 0) {
                         $hash = md5_file($_FILES['file']['tmp_name'][$code][$k]);
                         $filename = $hash.'.'.$ext;
                         move_uploaded_file($_FILES['file']['tmp_name'][$code][$k], LOCALFILES.$filename);
-						$_POST['item']['file'][$code]['file'][$k] = $filename;
+						$_POST['item']['file'][$code]['file'][$k] = $_FILES['file']['name'][$code][$k];
 						$_POST['item']['file'][$code]['hash'][$k] = $hash;
                         $_POST['item']['file'][$code]['description'][$k] = isset($_POST['item']['file'][$code]['description'][$k]) && $_POST['item']['file'][$code]['description'][$k] ? $_POST['item']['file'][$code]['description'][$k] : $_FILES['file']['name'][$code][$k];
 
@@ -327,7 +327,7 @@ if(isset($_POST['common_action']) && $_POST['common_action'] > 0) {
                         $hash = md5_file($_FILES['file']['tmp_name'][$code][$k]);
                         $filename = $hash.'.'.$ext;
                         move_uploaded_file($_FILES['file']['tmp_name'][$code][$k], LOCALFILES.$filename);
-						$_POST['item']['file'][$code]['file'][$k] = $filename;
+						$_POST['item']['file'][$code]['file'][$k] = $_FILES['file']['name'][$code][$k];
 						$_POST['item']['file'][$code]['hash'][$k] = $hash;
                         $_POST['item']['file'][$code]['description'][$k] = isset($_POST['item']['file'][$code]['description'][$k]) && $_POST['item']['file'][$code]['description'][$k] ? $_POST['item']['file'][$code]['description'][$k] : $_FILES['file']['name'][$code][$k];
 

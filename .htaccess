@@ -12,9 +12,9 @@ RewriteRule ^admin\/?(.*) - [L]
 RewriteRule ^install\/?(.*) - [L]
 RewriteRule ^lib\/(.*) - [L]
 
-RewriteRule files\/tinymce\/([a-z0-9\-\_]+\..*)$ - [L,QSA]
-RewriteRule files\/download\/([a-z0-9\-\_]+\..*)$ lib/service/file.php?file=$1 [L,QSA]
-RewriteRule files\/([a-z0-9]+)\/([a-z0-9\-\_]+\.(jpg|jpeg|gif|png|svg))$ lib/service/image.php?size=$1&file=$2 [L,QSA]
+RewriteRule files\/tinymce\/([a-zA-Z0-9\-\_]+\..*)$ - [L,QSA]
+RewriteRule files\/download\/([a-zA-Z0-9\-\_]+\..*)$ lib/service/file.php?file=$1 [L,QSA]
+RewriteRule files\/([a-z0-9]+)\/([a-zA-Z0-9\-\_]+\.(jpg|jpeg|gif|png|svg))$ lib/service/image.php?size=$1&file=$2 [L,QSA]
 RewriteRule ^sitemap.xml$ lib/service/sitemap.php [L,QSA]
 RewriteRule ^rss.xml$ lib/service/rss.php [L,QSA]
 

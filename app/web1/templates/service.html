@@ -9,8 +9,12 @@
 {if $gallery}
 <div class="gallery_cube gallery_cube_3 arch_gallery_cube">
     {foreach from=$gallery item=row}
-    <a href="{$FILES}w2000/{$row.file}" class="gallery_cube_link" data-nanogallery2-lightbox>
+    <a href="{$FILES}w2000/{$row.file}" class="gallery_wide_link" data-nanogallery2-lightbox>
         <img src="{$FILES}w600/{$row.file}" alt="" />
+        <span class="gallery_wide_hover">
+            <span class="gallery_wide_title">{$row.alt}</span>
+            <span class="gallery_wide_desc">{$row.description}</span>
+        </span>
     </a>
     {/foreach}
 </div>

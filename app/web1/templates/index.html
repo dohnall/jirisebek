@@ -28,6 +28,14 @@
 </div>
 
 <div class="gallery_cube gallery_cube_4 mt32">
+    {$row = $HELPER->section(2)}
+    {$image = $row->get('file', 'image')}
+    <a href="{$row->get('url')}" class="gallery_cube_link">
+        {if $image}
+        <img src="{$FILES}w600/{$image[0].file}" alt="{$image[0].alt}" />
+        {/if}
+        <span>{$row->get('section', 'name')}</span>
+    </a>
     {foreach from=$COMPONENTS.hp_services item=row}
     {$image = $row->get('file', 'image')}
     <a href="{$row->get('url')}" class="gallery_cube_link">
