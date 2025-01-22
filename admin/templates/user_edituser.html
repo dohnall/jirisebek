@@ -1,0 +1,144 @@
+<h1 class="h-user h-user-edituser">{if isset($data.user.nickname) && $data.user.nickname}{$data.user.nickname}{else}{#new_item#}{/if}</h1>
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=user" class="button back">{#back_to_list#}</a></p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table class="table-ajax-content table-user table-user-edituser">
+        <tr>
+            <th class="th-label th-admin"><label for="admin">{#admin#}</label>:</th>
+            <td><input type="checkbox" name="user[admin]" id="admin" value="1"{if isset($data.user.admin) && $data.user.admin} checked="checked"{/if} /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-nickname"><label for="nickname">{#nickname#}</label>:</th>
+            <td><input type="text" name="user[nickname]" id="nickname" value="{if isset($data.user.nickname)}{$data.user.nickname}{/if}" size="50" /></td>
+        </tr>
+        <tr title="{#fill_for_change_only#}">
+            <th class="th-label th-password"><label for="passwd">{#password#}</label>:</th>
+            <td><input type="password" name="user[passwd]" id="passwd" value="" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-repassword"><label for="repasswd">{#repassword#}</label>:</th>
+            <td><input type="password" name="user[repasswd]" id="repasswd" value="" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-fname"><label for="fname">{#fname#}</label>:</th>
+            <td><input type="text" name="user[fname]" id="fname" value="{if isset($data.user.fname)}{$data.user.fname}{/if}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-lname"><label for="lname">{#lname#}</label>:</th>
+            <td><input type="text" name="user[lname]" id="lname" value="{if isset($data.user.lname)}{$data.user.lname}{/if}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-email"><label for="email">{#email#}</label>:</th>
+            <td>
+{if $item_id == $user->user_id}
+				{$data.user.email}
+				<input type="hidden" name="user[email]" id="email" value="{$data.user.email}" />
+{else}
+				<input type="text" name="user[email]" id="email" value="{if isset($data.user.email)}{$data.user.email}{/if}" size="50" />
+{/if}
+			</td>
+        </tr>
+        <tr>
+            <th class="th-label th-cmslang"><label for="cmslang">{#cmslang#}</label>:</th>
+            <td>
+                <select name="user[cmslang]" id="cmslang">
+{foreach from=$cmslang item=lang}
+                    <option value="{$lang}"{if isset($data.user.cmslang) && $lang == $data.user.cmslang} selected="selected"{/if}>{$lang}</option>
+{/foreach}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th class="th-label th-timezone"><label for="timezone">{#timezone#}</label>:</th>
+            <td>
+                <select name="user[timezone]" id="timezone">
+{foreach from=$timezones item=timezone}
+                    <option value="{$timezone}"{if isset($data.user.timezone) && $timezone == $data.user.timezone} selected="selected"{/if}>{$timezone}</option>
+{/foreach}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th class="th-label th-status"><label for="status">{#status#}</label>:</th>
+            <td>
+                <select name="user[status]" id="status">
+                    <option value="0"{if isset($data.user.status) && $data.user.status == 0} selected="selected"{/if}>{#inactive#}</option>
+                    <option value="1"{if isset($data.user.status) && $data.user.status == 1} selected="selected"{/if}>{#active#}</option>
+                </select>
+            </td>
+        </tr>
+        {$userData}
+        <tr>
+            <td colspan="2">
+                <h2>{#domains#}:</h2>
+                <div id="accordion">
+{foreach from=$accordion key=domain_id item=row}
+                	<h3><a href="#section{$domain_id}"><strong>{$row.domain.name}</strong></a></h3>
+                	<table class="table-user-editdomain">
+                	    <tr>
+                	       <th class="th-label th-label-domain"><label for="domain_{$domain_id}">{#domain#}:</label></th>
+                	       <td><input id="domain_{$domain_id}" class="enable_domain" type="checkbox" name="domain[{$domain_id}]" value="{$domain_id}"{if $item->hasDomain($domain_id)} checked="checked"{/if} /></td>
+                        </tr>
+                		<tr>
+                            <th class="th-label th-label-group"><label for="group_{$domain_id}">{#group#}:</label></th>
+                            <td>
+                                <select name="group[{$domain_id}]" id="group_{$domain_id}" class="domain_{$domain_id}"{if !$item->hasDomain($domain_id)} disabled="disabled"{/if}>
+    {foreach from=$row.group item=group}
+                                    <option value="{$group.group_id}"{if $item->hasGroup($group.group_id, $domain_id)} selected="selected"{/if}>{$group.name}</option>
+    {/foreach}
+                                </select>
+                            </td>
+                        </tr>
+                		<tr>
+                            <th class="th-label th-langs">{#langs#}:</th>
+                            <td>
+    {foreach from=$row.lang item=lang}
+                                <input type="checkbox" name="lang[{$domain_id}][{$lang.lang_id}]" id="lang_{$domain_id}_{$lang.lang_id}" class="domain_{$domain_id}" value="{$lang.lang_id}"{if $item->hasLang($lang.lang_id, $domain_id)} checked="checked"{/if}{if !$item->hasDomain($domain_id)} disabled="disabled"{/if} /> <label for="lang_{$domain_id}_{$lang.lang_id}">{$lang.name}</label><br />
+    {/foreach}
+                            </td>
+                        </tr>
+                		<tr>
+                            <th class="th-label th-modules">{#modules#}:</th>
+                            <td>
+    {foreach from=$row.module item=module}
+        {if $module.optional}
+                                <input type="checkbox" name="module[{$domain_id}][{$module.code}]" id="module_{$domain_id}_{$module.module_id}" class="domain_{$domain_id}" value="{$module.module_id}"{if $item->hasModule($module.code, $domain_id)} checked="checked"{/if}{if !$item->hasDomain($domain_id)} disabled="disabled"{/if} /> <label for="module_{$domain_id}_{$module.module_id}">{$dictionary[$module.code]}</label><br />
+        {else}
+                                <input type="hidden" name="module[{$domain_id}][{$module.code}]" class="domain_{$domain_id}" value="{$module.module_id}"{if $item->hasModule($module.code, $domain_id)} checked="checked"{/if}{if !$item->hasDomain($domain_id)} disabled="disabled"{/if} />
+        {/if}
+    {/foreach}
+                            </td>
+                        </tr>
+                		<tr class="user_sections">
+                            <th class="th-label th-sections">{#sections#}:</th>
+                            <td>
+                                <ul>
+    {foreach from=$row.section item=section}
+                                    <li>
+        {if $section->hasChildren()}
+                                        <a href="javascript:;" id="i_{$section->section_id}_{$section->domain_id}_{$section->lang_id}"><span class="ui-icon ui-icon-circlesmall-plus"></span></a>
+        {else}
+                                        <span class="ui-icon ui-icon-document"></span>
+        {/if}
+                                        <input type="checkbox" name="section[{$section->domain_id}][{$section->section_id}]" id="section_{$section->domain_id}_{$section->section_id}" class="domain_{$section->domain_id}" value="{$section->section_id}"{if $item->hasSection($section->section_id, $section->domain_id, $section->lang_id)} checked="checked"{/if}{if !$item->hasDomain($section->domain_id)} disabled="disabled"{/if} /> <label for="section_{$section->domain_id}_{$section->section_id}">{$section->get('text', 'name')}</label>
+                                    </li>
+    {/foreach}
+                                </ul>
+                            </td>
+                        </tr>
+                	</table>
+{/foreach}
+                </div>
+            </td>
+        </tr>
+{if $user->hasRight(20) || ($user->hasRight(49) && $same_group)}
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="hidden" name="item_id" value="{$item_id}" />
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+{/if}
+    </table>
+</form>

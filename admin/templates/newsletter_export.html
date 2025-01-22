@@ -1,0 +1,4 @@
+{#email#};{#fname#};{#lname#}{foreach from=$groups item=row};{$row.name}{/foreach};{#status#}
+{foreach from=$records item=record}
+{$record.email};{$record.fname};{$record.lname}{foreach from=$groups item=row};{if in_array($row.ngroup_id, $ngroup[$record.nuser_id])}1{else}0{/if}{/foreach};{$record.status}
+{/foreach}

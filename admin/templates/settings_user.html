@@ -1,0 +1,50 @@
+<h1 class="h-settings h-settings-user">{#users#}</h1>
+<table>
+	<tr>
+		<td>
+			<form method="post" action="">
+				<p>
+					{#add_field#}:
+					<select name="col">
+						<option value="0">-- {#select#} --</option>
+	{foreach from=$cols item=col}
+						<option value="{$col.column_id}"{if isset($item[$col.column_id])} class="b"{/if}>{$col.name} - {$col.code} - {$col.type}</option>
+	{/foreach}
+					</select>
+	{if $user->hasRight(43)}
+					<input type="hidden" name="action" value="addCol" />
+					<input type="submit" class="button" value="{#add#}" />
+	{/if}
+				</p>
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table class="table-sortable table-sortable-user list">
+				<thead>
+					<tr>
+						<th class="th-name">{#name#}</th>
+						<th class="th-code">{#code#}</th>
+						<th class="th-type">{#type#}</th>
+	{if $user->hasRight(43)}
+						<th class="th-action">{#action#}</th>
+	{/if}
+					</tr>
+				</thead>
+				<tbody class="{if $user->hasRight(43)}sortable sortable_user{/if}">
+				{foreach from=$item item=col}
+					<tr class="{cycle values='odd,even'}">
+						<td><input type="hidden" name="ucid" value="{$col.user_column_id}" />{$col.name}</td>
+						<td>{$col.code}</td>
+						<td>{$col.type}</td>
+					{if $user->hasRight(43)}
+						<td><a href="{$ROOT}?module={$MODULE}&amp;submodule=user&amp;id={$col.user_column_id}&amp;action=deleteCol" class="delete">{#delete#}</a></td>
+					{/if}
+					</tr>
+				{/foreach}
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table>

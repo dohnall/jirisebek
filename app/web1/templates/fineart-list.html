@@ -1,0 +1,14 @@
+<div class="section_heading">
+    <span class="section_heading_text">{$SECTION->get('value', 'header')}</span>
+</div>
+<div class="gallery_cube gallery_cube_3 mt56">
+    {foreach from=$COMPONENTS.fineart item=row}
+    {$image = $row->get('file', 'image')}
+    <a href="{$row->get('url')}" class="gallery_cube_link">
+        {if $image}
+        <img src="{$FILES}w600/{$image[0].file}" alt="" />
+        {/if}
+        <span>{$row->get('section', 'name')}</span>
+    </a>
+    {/foreach}
+</div>

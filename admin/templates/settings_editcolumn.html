@@ -1,0 +1,141 @@
+<h1 class="h-settings h-settings-editcolumn">{if $item.item.name}{$item.item.name}{else}{#new_item#}{/if}</h1>
+<p class="navi">
+	<a href="{$ROOT}?module={$MODULE}&amp;submodule=column" class="button back">{#back_to_list#}</a>
+</p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table>
+        <tr>
+            <th class="th-label th-name"><label for="name">{#name#}</label>:</th>
+            <td><input type="text" name="item[name]" id="name" value="{$item.item.name}" size="50" maxlength="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-code"><label for="code">{#code#}</label>:</th>
+            <td><input type="text" name="item[code]" id="code" value="{$item.item.code}" size="50" maxlength="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-type"><label for="type">{#type#}</label>:</th>
+            <td>
+				<select name="item[type]" id="type">
+{foreach from=$dataTypes item=row}
+					<option value="{$row}"{if $row == $item.item.type} selected="selected"{/if}>{$row}</option>
+{/foreach}
+				</select>
+			</td>
+        </tr>
+        <tr>
+            <th class="th-label th-required"><label for="required">{#required#}</label>:</th>
+            <td><input type="checkbox" name="item[required]" id="required" value="1"{if $item.item.required} checked="checked"{/if} /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-readonly"><label for="readonly">{#readonly#}</label>:</th>
+            <td><input type="checkbox" name="item[readonly]" id="readonly" value="1"{if $item.item.readonly} checked="checked"{/if} /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-hint"><label for="hint">{#hint#}</label>:</th>
+            <td><input type="text" name="item[hint]" id="hint" value="{$item.item.hint}" size="50" maxlength="255" /></td>
+        </tr>
+{if isset($params.disabled)}
+        <tr>
+            <th class="th-label th-disabled"><label for="disabled">{#disabled#}</label>:</th>
+            <td><input type="checkbox" name="param[disabled]" id="disabled" value="1"{if $item.param.disabled} checked="checked"{/if} /></td>
+        </tr>
+{/if}
+{if isset($params.multiselect)}
+        <tr>
+            <th class="th-label th-multiselect"><label for="multiselect">{#multiselect#}</label>:</th>
+            <td><input type="checkbox" name="param[multiselect]" id="multiselect" value="1"{if $item.param.multiselect} checked="checked"{/if} /></td>
+        </tr>
+{/if}
+{if isset($params.relation)}
+        <tr>
+            <th class="th-label th-relation"><label for="relation">{#relation#}</label>:</th>
+            <td><input type="text" name="param[relation]" id="relation" value="{$item.param.relation}" size="50" /></td>
+        </tr>
+{/if}
+{if isset($params.size)}
+        <tr>
+            <th class="th-label th-size"><label for="size">{#size#}</label>:</th>
+            <td><input type="text" name="param[size]" id="size" value="{$item.param.size}" size="50" maxlength="10" /></td>
+        </tr>
+{/if}
+{if isset($params.selecttype)}
+        <tr>
+            <th class="th-label th-selecttype"><label for="selecttype">{#selecttype#}</label>:</th>
+            <td>
+				<select name="param[selecttype]" id="selecttype">
+					<option value="values"{if $item.param.selecttype == 'values'} selected="selected"{/if}>{#values#}</option>
+					<option value="template"{if $item.param.selecttype == 'template'} selected="selected"{/if}>{#template#}</option>
+					<option value="codelist"{if $item.param.selecttype == 'codelist'} selected="selected"{/if}>{#codelist#}</option>
+					<option value="users"{if $item.param.selecttype == 'users'} selected="selected"{/if}>{#users#}</option>
+				</select>
+			</td>
+        </tr>
+{/if}
+{if isset($params.values)}
+        <tr>
+            <th class="th-label th-values"><label for="values">{#values#}</label>:</th>
+            <td><textarea name="param[values]" id="values" rows="8" cols="60">{$item.param.values}</textarea></td>
+        </tr>
+{/if}
+{if isset($params.template)}
+        <tr>
+            <th class="th-label th-template"><label for="template">{#template#}</label>:</th>
+            <td>
+				<select name="param[template]" id="template">
+					<option value="">{#select#}</option>
+	{foreach from=$templates item=row}
+					<option value="{$row.code}"{if $item.param.template == $row.code} selected="selected"{/if}>{$row.name}</option>
+	{/foreach}
+				</select>
+			</td>
+        </tr>
+{/if}
+{if isset($params.codelist)}
+        <tr>
+            <th class="th-label th-codelist"><label for="codelist">{#codelist#}</label>:</th>
+            <td>
+				<select name="param[codelist]" id="codelist">
+					<option value="">{#select#}</option>
+	{foreach from=$codelists item=row}
+					<option value="{$row.codelist_id}"{if $item.param.codelist == $row.codelist_id} selected="selected"{/if}>{$row.name}</option>
+	{/foreach}
+				</select>
+			</td>
+        </tr>
+{/if}
+{if isset($params.maxlength)}
+        <tr>
+            <th class="th-label th-maxlength"><label for="maxlength">{#maxlength#}</label>:</th>
+            <td><input type="text" name="param[maxlength]" id="maxlength" value="{$item.param.maxlength}" size="50" maxlength="5" /></td>
+        </tr>
+{/if}
+{if isset($params.width)}
+        <tr>
+            <th class="th-label th-width"><label for="width">{#width#}</label>:</th>
+            <td><input type="text" name="param[width]" id="width" value="{$item.param.width}" size="50" maxlength="10" /></td>
+        </tr>
+{/if}
+{if isset($params.height)}
+        <tr>
+            <th class="th-label th-height"><label for="height">{#height#}</label>:</th>
+            <td><input type="text" name="param[height]" id="height" value="{$item.param.height}" size="50" maxlength="10" /></td>
+        </tr>
+{/if}
+{if isset($params.max)}
+        <tr>
+            <th class="th-label th-max"><label for="height">{#max#}</label>:</th>
+            <td><input type="text" name="param[max]" id="max" value="{$item.param.max}" size="50" maxlength="10" /></td>
+        </tr>
+{/if}
+{if $user->hasRight(14)}
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="hidden" name="item_id" value="{$item_id}" />
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+{/if}
+    </table>
+</form>

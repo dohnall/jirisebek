@@ -1,0 +1,35 @@
+<h1><span>{$dictionary[{"cms_name_`$COMPANY`"}]}</span></h1>
+<div id="login_slider">
+    <div id="login_slider_in" class="clearfix">
+        <form method="post" action="">
+            <h2>{#login#}</h2>
+            <div>
+                <div>
+                    <div><label for="nickname">{#nickname#}:</label></div>
+                    <div><input name="nickname" type="text" id="nickname" value="" /></div>
+                </div>
+                <div>
+                    <div><label for="passwd">{#password#}:</label></div>
+                    <div><input name="passwd" type="password" id="passwd" value="" /></div>
+                </div>
+                <div>
+                    <div class="link"><a href="javascript:;" id="moveLeft">{#lost_password#}</a>&nbsp;&raquo;</div>
+                    <div><input type="submit" name="login" value="{#log_in#}" /></div>
+                </div>
+            </div>
+        </form>    
+        <form method="post" action="">
+            <h2>{#lost_password#}</h2>
+            <div>
+                <div>
+                    <div><label for="email">{#email#}:</label></div>
+                    <div><input name="email" type="text" id="email" value="" /></div>
+                </div>
+                <div>
+                    <div class="link">&laquo;&nbsp;<a href="javascript:;" id="moveRight">{#login#}</a></div>
+                    <div><input type="submit" name="password" value="{#send_password#}" /></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

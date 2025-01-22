@@ -1,0 +1,21 @@
+{if $pager.last > 1}
+<div class="row">
+	<div class="col-12">
+		<nav>
+			<ul class="pagination justify-content-center">
+				<li class="page-item{if $pager.page == 1} disabled{/if}">
+					<a class="page-link" href="{$SECTION->get('url')}{if $pager.previous > 1}page-{$pager.previous}/{/if}" tabindex="-1" aria-disabled="true">&lt;</a>
+				</li>
+				{foreach from=$pager.pages item=number}
+				<li class="page-item">
+					<a href="{$SECTION->get('url')}{if $number > 1}page-{$number}/{/if}" class="page-link{if $pager.page == $number} active{/if}">{$number}</a>
+				</li>
+				{/foreach}
+				<li class="page-item{if $pager.page == $pager.last} disabled{/if}">
+					<a class="page-link" href="{$SECTION->get('url')}page-{$pager.next}/">&gt;</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+{/if}

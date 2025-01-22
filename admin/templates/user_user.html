@@ -1,0 +1,34 @@
+<h1 class="h-user h-user-user">{#users#}</h1>
+{if $user->hasRight(20)}
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=edituser" class="button new">{#new_item#}</a></p>
+{/if}
+<table class="list table-user table-user-user">
+    <thead>
+        <tr>
+            <th class="th-nickname" width="250"><a href="{$ROOT}?module=user&amp;submodule=user&amp;order=nickname&amp;sort={if $order=='nickname' && $sort=='asc'}desc{else}asc{/if}">{#nickname#}</a></th>
+            <th class="th-fname"><a href="{$ROOT}?module=user&amp;submodule=user&amp;order=fname&amp;sort={if $order=='fname' && $sort=='asc'}desc{else}asc{/if}">{#fname#}</a></th>
+            <th class="th-lname"><a href="{$ROOT}?module=user&amp;submodule=user&amp;order=lname&amp;sort={if $order=='lname' && $sort=='asc'}desc{else}asc{/if}">{#lname#}</a></th>
+            <th class="th-email" width="250"><a href="{$ROOT}?module=user&amp;submodule=user&amp;order=email&amp;sort={if $order=='email' && $sort=='asc'}desc{else}asc{/if}">{#email#}</a></th>
+            <th class="th-status"><a href="{$ROOT}?module=user&amp;submodule=user&amp;order=status&amp;sort={if $order=='status' && $sort=='asc'}desc{else}asc{/if}">{#status#}</a></th>
+{if $user->hasRight(20)}
+            <th class="th-action">{#action#}</th>
+{/if}
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=edituser&amp;id={$row.user_id}">{$row.nickname}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=edituser&amp;id={$row.user_id}">{$row.fname}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=edituser&amp;id={$row.user_id}">{$row.lname}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=edituser&amp;id={$row.user_id}">{$row.email}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=edituser&amp;id={$row.user_id}">{if $row.status == 1}{#active#}{else}{#inactive#}{/if}</a></td>
+	{if $user->hasRight(20)}
+            <td>{if $row.user_id != $user_id}<a href="{$ROOT}?module={$MODULE}&amp;submodule=user&amp;id={$row.user_id}&amp;action=delete" class="delete">{#delete#}</a>{/if}</td>
+	{/if}
+        </tr>
+{/foreach}
+    </tbody>
+</table>
+
+

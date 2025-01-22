@@ -1,0 +1,37 @@
+<div id="tree">
+    <form method="post" action="">
+        <div>
+            <label for="content_lang">{#lang#}:</label>
+            <select name="content_lang" id="content_lang">
+{foreach from=$langs item=lang}
+                <option value="{$lang.lang_id}"{if $LANG == $lang.lang_id} selected="selected"{/if}>{$lang.name}</option>
+{/foreach}
+            </select>
+        </div>
+    </form>
+{if $tree}
+    <ul>
+    {foreach from=$tree item=tree2}
+        {if in_array($tree2->get('section', 'section_id'), array_keys($item->get('path')))}
+            {if $tree2->hasChildren()}
+            <li><a href="javascript:;" id="i{$tree2->get('section', 'section_id')}" class="ui-icon ui-icon-circlesmall-minus"></a><a class="active{if $tree2->get('text', 'default_lang') == 1} default_lang{/if}" href="{$ROOT}?module={$MODULE}&amp;id={$tree2->get('section', 'section_id')}" title="{#subpages#}: {$tree2->hasChildren()}">{$tree2->get('text', 'name')}</a>
+                {include file="content_tree_branch.html" children=$tree2->get('children', true)}
+            </li>
+            {else}
+            <li><span class="ui-icon ui-icon-document"></span><a class="active{if $tree2->get('text', 'default_lang') == 1} default_lang{/if}" href="{$ROOT}?module={$MODULE}&amp;id={$tree2->get('section', 'section_id')}">{$tree2->get('text', 'name')}</a></li>
+            {/if}
+        {else}
+            {if $tree2->hasChildren()}
+            <li><a href="javascript:;" id="i{$tree2->get('section', 'section_id')}" class="ui-icon ui-icon-circlesmall-plus"></a><a{if $tree2->get('text', 'default_lang') == 1} class="default_lang"{/if} href="{$ROOT}?module={$MODULE}&amp;id={$tree2->get('section', 'section_id')}" title="{#subpages#}: {$tree2->hasChildren()}">{$tree2->get('text', 'name')}</a></li>
+            {else}
+            <li><span class="ui-icon ui-icon-document"></span><a{if $tree2->get('text', 'default_lang') == 1} class="default_lang"{/if} href="{$ROOT}?module={$MODULE}&amp;id={$tree2->get('section', 'section_id')}">{$tree2->get('text', 'name')}</a></li>
+            {/if}
+        {/if}
+    {/foreach}
+    </ul>
+{/if}
+</div>
+<div id="content">
+    {include file="`$MODULE`_`$SUBMODULE`.html"}
+</div>
+

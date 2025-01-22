@@ -1,0 +1,24 @@
+<h1 class="h-settings h-settings-editmodule">{if isset($item.item.code) && $item.item.code}{$dictionary[$item.item.code]}{else}{#new_item#}{/if}</h1>
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=module" class="button back">{#back_to_list#}</a></p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table>
+        <tr>
+            <th class="th-label th-code"><label for="code">{#code#}</label>:</th>
+            <td><input type="text" name="item[code]" id="code" value="{if isset($item.item.code)}{$item.item.code}{/if}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-optional"><label for="optional">{#optional#}</label>:</th>
+            <td><input type="checkbox" name="item[optional]" id="optional" value="1"{if isset($item.item.optional) && $item.item.optional} checked="checked"{/if} /></td>
+        </tr>
+{if $user->hasRight(4)}
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="hidden" name="item_id" value="{$item_id}" />
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+{/if}
+    </table>
+</form>

@@ -1,0 +1,39 @@
+{$promoImage = $SECTION->get('file', 'promo_image')}
+{$gallery = $SECTION->get('file', 'gallery')}
+<div class="section_heading">
+    <span class="section_heading_text">{$SECTION->get('value', 'header')}</span>
+</div>
+
+<p class="section_text mt24">{$SECTION->get('value', 'anotation')}</p>
+
+{if $gallery}
+<div class="gallery_cube gallery_cube_3 arch_gallery_cube">
+    {foreach from=$gallery item=row}
+    <a href="{$FILES}w2000/{$row.file}" class="gallery_cube_link" data-nanogallery2-lightbox>
+        <img src="{$FILES}w600/{$row.file}" alt="" />
+    </a>
+    {/foreach}
+</div>
+{/if}
+
+<div class="interier_block mt56">
+    <div class="interier_block_shade"></div>
+    <div class="interier_block_text">
+        <div>
+            <div class="section_subheading">{$SECTION->get('value', 'promo_header')}</div>
+            <div class="content_text mt24">{$SECTION->get('value', 'promo_content')}</div>
+            {if $promoImage}
+            <img src="{$FILES}w1200/{$promoImage[0].file}" alt="{$image[0].alt}" class="mt40">
+            {/if}
+        </div>
+    </div>
+</div>
+
+<div class="contact_block content_text centered">
+    <div class="section_subheading">{#call_for_action_header#}</div>
+    <div>{#call_for_action_text#}</div>
+    <div class="contact_block_links">
+        <span class="contact_phone">{#phone_number#}</span></a>
+        {mailto address=$DICTIONARY.email_address encode="javascript_charcode" extra='class="contact_mail"'}
+    </div>
+</div>

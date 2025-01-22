@@ -1,0 +1,26 @@
+<h1 class="h-settings h-settings-module">{#modules#}</h1>
+{if $user->hasRight(4)}
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=editmodule" class="button new">{#new_item#}</a></p>
+{/if}
+<table class="list table-settings table-settings-module">
+    <thead>
+        <tr>
+            <th class="th-code">{#code#}</th>
+            <th class="th-optional">{#optional#}</th>
+{if $user->hasRight(4)}
+            <th class="th-action">{#action#}</th>
+{/if}
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editmodule&amp;id={$row.module_id}">{$dictionary[$row.code]}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editmodule&amp;id={$row.module_id}">{if $row.optional}{#yes#}{else}{#no#}{/if}</a></td>
+	{if $user->hasRight(4)}
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=module&amp;id={$row.module_id}&amp;action=delete" class="delete">{#delete#}</a></td>
+	{/if}
+        </tr>
+{/foreach}
+    </tbody>
+</table>

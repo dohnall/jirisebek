@@ -1,0 +1,24 @@
+<h1 class="h-settings h-settings-domain h-domains">{#domains#}</h1>
+{if $user->hasRight(6)}
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=editdomain" class="button new">{#new_item#}</a></p>
+{/if}
+<table class="list table-settings table-settings-domain">
+    <thead>
+        <tr>
+            <th class="th-name">{#name#}</th>
+{if $user->hasRight(6)}
+            <th class="th-action">{#action#}</th>
+{/if}
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editdomain&amp;id={$row.domain_id}">{$row.name}</a></td>
+	{if $user->hasRight(6)}
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=domain&amp;id={$row.domain_id}&amp;action=delete" class="delete">{#delete#}</a></td>
+	{/if}
+        </tr>
+{/foreach}
+    </tbody>
+</table>

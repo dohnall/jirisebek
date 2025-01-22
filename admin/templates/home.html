@@ -1,0 +1,176 @@
+<div id="home">
+    <h1>{#welcome#} {#cms_name#}</h1>
+    <div class="dashboard clearfix">
+
+{*
+    DASHBOARD
+    -------------------
+    Nastenka admina je resena jako portlety, /@TODO jejichz rozlozeni si muze uzivatel navic customizovat/. Z hlediska HTML
+    je potreba jedine: naskladat vsechny boxy (.box) postupne za sebou do sloupcu 1 a 2 (.col-1, .col-2) tak, aby byly
+    oba sloupce plusminus stejne vysoke. Takhle to uvidi uzivatel bez JavaScriptu nebo v IE<9. Toto defaultni
+    zobrazeni mozno zkontrolovat vypnutim javascriptu a zmensenim viewportu browseru pod 1300 px.
+    --
+    Pro uzivatele s modernimi browsery s podporou media queries pribyde pri viewportu sirsim nez 1300 px treti sloupec,
+    do ktereho /@TODO se JavaScriptem presunou boxy z dolni casti sloupcu 1 a 2/. /@TODO Poradi boxu lze menit drag'n'dropem a sestava
+    se uklada do user cookie (ttl 30d) veskera logika seskladavani sestavy ulozene pro 3 sloupce do 2 sloupcu a naopak
+    je v JavaScriptu - v PHP nebo DB neni potreba resit nic vic, nez to defaultni rozlozeni./
+*}
+
+        <div class="col col-1 clearfix">
+
+
+            <div class="box" id="last_logged_in">
+                <div class="box-header">
+                    <h3>{#last_login#}</h3>
+                </div>
+                <div class="box-body">
+                    <table class="list">
+                        <tbody>
+{foreach from=$users item=row name=lastLoggedIn}
+                            <tr>
+                                <td class="th-iterator">{$row@iteration}</td>
+                                <td class="th-name">{$row.nickname|truncate:25:"&hellip;":true} ({$row.fname} {$row.lname})</td>
+                                <td class="th-date">{$row.time|date_format:"%d.%m.%Y %H:%M:%S"}</td>
+                            </tr>
+{/foreach}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="box" id="support_message">
+                <div class="box-header">
+                    <h3>{#contact_form#}</h3>
+                </div>
+                <div class="box-body">
+                    <form method="post" action="">
+                        <p>
+                            <textarea name="message" rows="5" cols="100"></textarea><br />
+                            <input type="submit" name="send" value="{#send#}" />
+                        </p>
+                    </form>
+                </div>
+                <div class="box-footer">
+                    <p>{#contact_form#}</p>
+                </div>
+            </div>
+            <script type="text/javascript">
+              //<![CDATA[
+                var sm = $('#support_message'),
+                    txt = sm.find('textarea'),
+                    msg = '{#contact_form_hint_1#}',
+                    msg2 = '{#contact_form_hint_2#}',
+                    sbar1 = $('#support_message .box-footer') ,
+{literal}
+                    checkHpTxt = function () {
+                        if (!txt.val() || txt.val() === msg) {
+                            txt.val(msg).addClass('empty');
+                        } else {
+                            txt.removeClass('empty');
+                        }
+                    };
+                $('#support_message textarea').on('focus', function () {
+                    if (txt.val() === msg) {
+                        txt.val('').removeClass('empty');
+                    }
+                });
+                $('#support_message textarea').on('blur', function () {
+                    if (!txt.val() || txt.val() === msg) {
+                        txt.val(msg).addClass('empty');
+                    }
+                });
+                $('#support_message form').on('submit', function () {
+                    if (txt.val() === msg) {
+                        txt.val('');
+                    }
+                });
+                checkHpTxt();
+                // status bar
+                txt.hover(function () {
+                    sbar1.find('.statusDefault').hide();
+                    sbar1.find('.statusMessage').remove();
+                    sbar1.append('<span class="statusMessage">' + msg + '</span>');
+                }, function () {
+                    sbar1.find('.statusMessage').remove();
+                    sbar1.find('.statusDefault').show();
+                });
+                sm.find('input[type="submit"]').hover(function () {
+                    sbar1.find('.statusDefault').hide();
+                    sbar1.find('.statusMessage').remove();
+                    sbar1.append('<span class="statusMessage">' + msg2 + '</span>');
+                }, function () {
+                    sbar1.find('.statusMessage').remove();
+                    sbar1.find('.statusDefault').show();
+                });
+              //]]>
+            </script>{/literal}
+
+        </div>
+
+
+        <div class="col col-2">
+
+            <div class="box" id="last_updated_pages">
+                <div class="box-header">
+                    <h3>{#last_updated_pages#}</h3>
+                </div>
+                <div class="box-body">
+                    <table class="list">
+                        <tbody>
+{foreach from=$sections item=row name=lastUpdated}
+                            <tr>
+                                <td class="th-iterator">{$row@iteration}</td>
+                                <td class="th-name"><a href="{$ROOT}?module=content&amp;id={$row->section_id}">{$row->get('text', 'name')|truncate:45}</a></td>
+                                <td class="th-date">{$row->get('text', 'updated')|date_format:"%d.%m.%Y %H:%M"}</td>
+                            </tr>
+{/foreach}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-footer">
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            {literal}<script type="text/javascript">
+              //<![CDATA[
+                var sbar2 = $('#last_updated_pages .box-footer');
+                // status bar
+                $('#last_updated_pages tr').hover(function () {
+                    sbar2.find('.statusDefault').hide();
+                    sbar2.find('.statusMessage').remove();
+                    sbar2.append('<span class="statusMessage">' + $(this).find('a').attr('href') + '</span>');
+                }, function () {
+                    sbar2.find('.statusMessage').remove();
+                    sbar2.find('.statusDefault').show();
+                });
+              //]]>
+            </script>{/literal}
+
+        </div>
+
+
+        <div class="col col-3"></div>
+        {literal}<script type="text/javascript">
+          //<![CDATA[
+            var checkHpBoxes = function () {
+                var c1 = $('.col-1'),
+                    c2 = $('.col-2'),
+                    c3 = $('.col-3');
+                if (c3.is(':visible')) {
+                    $('#support_message').appendTo(c3);
+                } else {
+                    $('#support_message').appendTo(c1);
+                }
+            };
+            $(window).on('resize', function () {
+                checkHpBoxes();
+            });
+            checkHpBoxes();
+            // status bars
+            $('.box-footer p').wrapInner('<span class="statusDefault" />');
+          //]]>
+        </script>{/literal}
+
+    </div>
+</div>

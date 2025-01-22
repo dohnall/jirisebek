@@ -1,0 +1,26 @@
+<div id="action_buttons">
+{if !$user->hasRight(32)}
+    <input type="hidden" name="item[section][removable]" value="{if $item->get('section', 'removable')}1{else}0{/if}" />
+{/if}
+	<input type="hidden" name="item_id" value="{$item->section_id}" />
+	<input type="hidden" name="version" value="{$version}" />
+    <input type="hidden" name="tabs[]" value="{$tab}" />
+{if $user->hasRight(27)}
+	{if $item->get('section', 'parent_id') != 0 || !$user->hasRight(25)}
+    <input type="submit" name="save" value="{#save#}" />
+	{/if}
+	{if $user->hasRight(25) && $item->get('text', 'status') == 0 || $item->get('section', 'parent_id') == 0}
+    <input type="submit" name="save_publicate" value="{#save_publicate#}" />
+	{/if}
+	{if $user->hasRight(33)}
+    <input type="submit" name="save_version" value="{#save_as_new_version#}" />
+    {/if}
+	<a href="/{$item->get('url')}?action=preview" class="button" target="_blank">{#preview#}</a>
+{/if}
+{if $user->hasRight(24) && $item->get('section', 'removable') == 1 && $item->get('section', 'parent_id') != 0}
+    <a href="{$ROOT}?module=content&amp;id={$item->section_id}&amp;action=delete" class="delete button">{#delete#}</a>
+{/if}
+{if $user->hasRight(34) && $item->hasVersion() > 1}
+	<a href="{$ROOT}?module=content&amp;id={$item->section_id}&amp;version={$item->get('text', 'section_text_id')}&amp;action=delete_version" class="delete button">{#delete_version#}</a>
+{/if}
+</div>

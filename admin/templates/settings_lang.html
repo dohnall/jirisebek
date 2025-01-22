@@ -1,0 +1,26 @@
+<h1 class="h-settings h-settings-lang">{#langs#}</h1>
+{if $user->hasRight(2)}
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=editlang" class="button new">{#new_item#}</a></p>
+{/if}
+<table class="list table-settings table-settings-lang">
+    <thead>
+        <tr>
+            <th class="th-code">{#code#}</th>
+            <th class="th-name">{#name#}</th>
+{if $user->hasRight(2)}
+            <th class="th-action">{#action#}</th>
+{/if}
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editlang&amp;id={$row.lang_id}">{$row.code}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editlang&amp;id={$row.lang_id}">{$row.name}</a></td>
+	{if $user->hasRight(2)}
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=lang&amp;id={$row.lang_id}&amp;action=delete" class="delete">{#delete#}</a></td>
+	{/if}
+        </tr>
+{/foreach}
+    </tbody>
+</table>

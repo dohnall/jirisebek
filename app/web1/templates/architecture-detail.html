@@ -1,0 +1,53 @@
+{$parent = $HELPER->section($SECTION->get('section', 'parent_id'))}
+{$gallery = $SECTION->get('file', 'gallery')}
+<div class="section_heading section_heading_left">
+    <span class="section_heading_text">{$SECTION->get('value', 'header')}</span>
+</div>
+
+<div class="arch_info">
+    <div class="arch_info_spec">{$SECTION->get('value', 'content_left')}</div>
+    <div class="wysiwyg_html">{$SECTION->get('value', 'content_right')}</div>
+</div>
+{if $gallery}
+<div class="gallery_cube gallery_cube_3 arch_gallery_cube">
+    {foreach from=$gallery item=row}
+    <a href="{$FILES}w2000/{$row.file}" class="gallery_cube_link" data-nanogallery2-lightbox>
+        <img src="{$FILES}w600/{$row.file}" alt="" />
+    </a>
+    {/foreach}
+</div>
+{/if}
+<div class="flexed_center">
+    <div class="section_subheading">Další projekty</div>
+</div>
+
+<div class="gallery_wide gallery_wide_zooms mt40">
+    {foreach from=$COMPONENTS.architecture_detail item=row}
+    {$image = $row->get('file', 'image')}
+    <a href="{$row->get('url')}" class="gallery_wide_link">
+        {if $image}
+        <img src="{$FILES}w600/{$image[0].file}" alt="{$image[0].alt}">
+        {/if}
+        <span class="gallery_wide_hover">
+            <span class="gallery_wide_title">{$row->get('section', 'name')}</span>
+            <span class="gallery_wide_desc">{$row->get('value', 'architect')}</span>
+        </span>
+    </a>
+    {/foreach}
+</div>
+
+<div class="gallery_paging mt40">
+    <div class="gallery_paging_sides">
+        <div class="gallery_paging_actions">
+            <a href="{$parent->get('url')}" class="button_primary">{#show_all_projects#}</a>
+        </div>
+    </div>
+    <div class="contact_block content_text">
+        <div class="section_subheading">{#call_for_action_header#}</div>
+        <div>{#call_for_action_text#}</div>
+        <div class="contact_block_links">
+            <span class="contact_phone">{#phone_number#}</span></a>
+            {mailto address=$DICTIONARY.email_address encode="javascript_charcode" extra='class="contact_mail"'}
+        </div>
+    </div>
+</div>

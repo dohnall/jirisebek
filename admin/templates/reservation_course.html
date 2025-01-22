@@ -1,0 +1,165 @@
+<h1 class="h-user h-user-user">{$action->get('value', 'fullname')} - {$course.start|date_format:"%d.%m.%Y %H:%M"}</h1>
+{if $user->hasRight(51)}
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=action&amp;id={$action->section_id}" class="button back">Zpět na výpis termínů</a></p>
+{/if}
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table>
+        <tr>
+            <th class="th-label th-name"><label>Název akce</label>:</th>
+            <td>{$action->get('value', 'fullname')}</td>
+        </tr>
+        <tr>
+            <th class="th-label th-start"><label>Termín akce</label>:</th>
+            <td>{$course.start|date_format:"%d.%m.%Y %H:%M"}</td>
+        </tr>
+        <tr>
+            <th class="th-label th-length"><label>Délka akce</label>:</th>
+            <td>{$action->get('value', 'length')*5} minut</td>
+        </tr>
+        <tr>
+            <th class="th-label th-price"><label>Cena</label>:</th>
+            <td>{$action->get('value', 'price')} Kč</td>
+        </tr>
+        <tr>
+            <th class="th-label th-capacity"><label>Kapacita</label>:</th>
+            <td>{$action->get('value', 'capacity')}</td>
+        </tr>
+        <tr>
+            <th class="th-label th-application"><label>Obsazenost</label>:</th>
+            <td>{$course.applied}</td>
+        </tr>
+        <tr>
+            <th class="th-label th-efficiency"><label>Procento obsazenosti</label>:</th>
+            <td>
+            {if $action->get('section', 'parent_id') == 653}
+				{round($course.applied/$action->get('value', 'capacity')*100, 2)}%
+			{else}
+				{$adult = 0}
+				{$kid = 0}
+				{foreach from=$reservation item=row}
+					{if $row.person == 'adult'}
+						{$adult = $adult + 1}
+					{elseif $row.person == 'kid'}
+						{$kid = $kid + 1}
+					{/if}
+				{/foreach}
+				{round(($adult*1.5 + $kid)/$action->get('value', 'capacity')*100, 2)}%
+			{/if}
+			</td>
+        </tr>
+    </table>
+    <h2>Rezervace</h2>
+    <table>
+    	<tr>
+			<th width="50">&nbsp;</th>
+			<th width="20">OK</th>
+			<th width="200">Jméno</th>
+			<th width="200">Příjmení</th>
+			<th width="200">Email</th>
+			<th width="80">Osoba</th>
+			<th>&nbsp;</th>
+		</tr>
+	{foreach from=$reservation item=row key=seat}
+{if $action->get('section', 'parent_id') == 653 && $action->get('value', 'free') != 1}
+		{if $seat <= 49 && $seat % 8 == 1}
+		<tr><td colspan="7"><h3>Řada {round(($seat+8)/8)}</h3></td></tr>
+		{/if}
+
+		{if $seat <= 49}
+			{$s = $seat%8}
+			{if $s == 0}
+				{$s = 8}
+			{/if}
+		{else}
+			{$s = ($seat-48)%10}
+			{if $s == 0}
+				{$s = 10}
+			{/if}
+		{/if}
+		{if $row}
+		<tr>
+			<td>S {$s}</td>
+			<td><input type="checkbox" id="confirmation_{$row.reservation_id}" class="confirmation" name="confirm[{$row.reservation_id}]" value="{$row.reservation_id}"{if $row.confirmed} checked="checked"{/if} /></td>
+			<td><label for="confirmation_{$row.reservation_id}">{$row.fname}</label></td>
+			<td><label for="confirmation_{$row.reservation_id}">{$row.lname}</label></td>
+			<td><label for="confirmation_{$row.reservation_id}">{$row.email}</label></td>
+			<td><label for="confirmation_{$row.reservation_id}">{if $row.person == 'adult'}dospělý{else}dítě{/if}</label></td>
+			<td><a href="{$ROOT}?module={$MODULE}&amp;submodule=course&amp;id={$course.course_id}&amp;delete={$row.reservation_id}" class="delete">smazat</a></td>
+		</tr>
+		{else}
+		<tr>
+			<td>S {$s}</td>
+			<td>&nbsp;</td>
+			<td><input type="text" name="fname[{$seat}]" value="{$data.fname[$seat]}" style="width:200px;" /></td>
+			<td><input type="text" name="lname[{$seat}]" value="{$data.lname[$seat]}" style="width:200px;" /></td>
+			<td><input type="text" name="email[{$seat}]" value="{$data.email[$seat]}" style="width:200px;" /></td>
+			<td><select name="person[{$seat}]"><option value="adult">dospělý</option><option value="kid">dítě</option></select></td>
+			<td><a href="{$ROOT}?module={$MODULE}&amp;submodule=course&amp;id={$course.course_id}&amp;seat={$seat}&amp;anonymous">Přidat anonymně</a></td>
+		</tr>
+		{/if}
+{else}
+		{if $row}
+		<tr>
+			<td>{$seat}</td>
+			<td><input type="checkbox" id="confirmation_{$row.reservation_id}" class="confirmation" name="confirm[{$row.reservation_id}]" value="{$row.reservation_id}"{if $row.confirmed} checked="checked"{/if} /></td>
+			<td><label for="confirmation_{$row.reservation_id}">{$row.fname}</label></td>
+			<td><label for="confirmation_{$row.reservation_id}">{$row.lname}</label></td>
+			<td><label for="confirmation_{$row.reservation_id}">{$row.email}</label></td>
+			<td><label for="confirmation_{$row.reservation_id}">{if $row.person == 'adult'}dospělý{else}dítě{/if}</label></td>
+			<td><a href="{$ROOT}?module={$MODULE}&amp;submodule=course&amp;id={$course.course_id}&amp;delete={$row.reservation_id}" class="delete">smazat</a></td>
+		</tr>
+		{else}
+		<tr>
+			<td>{$seat}</td>
+			<td>&nbsp;</td>
+			<td><input type="text" name="fname[{$seat}]" value="{$data.fname[$seat]}" style="width:200px;" /></td>
+			<td><input type="text" name="lname[{$seat}]" value="{$data.lname[$seat]}" style="width:200px;" /></td>
+			<td><input type="text" name="email[{$seat}]" value="{$data.email[$seat]}" style="width:200px;" /></td>
+			<td><select name="person[{$seat}]"><option value="adult">dospělý</option><option value="kid">dítě</option></select></td>
+			<td><a href="{$ROOT}?module={$MODULE}&amp;submodule=course&amp;id={$course.course_id}&amp;seat={$seat}&amp;anonymous">Přidat anonymně</a></td>
+		</tr>
+		{/if}
+{/if}
+	{/foreach}
+	</table>
+    <h2>Nad-kapacita</h2>
+    <table>
+    	<tr>
+			<th width="50">Sedadlo</th>
+			<th width="20">OK</th>
+			<th width="200">Jméno</th>
+			<th width="200">Příjmení</th>
+			<th width="200">Email</th>
+			<th width="80">Osoba</th>
+			<th>&nbsp;</th>
+		</tr>
+	{foreach from=$reservation_over item=row}
+		<tr>
+			<td>{$action->get('value', 'capacity')+$row@iteration}</td>
+			<td><input type="checkbox" id="confirmation_{$row.reservation_id}" class="confirmation" name="confirm[{$row.reservation_id}]" value="{$row.reservation_id}"{if $row.confirmed} checked="checked"{/if} /></td>
+			<td><label for="confirmation_{$row.reservation_id}">{$row.fname}</label></td>
+			<td><label for="confirmation_{$row.reservation_id}">{$row.lname}</label></td>
+			<td><label for="confirmation_{$row.reservation_id}">{$row.email}</label></td>
+			<td><a href="{$ROOT}?module={$MODULE}&amp;submodule=course&amp;id={$course.course_id}&amp;delete={$row.reservation_id}" class="delete">smazat</a></td>
+		</tr>
+	{/foreach}
+	{section name=over loop=5-count($reservation_over)}
+		{$seat = $action->get('value', 'capacity')+count($reservation_over)+$smarty.section.over.iteration}
+		<tr>
+			<td>{$seat}</td>
+			<td>&nbsp;</td>
+			<td><input type="text" name="fname[{$seat}]" value="{$data.fname[$seat]}" style="width:200px;" /></td>
+			<td><input type="text" name="lname[{$seat}]" value="{$data.lname[$seat]}" style="width:200px;" /></td>
+			<td><input type="text" name="email[{$seat}]" value="{$data.email[$seat]}" style="width:200px;" /></td>
+			<td><select name="person[{$seat}]"><option value="adult">dospělý</option><option value="kid">dítě</option></select></td>
+			<td><a href="{$ROOT}?module={$MODULE}&amp;submodule=course&amp;id={$course.course_id}&amp;seat={$seat}&amp;anonymous">Přidat anonymně</a></td>
+		</tr>	
+	{/section}
+        <tr>
+            <td colspan="6">
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+	</table>
+</form>

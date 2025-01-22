@@ -1,0 +1,93 @@
+<h1 class="h-user h-user-user">Plánování akcí</h1>
+<p class="navi">
+	<a href="{$ROOT}?module={$MODULE}&amp;submodule=planning&amp;week={if $week == '01'}{$prevmaxweek}{else}{$week-1}{/if}&amp;year={if $week == '01'}{$year-1}{else}{$year}{/if}" class="button">Předchozí týden</a>
+	<a href="{$ROOT}?module={$MODULE}&amp;submodule=planning&amp;week={if $week == $maxweek}1{else}{$week+1}{/if}&amp;year={if $week == $maxweek}{$year+1}{else}{$year}{/if}" class="button next">Další týden</a>
+</p>
+<form method="post" action="">
+	<p><input type="submit" class="button" name="copyweek" value="Kopirovat tento týden do dalšího" /></p>
+</form>
+<div id="rezervace-table">
+	<div class="hours">
+	   <div class="datespace"></div>
+	   <div class="item">7</div>
+	   <div class="item">8</div>
+	   <div class="item">9</div>
+	   <div class="item">10</div>
+	   <div class="item">11</div>
+	   <div class="item">12</div>
+	   <div class="item">13</div>
+	   <div class="item">14</div>
+	   <div class="item">15</div>
+	   <div class="item">16</div>
+	   <div class="item">17</div>
+	   <div class="item">18</div>
+	   <div class="item">19</div>
+	   <div class="item">20</div>
+	   <div class="item">21</div>
+	   <div class="item">22</div>
+	</div>
+{foreach from=$days item=courses key=day}
+	<div class="days">
+	   	<div class="item">
+	      	<div class="date">{$day|date_format:"%a %d.%m."}</div>
+	      	<div class="actions">
+	{foreach from=$courses item=row}
+		{$action = $HELPER->section($row.action_id)}
+		{$width = round(13*$action->get('value', 'length')/3-1)}
+		{$hours = $row.start|date_format:"%H"}
+		{$minutes = $row.start|date_format:"%M"}
+		{$left = round((($hours-7)*4+$minutes/15)*13-1)}
+	        	<div class="action" style="width:{$width}px; left:{$left}px; background-color:#{$action->get('value', 'colour')};">
+		{if $action->get('value', 'private') == 1}
+					Soukromá akce
+					<br />{$row.start|date_format:"%H:%M"}
+					<br />{$action->get('value', 'short')}
+		{else}
+					{$action->get('value', 'short')}
+					<br />{$row.start|date_format:"%H:%M"}
+					<br />({if $row.cancelled == 1}zrušeno{else}{$row.applied} / {$action->get('value', 'capacity')}{/if})
+		{/if}
+					<div class="actionmore" style="background-color:#{$action->get('value', 'colour')};">
+						<a href="{$ROOT}?module={$MODULE}&amp;submodule=course&amp;id={$row.course_id}" class="actionbt">Detail</a><br />
+						{if $row.cancelled == 0}<a href="{$ROOT}?module={$MODULE}&amp;submodule=planning&amp;action=cancel&amp;id={$row.course_id}" class="actionbt cancel">Zrušit</a><br />{/if}
+						<a href="{$ROOT}?module={$MODULE}&amp;submodule=planning&amp;action=delete&amp;id={$row.course_id}" class="actionbt delete">Smazat</a>
+					</div>
+				</div>
+	{/foreach}
+	      	</div>
+	   	</div>
+	</div>
+{/foreach}
+	<div class="clr"><hr /></div>
+</div><!--rezervace-table-->
+<div class="clr"><hr /></div>
+<form method="post" action="" style="margin:10px 0 0 0;">
+	<table>
+		<tr>
+			<th class="th-label th-action"><label for="action">Akce:</label></th>
+			<td>
+				<select name="action" id="action">
+					<option value="0">= = vyberte = =</option>
+{foreach from=$actions item=name key=id}
+	{$action = $HELPER->section($id)}
+	{if $action->get('section', 'status') == 1}
+					<option value="{$id}">{$name}</option>
+	{/if}
+{/foreach}
+				</select>
+			</td>
+		</tr>
+		<tr>
+		    <th class="th-label th-date"><label for="date">Datum:</label></th>
+		    <td><input class="datetype" style="width:95px;" id="date" type="text" name="date" value="{$smarty.now|date_format:"%Y-%m-%d"}" size="10" /></td>
+		</tr>
+		<tr>
+		    <th class="th-label th-time"><label for="time">Čas:</label></th>
+		    <td>{html_select_time display_seconds=false minute_interval=5 prefix=""}</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><input type="submit" class="button" name="planning" value="{#save#}" /></td>
+		</tr>
+	</table>
+</form>

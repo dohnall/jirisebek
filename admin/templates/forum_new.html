@@ -1,0 +1,24 @@
+<h1 class="h-forum">{#forum_new#}</h1>
+{foreach from=$posts item=post}
+<div class="post{if $FORUM_TYPE == 'moderated'} new{/if}">
+	<div class="title">
+		<strong>{$post.fname} {$post.lname} &lt;{mailto address=$post.email}&gt;</strong> - {$post.inserted|date_format:"%d.%m.%Y %H:%M:%S"} | IP: {$post.ip} | <a href="javascript:;" class="deletePost">{#delete#}</a>
+	</div>
+	<h2><a href="{$HELPER->section($post.section_id)->get('url')}">{$HELPER->section($post.section_id)->get('text', 'name')}</a></h2>
+	<div class="subject">
+		<label>{#subject#}:</label><p>{$post.subject}</p>
+	</div>
+	<div class="message">
+		<label>{#message#}:</label><p>{$post.message|nl2br}</p>
+	</div>
+	<div class="status">
+		<label>{#status#}:</label>
+		<select name="status">
+			<option value="new"{if $post.status == 'new'} selected="selected"{/if}>{#new#}</option>
+			<option value="public"{if $post.status == 'public'} selected="selected"{/if}>{#public#}</option>
+			<option value="denied"{if $post.status == 'denied'} selected="selected"{/if}>{#denied#}</option>
+		</select>
+	</div>
+	<input type="hidden" name="forum" value="{$post.forum_id}" />
+</div>
+{/foreach}

@@ -1,0 +1,81 @@
+<style type="text/css">
+.CodeMirror { border-top: 1px solid black; border-bottom: 1px solid black; font-size:12px; }
+.CodeMirror-activeline-background { background: #e8f2ff !important; }
+.CodeMirror-fullscreen { display: block; position: absolute; top: 0; left: 0; width: 100%; z-index: 9999; }
+.CodeMirror-dialog { position: absolute; left: 0; right: 0; background: white; z-index: 15; padding: .1em .8em; overflow: hidden; color: #333; }
+.CodeMirror-dialog-top { border-bottom: 1px solid #eee; top: 0; }
+.CodeMirror-dialog-bottom { border-top: 1px solid #eee; bottom: 0; }
+.CodeMirror-dialog input { border: none; outline: none; background: transparent; width: 20em; color: inherit; font-family: monospace; }
+.CodeMirror-dialog button { font-size: 70%; }
+</style>
+<h1 class="h-templates h-templates-template">{if $template}{$template}{else}{#new_item#}{/if}</h1>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+	<div>
+		<textarea name="file" id="codemirror">{$html|escape}</textarea>
+		<input type="submit" value="{#save#}" />
+	</div>
+</form>
+<h3>Search/Replace</h3>
+<dl>
+	<dt>Ctrl-F / Cmd-F</dt><dd>Start searching</dd>
+	<dt>Ctrl-G / Cmd-G</dt><dd>Find next</dd>
+	<dt>Shift-Ctrl-G / Shift-Cmd-G</dt><dd>Find previous</dd>
+	<dt>Shift-Ctrl-F / Cmd-Option-F</dt><dd>Replace</dd>
+	<dt>Shift-Ctrl-R / Shift-Cmd-Option-F</dt><dd>Replace all</dd>
+</dl>
+<h3>Full-screen</h3>
+<dl>
+	<dt>F11</dt><dd>toggle full screen editing</dd>
+	<dt>Esc</dt><dd>exit full screen editing</dd>
+</dl>
+<script>
+// Define an extended mixed-mode that understands vbscript and
+// leaves mustache/handlebars embedded templates in html mode
+function isFullScreen(cm) {
+  	return /\bCodeMirror-fullscreen\b/.test(cm.getWrapperElement().className);
+}
+function winHeight() {
+  	return window.innerHeight || (document.documentElement || document.body).clientHeight;
+}
+function setFullScreen(cm, full) {
+	var wrap = cm.getWrapperElement();
+	if (full) {
+		wrap.className += " CodeMirror-fullscreen";
+		wrap.style.height = winHeight() + "px";
+		document.documentElement.style.overflow = "hidden";
+	} else {
+		wrap.className = wrap.className.replace(" CodeMirror-fullscreen", "");
+		wrap.style.height = "";
+		document.documentElement.style.overflow = "";
+	}
+	cm.refresh();
+}
+CodeMirror.on(window, "resize", function() {
+	var showing = document.body.getElementsByClassName("CodeMirror-fullscreen")[0];
+	if (!showing) return;
+	showing.CodeMirror.getWrapperElement().style.height = winHeight() + "px";
+});
+var mixedMode = {
+	name: "htmlmixed",
+	scriptTypes: [{ matches: /\/x-handlebars-template|\/x-mustache/i,
+	               mode: null },
+	              { matches: /(text|application)\/(x-)?vb(a|script)/i,
+	               mode: "vbscript" }]
+};
+var editor = CodeMirror.fromTextArea(document.getElementById("codemirror"), {
+	mode: mixedMode,
+	tabMode: "indent",
+	styleActiveLine: true,
+	lineNumbers: true,
+	autofocus: true,
+	extraKeys: {
+		"F11": function(cm) {
+			setFullScreen(cm, !isFullScreen(cm));
+		},
+		"Esc": function(cm) {
+			if (isFullScreen(cm)) setFullScreen(cm, false);
+		}
+	}
+});
+</script>

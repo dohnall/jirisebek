@@ -1,0 +1,14 @@
+<div class="gallery_paging_sides">
+	{if $pager.last > 1}
+	<div class="gallery_paging_nav">
+		{foreach from=$pager.pages item=number}
+		<a href="{$SECTION->get('url')}{if $number > 1}page-{$number}/{/if}"{if $pager.page == $number} class="active"{/if}>{$number}</a>
+		{/foreach}
+	</div>
+	{if $pager.page != $pager.last}
+	<div class="gallery_paging_actions">
+		<a href="{$SECTION->get('url')}page-{$pager.next}/" class="button_primary">{#next_projects#}</a>
+	</div>
+	{/if}
+	{/if}
+</div>

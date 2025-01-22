@@ -1,0 +1,15 @@
+<form action="" class="pager-form">
+	<div class="pager clearfix">
+	    <ul>
+	        <li><a href="{$ROOT}?module={$MODULE}&amp;id={$item->section_id}&amp;page=1" class="button" title="{#first#}">&laquo;</a></li>
+	        <li><a href="{$ROOT}?module={$MODULE}&amp;id={$item->section_id}&amp;page={$pager.previous}" class="button" title="{#previous#}">&lsaquo;</a></li>
+	        <li class="inputs">
+	            <input type="hidden" name="module" value="{$MODULE}" />
+	            <input type="hidden" name="id" value="{$item->section_id}" />
+				<input type="text" size="3" name="page" value="{$pager.page}" /> {#of#} {$pager.last}
+	        </li>
+	        <li><a href="{$ROOT}?module={$MODULE}&amp;id={$item->section_id}&amp;page={$pager.next}" class="button" title="{#next#}">&rsaquo;</a></li>
+	        <li><a href="{$ROOT}?module={$MODULE}&amp;id={$item->section_id}&amp;page={$pager.last}" class="button" title="{#last#}">&raquo;</a></li>
+	    </ul>
+	</div>
+</form>

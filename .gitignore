@@ -1,0 +1,7 @@
+.idea
+_old
+_templates
+log
+templates_c
+/app/web1/files/*/*.*
+/lib/config

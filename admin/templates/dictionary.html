@@ -1,0 +1,14 @@
+<div id="menu">
+    <ul>
+{if $user->hasRight(18)}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=generate">{#generate#}</a></li>
+{/if}
+{if $user->hasRight(17)}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=export">{#export#}</a></li>
+        <li><a href="javascript:;" id="dictionary_import">{#import#}</a></li>
+{/if}
+    </ul>
+</div>
+<div id="content">
+    {include file="`$MODULE`_`$SUBMODULE`.html"}
+</div>

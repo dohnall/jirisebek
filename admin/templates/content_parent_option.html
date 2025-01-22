@@ -1,0 +1,8 @@
+{if $config->hasTemplateChildren($section->get('section', 'template'))}
+				<option{if $section->section_id == $item->section_id} disabled="disabled"{/if}{if $section->section_id == $item->get('section', 'parent_id')} selected="selected"{/if} value="{$section->section_id}">{'--'|str_repeat:($section->get('section', 'depth')-1)} {$section->get('text', 'name')}</option>
+	{if $section->get('children', true)}
+		{foreach from=$section->get('children') item=child}
+				{include file='content_parent_option.html' section=$child}
+		{/foreach}
+	{/if}
+{/if}

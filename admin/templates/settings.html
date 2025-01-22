@@ -1,0 +1,37 @@
+<div id="menu">
+    <ul>
+{if $user->hasRight(1)}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=lang"{if $SUBMODULE == 'lang' || $SUBMODULE == 'editlang'} class="active"{/if}>{#langs#}</a></li>
+{/if}
+{if $user->hasRight(3)}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=module"{if $SUBMODULE == 'module' || $SUBMODULE == 'editmodule'} class="active"{/if}>{#modules#}</a></li>
+{/if}
+{if $user->hasRight(5)}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=domain"{if $SUBMODULE == 'domain' || $SUBMODULE == 'editdomain'} class="active"{/if}>{#domains#}</a></li>
+{/if}
+{if $user->hasRight(7)}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=right"{if $SUBMODULE == 'right' || $SUBMODULE == 'editright'} class="active"{/if}>{#rights#}</a></li>
+{/if}
+{if $user->hasRight(9)}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=template"{if $SUBMODULE == 'template' || $SUBMODULE == 'edittemplate'} class="active"{/if}>{#templates#}</a></li>
+{/if}
+{if $user->hasRight(11)}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=menu"{if $SUBMODULE == 'menu' || $SUBMODULE == 'editmenu'} class="active"{/if}>{#menus#}</a></li>
+{/if}
+{if $user->hasRight(13)}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=column"{if $SUBMODULE == 'column' || $SUBMODULE == 'editcolumn'} class="active"{/if}>{#columns#}</a></li>
+{/if}
+{if $user->hasRight(15)}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=component"{if $SUBMODULE == 'component' || $SUBMODULE == 'editcomponent'} class="active"{/if}>{#components#}</a></li>
+{/if}
+{if $user->hasRight(42)}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=user"{if $SUBMODULE == 'user'} class="active"{/if}>{#users#}</a></li>
+{/if}
+{if $user->hasRight(46)}
+		<li><a href="{$ROOT}?module={$MODULE}&amp;submodule=codelist"{if $SUBMODULE == 'codelist'} class="active"{/if}>{#codelist#}</a></li>
+{/if}
+    </ul>
+</div>
+<div id="content">
+    {include file="`$MODULE`_`$SUBMODULE`.html"}
+</div>

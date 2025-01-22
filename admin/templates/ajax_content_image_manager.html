@@ -1,0 +1,18 @@
+<fieldset>
+	<legend>{#new#}</legend>
+	<div class="fieldset flash" id="fsUploadProgress"></div>
+	<span id="upload"></span>
+	<input id="btnCancel" class="smallButton" type="button" value="{#cancel_all_uploads#}" onclick="swfu.cancelQueue();" disabled="disabled" />
+</fieldset>
+<fieldset>
+	<legend>{#gallery#}</legend>
+	<div id="gallery">
+		<div class="control">
+			<a href="javascript:;" id="imageManagerReload" class="button">{#refresh#}</a>
+		</div>
+		<ul>
+			<li class="loader"></li>
+		</ul>
+		<input type="hidden" name="file" value="" />
+	</div>
+</fieldset>

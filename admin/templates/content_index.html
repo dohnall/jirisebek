@@ -1,0 +1,144 @@
+{if $item_id && $item->get('path')}
+<p class="bcrumbs">{#path#}:
+    {foreach from=$item->get('path') item=row name=path}
+        {if $row@last == true}
+    <a href="{$row->get('url')}">{$row->get('text', 'name')}</a>
+        {else}
+    <a href="{$ROOT}?module={$MODULE}&amp;id={$row->get('section', 'section_id')}">{$row->get('text', 'name')}</a> &rsaquo;
+        {/if}
+    {/foreach}
+</p>
+<h1 class="h-content-item">{$item->get('text', 'name')}</h1>
+{/if}
+{if $config->hasTemplateChildren($item->get('section', 'template'))}
+<p class="navi">
+	{if $user->hasRight(44)}
+    <a href="javascript:;" id="item_export" class="button export">{#export#}</a>
+	{/if}
+	{if $user->hasRight(45)}
+    <a href="javascript:;" id="item_import" class="button import">{#import#}</a>
+	{/if}
+	{if $user->hasRight(23) && $user->hasRight(27)}
+	<a href="javascript:;" id="item_new" class="button new">{#new_item#}</a>
+	{/if}
+</p>
+{/if}
+<div class="clr"><hr /></div>
+{if $item_id}
+<form method="post" action="" enctype="multipart/form-data">
+    <div id="content-tabs">
+    	<ul>
+    {if $config->hasTemplateChildren($item->get('section', 'template'))}
+    		<li><a href="{$AJAX}{$MODULE}.php?action=list&amp;id={$item->get('section', 'section_id')}&amp;page={$pager.page}"><span>{#content_list#}</span></a></li>
+    {/if}
+    		<li><a href="{$AJAX}{$MODULE}.php?action=properties&amp;id={$item->get('section', 'section_id')}{if $version > 0}&amp;version={$version}{/if}"><span>{#content_properties#}</span></a></li>
+	{if $user->hasRight(35)}
+    		<li><a href="{$AJAX}{$MODULE}.php?action=versions&amp;id={$item->get('section', 'section_id')}{if $version > 0}&amp;version={$version}{/if}"><span>{#content_versions#}</span></a></li>
+	{/if}
+	{if $user->hasRight(36) && $item->get('section', 'parent_id') > 0}
+    		<li><a href="{$AJAX}{$MODULE}.php?action=relations&amp;id={$item->get('section', 'section_id')}"><span>{#content_relations#}</span></a></li>
+	{/if}
+    {foreach from=$config->getTabs($item->get('section', 'template')) item=row}
+    		<li><a href="{$AJAX}{$MODULE}.php?action=tab{$row.template_tab_id}&amp;id={$item->get('section', 'section_id')}{if $version > 0}&amp;version={$version}{/if}"><span>{$row.name}</span></a></li>
+    {/foreach}
+    {if $user->hasRight(52)}
+            <li><a href="{$AJAX}{$MODULE}.php?action=log&amp;id={$item->section_id}"><span>{#content_log#}</span></a></li>
+    {/if}
+    	</ul>
+    </div>
+</form>
+{/if}
+{if $user->hasRight(23) && $user->hasRight(27)}
+<div id="item-new" title="{#new_item#}" class="hidden">
+	<form method="post" action="">
+    	<fieldset>
+        	<table>
+        	   <tr>
+                    <td class="th-label"><label for="content_name1">{#name#}:</label></td>
+                    <td><input type="text" name="name" id="content_name1" /></td>
+        	   </tr>
+        	   <tr>
+                    <td class="th-label"><label for="content_template1">{#template#}:</label></td>
+                    <td>
+                        <select name="template" id="content_template1">
+	{foreach from=$config->getTemplates(true) item=row}
+                            <option value="{$row.code}">{$row.name}</option>
+	{/foreach}
+                        </select>
+                    </td>
+                </tr>
+        	   <tr>
+                    <td class="th-label"><label for="content_insert1">{#insert#}:</label></td>
+                    <td>
+                        <select name="insert" id="content_insert1">
+                            <option value="1"{if $insert == 1} selected="selected"{/if}>{#to_begin#}</option>
+                            <option value="2"{if $insert == 2} selected="selected"{/if}>{#to_end#}</option>
+                        </select>
+                        <input type="hidden" name="parent" value="{$item_id}" id="parent_id" />
+                        <input type="hidden" name="action" value="create" />
+                    </td>
+                </tr>
+        	</table>
+        </fieldset>
+	</form>
+</div>
+{/if}
+{if $user->hasRight(44)}
+<div id="item-export" title="{#export#}" class="hidden">
+	<form method="post" action="">
+    	<fieldset>
+        	<table>
+        	   	<tr>
+                    <td class="th-label"><label for="content_template2">{#template#}:</label></td>
+                    <td>
+                        <select name="template" id="content_template2">
+	{foreach from=$config->getTemplates(true) item=row}
+                            <option value="{$row.code}">{$row.name}</option>
+	{/foreach}
+                        </select>
+                    </td>
+            	</tr>
+        	   	<tr>
+                    <td class="th-label"><label for="content_type2">{#type#}:</label></td>
+                    <td>
+                        <select name="type" id="content_type2">
+                            <option value="1"{if isset($type) && $type == 1} selected="selected"{/if}>{#all#}</option>
+                            <option value="2"{if isset($type) && $type == 2} selected="selected"{/if}>{#children#}</option>
+                        </select>
+                        <input type="hidden" name="parent" value="{$item_id}" />
+                        <input type="hidden" name="action" value="export" />
+                    </td>
+                </tr>
+        	</table>
+        </fieldset>
+	</form>
+</div>
+{/if}
+{if $user->hasRight(45)}
+<div id="item-import" title="{#import#}" class="hidden">
+	<form method="post" action="" enctype="multipart/form-data">
+    	<fieldset>
+        	<table>
+        	   	<tr>
+                    <td class="th-label"><label for="content_template3">{#template#}:</label></td>
+                    <td>
+                        <select name="template" id="content_template3">
+	{foreach from=$config->getTemplates(true) item=row}
+                            <option value="{$row.code}">{$row.name}</option>
+	{/foreach}
+                        </select>
+                    </td>
+            	</tr>
+        	   	<tr>
+                    <td class="th-label"><label>{#csv_file#}:</label></td>
+                    <td>
+						<input type="file" name="import" />
+                        <input type="hidden" name="parent" value="{$item_id}" />
+                        <input type="hidden" name="action" value="import" />
+					</td>
+        	   	</tr>
+        	</table>
+        </fieldset>
+	</form>
+</div>
+{/if}

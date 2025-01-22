@@ -1,0 +1,64 @@
+<h1 class="h-settings h-settings-template">{#codelist#}</h1>
+{if $user->hasRight(47)}
+<p class="navi"><a href="javascript:;" id="item_new" class="button new">{#new_item#}</a></p>
+{/if}
+<form method="post" action="" class="filter">
+    <fieldset class="filter" class="filter">
+        <legend>{#filter#}</legend>
+        <label for="codelist_lang">{#lang#}: </label>
+        <select name="lang" id="codelist_lang">
+{foreach from=$langs item=lang}
+            <option value="{$lang.lang_id}"{if $codelist_lang == $lang.lang_id} selected="selected"{/if}>{$lang.name}</option>
+{/foreach}
+        </select>
+        <input type="submit" value="{#change#}" />
+    </fieldset>
+</form>
+<table class="list table-settings table-settings-template">
+    <thead>
+        <tr>
+            <th class="th-name">{#name#}</th>
+            <th class="th-code">{#code#}</th>
+{if $user->hasRight(47)}
+            <th class="th-action">{#action#}</th>
+{/if}
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcodelist&amp;id={$row.codelist_id}">{$row.name}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcodelist&amp;id={$row.codelist_id}">{$row.code}</a></td>
+	{if $user->hasRight(47)}
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=codelist&amp;id={$row.codelist_id}&amp;action=delete" class="delete">{#delete#}</a></td>
+	{/if}
+        </tr>
+{/foreach}
+    </tbody>
+</table>
+{if $user->hasRight(47)}
+<div id="item-new" title="{#new_item#}" class="hidden">
+	<form method="post" action="">
+    	<fieldset>
+        	<table>
+        	    <tr>
+        		  	<td class="th-label"><label for="content_code">{#code#}:</label></td>
+        		  	<td>
+				  		<input type="text" name="item[code]" id="content_code" />
+                        <input type="hidden" name="item_id" value="0" />
+						<input type="hidden" name="action" value="new_item" />
+                	</td>
+                </tr>
+{foreach from=$langs item=row}
+        		<tr>
+        		  	<td class="th-label"><label for="content_name_{$row.code}">{#name#} ({$row.code}):</label></td>
+        		  	<td>
+				  		<input type="text" name="item[name][{$row.lang_id}]" id="content_name_{$row.code}" />
+                	</td>
+            	</tr>
+{/foreach}
+        	</table>
+        </fieldset>
+	</form>
+</div>
+{/if}

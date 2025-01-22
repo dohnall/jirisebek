@@ -1,0 +1,45 @@
+<h1 class="h-settings h-settings-editcolumn">{if $data.newsletter_id > 0}{#edit_item#}{else}{#new_item#}{/if}</h1>
+<p class="navi">
+	<a href="{$ROOT}?module={$MODULE}" class="button back">{#back_to_list#}</a>
+</p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table>
+        <tr>
+            <th class="th-label th-name"><label for="name">{#name#}</label>:</th>
+            <td><input type="text" name="name" id="name" value="{$data.name}" size="50" maxlength="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-code"><label for="code">{#subject#}</label>:</th>
+            <td><input type="text" name="subject" id="code" value="{$data.subject}" size="50" maxlength="100" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-code"><label for="code">{#groups#}</label>:</th>
+            <td>
+            	<input class="ngroup_cbx ngroup_cbx_first" type="checkbox" name="ngroup[]" value="0" id="ngroup_0"{if in_array(0, $data.ngroup) || !$data.ngroup} checked="checked"{/if}><label for="ngroup_0">{#all#}</label><br>
+{foreach from=$groups item=row}
+            	<input class="ngroup_cbx" type="checkbox" name="ngroup[]" value="{$row.ngroup_id}" id="ngroup_{$row.ngroup_id}"{if in_array($row.ngroup_id, $data.ngroup)} checked="checked"{/if}><label for="ngroup_{$row.ngroup_id}">{$row.name}</label><br>
+{/foreach}
+			</td>
+        </tr>        
+		<tr>
+		    <th class="th-label th-code"><label for="message">{#content#}</label>:</th>
+		    <td><textarea id="message" class="html" name="content" style="width:100%;height:400px;">{$data.content}</textarea></td>
+		</tr>
+        <tr>
+            <th class="th-label th-required"><label for="required">{#prepared#}</label>:</th>
+            <td><input type="checkbox" id="prepared" name="prepared" value="1"{if $data.prepared==1} checked="checked"{/if} /></td>
+        </tr>
+{if $data.prepared != 1 && ($data.sent == '0000-00-00 00:00:00' || !$data.sent)}
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="hidden" name="item_id" value="{$item_id}" />
+                <input type="hidden" id="testEmail" name="testEmail" value="" />
+                <input type="submit" name="save" value="{#save#}" />
+                <input type="submit" name="sendTest" value="{#sendtest#}" onclick="if(email = prompt('E-mail')) { $('#testEmail').val(email); } else { return false; }" />
+            </td>
+        </tr>
+{/if}
+    </table>
+</form>

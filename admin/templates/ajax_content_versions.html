@@ -1,0 +1,19 @@
+{include file="pager-detail.html"}
+<table class="list">
+	<tr>
+		<th class="th-section">{#section#}</th>
+		<th class="th-main">{#inserted#}</th>
+{if $user->hasRight(34)}
+		<th class="th-action">{#action#}</th>
+{/if}
+	</tr>
+{foreach from=$item->get('version') item=version}
+	<tr class="{cycle values='odd,even'}">
+		<td>{if $version.section_text_id == $item->get('text', 'section_text_id')}&bull; {/if}<a href="{$ROOT}?module=content&amp;id={$item->section_id}&amp;version={$version.section_text_id}">{$version.name}</a></td>
+		<td><a href="{$ROOT}?module=content&amp;id={$item->section_id}&amp;version={$version.section_text_id}">{$version.inserted|date_format:"%d.%m.%Y %H:%M:%S"}</a></td>
+	{if $user->hasRight(34)}
+		<td>{if $item->get('version')|@count > 1}<a href="{$ROOT}?module=content&amp;id={$item->section_id}&amp;version={$version.section_text_id}&amp;action=delete_version" class="delete">{#delete#}</a>{/if}</td>
+	{/if}
+	</tr>
+{/foreach}
+</table>

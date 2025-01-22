@@ -1,0 +1,24 @@
+<h1 class="h-settings h-settings-editlang">{if isset($item.item.name) && $item.item.name}{$item.item.name}{else}{#new_item#}{/if}</h1>
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=lang" class="button back">{#back_to_list#}</a></p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table>
+        <tr>
+            <th class="th-label th-code"><label for="code">{#code#}</label>:</th>
+            <td><input type="text" name="item[code]" id="code" value="{if isset($item.item.code)}{$item.item.code}{/if}" size="3" maxlength="2" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-name"><label for="name">{#name#}</label>:</th>
+            <td><input type="text" name="item[name]" id="name" value="{if isset($item.item.name)}{$item.item.name}{/if}" size="50" /></td>
+        </tr>
+{if $user->hasRight(2)}
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="hidden" name="item_id" value="{$item_id}" />
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+{/if}
+    </table>
+</form>

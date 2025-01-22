@@ -1,0 +1,301 @@
+                    <h6>Annexe 1.7: Scoping Futures (7/7)</h6>
+                    <h1><b>Funding and Duration</b></h1>
+
+                    <div class="tabs">
+                        <ul>
+                            <li><a href="#form1" onclick="return tabs(1,2,this);" class="active" id="tab1"><b>1. Funding</b></a></li>
+                            <li><a href="#form2" onclick="return tabs(2,1,this);" id="tab2"><b>2. Duration</b></a></li>
+                        </ul>
+                        <div class="mask"></div>
+                        <div style="clear:both"></div>
+                    </div>
+
+                    <div class="oracle-form">
+
+                        <form action="" method="post">
+
+                            <div id="form1">
+
+                                <h3>Q1: Please indicate the estimated “Project Cost” (in Euros €) of the study.</h3>
+
+                                <div class="table-wrapper">
+                                    <table>
+                                        <col style="width:36px" />
+                                        <col />
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="radio" name="project_cost" id="input-1-7-1-1" value="1"{if $form.project_cost == 1 || !$form.project_cost} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-1-1">&lt; 50,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="project_cost" id="input-1-7-1-2" value="2"{if $form.project_cost == 2} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-1-2">50,001—100,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="project_cost" id="input-1-7-1-3" value="3"{if $form.project_cost == 3} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-1-3">100,001—250,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="project_cost" id="input-1-7-1-4" value="4"{if $form.project_cost == 4} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-1-4">250,001—500,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="project_cost" id="input-1-7-1-5" value="5"{if $form.project_cost == 5} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-1-5">500,001—750,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="project_cost" id="input-1-7-1-6" value="6"{if $form.project_cost == 6} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-1-6">750,001—1,000,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="project_cost" id="input-1-7-1-7" value="7"{if $form.project_cost == 7} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-1-7">1,000,001—2,000,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="project_cost" id="input-1-7-1-8" value="8"{if $form.project_cost == 8} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-1-8">2,000,001—3,000,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="project_cost" id="input-1-7-1-9" value="9"{if $form.project_cost == 9} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-1-9">3,000,001—4,000,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="project_cost" id="input-1-7-1-10" value="10"{if $form.project_cost == 10} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-1-10">4,000,001—5,000,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="project_cost" id="input-1-7-1-11" value="11"{if $form.project_cost == 11} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-1-11">&gt; 5,000,000 Euros</label></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                                <h3>Q2: Please indicate the proportion of the “Project Cost” funded by the sponsor.</h3>
+
+                                <div class="table-wrapper">
+                                    <table>
+                                        <col style="width:114px" />
+                                        <col />
+                                        <tbody>
+                                            <tr>
+                                                <td><label for="input-1-7-2">Proportion in <b>%</b></label></td>
+                                                <td>
+                                                    <input type="text" name="proportion" value="{$form.proportion}" id="input-1-7-2" class="additional" style="width:40px;font-weight:700;font-size:14px" maxlength="3" />
+                                                    <b>%</b>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                                <h3>Q3: Does the scope of the project allow for continuation of its activities?</h3>
+
+                                <div class="table-wrapper" id="continuation">
+                                    <table>
+                                        <col style="width:36px" />
+                                        <col />
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="radio" name="continuation" id="input-1-7-4-1" value="1"{if $form.continuation == 1} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-4-1"><b>Yes</b></label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="continuation" id="input-1-7-4-2" value="0"{if !$form.continuation} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-4-2"><b>No</b></label></td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">Briefly justify (max. 140 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <textarea name="continuation_description" id="input-1-7-5" class="additional" style="width:94%" cols="20" rows="2">{$form.continuation_description}</textarea>
+                                                    <span class="counter">{$form.continuation_description|count_characters:true}</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">If Yes, please estimate the amount of funding that may be required from the sponsor?</th>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="amount" value="1"{if $form.amount == 1 || !$form.amount} checked="checked"{/if} id="input-1-7-6-1" /></td>
+                                                <td><label for="input-1-7-6-1">&lt; 50,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="amount" value="2"{if $form.amount == 2} checked="checked"{/if} id="input-1-7-6-2" /></td>
+                                                <td><label for="input-1-7-6-2">50,001—100,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="amount" value="3"{if $form.amount == 3} checked="checked"{/if} id="input-1-7-6-3" /></td>
+                                                <td><label for="input-1-7-6-3">100,001—250,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="amount" value="4"{if $form.amount == 4} checked="checked"{/if} id="input-1-7-6-4" /></td>
+                                                <td><label for="input-1-7-6-4">250,001—500,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="amount" value="5"{if $form.amount == 5} checked="checked"{/if} id="input-1-7-6-5" /></td>
+                                                <td><label for="input-1-7-6-5">500,001—750,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="amount" value="6"{if $form.amount == 6} checked="checked"{/if} id="input-1-7-6-6" /></td>
+                                                <td><label for="input-1-7-6-6">750,001—1,000,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="amount" value="7"{if $form.amount == 7} checked="checked"{/if} id="input-1-7-6-7" /></td>
+                                                <td><label for="input-1-7-6-7">1,000,001—2,000,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="amount" value="8"{if $form.amount == 8} checked="checked"{/if} id="input-1-7-6-8" /></td>
+                                                <td><label for="input-1-7-6-8">2,000,001—3,000,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="amount" value="9"{if $form.amount == 9} checked="checked"{/if} id="input-1-7-6-9" /></td>
+                                                <td><label for="input-1-7-6-9">3,000,001—4,000,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="amount" value="10"{if $form.amount == 10} checked="checked"{/if} id="input-1-7-6-10" /></td>
+                                                <td><label for="input-1-7-6-10">4,000,001—5,000,000 Euros</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="amount" value="11"{if $form.amount == 11} checked="checked"{/if} id="input-1-7-6-11" /></td>
+                                                <td><label for="input-1-7-6-11">&gt; 5,000,000 Euros</label></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="hide-if-js" id="form2">
+                                <h3>Q1: Indicate which of the following options apply to the project duration (in months).</h3>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <col style="width:36px" />
+                                        <col />
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="radio" name="duration" value="1"{if $form.duration == 1 || !$form.duration} checked="checked"{/if} id="input-1-7-7-1" /></td>
+                                                <td><label for="input-1-7-7-1">Up to 6 months</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="duration" value="2"{if $form.duration == 2} checked="checked"{/if} id="input-1-7-7-2" /></td>
+                                                <td><label for="input-1-7-7-2">6 to 12 months</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="duration" value="3"{if $form.duration == 3} checked="checked"{/if} id="input-1-7-7-3" /></td>
+                                                <td><label for="input-1-7-7-3">13 to 24 months</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="duration" value="4"{if $form.duration == 4} checked="checked"{/if} id="input-1-7-7-4" /></td>
+                                                <td><label for="input-1-7-7-4">25 to 36 months</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="duration" value="5"{if $form.duration == 5} checked="checked"{/if} id="input-1-7-7-5" /></td>
+                                                <td><label for="input-1-7-7-5">37 to 48 months</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="duration" value="6"{if $form.duration == 6} checked="checked"{/if} id="input-1-7-7-6" /></td>
+                                                <td><label for="input-1-7-7-6">49 to 60 months</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="duration" value="7"{if $form.duration == 7} checked="checked"{/if} id="input-1-7-7-7" /></td>
+                                                <td><label for="input-1-7-7-7">Over 60 months</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="duration" value="8"{if $form.duration == 8} checked="checked"{/if} id="input-1-7-7-8" /></td>
+                                                <td><label for="input-1-7-7-8">Continuous activity</label></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3>Q2a: If available, indicate the Start Date.</h3>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label for="startdate">Start Date:
+                                                        <input type="text" name="startdate" value="{$form.startdate}" id="startdate" class="additional" style="width:160px;font-weight:700;font-size:14px" maxlength="12" />
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3>Q2b: If available, indicate the End Date.</h3>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label for="enddate">End Date:
+                                                        <input type="text" name="enddate" value="{$form.enddate}" id="enddate" class="additional" style="width:160px;font-weight:700;font-size:14px" maxlength="12" />
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h3>Q2c: Was the project extended?</h3>
+                                <div class="table-wrapper">
+                                    <table id="extended">
+                                        <col style="width:36px" />
+                                        <col />
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="radio" name="extended" id="input-1-7-10-1" value="1"{if $form.extended == 1} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-10-1"><b>Yes</b></label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="radio" name="extended" id="input-1-7-10-2" value="0"{if !$form.extended} checked="checked"{/if} /></td>
+                                                <td><label for="input-1-7-10-2"><b>No</b></label></td>
+                                            </tr>
+                                            <tr{if $form.extended != 1} class="disabled"{/if}>
+                                                <td colspan="2">
+                                                    <label for="input-1-7-11">If Yes, for how many months?
+                                                        <input type="text" name="months" value="{$form.months}" id="input-1-7-11" class="additional"
+                                                            style="width:30px;font-weight:700;font-size:14px" maxlength="3"{if $form.extended != 1} disabled="disabled"{/if} />
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2">Briefly justify (max. 140 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <textarea name="extended_description" id="input-1-7-12" class="additional" style="width:94%" cols="20" rows="2">{$form.extended_description}</textarea>
+                                                    <span class="counter">{$form.extended_description|count_characters:true}</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <script type="text/javascript">
+                                {literal}
+                                  //<![CDATA[
+                                    (function ($) {
+                                        var tab = $('#extended');
+                                        tab.find('input[name="extended"]').change(function () {
+                                            if (tab.find('#input-1-7-10-1').prop('checked')) {
+                                                tab.find('input[name="months"]').prop('disabled', false).closest('tr').removeClass('disabled');
+                                            } else {
+                                                tab.find('input[name="months"]').prop('disabled', true).closest('tr').addClass('disabled');
+                                            }
+                                        });
+                                    }(jQuery));
+
+			                        function tabs(show,hide,self) {
+			                            var cn = (!!document.getElementById('form' + show) ? document.getElementById('form' + show).className : '');
+			                            show = String(show);
+			                            hide = String(hide);
+			                            !!document.getElementById('form' + hide) && (document.getElementById('form' + hide).style.display = 'none');
+			                            !!document.getElementById('form' + show) && (document.getElementById('form' + show).style.display = '');
+			                            !!document.getElementById('form' + show) && (document.getElementById('form' + show).className = cn.replace(/( )?hide-if-js/, ''));
+			                            self.className = 'active';
+			                            !!document.getElementById('tab' + hide) && (document.getElementById('tab' + hide).className = '');
+			                            return false;
+			                        }
+			                      //]]>
+			                    {/literal}
+			                    </script>
+                            </div>

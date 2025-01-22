@@ -1,0 +1,117 @@
+                    <h6>Annexe 1.6: Scoping Futures (6/7)</h6>
+                    <h1><b>Time horizon(s)</b></h1>
+
+                    <div class="oracle-form">
+                        <form action="" method="post">
+
+                            <h3>Q1: Please indicate if the study has multiple time horizons.</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="multiple_th" id="input-1-6-1-1" value="1"{if $form.multiple_th == 1} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-6-1-1"><b>Yes</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="multiple_th" id="input-1-6-1-2" value="0"{if !$form.multiple_th} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-6-1-2"><b>No</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">Briefly justify (max. 140 characters)</th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <textarea name="multiple_th_description" id="input-1-6-2" class="additional" style="width:94%" cols="20" rows="2">{$form.multiple_th_description}</textarea>
+                                                <span class="counter">{$form.multiple_th_description|count_characters:true}</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <h3>Q2: Please indicate the (primary) time horizon band of the study.</h3>
+
+                            <div class="table-wrapper">
+                                <table class="horizon-years">
+                                    <tbody>
+                                        <tr>
+                                            <td><label><input type="radio" name="primary_th" value="1"{if $form.primary_th == 1 || !$form.primary_th} checked="checked"{/if} /> 1976—1980</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="2"{if $form.primary_th == 2} checked="checked"{/if} /> 2001—2005</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="3"{if $form.primary_th == 3} checked="checked"{/if} /> 2026—2030</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="4"{if $form.primary_th == 4} checked="checked"{/if} /> 2051—2055</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="5"{if $form.primary_th == 5} checked="checked"{/if} /> 2076—2080</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label><input type="radio" name="primary_th" value="6"{if $form.primary_th == 6} checked="checked"{/if} /> 1981—1985</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="7"{if $form.primary_th == 7} checked="checked"{/if} /> 2006—2010</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="8"{if $form.primary_th == 8} checked="checked"{/if} /> 2031—2035</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="9"{if $form.primary_th == 9} checked="checked"{/if} /> 2056—2060</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="10"{if $form.primary_th == 10} checked="checked"{/if} /> 2081—2085</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label><input type="radio" name="primary_th" value="11"{if $form.primary_th == 11} checked="checked"{/if} /> 1986—1990</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="12"{if $form.primary_th == 12} checked="checked"{/if} /> 2011—2015</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="13"{if $form.primary_th == 13} checked="checked"{/if} /> 2036—2040</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="14"{if $form.primary_th == 14} checked="checked"{/if} /> 2061—2065</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="15"{if $form.primary_th == 15} checked="checked"{/if} /> 2086—2090</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label><input type="radio" name="primary_th" value="16"{if $form.primary_th == 16} checked="checked"{/if} /> 1991—1995</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="17"{if $form.primary_th == 17} checked="checked"{/if} /> 2016—2020</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="18"{if $form.primary_th == 18} checked="checked"{/if} /> 2041—2045</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="19"{if $form.primary_th == 19} checked="checked"{/if} /> 2066—2070</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="20"{if $form.primary_th == 20} checked="checked"{/if} /> 2091—2095</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label><input type="radio" name="primary_th" value="21"{if $form.primary_th == 21} checked="checked"{/if} /> 1996—2000</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="22"{if $form.primary_th == 22} checked="checked"{/if} /> 2021—2025</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="23"{if $form.primary_th == 23} checked="checked"{/if} /> 2046—2050</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="24"{if $form.primary_th == 24} checked="checked"{/if} /> 2071—2075</label></td>
+                                            <td><label><input type="radio" name="primary_th" value="25"{if $form.primary_th == 25} checked="checked"{/if} /> 2096—2100</label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+                            <h3>Q3: Taking into account the context and domain coverage (theme/sector) of the study,
+                                indicate which of the following terms best describes the time horizon?</h3>
+
+                            <div class="table-wrapper">
+                                <p>
+                                    <small>For example 20 years time horizon may be seen as short-term for FLA on “climate change” but
+                                        can be perceived long-term for FLA on mobile communications.</small>
+                                </p>
+                                <table>
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" name="short_term" id="input-1-6-4-1" value="1"{if $form.short_term} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-6-4-1"><b>Short-term perspective</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="medium_term" id="input-1-6-4-2" value="1"{if $form.medium_term} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-6-4-2"><b>Medium-term perspective</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="long_term" id="input-1-6-4-3" value="1"{if $form.long_term} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-6-4-3"><b>Long-term perspective</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">Briefly justify (max. 140 characters)</th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <textarea name="term_description" id="input-1-6-5" class="additional" style="width:94%" cols="20" rows="2">{$form.term_description}</textarea>
+                                                <span class="counter">{$form.term_description|count_characters:true}</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>

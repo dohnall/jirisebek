@@ -1,0 +1,23 @@
+<h1 class="h-user h-user-group">{#groups#}</h1>
+{if $user->hasRight(22)}
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=editgroup" class="button new">{#new_item#}</a></p>
+{/if}
+<table class="list table-user table-user-group">
+    <thead>
+        <tr>
+            <th class="th-name">{#name#}</th>
+            <th class="th-rank">{#rank#}</th>
+            <th class="th-action">{#action#}</th>
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row name=items}
+        <tr class="{cycle values='odd,even'}" title="{$row.description}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editgroup&amp;id={$row.group_id}">{$row.name}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editgroup&amp;id={$row.group_id}">{$row@iteration}</a></td>
+            <td>{if $row.group_id != $group_id}<a href="{$ROOT}?module={$MODULE}&amp;submodule=group&amp;id={$row.group_id}&amp;action=delete" class="delete">{#delete#}</a>{/if}</td>
+        </tr>
+{/foreach}
+    </tbody>
+</table>
+

@@ -1,0 +1,481 @@
+                    <h6>Annexe 1.8: Mobilising Futures (1/7)</h6>
+                    <h1><b>Sponsors and Champions</b></h1>
+                    <div class="oracle-form">
+                        <form action="" method="post">
+                            <h3>Q1: Which of the following options best describe the <i>primary sponsor</i> of the study?</h3>
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:36px" />
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody id="primarySponsors">
+                                        <tr>
+                                            <td><input type="checkbox" name="european_union" value="1"{if $form.european_union == 1} checked="checked"{/if} id="input-1-8-1" /></td>
+                                            <td colspan="2"><label for="input-1-8-1">European Union</label></td>
+                                        </tr>
+                                            <tr{if $form.european_union != 1} class="disabled"{/if}>
+                                                <td></td>
+                                                <td><input type="checkbox" name="sub_european_union_1" value="1"{if $form.sub_european_union_1 == 1} checked="checked"{/if} id="input-1-8-1-1-1"{if $form.european_union != 1} disabled="disabled"{/if} /></td>
+                                                <td><label for="input-1-8-1-1-1">European Commission</label></td>
+                                            </tr>
+                                            <tr{if $form.european_union != 1} class="disabled"{/if}>
+                                                <td></td>
+                                                <td><input type="checkbox" name="sub_european_union_2" value="1"{if $form.sub_european_union_2 == 1} checked="checked"{/if} id="input-1-8-1-1-2"{if $form.european_union != 1} disabled="disabled"{/if} /></td>
+                                                <td><label for="input-1-8-1-1-2">Other EU body, please specify:
+                                                    <input type="text" class="additional" maxlength="140" name="sub_european_union_other" value="{$form.sub_european_union_other}" id="input-1-8-1-1-2-1"{if $form.european_union != 1} disabled="disabled"{/if} />
+                                                    <span class="counter">{$form.sub_european_union_other|count_characters:true}</span></label></td>
+                                            </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="nonstate_actor" value="1"{if $form.nonstate_actor == 1} checked="checked"{/if} id="input-1-8-2" /></td>
+                                            <td colspan="2"><label for="input-1-8-2">Non-State actor</label></td>
+                                        </tr>
+                                            <tr{if $form.nonstate_actor != 1} class="disabled"{/if}>
+                                                <td></td>
+                                                <td><input type="checkbox" name="sub_nonstate_actor_1" value="1"{if $form.sub_nonstate_actor_1 == 1} checked="checked"{/if} id="input-1-8-2-1"{if $form.nonstate_actor != 1} disabled="disabled"{/if} /></td>
+                                                <td><label for="input-1-8-2-1">International agencies (OECD, UNESCO, UNIDO, etc)</label></td>
+                                            </tr>
+                                            <tr{if $form.nonstate_actor != 1} class="disabled"{/if}>
+                                                <td></td>
+                                                <td><input type="checkbox" name="sub_nonstate_actor_2" value="1"{if $form.sub_nonstate_actor_2 == 1} checked="checked"{/if} id="input-1-8-2-2"{if $form.nonstate_actor != 1} disabled="disabled"{/if} /></td>
+                                                <td><label for="input-1-8-2-2">Non-governmental, not for profit, organisations (NGO)</label></td>
+                                            </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="government_actor" value="1"{if $form.government_actor == 1} checked="checked"{/if} id="input-1-8-3" /></td>
+                                            <td colspan="2"><label for="input-1-8-3">Government actor (Departments, Agencies, etc.)</label></td>
+                                        </tr>
+                                            <tr{if $form.government_actor != 1} class="disabled"{/if}>
+                                                <td></td>
+                                                <td><input type="checkbox" name="sub_government_actor_1" value="1"{if $form.sub_government_actor_1 == 1} checked="checked"{/if} id="input-1-8-3-1-1"{if $form.government_actor != 1} disabled="disabled"{/if} /></td>
+                                                <td><label for="input-1-8-3-1-1">National/Federal body</label></td>
+                                            </tr>
+                                            <tr{if $form.government_actor != 1} class="disabled"{/if}>
+                                                <td></td>
+                                                <td><input type="checkbox" name="sub_government_actor_2" value="1"{if $form.sub_government_actor_1 == 1} checked="checked"{/if} id="input-1-8-3-1-2"{if $form.government_actor != 1} disabled="disabled"{/if} /></td>
+                                                <td><label for="input-1-8-3-1-2">Regional/Local body</label></td>
+                                            </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="business_actor" value="1"{if $form.business_actor == 1} checked="checked"{/if} id="input-1-8-4" /></td>
+                                            <td colspan="2"><label for="input-1-8-4">Business actor</label></td>
+                                        </tr>
+                                            <tr{if $form.business_actor != 1} class="disabled"{/if}>
+                                                <td></td>
+                                                <td><input type="checkbox" name="sub_business_actor_1" value="1"{if $form.sub_business_actor_1 == 1} checked="checked"{/if} id="input-1-8-4-1-1"{if $form.business_actor != 1} disabled="disabled"{/if} /></td>
+                                                <td><label for="input-1-8-4-1-1">Private organisations (Corporations, Firms, SME)</label></td>
+                                            </tr>
+                                            <tr{if $form.business_actor != 1} class="disabled"{/if}>
+                                                <td></td>
+                                                <td><input type="checkbox" name="sub_business_actor_2" value="1"{if $form.sub_business_actor_2 == 1} checked="checked"{/if} id="input-1-8-4-1-2"{if $form.business_actor != 1} disabled="disabled"{/if} /></td>
+                                                <td><label for="input-1-8-4-1-2">Consultancies and IT services</label></td>
+                                            </tr>
+                                            <tr{if $form.business_actor != 1} class="disabled"{/if}>
+                                                <td></td>
+                                                <td><input type="checkbox" name="sub_business_actor_3" value="1"{if $form.sub_business_actor_3 == 1} checked="checked"{/if} id="input-1-8-4-1-3"{if $form.business_actor != 1} disabled="disabled"{/if} /></td>
+                                                <td><label for="input-1-8-4-1-3">Associations representing commercial interests (e.g. chambers of commerce)</label></td>
+                                            </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="education_actor" value="1"{if $form.education_actor == 1} checked="checked"{/if} id="input-1-8-5" /></td>
+                                            <td colspan="2"><label for="input-1-8-5">Research and education actor</label></td>
+                                        </tr>
+                                            <tr{if $form.education_actor != 1} class="disabled"{/if}>
+                                                <td></td>
+                                                <td><input type="checkbox" name="sub_education_actor_1" value="1"{if $form.sub_education_actor_1 == 1} checked="checked"{/if} id="input-1-8-5-1-1"{if $form.education_actor != 1} disabled="disabled"{/if} /></td>
+                                                <td><label for="input-1-8-5-1-1">Research funding organisations</label></td>
+                                            </tr>
+                                            <tr{if $form.education_actor != 1} class="disabled"{/if}>
+                                                <td></td>
+                                                <td><input type="checkbox" name="sub_education_actor_2" value="1"{if $form.sub_education_actor_2 == 1} checked="checked"{/if} id="input-1-8-5-1-2"{if $form.education_actor != 1} disabled="disabled"{/if} /></td>
+                                                <td><label for="input-1-8-5-1-2">Public research organisations (non-HEI)</label></td>
+                                            </tr>
+                                            <tr{if $form.education_actor != 1} class="disabled"{/if}>
+                                                <td></td>
+                                                <td><input type="checkbox" name="sub_education_actor_3" value="1"{if $form.sub_education_actor_3 == 1} checked="checked"{/if} id="input-1-8-5-1-3"{if $form.education_actor != 1} disabled="disabled"{/if} /></td>
+                                                <td><label for="input-1-8-5-1-3">Private research and innovation support organisations</label></td>
+                                            </tr>
+                                            <tr{if $form.education_actor != 1} class="disabled"{/if}>
+                                                <td></td>
+                                                <td><input type="checkbox" name="sub_education_actor_4" value="1"{if $form.sub_education_actor_4 == 1} checked="checked"{/if} id="input-1-8-5-1-4"{if $form.education_actor != 1} disabled="disabled"{/if} /></td>
+                                                <td><label for="input-1-8-5-1-4">Higher education institutions (HEI)</label></td>
+                                            </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="other_actor" value="1"{if $form.other_actor == 1} checked="checked"{/if} id="input-1-8-6" /></td>
+                                            <td colspan="2"><label for="input-1-8-1-8-1">Other, please specify (max 140 chars.):
+                                                <input type="text" class="additional" maxlength="140" name="other_actor_name" value="{$form.other_actor_name}" id="input-1-8-1-8-1" />
+                                                <span class="counter">{$form.other_actor_name|count_characters:true}</span></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <script type="text/javascript">
+                            {literal}
+                              //<![CDATA[
+                                $('#primarySponsors input:checkbox').click(function() {
+                                    var id = $(this).attr('id');
+                                    if($(this).attr('checked') == 'checked') {
+                                        $('[id^="'+id+'"]').not(this).attr('disabled', false);
+                                        $('[id^="'+id+'"]').not(this).parents('tr').removeClass('disabled');
+                                    } else {
+                                        $('[id^="'+id+'"]').not(this).attr('disabled', true);
+                                        $('[id^="'+id+'"]').not(this).parents('tr').addClass('disabled');
+                                    }
+                                });
+                              //]]>
+                            {/literal}
+                            </script>
+                            <h3>Q2: Provide some basic information about the sponsor(s) of the study.</h3>
+                            <div class="table-wrapper">
+                                <table class="append-bottom">
+                                    <col style="width:15%" />
+                                    <col style="width:20%" />
+                                    <col style="width:15%" />
+                                    <col style="width:20%" />
+                                    <col style="" />
+                                    <col style="width:60px" />
+                                    <tr>
+                                        <th colspan="6">Primary Sponsor</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Acronym</th>
+                                        <th>Sponsor Full Name</th>
+                                        <th>Website</th>
+                                        <th>Contact Person</th>
+                                        <th>E-Mail</th>
+                                        <th>Country</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_acronym_1" value="{$form.sponsor_acronym_1}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_name_1" value="{$form.sponsor_name_1}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_website_1" value="{$form.sponsor_website_1}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_contact_1" value="{$form.sponsor_contact_1}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_email_1" value="{$form.sponsor_email_1}" /></td>
+                                        <td>
+                                            <select name="sponsor_country_1" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.sponsor_country_1 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="table-wrapper">
+                                <table class="append-bottom" id="haveSpons">
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tr>
+                                        <th colspan="6">Did the study have other sponsors?</th>
+                                    </tr>
+                                        <tr>
+                                            <td><input type="radio" name="other_sponsors" value="1"{if $form.other_sponsors == 1} checked="checked"{/if} id="input-1-8-7-1" /></td>
+                                            <td colspan="5"><label for="input-1-8-7-1">Yes</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="other_sponsors" value="0"{if $form.other_sponsors < 1} checked="checked"{/if} id="input-1-8-7-2" /></td>
+                                            <td colspan="5"><label for="input-1-8-7-2">No</label></td>
+                                        </tr>
+                                </table>
+                            </div>
+                            <div class="table-wrapper" id="addSpons">
+                                <table>
+                                    <col style="width:15%" />
+                                    <col style="width:20%" />
+                                    <col style="width:15%" />
+                                    <col style="width:20%" />
+                                    <col style="" />
+                                    <col style="width:60px" />
+                                    <tr>
+                                        <th colspan="6">If Yes, please list up to 5 additional sponsors</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Acronym</th>
+                                        <th>Sponsor Full Name</th>
+                                        <th>Website</th>
+                                        <th>Contact Person</th>
+                                        <th>E-Mail</th>
+                                        <th>Country</th>
+                                    </tr>
+                                    <tr{if $form.other_sponsors < 1} class="disabled"{/if}>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_acronym_2" value="{$form.sponsor_acronym_2}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_name_2" value="{$form.sponsor_name_2}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_website_2" value="{$form.sponsor_website_2}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_contact_2" value="{$form.sponsor_contact_2}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_email_2" value="{$form.sponsor_email_2}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td>
+                                            <select name="sponsor_country_2" style="width:42px;"{if $form.other_sponsors < 1} disabled="disabled"{/if}>
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.sponsor_country_2 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr{if $form.other_sponsors < 1} class="disabled"{/if}>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_acronym_3" value="{$form.sponsor_acronym_3}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_name_3" value="{$form.sponsor_name_3}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_website_3" value="{$form.sponsor_website_3}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_contact_3" value="{$form.sponsor_contact_3}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_email_3" value="{$form.sponsor_email_3}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td>
+                                            <select name="sponsor_country_3" style="width:42px;"{if $form.other_sponsors < 1} disabled="disabled"{/if}>
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.sponsor_country_3 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr{if $form.other_sponsors < 1} class="disabled"{/if}>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_acronym_4" value="{$form.sponsor_acronym_4}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_name_4" value="{$form.sponsor_name_4}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_website_4" value="{$form.sponsor_website_4}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_contact_4" value="{$form.sponsor_contact_4}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_email_4" value="{$form.sponsor_email_4}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td>
+                                            <select name="sponsor_country_4" style="width:42px;"{if $form.other_sponsors < 1} disabled="disabled"{/if}>
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.sponsor_country_4 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr{if $form.other_sponsors < 1} class="disabled"{/if}>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_acronym_5" value="{$form.sponsor_acronym_5}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_name_5" value="{$form.sponsor_name_5}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_website_5" value="{$form.sponsor_website_5}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_contact_5" value="{$form.sponsor_contact_5}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_email_5" value="{$form.sponsor_email_5}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td>
+                                            <select name="sponsor_country_5" style="width:42px;"{if $form.other_sponsors < 1} disabled="disabled"{/if}>
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.sponsor_country_5 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr{if $form.other_sponsors < 1} class="disabled"{/if}>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_acronym_6" value="{$form.sponsor_acronym_6}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_name_6" value="{$form.sponsor_name_6}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_website_6" value="{$form.sponsor_website_6}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_contact_6" value="{$form.sponsor_contact_6}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td><input type="text" class="by-cell additional" name="sponsor_email_6" value="{$form.sponsor_email_6}"{if $form.other_sponsors < 1} disabled="disabled"{/if} /></td>
+                                        <td>
+                                            <select name="sponsor_country_6" style="width:42px;"{if $form.other_sponsors < 1} disabled="disabled"{/if}>
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.sponsor_country_6 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <script type="text/javascript">
+                            {literal}
+                              //<![CDATA[
+                                var checkSpons = function () {
+                                    if ($('#input-1-8-7-1').prop('checked')) {
+                                        $('#addSpons *').prop('disabled', false);
+                                        $('#addSpons tr').removeClass('disabled');
+                                    } else {
+                                        $('#addSpons *').prop('disabled', true);
+                                        $('#addSpons tr').addClass('disabled');
+                                    }
+                                };
+                                $('#haveSpons').click(checkSpons);
+                                checkSpons();
+                              //]]>
+                            {/literal}
+                            </script>
+                            <h3>Q3: Please list up to five champions of the study.</h3>
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="" />
+                                    <col style="" />
+                                    <col style="" />
+                                    <col style="" />
+                                    <col style="width:17%" />
+                                    <col style="width:60px" />
+                                    <col style="width:152px" />
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Name</th>
+                                        <th>Surname</th>
+                                        <th>E-mail</th>
+                                        <th>Organization</th>
+                                        <th>Country</th>
+                                        <th>Type of actor</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="champion_title_1">
+                                                <option value="">none</option>
+                                                <option value="Mr"{if $form.champion_title_1 == 'Mr'} selected="selected"{/if}>Mr</option>
+                                                <option value="Ms"{if $form.champion_title_1 == 'Ms'} selected="selected"{/if}>Ms</option>
+                                                <option value="Dr"{if $form.champion_title_1 == 'Dr'} selected="selected"{/if}>Dr</option>
+                                                <option value="Prof"{if $form.champion_title_1 == 'Prof'} selected="selected"{/if}>Prof</option>
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional" name="champion_fname_1" value="{$form.champion_fname_1}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_lname_1" value="{$form.champion_lname_1}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_email_1" value="{$form.champion_email_1}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_organization_1" value="{$form.champion_organization_1}" /></td>
+                                        <td>
+                                            <select name="champion_country_1" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.champion_country_1 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="champion_type_1">
+                                                <option value="">none</option>
+                                                <option value="eu"{if $form.champion_type_1 == 'eu'} selected="selected"{/if}>European Union</option>
+                                                <option value="nst"{if $form.champion_type_1 == 'nst'} selected="selected"{/if}>Non-State</option>
+                                                <option value="go"{if $form.champion_type_1 == 'go'} selected="selected"{/if}>Government</option>
+                                                <option value="bu"{if $form.champion_type_1 == 'bu'} selected="selected"{/if}>Business</option>
+                                                <option value="re"{if $form.champion_type_1 == 're'} selected="selected"{/if}>Research/Education</option>
+                                                <option value="o"{if $form.champion_type_1 == 'o'} selected="selected"{/if}>Other</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="champion_title_2">
+                                                <option value="">none</option>
+                                                <option value="Mr"{if $form.champion_title_2 == 'Mr'} selected="selected"{/if}>Mr</option>
+                                                <option value="Ms"{if $form.champion_title_2 == 'Ms'} selected="selected"{/if}>Ms</option>
+                                                <option value="Dr"{if $form.champion_title_2 == 'Dr'} selected="selected"{/if}>Dr</option>
+                                                <option value="Prof"{if $form.champion_title_2 == 'Prof'} selected="selected"{/if}>Prof</option>
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional" name="champion_fname_2" value="{$form.champion_fname_2}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_lname_2" value="{$form.champion_lname_2}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_email_2" value="{$form.champion_email_2}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_organization_2" value="{$form.champion_organization_2}" /></td>
+                                        <td>
+                                            <select name="champion_country_2" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.champion_country_2 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="champion_type_2">
+                                                <option value="">none</option>
+                                                <option value="eu"{if $form.champion_type_2 == 'eu'} selected="selected"{/if}>European Union</option>
+                                                <option value="nst"{if $form.champion_type_2 == 'nst'} selected="selected"{/if}>Non-State</option>
+                                                <option value="go"{if $form.champion_type_2 == 'go'} selected="selected"{/if}>Government</option>
+                                                <option value="bu"{if $form.champion_type_2 == 'bu'} selected="selected"{/if}>Business</option>
+                                                <option value="re"{if $form.champion_type_2 == 're'} selected="selected"{/if}>Research/Education</option>
+                                                <option value="o"{if $form.champion_type_2 == 'o'} selected="selected"{/if}>Other</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="champion_title_3">
+                                                <option value="">none</option>
+                                                <option value="Mr"{if $form.champion_title_3 == 'Mr'} selected="selected"{/if}>Mr</option>
+                                                <option value="Ms"{if $form.champion_title_3 == 'Ms'} selected="selected"{/if}>Ms</option>
+                                                <option value="Dr"{if $form.champion_title_3 == 'Dr'} selected="selected"{/if}>Dr</option>
+                                                <option value="Prof"{if $form.champion_title_3 == 'Prof'} selected="selected"{/if}>Prof</option>
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional" name="champion_fname_3" value="{$form.champion_fname_3}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_lname_3" value="{$form.champion_lname_3}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_email_3" value="{$form.champion_email_3}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_organization_3" value="{$form.champion_organization_3}" /></td>
+                                        <td>
+                                            <select name="champion_country_3" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.champion_country_3 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="champion_type_3">
+                                                <option value="">none</option>
+                                                <option value="eu"{if $form.champion_type_3 == 'eu'} selected="selected"{/if}>European Union</option>
+                                                <option value="nst"{if $form.champion_type_3 == 'nst'} selected="selected"{/if}>Non-State</option>
+                                                <option value="go"{if $form.champion_type_3 == 'go'} selected="selected"{/if}>Government</option>
+                                                <option value="bu"{if $form.champion_type_3 == 'bu'} selected="selected"{/if}>Business</option>
+                                                <option value="re"{if $form.champion_type_3 == 're'} selected="selected"{/if}>Research/Education</option>
+                                                <option value="o"{if $form.champion_type_3 == 'o'} selected="selected"{/if}>Other</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="champion_title_4">
+                                                <option value="">none</option>
+                                                <option value="Mr"{if $form.champion_title_4 == 'Mr'} selected="selected"{/if}>Mr</option>
+                                                <option value="Ms"{if $form.champion_title_4 == 'Ms'} selected="selected"{/if}>Ms</option>
+                                                <option value="Dr"{if $form.champion_title_4 == 'Dr'} selected="selected"{/if}>Dr</option>
+                                                <option value="Prof"{if $form.champion_title_4 == 'Prof'} selected="selected"{/if}>Prof</option>
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional" name="champion_fname_4" value="{$form.champion_fname_4}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_lname_4" value="{$form.champion_lname_4}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_email_4" value="{$form.champion_email_4}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_organization_4" value="{$form.champion_organization_4}" /></td>
+                                        <td>
+                                            <select name="champion_country_4" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.champion_country_4 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="champion_type_4">
+                                                <option value="">none</option>
+                                                <option value="eu"{if $form.champion_type_4 == 'eu'} selected="selected"{/if}>European Union</option>
+                                                <option value="nst"{if $form.champion_type_4 == 'nst'} selected="selected"{/if}>Non-State</option>
+                                                <option value="go"{if $form.champion_type_4 == 'go'} selected="selected"{/if}>Government</option>
+                                                <option value="bu"{if $form.champion_type_4 == 'bu'} selected="selected"{/if}>Business</option>
+                                                <option value="re"{if $form.champion_type_4 == 're'} selected="selected"{/if}>Research/Education</option>
+                                                <option value="o"{if $form.champion_type_4 == 'o'} selected="selected"{/if}>Other</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select name="champion_title_5">
+                                                <option value="">none</option>
+                                                <option value="Mr"{if $form.champion_title_5 == 'Mr'} selected="selected"{/if}>Mr</option>
+                                                <option value="Ms"{if $form.champion_title_5 == 'Ms'} selected="selected"{/if}>Ms</option>
+                                                <option value="Dr"{if $form.champion_title_5 == 'Dr'} selected="selected"{/if}>Dr</option>
+                                                <option value="Prof"{if $form.champion_title_5 == 'Prof'} selected="selected"{/if}>Prof</option>
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional" name="champion_fname_5" value="{$form.champion_fname_5}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_lname_5" value="{$form.champion_lname_5}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_email_5" value="{$form.champion_email_5}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="champion_organization_5" value="{$form.champion_organization_5}" /></td>
+                                        <td>
+                                            <select name="champion_country_5" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.champion_country_5 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select name="champion_type_5">
+                                                <option value="">none</option>
+                                                <option value="eu"{if $form.champion_type_5 == 'eu'} selected="selected"{/if}>European Union</option>
+                                                <option value="nst"{if $form.champion_type_5 == 'nst'} selected="selected"{/if}>Non-State</option>
+                                                <option value="go"{if $form.champion_type_5 == 'go'} selected="selected"{/if}>Government</option>
+                                                <option value="bu"{if $form.champion_type_5 == 'bu'} selected="selected"{/if}>Business</option>
+                                                <option value="re"{if $form.champion_type_5 == 're'} selected="selected"{/if}>Research/Education</option>
+                                                <option value="o"{if $form.champion_type_5 == 'o'} selected="selected"{/if}>Other</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>

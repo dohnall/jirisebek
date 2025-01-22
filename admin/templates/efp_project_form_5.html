@@ -1,0 +1,567 @@
+                    <h6>Annexe 1.5: Scoping Futures (5/7)</h6>
+                    <h1><b>Territorial scope</b></h1>
+
+                    <div class="oracle-form">
+                        <form action="" method="post">
+                            <h3>Q1: Please indicate the territorial scope</h3>
+                            <div class="table-wrapper">
+                                <table id="territorialScope">
+                                    <col style="width:36px" />
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="territorial_scope" value="1" id="input-1-5-1-1"{if $form.territorial_scope == 1 || !$form.territorial_scope} checked="checked"{/if} /></td>
+                                            <td colspan="2"><label for="input-1-5-1-1"><b>Supranational</b></label></td>
+                                        </tr>
+                                        <tr{if $form.territorial_scope > 1} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="radio" name="territorial_scope_national" value="1" id="input-1-5-1-2-1"{if $form.territorial_scope > 1} disabled="disabled"{/if}{if $form.territorial_scope_national == 1 || !$form.territorial_scope_national} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-5-1-2-1">Global</label></td>
+                                        </tr>
+                                        <tr{if $form.territorial_scope > 1} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="radio" name="territorial_scope_national" value="2" id="input-1-5-1-2-2"{if $form.territorial_scope > 1} disabled="disabled"{/if}{if $form.territorial_scope_national == 2} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-5-1-2-2">European</label></td>
+                                        </tr>
+                                        <tr{if $form.territorial_scope > 1} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="radio" name="territorial_scope_national" value="3" id="input-1-5-1-2-3"{if $form.territorial_scope > 1} disabled="disabled"{/if}{if $form.territorial_scope_national == 3} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-5-1-2-3">Trans-border</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="territorial_scope" value="2" id="input-1-5-1-2"{if $form.territorial_scope == 2} checked="checked"{/if} /></td>
+                                            <td colspan="2"><label for="input-1-5-1-2"><b>National</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="territorial_scope" value="3" id="input-1-5-1-3"{if $form.territorial_scope == 3} checked="checked"{/if} /></td>
+                                            <td colspan="2"><label for="input-1-5-1-3"><b>Sub-national</b></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <script type="text/javascript">
+                            {literal}
+                              //<![CDATA[
+                                (function ($) {
+                                    var tab = $('#territorialScope');
+                                    tab.find('input[name="territorial_scope"]').change(function () {
+                                        if (tab.find('#input-1-5-1-1').prop('checked')) {
+                                            tab.find('input[name="territorial_scope_national"]').prop('disabled', false).closest('tr').removeClass('disabled');
+                                        } else {
+                                            tab.find('input[name="territorial_scope_national"]').prop('disabled', true).closest('tr').addClass('disabled');
+                                        }
+                                    });
+                                }(jQuery));
+                              //]]>
+                            {/literal}
+                            </script>
+
+
+
+                            <h3>Q2a: Please indicate the <b>primary</b> regions/countries covered by the study</h3>
+
+                            <div class="table-wrapper">
+                                <p><small>Use <b>CTRL</b> to select multiple items.</small></p>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2">In Europe</th>
+                                            <th rowspan="2">In North America</th>
+                                            <th rowspan="2">In Latin America</th>
+                                            <th rowspan="2">In Asia</th>
+                                            <th rowspan="2">In Africa</th>
+                                            <th rowspan="2">In Oceania</th>
+                                        </tr>
+                                        <tr>
+                                            <th>EU countries</th>
+                                            <th>non-EU</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="country-select">
+                                                <select name="primary_countries_eu[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(1, $form.primary_countries_eu)} selected="selected"{/if}>Austria</option>
+                                                    <option value="2"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(2, $form.primary_countries_eu)} selected="selected"{/if}>Belgium</option>
+                                                    <option value="3"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(3, $form.primary_countries_eu)} selected="selected"{/if}>Bulgaria</option>
+                                                    <option value="4"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(4, $form.primary_countries_eu)} selected="selected"{/if}>Cyprus</option>
+                                                    <option value="5"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(5, $form.primary_countries_eu)} selected="selected"{/if}>Czech Republic</option>
+                                                    <option value="6"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(6, $form.primary_countries_eu)} selected="selected"{/if}>Denmark</option>
+                                                    <option value="7"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(7, $form.primary_countries_eu)} selected="selected"{/if}>Estonia</option>
+                                                    <option value="8"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(8, $form.primary_countries_eu)} selected="selected"{/if}>Finland</option>
+                                                    <option value="9"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(9, $form.primary_countries_eu)} selected="selected"{/if}>France</option>
+                                                    <option value="10"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(10, $form.primary_countries_eu)} selected="selected"{/if}>Germany</option>
+                                                    <option value="11"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(11, $form.primary_countries_eu)} selected="selected"{/if}>Greece</option>
+                                                    <option value="12"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(12, $form.primary_countries_eu)} selected="selected"{/if}>Hungary</option>
+                                                    <option value="13"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(13, $form.primary_countries_eu)} selected="selected"{/if}>Ireland</option>
+                                                    <option value="14"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(14, $form.primary_countries_eu)} selected="selected"{/if}>Italy</option>
+                                                    <option value="15"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(15, $form.primary_countries_eu)} selected="selected"{/if}>Latvia</option>
+                                                    <option value="16"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(16, $form.primary_countries_eu)} selected="selected"{/if}>Lithuania</option>
+                                                    <option value="17"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(17, $form.primary_countries_eu)} selected="selected"{/if}>Luxembourg</option>
+                                                    <option value="18"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(18, $form.primary_countries_eu)} selected="selected"{/if}>Malta</option>
+                                                    <option value="19"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(19, $form.primary_countries_eu)} selected="selected"{/if}>Netherlands</option>
+                                                    <option value="20"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(20, $form.primary_countries_eu)} selected="selected"{/if}>Poland</option>
+                                                    <option value="21"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(21, $form.primary_countries_eu)} selected="selected"{/if}>Portugal</option>
+                                                    <option value="22"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(22, $form.primary_countries_eu)} selected="selected"{/if}>Romania</option>
+                                                    <option value="23"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(23, $form.primary_countries_eu)} selected="selected"{/if}>Slovakia</option>
+                                                    <option value="24"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(24, $form.primary_countries_eu)} selected="selected"{/if}>Slovenia</option>
+                                                    <option value="25"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(25, $form.primary_countries_eu)} selected="selected"{/if}>Spain</option>
+                                                    <option value="26"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(26, $form.primary_countries_eu)} selected="selected"{/if}>Sweden</option>
+                                                    <option value="27"{if isset($form.primary_countries_eu) && is_array($form.primary_countries_eu) && in_array(27, $form.primary_countries_eu)} selected="selected"{/if}>United Kingdom</option>
+                                                </select>
+                                            </td>
+                                            <td class="country-select">
+                                                <select name="primary_countries_noneu[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(1, $form.primary_countries_noneu)} selected="selected"{/if}>Albania</option>
+                                                    <option value="2"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(2, $form.primary_countries_noneu)} selected="selected"{/if}>Andorra</option>
+                                                    <option value="3"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(3, $form.primary_countries_noneu)} selected="selected"{/if}>Armenia</option>
+                                                    <option value="4"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(4, $form.primary_countries_noneu)} selected="selected"{/if}>Azerbaijan</option>
+                                                    <option value="5"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(5, $form.primary_countries_noneu)} selected="selected"{/if}>Belarus</option>
+                                                    <option value="6"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(6, $form.primary_countries_noneu)} selected="selected"{/if}>Bosnia and Herzegovina</option>
+                                                    <option value="7"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(7, $form.primary_countries_noneu)} selected="selected"{/if}>Croatia</option>
+                                                    <option value="8"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(8, $form.primary_countries_noneu)} selected="selected"{/if}>Republic of Macedonia</option>
+                                                    <option value="9"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(9, $form.primary_countries_noneu)} selected="selected"{/if}>Georgia</option>
+                                                    <option value="10"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(10, $form.primary_countries_noneu)} selected="selected"{/if}>Iceland</option>
+                                                    <option value="11"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(11, $form.primary_countries_noneu)} selected="selected"{/if}>Liechtenstein</option>
+                                                    <option value="12"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(12, $form.primary_countries_noneu)} selected="selected"{/if}>Moldova</option>
+                                                    <option value="13"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(13, $form.primary_countries_noneu)} selected="selected"{/if}>Monaco</option>
+                                                    <option value="14"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(14, $form.primary_countries_noneu)} selected="selected"{/if}>Montenegro</option>
+                                                    <option value="15"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(15, $form.primary_countries_noneu)} selected="selected"{/if}>Norway</option>
+                                                    <option value="16"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(16, $form.primary_countries_noneu)} selected="selected"{/if}>Russia</option>
+                                                    <option value="17"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(17, $form.primary_countries_noneu)} selected="selected"{/if}>San Marino</option>
+                                                    <option value="18"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(18, $form.primary_countries_noneu)} selected="selected"{/if}>Serbia</option>
+                                                    <option value="19"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(19, $form.primary_countries_noneu)} selected="selected"{/if}>Switzerland</option>
+                                                    <option value="20"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(20, $form.primary_countries_noneu)} selected="selected"{/if}>Turkey</option>
+                                                    <option value="21"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(21, $form.primary_countries_noneu)} selected="selected"{/if}>Ukraine</option>
+                                                    <option value="22"{if isset($form.primary_countries_noneu) && is_array($form.primary_countries_noneu) && in_array(22, $form.primary_countries_noneu)} selected="selected"{/if}>Vatican City State</option>
+                                                </select>
+                                            </td>
+                                            <td class="country-select">
+                                                <select name="primary_countries_na[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.primary_countries_na) && is_array($form.primary_countries_na) && in_array(1, $form.primary_countries_na)} selected="selected"{/if}>Canada</option>
+                                                    <option value="2"{if isset($form.primary_countries_na) && is_array($form.primary_countries_na) && in_array(2, $form.primary_countries_na)} selected="selected"{/if}>United States of America</option>
+                                                </select>
+                                            </td>
+                                            <td class="country-select">
+                                                <select name="primary_countries_sa[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(1, $form.primary_countries_sa)} selected="selected"{/if}>Antigua &amp; Barbuda</option>
+                                                    <option value="2"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(2, $form.primary_countries_sa)} selected="selected"{/if}>Argentina</option>
+                                                    <option value="3"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(3, $form.primary_countries_sa)} selected="selected"{/if}>Bahamas</option>
+                                                    <option value="4"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(4, $form.primary_countries_sa)} selected="selected"{/if}>Barbados</option>
+                                                    <option value="5"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(5, $form.primary_countries_sa)} selected="selected"{/if}>Belize</option>
+                                                    <option value="6"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(6, $form.primary_countries_sa)} selected="selected"{/if}>Bolivia</option>
+                                                    <option value="7"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(7, $form.primary_countries_sa)} selected="selected"{/if}>Brazil</option>
+                                                    <option value="8"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(8, $form.primary_countries_sa)} selected="selected"{/if}>Chile</option>
+                                                    <option value="9"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(9, $form.primary_countries_sa)} selected="selected"{/if}>Colombia</option>
+                                                    <option value="10"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(10, $form.primary_countries_sa)} selected="selected"{/if}>Costa Rica</option>
+                                                    <option value="11"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(11, $form.primary_countries_sa)} selected="selected"{/if}>Cuba</option>
+                                                    <option value="12"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(12, $form.primary_countries_sa)} selected="selected"{/if}>Dominica</option>
+                                                    <option value="13"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(13, $form.primary_countries_sa)} selected="selected"{/if}>Dominican Republic</option>
+                                                    <option value="14"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(14, $form.primary_countries_sa)} selected="selected"{/if}>Ecuador</option>
+                                                    <option value="15"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(15, $form.primary_countries_sa)} selected="selected"{/if}>El Salvador</option>
+                                                    <option value="16"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(16, $form.primary_countries_sa)} selected="selected"{/if}>Grenada</option>
+                                                    <option value="17"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(17, $form.primary_countries_sa)} selected="selected"{/if}>Guatemala</option>
+                                                    <option value="18"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(18, $form.primary_countries_sa)} selected="selected"{/if}>Guyana</option>
+                                                    <option value="19"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(19, $form.primary_countries_sa)} selected="selected"{/if}>Haiti</option>
+                                                    <option value="20"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(20, $form.primary_countries_sa)} selected="selected"{/if}>Honduras</option>
+                                                    <option value="21"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(21, $form.primary_countries_sa)} selected="selected"{/if}>Jamaica</option>
+                                                    <option value="22"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(22, $form.primary_countries_sa)} selected="selected"{/if}>Mexico</option>
+                                                    <option value="23"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(23, $form.primary_countries_sa)} selected="selected"{/if}>Nicaragua</option>
+                                                    <option value="24"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(24, $form.primary_countries_sa)} selected="selected"{/if}>Panama</option>
+                                                    <option value="25"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(25, $form.primary_countries_sa)} selected="selected"{/if}>Paraguay</option>
+                                                    <option value="26"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(26, $form.primary_countries_sa)} selected="selected"{/if}>Peru</option>
+                                                    <option value="27"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(27, $form.primary_countries_sa)} selected="selected"{/if}>St. Kitts &amp; Nevis</option>
+                                                    <option value="28"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(28, $form.primary_countries_sa)} selected="selected"{/if}>St. Lucia</option>
+                                                    <option value="29"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(29, $form.primary_countries_sa)} selected="selected"{/if}>St. Vincent &amp; The Grenadines</option>
+                                                    <option value="30"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(30, $form.primary_countries_sa)} selected="selected"{/if}>Suriname</option>
+                                                    <option value="31"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(31, $form.primary_countries_sa)} selected="selected"{/if}>Trinidad &amp; Tobago</option>
+                                                    <option value="32"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(32, $form.primary_countries_sa)} selected="selected"{/if}>Uruguay</option>
+                                                    <option value="33"{if isset($form.primary_countries_sa) && is_array($form.primary_countries_sa) && in_array(33, $form.primary_countries_sa)} selected="selected"{/if}>Venezuela</option>
+                                                </select>
+                                            </td>
+                                            <td class="country-select">
+                                                <select name="primary_countries_asia[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(1, $form.primary_countries_asia)} selected="selected"{/if}>Afghanistan</option>
+                                                    <option value="2"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(2, $form.primary_countries_asia)} selected="selected"{/if}>Bahrain</option>
+                                                    <option value="3"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(3, $form.primary_countries_asia)} selected="selected"{/if}>Bangladesh</option>
+                                                    <option value="4"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(4, $form.primary_countries_asia)} selected="selected"{/if}>Bhutan</option>
+                                                    <option value="5"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(5, $form.primary_countries_asia)} selected="selected"{/if}>Brunei</option>
+                                                    <option value="6"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(6, $form.primary_countries_asia)} selected="selected"{/if}>Cambodia</option>
+                                                    <option value="7"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(7, $form.primary_countries_asia)} selected="selected"{/if}>China</option>
+                                                    <option value="8"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(8, $form.primary_countries_asia)} selected="selected"{/if}>East Timor</option>
+                                                    <option value="9"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(9, $form.primary_countries_asia)} selected="selected"{/if}>India</option>
+                                                    <option value="10"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(10, $form.primary_countries_asia)} selected="selected"{/if}>Indonesia</option>
+                                                    <option value="11"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(11, $form.primary_countries_asia)} selected="selected"{/if}>Iran</option>
+                                                    <option value="12"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(12, $form.primary_countries_asia)} selected="selected"{/if}>Iraq</option>
+                                                    <option value="13"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(13, $form.primary_countries_asia)} selected="selected"{/if}>Israel</option>
+                                                    <option value="14"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(14, $form.primary_countries_asia)} selected="selected"{/if}>Japan</option>
+                                                    <option value="15"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(15, $form.primary_countries_asia)} selected="selected"{/if}>Jordan</option>
+                                                    <option value="16"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(16, $form.primary_countries_asia)} selected="selected"{/if}>Kazakhstan</option>
+                                                    <option value="17"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(17, $form.primary_countries_asia)} selected="selected"{/if}>Korea North</option>
+                                                    <option value="18"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(18, $form.primary_countries_asia)} selected="selected"{/if}>Korea South</option>
+                                                    <option value="19"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(19, $form.primary_countries_asia)} selected="selected"{/if}>Kuwait</option>
+                                                    <option value="20"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(20, $form.primary_countries_asia)} selected="selected"{/if}>Kyrgyzstan</option>
+                                                    <option value="21"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(21, $form.primary_countries_asia)} selected="selected"{/if}>Laos</option>
+                                                    <option value="22"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(22, $form.primary_countries_asia)} selected="selected"{/if}>Lebanon</option>
+                                                    <option value="23"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(23, $form.primary_countries_asia)} selected="selected"{/if}>Malaysia</option>
+                                                    <option value="24"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(24, $form.primary_countries_asia)} selected="selected"{/if}>Maldives</option>
+                                                    <option value="25"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(25, $form.primary_countries_asia)} selected="selected"{/if}>Mongolia</option>
+                                                    <option value="26"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(26, $form.primary_countries_asia)} selected="selected"{/if}>Myanmar (Burma)</option>
+                                                    <option value="27"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(27, $form.primary_countries_asia)} selected="selected"{/if}>Nepal</option>
+                                                    <option value="28"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(28, $form.primary_countries_asia)} selected="selected"{/if}>Oman</option>
+                                                    <option value="29"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(29, $form.primary_countries_asia)} selected="selected"{/if}>Pakistan</option>
+                                                    <option value="30"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(30, $form.primary_countries_asia)} selected="selected"{/if}>The Philippines</option>
+                                                    <option value="31"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(31, $form.primary_countries_asia)} selected="selected"{/if}>Qatar</option>
+                                                    <option value="32"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(32, $form.primary_countries_asia)} selected="selected"{/if}>Saudi Arabia</option>
+                                                    <option value="33"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(33, $form.primary_countries_asia)} selected="selected"{/if}>Singapore</option>
+                                                    <option value="34"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(34, $form.primary_countries_asia)} selected="selected"{/if}>Sri Lanka</option>
+                                                    <option value="35"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(35, $form.primary_countries_asia)} selected="selected"{/if}>Syria</option>
+                                                    <option value="36"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(36, $form.primary_countries_asia)} selected="selected"{/if}>Taiwan</option>
+                                                    <option value="37"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(37, $form.primary_countries_asia)} selected="selected"{/if}>Tajikistan</option>
+                                                    <option value="38"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(38, $form.primary_countries_asia)} selected="selected"{/if}>Thailand</option>
+                                                    <option value="39"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(39, $form.primary_countries_asia)} selected="selected"{/if}>Turkey</option>
+                                                    <option value="40"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(40, $form.primary_countries_asia)} selected="selected"{/if}>Turkmenistan</option>
+                                                    <option value="41"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(41, $form.primary_countries_asia)} selected="selected"{/if}>United Arab Emirates</option>
+                                                    <option value="42"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(42, $form.primary_countries_asia)} selected="selected"{/if}>Uzbekistan</option>
+                                                    <option value="43"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(43, $form.primary_countries_asia)} selected="selected"{/if}>Vietnam</option>
+                                                    <option value="44"{if isset($form.primary_countries_asia) && is_array($form.primary_countries_asia) && in_array(44, $form.primary_countries_asia)} selected="selected"{/if}>Yemen</option>
+                                                </select>
+                                            </td>
+                                            <td class="country-select">
+                                                <select name="primary_countries_africa[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(1, $form.primary_countries_africa)} selected="selected"{/if}>Algeria</option>
+                                                    <option value="2"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(2, $form.primary_countries_africa)} selected="selected"{/if}>Angola</option>
+                                                    <option value="3"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(3, $form.primary_countries_africa)} selected="selected"{/if}>Benin</option>
+                                                    <option value="4"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(4, $form.primary_countries_africa)} selected="selected"{/if}>Botswana</option>
+                                                    <option value="5"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(5, $form.primary_countries_africa)} selected="selected"{/if}>Burkina Faso</option>
+                                                    <option value="6"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(6, $form.primary_countries_africa)} selected="selected"{/if}>Burundi</option>
+                                                    <option value="7"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(7, $form.primary_countries_africa)} selected="selected"{/if}>Cameroon</option>
+                                                    <option value="8"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(8, $form.primary_countries_africa)} selected="selected"{/if}>Cape Verde</option>
+                                                    <option value="9"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(9, $form.primary_countries_africa)} selected="selected"{/if}>Central African Republic</option>
+                                                    <option value="10"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(10, $form.primary_countries_africa)} selected="selected"{/if}>Chad</option>
+                                                    <option value="11"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(11, $form.primary_countries_africa)} selected="selected"{/if}>Comoros</option>
+                                                    <option value="12"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(12, $form.primary_countries_africa)} selected="selected"{/if}>Congo</option>
+                                                    <option value="13"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(13, $form.primary_countries_africa)} selected="selected"{/if}>Congo Democratic Republic of</option>
+                                                    <option value="14"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(14, $form.primary_countries_africa)} selected="selected"{/if}>Cote d'Ivoire</option>
+                                                    <option value="15"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(15, $form.primary_countries_africa)} selected="selected"{/if}>Djibouti</option>
+                                                    <option value="16"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(16, $form.primary_countries_africa)} selected="selected"{/if}>Egypt</option>
+                                                    <option value="17"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(17, $form.primary_countries_africa)} selected="selected"{/if}>Equatorial Guinea</option>
+                                                    <option value="18"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(18, $form.primary_countries_africa)} selected="selected"{/if}>Eritrea</option>
+                                                    <option value="19"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(19, $form.primary_countries_africa)} selected="selected"{/if}>Ethiopia</option>
+                                                    <option value="20"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(20, $form.primary_countries_africa)} selected="selected"{/if}>Gabon</option>
+                                                    <option value="21"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(21, $form.primary_countries_africa)} selected="selected"{/if}>Gambia</option>
+                                                    <option value="22"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(22, $form.primary_countries_africa)} selected="selected"{/if}>Ghana</option>
+                                                    <option value="23"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(23, $form.primary_countries_africa)} selected="selected"{/if}>Guinea</option>
+                                                    <option value="24"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(24, $form.primary_countries_africa)} selected="selected"{/if}>Guinea-Bissau</option>
+                                                    <option value="25"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(25, $form.primary_countries_africa)} selected="selected"{/if}>Kenya</option>
+                                                    <option value="26"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(26, $form.primary_countries_africa)} selected="selected"{/if}>Lesotho</option>
+                                                    <option value="27"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(27, $form.primary_countries_africa)} selected="selected"{/if}>Liberia</option>
+                                                    <option value="28"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(28, $form.primary_countries_africa)} selected="selected"{/if}>Libya</option>
+                                                    <option value="29"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(29, $form.primary_countries_africa)} selected="selected"{/if}>Madagascar</option>
+                                                    <option value="30"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(30, $form.primary_countries_africa)} selected="selected"{/if}>Malawi</option>
+                                                    <option value="31"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(31, $form.primary_countries_africa)} selected="selected"{/if}>Mali</option>
+                                                    <option value="32"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(32, $form.primary_countries_africa)} selected="selected"{/if}>Mauritania</option>
+                                                    <option value="33"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(33, $form.primary_countries_africa)} selected="selected"{/if}>Mauritius</option>
+                                                    <option value="34"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(34, $form.primary_countries_africa)} selected="selected"{/if}>Morocco</option>
+                                                    <option value="35"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(35, $form.primary_countries_africa)} selected="selected"{/if}>Mozambique</option>
+                                                    <option value="36"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(36, $form.primary_countries_africa)} selected="selected"{/if}>Namibia</option>
+                                                    <option value="37"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(37, $form.primary_countries_africa)} selected="selected"{/if}>Niger</option>
+                                                    <option value="38"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(38, $form.primary_countries_africa)} selected="selected"{/if}>Nigeria</option>
+                                                    <option value="39"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(39, $form.primary_countries_africa)} selected="selected"{/if}>Rwanda</option>
+                                                    <option value="40"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(40, $form.primary_countries_africa)} selected="selected"{/if}>Sao Tome &amp; Principe</option>
+                                                    <option value="41"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(41, $form.primary_countries_africa)} selected="selected"{/if}>Senegal</option>
+                                                    <option value="42"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(42, $form.primary_countries_africa)} selected="selected"{/if}>Seychelles</option>
+                                                    <option value="43"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(43, $form.primary_countries_africa)} selected="selected"{/if}>Sierra Leone</option>
+                                                    <option value="44"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(44, $form.primary_countries_africa)} selected="selected"{/if}>Somalia</option>
+                                                    <option value="45"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(45, $form.primary_countries_africa)} selected="selected"{/if}>South Africa</option>
+                                                    <option value="46"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(46, $form.primary_countries_africa)} selected="selected"{/if}>South Sudan</option>
+                                                    <option value="47"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(47, $form.primary_countries_africa)} selected="selected"{/if}>Sudan</option>
+                                                    <option value="48"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(48, $form.primary_countries_africa)} selected="selected"{/if}>Swaziland</option>
+                                                    <option value="49"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(49, $form.primary_countries_africa)} selected="selected"{/if}>Tanzania</option>
+                                                    <option value="50"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(50, $form.primary_countries_africa)} selected="selected"{/if}>Togo</option>
+                                                    <option value="51"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(51, $form.primary_countries_africa)} selected="selected"{/if}>Tunisia</option>
+                                                    <option value="52"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(52, $form.primary_countries_africa)} selected="selected"{/if}>Uganda</option>
+                                                    <option value="53"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(53, $form.primary_countries_africa)} selected="selected"{/if}>Zambia</option>
+                                                    <option value="54"{if isset($form.primary_countries_africa) && is_array($form.primary_countries_africa) && in_array(54, $form.primary_countries_africa)} selected="selected"{/if}>Zimbabwe</option>
+                                                </select>
+                                            </td>
+                                            <td class="country-select">
+                                                <select name="primary_countries_oceania[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(1, $form.primary_countries_oceania)} selected="selected"{/if}>Australia</option>
+                                                    <option value="2"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(2, $form.primary_countries_oceania)} selected="selected"{/if}>Fiji</option>
+                                                    <option value="3"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(3, $form.primary_countries_oceania)} selected="selected"{/if}>Kiribati</option>
+                                                    <option value="4"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(4, $form.primary_countries_oceania)} selected="selected"{/if}>Marshall Islands</option>
+                                                    <option value="5"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(5, $form.primary_countries_oceania)} selected="selected"{/if}>Micronesia</option>
+                                                    <option value="6"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(6, $form.primary_countries_oceania)} selected="selected"{/if}>Nauru</option>
+                                                    <option value="7"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(7, $form.primary_countries_oceania)} selected="selected"{/if}>New Zealand</option>
+                                                    <option value="8"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(8, $form.primary_countries_oceania)} selected="selected"{/if}>Palau</option>
+                                                    <option value="9"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(9, $form.primary_countries_oceania)} selected="selected"{/if}>Papua New Guinea</option>
+                                                    <option value="10"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(10, $form.primary_countries_oceania)} selected="selected"{/if}>Samoa</option>
+                                                    <option value="11"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(11, $form.primary_countries_oceania)} selected="selected"{/if}>Solomon Islands</option>
+                                                    <option value="12"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(12, $form.primary_countries_oceania)} selected="selected"{/if}>Tonga</option>
+                                                    <option value="13"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(13, $form.primary_countries_oceania)} selected="selected"{/if}>Tuvalu</option>
+                                                    <option value="14"{if isset($form.primary_countries_oceania) && is_array($form.primary_countries_oceania) && in_array(14, $form.primary_countries_oceania)} selected="selected"{/if}>Vanuatu</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3>Q2b: Please indicate the <b>secondary</b> regions/countries covered by the study</h3>
+                            <div class="table-wrapper">
+                                <p><small>Use <b>CTRL</b> to select multiple items.</small></p>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2">In Europe</th>
+                                            <th rowspan="2">In North America</th>
+                                            <th rowspan="2">In Latin America</th>
+                                            <th rowspan="2">In Asia</th>
+                                            <th rowspan="2">In Africa</th>
+                                            <th rowspan="2">In Oceania</th>
+                                        </tr>
+                                        <tr>
+                                            <th>EU countries</th>
+                                            <th>non-EU</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="country-select">
+                                                <select name="secondary_countries_eu[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(1, $form.secondary_countries_eu)} selected="selected"{/if}>Austria</option>
+                                                    <option value="2"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(2, $form.secondary_countries_eu)} selected="selected"{/if}>Belgium</option>
+                                                    <option value="3"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(3, $form.secondary_countries_eu)} selected="selected"{/if}>Bulgaria</option>
+                                                    <option value="4"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(4, $form.secondary_countries_eu)} selected="selected"{/if}>Cyprus</option>
+                                                    <option value="5"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(5, $form.secondary_countries_eu)} selected="selected"{/if}>Czech Republic</option>
+                                                    <option value="6"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(6, $form.secondary_countries_eu)} selected="selected"{/if}>Denmark</option>
+                                                    <option value="7"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(7, $form.secondary_countries_eu)} selected="selected"{/if}>Estonia</option>
+                                                    <option value="8"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(8, $form.secondary_countries_eu)} selected="selected"{/if}>Finland</option>
+                                                    <option value="9"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(9, $form.secondary_countries_eu)} selected="selected"{/if}>France</option>
+                                                    <option value="10"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(10, $form.secondary_countries_eu)} selected="selected"{/if}>Germany</option>
+                                                    <option value="11"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(11, $form.secondary_countries_eu)} selected="selected"{/if}>Greece</option>
+                                                    <option value="12"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(12, $form.secondary_countries_eu)} selected="selected"{/if}>Hungary</option>
+                                                    <option value="13"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(13, $form.secondary_countries_eu)} selected="selected"{/if}>Ireland</option>
+                                                    <option value="14"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(14, $form.secondary_countries_eu)} selected="selected"{/if}>Italy</option>
+                                                    <option value="15"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(15, $form.secondary_countries_eu)} selected="selected"{/if}>Latvia</option>
+                                                    <option value="16"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(16, $form.secondary_countries_eu)} selected="selected"{/if}>Lithuania</option>
+                                                    <option value="17"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(17, $form.secondary_countries_eu)} selected="selected"{/if}>Luxembourg</option>
+                                                    <option value="18"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(18, $form.secondary_countries_eu)} selected="selected"{/if}>Malta</option>
+                                                    <option value="19"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(19, $form.secondary_countries_eu)} selected="selected"{/if}>Netherlands</option>
+                                                    <option value="20"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(20, $form.secondary_countries_eu)} selected="selected"{/if}>Poland</option>
+                                                    <option value="21"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(21, $form.secondary_countries_eu)} selected="selected"{/if}>Portugal</option>
+                                                    <option value="22"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(22, $form.secondary_countries_eu)} selected="selected"{/if}>Romania</option>
+                                                    <option value="23"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(23, $form.secondary_countries_eu)} selected="selected"{/if}>Slovakia</option>
+                                                    <option value="24"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(24, $form.secondary_countries_eu)} selected="selected"{/if}>Slovenia</option>
+                                                    <option value="25"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(25, $form.secondary_countries_eu)} selected="selected"{/if}>Spain</option>
+                                                    <option value="26"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(26, $form.secondary_countries_eu)} selected="selected"{/if}>Sweden</option>
+                                                    <option value="27"{if isset($form.secondary_countries_eu) && is_array($form.secondary_countries_eu) && in_array(27, $form.secondary_countries_eu)} selected="selected"{/if}>United Kingdom</option>
+                                                </select>
+                                            </td>
+                                            <td class="country-select">
+                                                <select name="secondary_countries_noneu[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(1, $form.secondary_countries_noneu)} selected="selected"{/if}>Albania</option>
+                                                    <option value="2"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(2, $form.secondary_countries_noneu)} selected="selected"{/if}>Andorra</option>
+                                                    <option value="3"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(3, $form.secondary_countries_noneu)} selected="selected"{/if}>Armenia</option>
+                                                    <option value="4"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(4, $form.secondary_countries_noneu)} selected="selected"{/if}>Azerbaijan</option>
+                                                    <option value="5"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(5, $form.secondary_countries_noneu)} selected="selected"{/if}>Belarus</option>
+                                                    <option value="6"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(6, $form.secondary_countries_noneu)} selected="selected"{/if}>Bosnia and Herzegovina</option>
+                                                    <option value="7"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(7, $form.secondary_countries_noneu)} selected="selected"{/if}>Croatia</option>
+                                                    <option value="8"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(8, $form.secondary_countries_noneu)} selected="selected"{/if}>Republic of Macedonia</option>
+                                                    <option value="9"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(9, $form.secondary_countries_noneu)} selected="selected"{/if}>Georgia</option>
+                                                    <option value="10"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(10, $form.secondary_countries_noneu)} selected="selected"{/if}>Iceland</option>
+                                                    <option value="11"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(11, $form.secondary_countries_noneu)} selected="selected"{/if}>Liechtenstein</option>
+                                                    <option value="12"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(12, $form.secondary_countries_noneu)} selected="selected"{/if}>Moldova</option>
+                                                    <option value="13"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(13, $form.secondary_countries_noneu)} selected="selected"{/if}>Monaco</option>
+                                                    <option value="14"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(14, $form.secondary_countries_noneu)} selected="selected"{/if}>Montenegro</option>
+                                                    <option value="15"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(15, $form.secondary_countries_noneu)} selected="selected"{/if}>Norway</option>
+                                                    <option value="16"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(16, $form.secondary_countries_noneu)} selected="selected"{/if}>Russia</option>
+                                                    <option value="17"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(17, $form.secondary_countries_noneu)} selected="selected"{/if}>San Marino</option>
+                                                    <option value="18"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(18, $form.secondary_countries_noneu)} selected="selected"{/if}>Serbia</option>
+                                                    <option value="19"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(19, $form.secondary_countries_noneu)} selected="selected"{/if}>Switzerland</option>
+                                                    <option value="20"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(20, $form.secondary_countries_noneu)} selected="selected"{/if}>Turkey</option>
+                                                    <option value="21"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(21, $form.secondary_countries_noneu)} selected="selected"{/if}>Ukraine</option>
+                                                    <option value="22"{if isset($form.secondary_countries_noneu) && is_array($form.secondary_countries_noneu) && in_array(22, $form.secondary_countries_noneu)} selected="selected"{/if}>Vatican City State</option>
+                                                </select>
+                                            </td>
+                                            <td class="country-select">
+                                                <select name="secondary_countries_na[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.secondary_countries_na) && is_array($form.secondary_countries_na) && in_array(1, $form.secondary_countries_na)} selected="selected"{/if}>Canada</option>
+                                                    <option value="2"{if isset($form.secondary_countries_na) && is_array($form.secondary_countries_na) && in_array(2, $form.secondary_countries_na)} selected="selected"{/if}>United States of America</option>
+                                                </select>
+                                            </td>
+                                            <td class="country-select">
+                                                <select name="secondary_countries_sa[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(1, $form.secondary_countries_sa)} selected="selected"{/if}>Antigua &amp; Barbuda</option>
+                                                    <option value="2"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(2, $form.secondary_countries_sa)} selected="selected"{/if}>Argentina</option>
+                                                    <option value="3"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(3, $form.secondary_countries_sa)} selected="selected"{/if}>Bahamas</option>
+                                                    <option value="4"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(4, $form.secondary_countries_sa)} selected="selected"{/if}>Barbados</option>
+                                                    <option value="5"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(5, $form.secondary_countries_sa)} selected="selected"{/if}>Belize</option>
+                                                    <option value="6"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(6, $form.secondary_countries_sa)} selected="selected"{/if}>Bolivia</option>
+                                                    <option value="7"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(7, $form.secondary_countries_sa)} selected="selected"{/if}>Brazil</option>
+                                                    <option value="8"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(8, $form.secondary_countries_sa)} selected="selected"{/if}>Chile</option>
+                                                    <option value="9"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(9, $form.secondary_countries_sa)} selected="selected"{/if}>Colombia</option>
+                                                    <option value="10"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(10, $form.secondary_countries_sa)} selected="selected"{/if}>Costa Rica</option>
+                                                    <option value="11"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(11, $form.secondary_countries_sa)} selected="selected"{/if}>Cuba</option>
+                                                    <option value="12"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(12, $form.secondary_countries_sa)} selected="selected"{/if}>Dominica</option>
+                                                    <option value="13"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(13, $form.secondary_countries_sa)} selected="selected"{/if}>Dominican Republic</option>
+                                                    <option value="14"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(14, $form.secondary_countries_sa)} selected="selected"{/if}>Ecuador</option>
+                                                    <option value="15"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(15, $form.secondary_countries_sa)} selected="selected"{/if}>El Salvador</option>
+                                                    <option value="16"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(16, $form.secondary_countries_sa)} selected="selected"{/if}>Grenada</option>
+                                                    <option value="17"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(17, $form.secondary_countries_sa)} selected="selected"{/if}>Guatemala</option>
+                                                    <option value="18"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(18, $form.secondary_countries_sa)} selected="selected"{/if}>Guyana</option>
+                                                    <option value="19"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(19, $form.secondary_countries_sa)} selected="selected"{/if}>Haiti</option>
+                                                    <option value="20"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(20, $form.secondary_countries_sa)} selected="selected"{/if}>Honduras</option>
+                                                    <option value="21"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(21, $form.secondary_countries_sa)} selected="selected"{/if}>Jamaica</option>
+                                                    <option value="22"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(22, $form.secondary_countries_sa)} selected="selected"{/if}>Mexico</option>
+                                                    <option value="23"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(23, $form.secondary_countries_sa)} selected="selected"{/if}>Nicaragua</option>
+                                                    <option value="24"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(24, $form.secondary_countries_sa)} selected="selected"{/if}>Panama</option>
+                                                    <option value="25"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(25, $form.secondary_countries_sa)} selected="selected"{/if}>Paraguay</option>
+                                                    <option value="26"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(26, $form.secondary_countries_sa)} selected="selected"{/if}>Peru</option>
+                                                    <option value="27"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(27, $form.secondary_countries_sa)} selected="selected"{/if}>St. Kitts &amp; Nevis</option>
+                                                    <option value="28"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(28, $form.secondary_countries_sa)} selected="selected"{/if}>St. Lucia</option>
+                                                    <option value="29"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(29, $form.secondary_countries_sa)} selected="selected"{/if}>St. Vincent &amp; The Grenadines</option>
+                                                    <option value="30"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(30, $form.secondary_countries_sa)} selected="selected"{/if}>Suriname</option>
+                                                    <option value="31"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(31, $form.secondary_countries_sa)} selected="selected"{/if}>Trinidad &amp; Tobago</option>
+                                                    <option value="32"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(32, $form.secondary_countries_sa)} selected="selected"{/if}>Uruguay</option>
+                                                    <option value="33"{if isset($form.secondary_countries_sa) && is_array($form.secondary_countries_sa) && in_array(33, $form.secondary_countries_sa)} selected="selected"{/if}>Venezuela</option>
+                                                </select>
+                                            </td>
+                                            <td class="country-select">
+                                                <select name="secondary_countries_asia[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(1, $form.secondary_countries_asia)} selected="selected"{/if}>Afghanistan</option>
+                                                    <option value="2"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(2, $form.secondary_countries_asia)} selected="selected"{/if}>Bahrain</option>
+                                                    <option value="3"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(3, $form.secondary_countries_asia)} selected="selected"{/if}>Bangladesh</option>
+                                                    <option value="4"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(4, $form.secondary_countries_asia)} selected="selected"{/if}>Bhutan</option>
+                                                    <option value="5"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(5, $form.secondary_countries_asia)} selected="selected"{/if}>Brunei</option>
+                                                    <option value="6"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(6, $form.secondary_countries_asia)} selected="selected"{/if}>Cambodia</option>
+                                                    <option value="7"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(7, $form.secondary_countries_asia)} selected="selected"{/if}>China</option>
+                                                    <option value="8"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(8, $form.secondary_countries_asia)} selected="selected"{/if}>East Timor</option>
+                                                    <option value="9"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(9, $form.secondary_countries_asia)} selected="selected"{/if}>India</option>
+                                                    <option value="10"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(10, $form.secondary_countries_asia)} selected="selected"{/if}>Indonesia</option>
+                                                    <option value="11"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(11, $form.secondary_countries_asia)} selected="selected"{/if}>Iran</option>
+                                                    <option value="12"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(12, $form.secondary_countries_asia)} selected="selected"{/if}>Iraq</option>
+                                                    <option value="13"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(13, $form.secondary_countries_asia)} selected="selected"{/if}>Israel</option>
+                                                    <option value="14"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(14, $form.secondary_countries_asia)} selected="selected"{/if}>Japan</option>
+                                                    <option value="15"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(15, $form.secondary_countries_asia)} selected="selected"{/if}>Jordan</option>
+                                                    <option value="16"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(16, $form.secondary_countries_asia)} selected="selected"{/if}>Kazakhstan</option>
+                                                    <option value="17"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(17, $form.secondary_countries_asia)} selected="selected"{/if}>Korea North</option>
+                                                    <option value="18"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(18, $form.secondary_countries_asia)} selected="selected"{/if}>Korea South</option>
+                                                    <option value="19"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(19, $form.secondary_countries_asia)} selected="selected"{/if}>Kuwait</option>
+                                                    <option value="20"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(20, $form.secondary_countries_asia)} selected="selected"{/if}>Kyrgyzstan</option>
+                                                    <option value="21"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(21, $form.secondary_countries_asia)} selected="selected"{/if}>Laos</option>
+                                                    <option value="22"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(22, $form.secondary_countries_asia)} selected="selected"{/if}>Lebanon</option>
+                                                    <option value="23"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(23, $form.secondary_countries_asia)} selected="selected"{/if}>Malaysia</option>
+                                                    <option value="24"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(24, $form.secondary_countries_asia)} selected="selected"{/if}>Maldives</option>
+                                                    <option value="25"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(25, $form.secondary_countries_asia)} selected="selected"{/if}>Mongolia</option>
+                                                    <option value="26"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(26, $form.secondary_countries_asia)} selected="selected"{/if}>Myanmar (Burma)</option>
+                                                    <option value="27"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(27, $form.secondary_countries_asia)} selected="selected"{/if}>Nepal</option>
+                                                    <option value="28"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(28, $form.secondary_countries_asia)} selected="selected"{/if}>Oman</option>
+                                                    <option value="29"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(29, $form.secondary_countries_asia)} selected="selected"{/if}>Pakistan</option>
+                                                    <option value="30"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(30, $form.secondary_countries_asia)} selected="selected"{/if}>The Philippines</option>
+                                                    <option value="31"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(31, $form.secondary_countries_asia)} selected="selected"{/if}>Qatar</option>
+                                                    <option value="32"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(32, $form.secondary_countries_asia)} selected="selected"{/if}>Saudi Arabia</option>
+                                                    <option value="33"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(33, $form.secondary_countries_asia)} selected="selected"{/if}>Singapore</option>
+                                                    <option value="34"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(34, $form.secondary_countries_asia)} selected="selected"{/if}>Sri Lanka</option>
+                                                    <option value="35"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(35, $form.secondary_countries_asia)} selected="selected"{/if}>Syria</option>
+                                                    <option value="36"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(36, $form.secondary_countries_asia)} selected="selected"{/if}>Taiwan</option>
+                                                    <option value="37"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(37, $form.secondary_countries_asia)} selected="selected"{/if}>Tajikistan</option>
+                                                    <option value="38"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(38, $form.secondary_countries_asia)} selected="selected"{/if}>Thailand</option>
+                                                    <option value="39"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(39, $form.secondary_countries_asia)} selected="selected"{/if}>Turkey</option>
+                                                    <option value="40"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(40, $form.secondary_countries_asia)} selected="selected"{/if}>Turkmenistan</option>
+                                                    <option value="41"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(41, $form.secondary_countries_asia)} selected="selected"{/if}>United Arab Emirates</option>
+                                                    <option value="42"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(42, $form.secondary_countries_asia)} selected="selected"{/if}>Uzbekistan</option>
+                                                    <option value="43"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(43, $form.secondary_countries_asia)} selected="selected"{/if}>Vietnam</option>
+                                                    <option value="44"{if isset($form.secondary_countries_asia) && is_array($form.secondary_countries_asia) && in_array(44, $form.secondary_countries_asia)} selected="selected"{/if}>Yemen</option>
+                                                </select>
+                                            </td>
+                                            <td class="country-select">
+                                                <select name="secondary_countries_africa[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(1, $form.secondary_countries_africa)} selected="selected"{/if}>Algeria</option>
+                                                    <option value="2"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(2, $form.secondary_countries_africa)} selected="selected"{/if}>Angola</option>
+                                                    <option value="3"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(3, $form.secondary_countries_africa)} selected="selected"{/if}>Benin</option>
+                                                    <option value="4"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(4, $form.secondary_countries_africa)} selected="selected"{/if}>Botswana</option>
+                                                    <option value="5"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(5, $form.secondary_countries_africa)} selected="selected"{/if}>Burkina Faso</option>
+                                                    <option value="6"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(6, $form.secondary_countries_africa)} selected="selected"{/if}>Burundi</option>
+                                                    <option value="7"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(7, $form.secondary_countries_africa)} selected="selected"{/if}>Cameroon</option>
+                                                    <option value="8"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(8, $form.secondary_countries_africa)} selected="selected"{/if}>Cape Verde</option>
+                                                    <option value="9"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(9, $form.secondary_countries_africa)} selected="selected"{/if}>Central African Republic</option>
+                                                    <option value="10"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(10, $form.secondary_countries_africa)} selected="selected"{/if}>Chad</option>
+                                                    <option value="11"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(11, $form.secondary_countries_africa)} selected="selected"{/if}>Comoros</option>
+                                                    <option value="12"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(12, $form.secondary_countries_africa)} selected="selected"{/if}>Congo</option>
+                                                    <option value="13"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(13, $form.secondary_countries_africa)} selected="selected"{/if}>Congo Democratic Republic of</option>
+                                                    <option value="14"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(14, $form.secondary_countries_africa)} selected="selected"{/if}>Cote d'Ivoire</option>
+                                                    <option value="15"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(15, $form.secondary_countries_africa)} selected="selected"{/if}>Djibouti</option>
+                                                    <option value="16"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(16, $form.secondary_countries_africa)} selected="selected"{/if}>Egypt</option>
+                                                    <option value="17"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(17, $form.secondary_countries_africa)} selected="selected"{/if}>Equatorial Guinea</option>
+                                                    <option value="18"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(18, $form.secondary_countries_africa)} selected="selected"{/if}>Eritrea</option>
+                                                    <option value="19"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(19, $form.secondary_countries_africa)} selected="selected"{/if}>Ethiopia</option>
+                                                    <option value="20"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(20, $form.secondary_countries_africa)} selected="selected"{/if}>Gabon</option>
+                                                    <option value="21"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(21, $form.secondary_countries_africa)} selected="selected"{/if}>Gambia</option>
+                                                    <option value="22"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(22, $form.secondary_countries_africa)} selected="selected"{/if}>Ghana</option>
+                                                    <option value="23"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(23, $form.secondary_countries_africa)} selected="selected"{/if}>Guinea</option>
+                                                    <option value="24"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(24, $form.secondary_countries_africa)} selected="selected"{/if}>Guinea-Bissau</option>
+                                                    <option value="25"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(25, $form.secondary_countries_africa)} selected="selected"{/if}>Kenya</option>
+                                                    <option value="26"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(26, $form.secondary_countries_africa)} selected="selected"{/if}>Lesotho</option>
+                                                    <option value="27"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(27, $form.secondary_countries_africa)} selected="selected"{/if}>Liberia</option>
+                                                    <option value="28"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(28, $form.secondary_countries_africa)} selected="selected"{/if}>Libya</option>
+                                                    <option value="29"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(29, $form.secondary_countries_africa)} selected="selected"{/if}>Madagascar</option>
+                                                    <option value="30"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(30, $form.secondary_countries_africa)} selected="selected"{/if}>Malawi</option>
+                                                    <option value="31"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(31, $form.secondary_countries_africa)} selected="selected"{/if}>Mali</option>
+                                                    <option value="32"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(32, $form.secondary_countries_africa)} selected="selected"{/if}>Mauritania</option>
+                                                    <option value="33"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(33, $form.secondary_countries_africa)} selected="selected"{/if}>Mauritius</option>
+                                                    <option value="34"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(34, $form.secondary_countries_africa)} selected="selected"{/if}>Morocco</option>
+                                                    <option value="35"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(35, $form.secondary_countries_africa)} selected="selected"{/if}>Mozambique</option>
+                                                    <option value="36"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(36, $form.secondary_countries_africa)} selected="selected"{/if}>Namibia</option>
+                                                    <option value="37"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(37, $form.secondary_countries_africa)} selected="selected"{/if}>Niger</option>
+                                                    <option value="38"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(38, $form.secondary_countries_africa)} selected="selected"{/if}>Nigeria</option>
+                                                    <option value="39"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(39, $form.secondary_countries_africa)} selected="selected"{/if}>Rwanda</option>
+                                                    <option value="40"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(40, $form.secondary_countries_africa)} selected="selected"{/if}>Sao Tome &amp; Principe</option>
+                                                    <option value="41"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(41, $form.secondary_countries_africa)} selected="selected"{/if}>Senegal</option>
+                                                    <option value="42"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(42, $form.secondary_countries_africa)} selected="selected"{/if}>Seychelles</option>
+                                                    <option value="43"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(43, $form.secondary_countries_africa)} selected="selected"{/if}>Sierra Leone</option>
+                                                    <option value="44"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(44, $form.secondary_countries_africa)} selected="selected"{/if}>Somalia</option>
+                                                    <option value="45"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(45, $form.secondary_countries_africa)} selected="selected"{/if}>South Africa</option>
+                                                    <option value="46"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(46, $form.secondary_countries_africa)} selected="selected"{/if}>South Sudan</option>
+                                                    <option value="47"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(47, $form.secondary_countries_africa)} selected="selected"{/if}>Sudan</option>
+                                                    <option value="48"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(48, $form.secondary_countries_africa)} selected="selected"{/if}>Swaziland</option>
+                                                    <option value="49"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(49, $form.secondary_countries_africa)} selected="selected"{/if}>Tanzania</option>
+                                                    <option value="50"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(50, $form.secondary_countries_africa)} selected="selected"{/if}>Togo</option>
+                                                    <option value="51"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(51, $form.secondary_countries_africa)} selected="selected"{/if}>Tunisia</option>
+                                                    <option value="52"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(52, $form.secondary_countries_africa)} selected="selected"{/if}>Uganda</option>
+                                                    <option value="53"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(53, $form.secondary_countries_africa)} selected="selected"{/if}>Zambia</option>
+                                                    <option value="54"{if isset($form.secondary_countries_africa) && is_array($form.secondary_countries_africa) && in_array(54, $form.secondary_countries_africa)} selected="selected"{/if}>Zimbabwe</option>
+                                                </select>
+                                            </td>
+                                            <td class="country-select">
+                                                <select name="secondary_countries_oceania[]" size="10" multiple="multiple">
+                                                    <option value="1"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(1, $form.secondary_countries_oceania)} selected="selected"{/if}>Australia</option>
+                                                    <option value="2"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(2, $form.secondary_countries_oceania)} selected="selected"{/if}>Fiji</option>
+                                                    <option value="3"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(3, $form.secondary_countries_oceania)} selected="selected"{/if}>Kiribati</option>
+                                                    <option value="4"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(4, $form.secondary_countries_oceania)} selected="selected"{/if}>Marshall Islands</option>
+                                                    <option value="5"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(5, $form.secondary_countries_oceania)} selected="selected"{/if}>Micronesia</option>
+                                                    <option value="6"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(6, $form.secondary_countries_oceania)} selected="selected"{/if}>Nauru</option>
+                                                    <option value="7"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(7, $form.secondary_countries_oceania)} selected="selected"{/if}>New Zealand</option>
+                                                    <option value="8"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(8, $form.secondary_countries_oceania)} selected="selected"{/if}>Palau</option>
+                                                    <option value="9"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(9, $form.secondary_countries_oceania)} selected="selected"{/if}>Papua New Guinea</option>
+                                                    <option value="10"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(10, $form.secondary_countries_oceania)} selected="selected"{/if}>Samoa</option>
+                                                    <option value="11"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(11, $form.secondary_countries_oceania)} selected="selected"{/if}>Solomon Islands</option>
+                                                    <option value="12"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(12, $form.secondary_countries_oceania)} selected="selected"{/if}>Tonga</option>
+                                                    <option value="13"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(13, $form.secondary_countries_oceania)} selected="selected"{/if}>Tuvalu</option>
+                                                    <option value="14"{if isset($form.secondary_countries_oceania) && is_array($form.secondary_countries_oceania) && in_array(14, $form.secondary_countries_oceania)} selected="selected"{/if}>Vanuatu</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3>Q3: If applicable, indicate the name of the sub-national territory:</h3>
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:160px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><label for="input-1-5-4">Sub-national territory:</label></td>
+                                            <td><input type="text" name="subnational_territory" value="{$form.subnational_territory}" id="input-1-5-4" class="additional" style="width:96%" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>

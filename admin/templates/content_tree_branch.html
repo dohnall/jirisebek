@@ -1,0 +1,21 @@
+<ul>
+{foreach from=$children item=row}
+	{*if $config->hasTemplateChildren($row->get('section', 'template'))*}
+	    {if in_array($row->get('section', 'section_id'), array_keys($item->get('path')))}
+	        {if $row->hasChildren()}
+	        <li><a href="javascript:;" id="i{$row->get('section', 'section_id')}" class="ui-icon ui-icon-circlesmall-minus"></a><a class="active{if $row->get('text', 'default_lang') == 1} default_lang{/if}" href="{$ROOT}?module={$MODULE}&amp;id={$row->get('section', 'section_id')}" title="{#subpages#}: {$row->hasChildren()}">{$row->get('text', 'name')}</a>
+	            {include file="content_tree_branch.html" children=$row->get('children', true)}
+	        </li>
+	        {else}
+	        <li><span class="ui-icon ui-icon-document"></span><a class="active{if $row->get('text', 'default_lang') == 1} default_lang{/if}" href="{$ROOT}?module={$MODULE}&amp;id={$row->get('section', 'section_id')}">{$row->get('text', 'name')}</a></li>
+	        {/if}
+	    {else}
+	        {if $row->hasChildren()}
+	        <li><a href="javascript:;" id="i{$row->get('section', 'section_id')}" class="ui-icon ui-icon-circlesmall-plus"></a><a{if $row->get('text', 'default_lang') == 1} class="default_lang"{/if} href="{$ROOT}?module={$MODULE}&amp;id={$row->get('section', 'section_id')}" title="{#subpages#}: {$row->hasChildren()}">{$row->get('text', 'name')}</a></li>
+	        {else}
+	        <li><span class="ui-icon ui-icon-document"></span><a{if $row->get('text', 'default_lang') == 1} class="default_lang"{/if} href="{$ROOT}?module={$MODULE}&amp;id={$row->get('section', 'section_id')}">{$row->get('text', 'name')}</a></li>
+	        {/if}
+	    {/if}
+	{*/if*}
+{/foreach}
+</ul>

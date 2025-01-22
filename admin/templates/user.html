@@ -1,0 +1,15 @@
+<div id="menu">
+    <ul>
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=profile"{if $SUBMODULE == 'profile'} class="active"{/if}>{#profile#}</a></li>
+{if $user->hasRight(19)}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=user"{if $SUBMODULE == 'user' || $SUBMODULE == 'edituser'} class="active"{/if}>{#users#}</a></li>
+{/if}
+{if $user->hasRight(21)}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=group"{if $SUBMODULE == 'group' || $SUBMODULE == 'editgroup'} class="active"{/if}>{#groups#}</a></li>
+{/if}
+    </ul>
+</div>
+<div id="content">
+    {include file="`$MODULE`_`$SUBMODULE`.html"}
+</div>
+

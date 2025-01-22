@@ -1,0 +1,12 @@
+<div id="menu">
+    <ul>
+{foreach from=$codelists item=row}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;id={$row.codelist_id}"{if $codelist_id == $row.codelist_id} class="active"{/if}>{$row.name}</a></li>
+{/foreach}
+    </ul>
+</div>
+{if $codelist}
+<div id="content">
+    {include file="`$MODULE`_`$SUBMODULE`.html"}
+</div>
+{/if}

@@ -1,0 +1,36 @@
+<h1 class="h-settings h-settings-lang">{#groups#}</h1>
+<p class="navi">
+	<a href="javascript:;" id="item_new" class="ngroupnew button new">{#new_item#}</a>
+</p>
+<table class="list table-settings table-settings-lang">
+    <thead>
+        <tr>
+            <th>{#name#}</th>
+            <th>{#action#}</th>
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$records item=record}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="javascript:;" class="ngroup" id="g{$record.ngroup_id}">{$record.name}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=ngroup&amp;id={$record.ngroup_id}&amp;action=delete" class="delete">{#delete#}</a></td>
+        </tr>
+{/foreach}
+    </tbody>
+</table>
+<div id="item-new" title="{#group#}" class="hidden">
+	<form method="post" action="">
+    	<fieldset>
+        	<table>
+        	   <tr>
+                    <td class="th-label"><label for="ngroupname">{#name#}:</label></td>
+                    <td>
+						<input type="text" name="name" id="ngroupname" value="" />
+                        <input type="hidden" name="ngroup_id" value="0" id="ngroup_id" />
+                        <input type="hidden" name="action" value="save" />
+					</td>
+        	   </tr>
+        	</table>
+        </fieldset>
+	</form>
+</div>

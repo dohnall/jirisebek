@@ -1,0 +1,10 @@
+<div id="tree">
+    <ul>
+{foreach from=$templates item=row}
+		<li><a href="{$ROOT}?module={$MODULE}&amp;submodule=template&amp;template={$row}"{if $template == $row} class="active"{/if}>{$row}</a></li>
+{/foreach}
+    </ul>
+</div>
+<div id="content">
+    {include file="`$MODULE`_`$SUBMODULE`.html"}
+</div>

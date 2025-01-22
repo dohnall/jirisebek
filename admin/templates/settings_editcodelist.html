@@ -1,0 +1,80 @@
+<h1 class="h-settings h-settings-edittemplate">{if $item.item.name}{$item.item.name}{else}{#new_item#}{/if}</h1>
+<p class="navi">
+	<a href="{$ROOT}?module={$MODULE}&amp;submodule=codelist" class="button back">{#back_to_list#}</a>
+</p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table class="table-settings table-settings-edittemplate">
+        <tr>
+            <th class="th-label th-code"><label for="code">{#code#}</label>:</th>
+            <td><input type="text" name="item[code]" id="code" value="{$item.item.code}" size="50" /></td>
+        </tr>
+{foreach from=$langs item=row}
+        <tr>
+            <th class="th-label th-name"><label for="name_{$row.code}">{#name#} ({$row.code})</label>:</th>
+            <td><input type="text" name="item[name][{$row.lang_id}]" id="name_{$row.code}" value="{$item.names[$row.lang_id]}" size="50" /></td>
+        </tr>
+{/foreach}
+{if $user->hasRight(47)}
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="hidden" name="item_id" value="{$item_id}" />
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+{/if}
+    </table>
+</form>
+<table>
+	<tr>
+		<td>
+			<form method="post" action="">
+				<p>
+					{#add_field#}:
+					<select name="col">
+						<option value="0">{#select#}</option>
+	{foreach from=$cols item=col}
+						<option value="{$col.column_id}"{if isset($item.column[$col.column_id])} class="b"{/if}>{$col.name} - {$col.code} - {$col.type}</option>
+	{/foreach}
+					</select>
+	{if $user->hasRight(47)}
+					<input type="hidden" name="item_id" value="{$item_id}" />
+					<input type="hidden" name="action" value="addCol" />
+					<input type="submit" class="button" value="{#add#}" />
+	{/if}
+				</p>
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table class="table-sortable table-sortable-template list">
+				<thead>
+					<tr>
+						<th class="th-name">{#name#}</th>
+						<th class="th-code">{#code#}</th>
+						<th class="th-type">{#type#}</th>
+	{if $user->hasRight(47)}
+						<th class="th-action">{#action#}</th>
+	{/if}
+					</tr>
+				</thead>
+	{if isset($item.column)}
+				<tbody class="{if $user->hasRight(47)}sortable sortable_codelist{/if}">
+				{foreach from=$item.column item=col}
+					<tr class="{cycle values='odd,even'}">
+						<td><input type="hidden" name="ccid" value="{$col.codelist_column_id}" />{$col.name}</td>
+						<td>{$col.code}</td>
+						<td>{$col.type}</td>
+					{if $user->hasRight(47)}
+						<td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcodelist&amp;id={$col.codelist_column_id}&amp;action=deleteCol" class="delete">{#delete#}</a></td>
+					{/if}
+					</tr>
+				{/foreach}
+				</tbody>
+	{/if}
+			</table>
+		</td>
+	</tr>
+</table>

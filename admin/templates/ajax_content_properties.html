@@ -1,0 +1,93 @@
+{include file="pager-detail.html"}
+<table class="detail table-ajax table-ajax-content table-ajax-content-properties">
+	<tbody>
+		<tr>
+			<th class="th-label th-name"><label for="cid_name">{#name#}:</label></th>
+			<td><input type="text" value="{$item->get('text', 'name')}" name="item[text][name]" id="cid_name"></td>
+		</tr>
+{if $user->hasRight(28)}
+		<tr>
+			<th class="th-label th-parent"><label for="cid_parent">{#parent#}:</label></th>
+			<td>
+				<select id="cid_parent" name="item[section][parent_id]">
+	{if $item->get('section', 'parent_id') == 0}
+					<option value="0">{#none#}</option>
+	{elseif $homeId}
+					{include file='content_parent_option.html' section=$home}
+	{/if}
+				</select>
+			</td>
+		</tr>
+{/if}
+{if $user->hasRight(29) && $template_show}
+		<tr>
+			<th class="th-label th-template"><label for="cid_template">{#template#}:</label></th>
+			<td>
+				<select id="cid_template" name="item[section][template]">
+	{foreach from=$templates item=row}
+					<option{if $item->get('section', 'template') == $row.code} selected="selected"{/if} value="{$row.code}">{$row.name}</option>
+	{/foreach}
+				</select>
+			</td>
+		</tr>
+{/if}
+{if $user->hasRight(30)}
+		<tr>
+			<th class="th-label th-url"><label for="cid_url">{#url#}:</label></th>
+			<td><input type="text" value="{$item->get('text', 'url')}" name="item[text][url]" id="cid_url"></td>
+		</tr>
+		<tr>
+			<th class="th-label th-url_children"><label for="cid_url_children">{#url_children#}:</label></th>
+			<td><input type="text" value="{$item->get('text', 'url_children')}" name="item[text][url_children]" id="cid_url_children"></td>
+		</tr>
+{/if}
+{if $user->hasRight(31)}
+		<tr>
+			<th class="th-label th-title"><label for="cid_title">{#title#}:</label></th>
+			<td><input type="text" value="{$item->get('text', 'title')}" name="item[text][title]" id="cid_title"></td>
+		</tr>
+		<tr>
+			<th class="th-label th-title_children"><label for="cid_title_children">{#title_children#}:</label></th>
+			<td><input type="text" value="{$item->get('text', 'title_children')}" name="item[text][title_children]" id="cid_title_children"></td>
+		</tr>
+		<tr>
+			<th class="th-label th-description"><label for="cid_description">{#description#}:</label></th>
+			<td><input type="text" value="{$item->get('text', 'description')}" name="item[text][description]" id="cid_description"></td>
+		</tr>
+		<tr>
+			<th class="th-label th-keywords"><label for="cid_keywords">{#keywords#}:</label></th>
+			<td><input type="text" value="{$item->get('text', 'keywords')}" name="item[text][keywords]" id="cid_keywords"></td>
+		</tr>
+{/if}
+{if $user->hasRight(40)}
+		<tr>
+			<th class="th-label th-visibility"><label>{#visibility#}:</label></th>
+			<td>
+				<input type="checkbox" name="item[visibility][]" class="visibility1" id="cid_visibility_all" value="-1"{if count($item->get('visibility')) == 0} checked="checked"{/if} /> <label for="cid_visibility_all">{#everybody#}</label><br />
+				<input type="checkbox" name="item[visibility][]" class="visibility2" id="cid_visibility_0" value="0"{if in_array(0, $item->get('visibility'))} checked="checked"{/if} /> <label for="cid_visibility_0">{#unlogged#}</label><br />
+	{foreach from=$groups item=row}
+				<input type="checkbox" name="item[visibility][]" class="visibility2" id="cid_visibility_{$row.group_id}" value="{$row.group_id}"{if in_array($row.group_id, $item->get('visibility'))} checked="checked"{/if} /> <label for="cid_visibility_{$row.group_id}">{$row.name}</label><br />
+	{/foreach}
+			</td>
+		</tr>
+{/if}
+{if $user->hasRight(32)}
+		<tr>
+			<th class="th-label th-removable"><label for="cid_removable">{#removable#}:</label></th>
+			<td><input type="checkbox"{if $item->get('section', 'removable')} checked="checked"{/if} value="1" name="item[section][removable]" id="cid_removable"></td>
+		</tr>
+{/if}
+{if $user->hasRight(25)}
+		<tr>
+			<th class="th-label th-status"><label for="cid_status">{#status#}:</label></th>
+			<td>
+				<select id="cid_status" name="item[text][status]">
+					<option{if $item->get('text', 'status') == 0} selected="selected"{/if} value="0">{#inactive#}</option>
+					<option{if $item->get('text', 'status') == 1} selected="selected"{/if} value="1">{#active#}</option>
+				</select>
+			</td>
+		</tr>
+{/if}
+	</tbody>
+</table>
+{include file="ajax_content_buttons.html"}

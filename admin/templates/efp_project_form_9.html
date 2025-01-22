@@ -1,0 +1,851 @@
+                    <h6>Annexe 1.9: Mobilising Futures (2/7)</h6>
+                    <h1><b>Research and Support Teams</b></h1>
+                    <div class="oracle-form">
+                        <form action="" method="post">
+                            <h3>Q1: Provide the organisation details of the project leader and up to 35 project members.</h3>
+                            <div class="table-wrapper">
+                                <table class="append-bottom">
+                                    <col style="" />
+                                    <col style="width:15%" />
+                                    <col style="" />
+                                    <col style="width:15%" />
+                                    <col style="" />
+                                    <col style="width:60px;" />
+                                    <col style="width:36px;background-color:#F0F9F0" />
+                                    <col style="width:36px;background-color:#F0F9F0" />
+                                    <col style="width:36px;background-color:#F0F9F0" />
+                                    <col style="width:36px;background-color:#FCF3F3" />
+                                    <col style="width:36px;background-color:#FCF3F3" />
+                                    <col style="width:36px;background-color:#FCF3F3" />
+                                    <tr>
+                                        <th colspan="12">Project Leader</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="6">Organisation Details</th>
+                                        <th colspan="3">Capacities (people) *</th>
+                                        <th colspan="3">Efforts (person/months) *</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Acronym</th>
+                                        <th>Org. Name</th>
+                                        <th>Website</th>
+                                        <th>Contact Person</th>
+                                        <th>E-Mail</th>
+                                        <th>Country</th>
+                                        <th>R</th>
+                                        <th>TD</th>
+                                        <th>M/S</th>
+                                        <th>R</th>
+                                        <th>TD</th>
+                                        <th>M/S</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_1" value="{$form.acronym_1}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_1" value="{$form.name_1}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_1" value="{$form.website_1}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_1" value="{$form.contact_1}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_1" value="{$form.email_1}" /></td>
+                                        <td>
+                                            <select name="country_1" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_1 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_1" value="{$form.cap_r_1}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_1" value="{$form.cap_td_1}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_1" value="{$form.cap_ms_1}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_1" value="{$form.eff_r_1}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_1" value="{$form.eff_td_1}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_1" value="{$form.eff_ms_1}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="12" class="t-l notice">
+                                            * <b>R</b> = Research<br />
+                                            <b>TD</b> = Technology Development<br />
+                                            <b>M/S</b> = Management and other support activities
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="" />
+                                    <col style="width:15%" />
+                                    <col style="" />
+                                    <col style="width:15%" />
+                                    <col style="" />
+                                    <col style="width:60px" />
+                                    <col style="width:36px;background-color:#F0FAF0" />
+                                    <col style="width:36px;background-color:#F0FAF0" />
+                                    <col style="width:36px;background-color:#F0FAF0" />
+                                    <col style="width:36px;background-color:#FDF3F3" />
+                                    <col style="width:36px;background-color:#FDF3F3" />
+                                    <col style="width:36px;background-color:#FDF3F3" />
+                                    <tr>
+                                        <th colspan="12">Project Members</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="6">Organisation Details</th>
+                                        <th colspan="3">Capacities (people) *</th>
+                                        <th colspan="3">Efforts (person/months) *</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Acronym</th>
+                                        <th>Org. Name</th>
+                                        <th>Website</th>
+                                        <th>Contact Person</th>
+                                        <th>E-Mail</th>
+                                        <th>Country</th>
+                                        <th>R</th>
+                                        <th>TD</th>
+                                        <th>M/S</th>
+                                        <th>R</th>
+                                        <th>TD</th>
+                                        <th>M/S</th>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_2" value="{$form.acronym_2}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_2" value="{$form.name_2}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_2" value="{$form.website_2}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_2" value="{$form.contact_2}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_2" value="{$form.email_2}" /></td>
+                                        <td>
+                                            <select name="country_2" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_2 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_2" value="{$form.cap_r_2}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_2" value="{$form.cap_td_2}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_2" value="{$form.cap_ms_2}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_2" value="{$form.eff_r_2}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_2" value="{$form.eff_td_2}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_2" value="{$form.eff_ms_2}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_3" value="{$form.acronym_3}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_3" value="{$form.name_3}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_3" value="{$form.website_3}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_3" value="{$form.contact_3}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_3" value="{$form.email_3}" /></td>
+                                        <td>
+                                            <select name="country_3" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_3 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_3" value="{$form.cap_r_3}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_3" value="{$form.cap_td_3}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_3" value="{$form.cap_ms_3}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_3" value="{$form.eff_r_3}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_3" value="{$form.eff_td_3}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_3" value="{$form.eff_ms_3}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_4" value="{$form.acronym_4}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_4" value="{$form.name_4}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_4" value="{$form.website_4}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_4" value="{$form.contact_4}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_4" value="{$form.email_4}" /></td>
+                                        <td>
+                                            <select name="country_4" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_4 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_4" value="{$form.cap_r_4}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_4" value="{$form.cap_td_4}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_4" value="{$form.cap_ms_4}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_4" value="{$form.eff_r_4}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_4" value="{$form.eff_td_4}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_4" value="{$form.eff_ms_4}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_5" value="{$form.acronym_5}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_5" value="{$form.name_5}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_5" value="{$form.website_5}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_5" value="{$form.contact_5}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_5" value="{$form.email_5}" /></td>
+                                        <td>
+                                            <select name="country_5" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_5 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_5" value="{$form.cap_r_5}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_5" value="{$form.cap_td_5}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_5" value="{$form.cap_ms_5}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_5" value="{$form.eff_r_5}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_5" value="{$form.eff_td_5}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_5" value="{$form.eff_ms_5}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_6" value="{$form.acronym_6}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_6" value="{$form.name_6}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_6" value="{$form.website_6}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_6" value="{$form.contact_6}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_6" value="{$form.email_6}" /></td>
+                                        <td>
+                                            <select name="country_6" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_6 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_6" value="{$form.cap_r_6}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_6" value="{$form.cap_td_6}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_6" value="{$form.cap_ms_6}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_6" value="{$form.eff_r_6}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_6" value="{$form.eff_td_6}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_6" value="{$form.eff_ms_6}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_7" value="{$form.acronym_7}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_7" value="{$form.name_7}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_7" value="{$form.website_7}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_7" value="{$form.contact_7}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_7" value="{$form.email_7}" /></td>
+                                        <td>
+                                            <select name="country_7" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_7 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_7" value="{$form.cap_r_7}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_7" value="{$form.cap_td_7}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_7" value="{$form.cap_ms_7}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_7" value="{$form.eff_r_7}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_7" value="{$form.eff_td_7}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_7" value="{$form.eff_ms_7}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_8" value="{$form.acronym_8}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_8" value="{$form.name_8}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_8" value="{$form.website_8}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_8" value="{$form.contact_8}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_8" value="{$form.email_8}" /></td>
+                                        <td>
+                                            <select name="country_8" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_8 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_8" value="{$form.cap_r_8}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_8" value="{$form.cap_td_8}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_8" value="{$form.cap_ms_8}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_8" value="{$form.eff_r_8}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_8" value="{$form.eff_td_8}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_8" value="{$form.eff_ms_8}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_9" value="{$form.acronym_9}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_9" value="{$form.name_9}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_9" value="{$form.website_9}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_9" value="{$form.contact_9}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_9" value="{$form.email_9}" /></td>
+                                        <td>
+                                            <select name="country_9" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_9 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_9" value="{$form.cap_r_9}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_9" value="{$form.cap_td_9}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_9" value="{$form.cap_ms_9}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_9" value="{$form.eff_r_9}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_9" value="{$form.eff_td_9}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_9" value="{$form.eff_ms_9}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_10" value="{$form.acronym_10}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_10" value="{$form.name_10}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_10" value="{$form.website_10}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_10" value="{$form.contact_10}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_10" value="{$form.email_10}" /></td>
+                                        <td>
+                                            <select name="country_10" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_10 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_10" value="{$form.cap_r_10}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_10" value="{$form.cap_td_10}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_10" value="{$form.cap_ms_10}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_10" value="{$form.eff_r_10}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_10" value="{$form.eff_td_10}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_10" value="{$form.eff_ms_10}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_11" value="{$form.acronym_11}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_11" value="{$form.name_11}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_11" value="{$form.website_11}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_11" value="{$form.contact_11}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_11" value="{$form.email_11}" /></td>
+                                        <td>
+                                            <select name="country_11" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_11 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_11" value="{$form.cap_r_11}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_11" value="{$form.cap_td_11}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_11" value="{$form.cap_ms_11}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_11" value="{$form.eff_r_11}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_11" value="{$form.eff_td_11}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_11" value="{$form.eff_ms_11}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_12" value="{$form.acronym_12}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_12" value="{$form.name_12}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_12" value="{$form.website_12}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_12" value="{$form.contact_12}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_12" value="{$form.email_12}" /></td>
+                                        <td>
+                                            <select name="country_12" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_12 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_12" value="{$form.cap_r_12}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_12" value="{$form.cap_td_12}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_12" value="{$form.cap_ms_12}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_12" value="{$form.eff_r_12}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_12" value="{$form.eff_td_12}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_12" value="{$form.eff_ms_12}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_13" value="{$form.acronym_13}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_13" value="{$form.name_13}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_13" value="{$form.website_13}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_13" value="{$form.contact_13}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_13" value="{$form.email_13}" /></td>
+                                        <td>
+                                            <select name="country_13" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_13 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_13" value="{$form.cap_r_13}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_13" value="{$form.cap_td_13}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_13" value="{$form.cap_ms_13}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_13" value="{$form.eff_r_13}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_13" value="{$form.eff_td_13}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_13" value="{$form.eff_ms_13}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_14" value="{$form.acronym_14}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_14" value="{$form.name_14}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_14" value="{$form.website_14}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_14" value="{$form.contact_14}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_14" value="{$form.email_14}" /></td>
+                                        <td>
+                                            <select name="country_14" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_14 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_14" value="{$form.cap_r_14}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_14" value="{$form.cap_td_14}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_14" value="{$form.cap_ms_14}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_14" value="{$form.eff_r_14}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_14" value="{$form.eff_td_14}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_14" value="{$form.eff_ms_14}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_15" value="{$form.acronym_15}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_15" value="{$form.name_15}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_15" value="{$form.website_15}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_15" value="{$form.contact_15}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_15" value="{$form.email_15}" /></td>
+                                        <td>
+                                            <select name="country_15" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_15 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_15" value="{$form.cap_r_15}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_15" value="{$form.cap_td_15}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_15" value="{$form.cap_ms_15}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_15" value="{$form.eff_r_15}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_15" value="{$form.eff_td_15}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_15" value="{$form.eff_ms_15}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_16" value="{$form.acronym_16}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_16" value="{$form.name_16}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_16" value="{$form.website_16}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_16" value="{$form.contact_16}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_16" value="{$form.email_16}" /></td>
+                                        <td>
+                                            <select name="country_16" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_16 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_16" value="{$form.cap_r_16}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_16" value="{$form.cap_td_16}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_16" value="{$form.cap_ms_16}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_16" value="{$form.eff_r_16}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_16" value="{$form.eff_td_16}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_16" value="{$form.eff_ms_16}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_17" value="{$form.acronym_17}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_17" value="{$form.name_17}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_17" value="{$form.website_17}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_17" value="{$form.contact_17}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_17" value="{$form.email_17}" /></td>
+                                        <td>
+                                            <select name="country_17" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_17 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_17" value="{$form.cap_r_17}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_17" value="{$form.cap_td_17}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_17" value="{$form.cap_ms_17}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_17" value="{$form.eff_r_17}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_17" value="{$form.eff_td_17}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_17" value="{$form.eff_ms_17}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_18" value="{$form.acronym_18}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_18" value="{$form.name_18}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_18" value="{$form.website_18}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_18" value="{$form.contact_18}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_18" value="{$form.email_18}" /></td>
+                                        <td>
+                                            <select name="country_18" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_18 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_18" value="{$form.cap_r_18}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_18" value="{$form.cap_td_18}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_18" value="{$form.cap_ms_18}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_18" value="{$form.eff_r_18}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_18" value="{$form.eff_td_18}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_18" value="{$form.eff_ms_18}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_19" value="{$form.acronym_19}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_19" value="{$form.name_19}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_19" value="{$form.website_19}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_19" value="{$form.contact_19}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_19" value="{$form.email_19}" /></td>
+                                        <td>
+                                            <select name="country_19" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_19 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_19" value="{$form.cap_r_19}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_19" value="{$form.cap_td_19}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_19" value="{$form.cap_ms_19}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_19" value="{$form.eff_r_19}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_19" value="{$form.eff_td_19}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_19" value="{$form.eff_ms_19}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_20" value="{$form.acronym_20}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_20" value="{$form.name_20}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_20" value="{$form.website_20}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_20" value="{$form.contact_20}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_20" value="{$form.email_20}" /></td>
+                                        <td>
+                                            <select name="country_20" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_20 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_20" value="{$form.cap_r_20}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_20" value="{$form.cap_td_20}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_20" value="{$form.cap_ms_20}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_20" value="{$form.eff_r_20}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_20" value="{$form.eff_td_20}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_20" value="{$form.eff_ms_20}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_21" value="{$form.acronym_21}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_21" value="{$form.name_21}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_21" value="{$form.website_21}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_21" value="{$form.contact_21}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_21" value="{$form.email_21}" /></td>
+                                        <td>
+                                            <select name="country_21" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_21 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_21" value="{$form.cap_r_21}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_21" value="{$form.cap_td_21}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_21" value="{$form.cap_ms_21}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_21" value="{$form.eff_r_21}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_21" value="{$form.eff_td_21}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_21" value="{$form.eff_ms_21}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_22" value="{$form.acronym_22}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_22" value="{$form.name_22}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_22" value="{$form.website_22}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_22" value="{$form.contact_22}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_22" value="{$form.email_22}" /></td>
+                                        <td>
+                                            <select name="country_22" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_22 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_22" value="{$form.cap_r_22}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_22" value="{$form.cap_td_22}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_22" value="{$form.cap_ms_22}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_22" value="{$form.eff_r_22}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_22" value="{$form.eff_td_22}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_22" value="{$form.eff_ms_22}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_23" value="{$form.acronym_23}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_23" value="{$form.name_23}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_23" value="{$form.website_23}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_23" value="{$form.contact_23}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_23" value="{$form.email_23}" /></td>
+                                        <td>
+                                            <select name="country_23" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_23 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_23" value="{$form.cap_r_23}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_23" value="{$form.cap_td_23}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_23" value="{$form.cap_ms_23}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_23" value="{$form.eff_r_23}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_23" value="{$form.eff_td_23}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_23" value="{$form.eff_ms_23}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_24" value="{$form.acronym_24}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_24" value="{$form.name_24}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_24" value="{$form.website_24}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_24" value="{$form.contact_24}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_24" value="{$form.email_24}" /></td>
+                                        <td>
+                                            <select name="country_24" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_24 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_24" value="{$form.cap_r_24}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_24" value="{$form.cap_td_24}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_24" value="{$form.cap_ms_24}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_24" value="{$form.eff_r_24}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_24" value="{$form.eff_td_24}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_24" value="{$form.eff_ms_24}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_25" value="{$form.acronym_25}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_25" value="{$form.name_25}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_25" value="{$form.website_25}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_25" value="{$form.contact_25}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_25" value="{$form.email_25}" /></td>
+                                        <td>
+                                            <select name="country_25" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_25 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_25" value="{$form.cap_r_25}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_25" value="{$form.cap_td_25}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_25" value="{$form.cap_ms_25}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_25" value="{$form.eff_r_25}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_25" value="{$form.eff_td_25}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_25" value="{$form.eff_ms_25}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_26" value="{$form.acronym_26}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_26" value="{$form.name_26}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_26" value="{$form.website_26}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_26" value="{$form.contact_26}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_26" value="{$form.email_26}" /></td>
+                                        <td>
+                                            <select name="country_26" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_26 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_26" value="{$form.cap_r_26}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_26" value="{$form.cap_td_26}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_26" value="{$form.cap_ms_26}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_26" value="{$form.eff_r_26}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_26" value="{$form.eff_td_26}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_26" value="{$form.eff_ms_26}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_27" value="{$form.acronym_27}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_27" value="{$form.name_27}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_27" value="{$form.website_27}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_27" value="{$form.contact_27}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_27" value="{$form.email_27}" /></td>
+                                        <td>
+                                            <select name="country_27" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_27 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_27" value="{$form.cap_r_27}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_27" value="{$form.cap_td_27}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_27" value="{$form.cap_ms_27}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_27" value="{$form.eff_r_27}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_27" value="{$form.eff_td_27}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_27" value="{$form.eff_ms_27}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_28" value="{$form.acronym_28}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_28" value="{$form.name_28}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_28" value="{$form.website_28}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_28" value="{$form.contact_28}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_28" value="{$form.email_28}" /></td>
+                                        <td>
+                                            <select name="country_28" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_28 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_28" value="{$form.cap_r_28}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_28" value="{$form.cap_td_28}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_28" value="{$form.cap_ms_28}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_28" value="{$form.eff_r_28}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_28" value="{$form.eff_td_28}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_28" value="{$form.eff_ms_28}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_29" value="{$form.acronym_29}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_29" value="{$form.name_29}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_29" value="{$form.website_29}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_29" value="{$form.contact_29}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_29" value="{$form.email_29}" /></td>
+                                        <td>
+                                            <select name="country_29" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_29 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_29" value="{$form.cap_r_29}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_29" value="{$form.cap_td_29}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_29" value="{$form.cap_ms_29}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_29" value="{$form.eff_r_29}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_29" value="{$form.eff_td_29}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_29" value="{$form.eff_ms_29}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_30" value="{$form.acronym_30}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_30" value="{$form.name_30}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_30" value="{$form.website_30}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_30" value="{$form.contact_30}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_30" value="{$form.email_30}" /></td>
+                                        <td>
+                                            <select name="country_30" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_30 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_30" value="{$form.cap_r_30}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_30" value="{$form.cap_td_30}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_30" value="{$form.cap_ms_30}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_30" value="{$form.eff_r_30}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_30" value="{$form.eff_td_30}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_30" value="{$form.eff_ms_30}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_31" value="{$form.acronym_31}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_31" value="{$form.name_31}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_31" value="{$form.website_31}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_31" value="{$form.contact_31}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_31" value="{$form.email_31}" /></td>
+                                        <td>
+                                            <select name="country_31" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_31 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_31" value="{$form.cap_r_31}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_31" value="{$form.cap_td_31}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_31" value="{$form.cap_ms_31}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_31" value="{$form.eff_r_31}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_31" value="{$form.eff_td_31}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_31" value="{$form.eff_ms_31}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_32" value="{$form.acronym_32}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_32" value="{$form.name_32}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_32" value="{$form.website_32}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_32" value="{$form.contact_32}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_32" value="{$form.email_32}" /></td>
+                                        <td>
+                                            <select name="country_32" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_32 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_32" value="{$form.cap_r_32}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_32" value="{$form.cap_td_32}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_32" value="{$form.cap_ms_32}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_32" value="{$form.eff_r_32}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_32" value="{$form.eff_td_32}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_32" value="{$form.eff_ms_32}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_33" value="{$form.acronym_33}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_33" value="{$form.name_33}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_33" value="{$form.website_33}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_33" value="{$form.contact_33}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_33" value="{$form.email_33}" /></td>
+                                        <td>
+                                            <select name="country_33" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_33 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_33" value="{$form.cap_r_33}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_33" value="{$form.cap_td_33}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_33" value="{$form.cap_ms_33}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_33" value="{$form.eff_r_33}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_33" value="{$form.eff_td_33}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_33" value="{$form.eff_ms_33}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_34" value="{$form.acronym_34}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_34" value="{$form.name_34}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_34" value="{$form.website_34}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_34" value="{$form.contact_34}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_34" value="{$form.email_34}" /></td>
+                                        <td>
+                                            <select name="country_34" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_34 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_34" value="{$form.cap_r_34}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_34" value="{$form.cap_td_34}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_34" value="{$form.cap_ms_34}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_34" value="{$form.eff_r_34}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_34" value="{$form.eff_td_34}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_34" value="{$form.eff_ms_34}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_35" value="{$form.acronym_35}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_35" value="{$form.name_35}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_35" value="{$form.website_35}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_35" value="{$form.contact_35}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_35" value="{$form.email_35}" /></td>
+                                        <td>
+                                            <select name="country_35" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_35 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_35" value="{$form.cap_r_35}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_35" value="{$form.cap_td_35}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_35" value="{$form.cap_ms_35}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_35" value="{$form.eff_r_35}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_35" value="{$form.eff_td_35}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_35" value="{$form.eff_ms_35}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="text" class="by-cell additional" name="acronym_36" value="{$form.acronym_36}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="name_36" value="{$form.name_36}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="website_36" value="{$form.website_36}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="contact_36" value="{$form.contact_36}" /></td>
+                                        <td><input type="text" class="by-cell additional" name="email_36" value="{$form.email_36}" /></td>
+                                        <td>
+                                            <select name="country_36" style="width:42px;">
+                                                <option value=""></option>
+{foreach from=$cols[53].param.values key=key item=value}
+                								<option value="{$key}"{if $form.country_36 == $key} selected="selected"{/if}>{$cols[56].param.values[$key]} - {$value}</option>
+{/foreach}
+                                            </select>
+                                        </td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_r_36" value="{$form.cap_r_36}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_td_36" value="{$form.cap_td_36}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="cap_ms_36" value="{$form.cap_ms_36}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_r_36" value="{$form.eff_r_36}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_td_36" value="{$form.eff_td_36}" /></td>
+                                        <td><input type="text" class="by-cell additional thinner" name="eff_ms_36" value="{$form.eff_ms_36}" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="12" class="t-l notice">
+                                            * <b>R</b> = Research<br />
+                                            <b>TD</b> = Technology Development<br />
+                                            <b>M/S</b> = Management and other support activities
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>

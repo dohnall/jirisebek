@@ -1,0 +1,35 @@
+<h1 class="h-settings h-settings-editcolumn">{if $data.nuser_id > 0}{#edit_item#}{else}{#new_item#}{/if}</h1>
+<p class="navi">
+	<a href="{$ROOT}?module={$MODULE}&amp;submodule=nuser" class="button back">{#back_to_list#}</a>
+</p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table>
+        <tr>
+            <th class="th-label th-name"><label for="email">{#email#}</label>:</th>
+            <td><input type="text" name="email" id="email" value="{$data.email}" size="50" maxlength="100" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-name"><label for="fname">{#fname#}</label>:</th>
+            <td><input type="text" name="fname" id="fname" value="{$data.fname}" size="50" maxlength="100" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-name"><label for="lname">{#lname#}</label>:</th>
+            <td><input type="text" name="lname" id="lname" value="{$data.lname}" size="50" maxlength="100" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-status"><label for="status">{#status#}</label>:</th>
+            <td>
+                <select name="status" id="status">
+                    <option value="0"{if $data.status==0} selected="selected"{/if}>{#inactive#}</option>
+                    <option value="1"{if $data.status==1} selected="selected"{/if}>{#active#}</option>
+                    <option value="2"{if $data.status==2} selected="selected"{/if}>{#confirm#}</option>
+                </select>
+			</td>
+        </tr>
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td><input type="submit" name="save" value="{#save#}" /></td>
+        </tr>
+    </table>
+</form>

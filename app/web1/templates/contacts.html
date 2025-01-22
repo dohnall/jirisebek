@@ -1,0 +1,66 @@
+{$image = $SECTION->get('file', 'image')}
+<div class="section_heading">
+    <span class="section_heading_text">{$SECTION->get('value', 'header')}</span>
+</div>
+
+<p class="section_text mt24">{$SECTION->get('value', 'anotation')}</p>
+
+<div class="col_cards content_text mt56">
+    <div class="col_cards_avatar">
+        <div>
+            <div class="col_cards_title">{$SECTION->get('value', 'name')}</div>
+            <div class="col_cards_subtitle">{$SECTION->get('value', 'position')}</div>
+            <div class="col_cards_list">
+                <span class="contact_phone">{#phone_number#}</span></span>
+                {mailto address=$DICTIONARY.email_address encode="javascript_charcode" extra='class="contact_mail"'}
+            </div>
+        </div>
+        <div>
+            {if $image}
+            <img src="{$FILES}0/{$image[0].file}" alt="{$image[0].alt}" width="200">
+            {/if}
+        </div>
+    </div>
+    <div class="card_html">
+        {$SECTION->get('value', 'content_right')}
+    </div>
+</div>
+
+<div class="col2_box content_text mt40">
+    <div class="ico_wrap">
+        <span class="ico ico_map"></span> {#shooting_location#}
+    </div>
+    <div class="ico_wrap">
+        <a href="{#instagram_url#}" class="ico_wrap" target="_blank"><span class="ico ico_foto"></span> {#instagram_label#}</a>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="section_subheading">{#demand_header#}</div>
+
+<div class="content_text mt24">{#demand_text#}</div>
+
+<form action="" method="post" class="form_contact content_text mt40">
+    <label for="inp_name">{#email#} *</label>
+    <div>
+        <input id="inp_name" name="email" type="email" />
+    </div>
+    <label for="inp_message">{#message#} *</label>
+    <div>
+        <textarea id="inp_message" name="message" rows="6"></textarea>
+        {if $ALERT}
+        <div class="form_result_wrap">
+            {if $ALERT_TYPE == 'success'}
+            <span class="form_result form_success">{#message_sent#}</span>
+            {else}
+            <span class="form_result form_error">{#message_failed#}</span>
+            {/if}
+        </div>
+        {/if}
+    </div>
+    <span></span>
+    <div>
+        <button type="submit" name="submit" class="button_primary">{#send#}</button>
+    </div>
+</form>

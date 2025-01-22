@@ -1,0 +1,65 @@
+<h1 class="h-settings h-settings-component">{#components#}</h1>
+{if $user->hasRight(16)}
+<p class="navi"><a href="javascript:;" id="item_new" class="button new">{#new_item#}</a></p>
+{/if}
+<table class="list table-settings table-settings-component">
+    <thead>
+        <tr>
+            <th class="th-code">{#code#}</th>
+            <th class="th-receiver">{#receiver#}</th>
+            <th class="th-template">{#template#}</th>
+{if $user->hasRight(16)}
+            <th class="th-action">{#action#}</th>
+{/if}
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcomponent&amp;id={$row.component_id}">{$row.code}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcomponent&amp;id={$row.component_id}">{if $row.receiver}{$row.receiver}{else}{#all#}{/if}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcomponent&amp;id={$row.component_id}">{$row.template}</a></td>
+	{if $user->hasRight(16)}
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=component&amp;id={$row.component_id}&amp;action=delete" class="delete">{#delete#}</a></td>
+	{/if}
+        </tr>
+{/foreach}
+    </tbody>
+</table>
+{if $user->hasRight(16)}
+<div id="item-new" title="{#new_item#}" class="hidden">
+	<form method="post" action="">
+    	<fieldset>
+        	<table>
+				<tr>
+        		  	<td class="th-label"><label for="content_code">{#code#}:</label></td>
+        		  	<td><input type="text" name="item[code]" id="content_code" /></td>
+                </tr>
+				<tr>
+        		  	<td class="th-label"><label for="content_receiver">{#receiver#}:</label></td>
+        		  	<td>
+						<select name="item[receiver]" id="content_receiver">
+							<option value="">{#all#}</option>
+	{foreach from=$config->getTemplates() item=row}
+                            <option value="{$row.code}">{$row.name}</option>
+	{/foreach}
+						</select>
+					</td>
+                </tr>
+				<tr>
+        		  	<td class="th-label"><label for="content_template">{#template#}:</label></td>
+        		  	<td>
+						<select name="item[template]" id="content_template">
+	{foreach from=$config->getTemplates() item=row}
+                            <option value="{$row.code}">{$row.name}</option>
+	{/foreach}
+						</select>
+                        <input type="hidden" name="item_id" value="0" />
+						<input type="hidden" name="action" value="new_item" />
+					</td>
+                </tr>
+        	</table>
+        </fieldset>
+	</form>
+</div>
+{/if}

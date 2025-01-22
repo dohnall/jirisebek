@@ -1,0 +1,1088 @@
+                    <h6>Annexe 1.4: Scoping Futures (4/7)</h6>
+                    <h1><b>Methodology and Work Plan</b></h1>
+
+                    <div class="tabs">
+                        <ul>
+                            <li><a href="#form1" onclick="return tabs(1,2,this);" class="active" id="tab1"><b>Step 1:</b> Methods Selection</a></li>
+{if isset($form.save) || isset($form.submit)}
+                            <li><a href="#form2" onclick="return tabs(2,1,this);" id="tab2"><b>Step 2:</b> Methods Assessment and Work Plan</a></li>
+{/if}
+                        </ul>
+                        <div class="mask"></div>
+                        <div style="clear:both"></div>
+                    </div>
+
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="oracle-form" id="form1">
+                            <h3>Q1a: Please indicate the <i>qualitative</i> methods used by/in the study.</h3>
+
+                            <div class="table-wrapper">
+                                <table class="methods" id="a-1-4-q-1">
+                                    <col />
+                                    <col style="width:104px" />
+                                    <thead>
+                                        <tr>
+                                            <th class="t-l">Method type</th>
+                                            <th>Quantity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="backcasting" value="{if $form.backcasting}{$form.backcasting}{else}0{/if}"{if $form.backcasting} checked="checked"{/if} />
+                                                    Backcasting
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.backcasting}{$form.backcasting}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="brainstorming" value="{if $form.brainstorming}{$form.brainstorming}{else}0{/if}"{if $form.brainstorming} checked="checked"{/if} />
+                                                    Brainstorming
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.brainstorming}{$form.brainstorming}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="citizens_panels" value="{if $form.citizens_panels}{$form.citizens_panels}{else}0{/if}"{if $form.citizens_panels} checked="checked"{/if} />
+                                                    Citizens Panels
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.citizens_panels}{$form.citizens_panels}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="conferences" value="{if $form.conferences}{$form.conferences}{else}0{/if}"{if $form.conferences} checked="checked"{/if} />
+                                                    Conferences/Workshops
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.conferences}{$form.conferences}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="expert_panels" value="{if $form.expert_panels}{$form.expert_panels}{else}0{/if}"{if $form.expert_panels} checked="checked"{/if} />
+                                                    Expert Panels
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.expert_panels}{$form.expert_panels}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="expert_forecast" value="{if $form.expert_forecast}{$form.expert_forecast}{else}0{/if}"{if $form.expert_forecast} checked="checked"{/if} />
+                                                    Genius/Expert Forecast
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.expert_forecast}{$form.expert_forecast}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="interviews" value="{if $form.interviews}{$form.interviews}{else}0{/if}"{if $form.interviews} checked="checked"{/if} />
+                                                    Interviews
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.interviews}{$form.interviews}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="literature_review" value="{if $form.literature_review}{$form.literature_review}{else}0{/if}"{if $form.literature_review} checked="checked"{/if} />
+                                                    Literature Review (LR)
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.literature_review}{$form.literature_review}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="logic_charts" value="{if $form.logic_charts}{$form.logic_charts}{else}0{/if}"{if $form.logic_charts} checked="checked"{/if} />
+                                                    Logic Charts
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.logic_charts}{$form.logic_charts}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="morphological_analysis" value="{if $form.morphological_analysis}{$form.morphological_analysis}{else}0{/if}"{if $form.morphological_analysis} checked="checked"{/if} />
+                                                    Morphological Analysis
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.morphological_analysis}{$form.morphological_analysis}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="multiple_perspective_analysis" value="{if $form.multiple_perspective_analysis}{$form.multiple_perspective_analysis}{else}0{/if}"{if $form.multiple_perspective_analysis} checked="checked"{/if} />
+                                                    Multiple Perspective Analysis
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.multiple_perspective_analysis}{$form.multiple_perspective_analysis}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="relevance_trees" value="{if $form.relevance_trees}{$form.relevance_trees}{else}0{/if}"{if $form.relevance_trees} checked="checked"{/if} />
+                                                    Relevance Trees
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.relevance_trees}{$form.relevance_trees}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="role_play_gaming" value="{if $form.role_play_gaming}{$form.role_play_gaming}{else}0{/if}"{if $form.role_play_gaming} checked="checked"{/if} />
+                                                    Role play/Gaming
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.role_play_gaming}{$form.role_play_gaming}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="scanning" value="{if $form.scanning}{$form.scanning}{else}0{/if}"{if $form.scanning} checked="checked"{/if} />
+                                                    Scanning
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.scanning}{$form.scanning}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="scenario_vignettes" value="{if $form.scenario_vignettes}{$form.scenario_vignettes}{else}0{/if}"{if $form.scenario_vignettes} checked="checked"{/if} />
+                                                    Scenario Vignettes
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.scenario_vignettes}{$form.scenario_vignettes}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="scenario_workshops" value="{if $form.scenario_workshops}{$form.scenario_workshops}{else}0{/if}"{if $form.scenario_workshops} checked="checked"{/if} />
+                                                    Scenario workshops
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.scenario_workshops}{$form.scenario_workshops}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="science_fictioning" value="{if $form.science_fictioning}{$form.science_fictioning}{else}0{/if}"{if $form.science_fictioning} checked="checked"{/if} />
+                                                    Science Fictioning (SF)
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.science_fictioning}{$form.science_fictioning}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="surveys" value="{if $form.surveys}{$form.surveys}{else}0{/if}"{if $form.surveys} checked="checked"{/if} />
+                                                    Surveys
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.surveys}{$form.surveys}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="swot" value="{if $form.swot}{$form.swot}{else}0{/if}"{if $form.swot} checked="checked"{/if} />
+                                                    SWOT
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.swot}{$form.swot}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="teepse_analysis" value="{if $form.teepse_analysis}{$form.teepse_analysis}{else}0{/if}"{if $form.teepse_analysis} checked="checked"{/if} />
+                                                    TEEPSE Analysis
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.teepse_analysis}{$form.teepse_analysis}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="weak_signals_analysis" value="{if $form.weak_signals_analysis}{$form.weak_signals_analysis}{else}0{/if}"{if $form.weak_signals_analysis} checked="checked"{/if} />
+                                                    Weak Signals Analysis
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.weak_signals_analysis}{$form.weak_signals_analysis}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="wild_cards_analysis" value="{if $form.wild_cards_analysis}{$form.wild_cards_analysis}{else}0{/if}"{if $form.wild_cards_analysis} checked="checked"{/if} />
+                                                    Wild Cards Analysis
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.wild_cards_analysis}{$form.wild_cards_analysis}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2" class="addrows-open{if $form.qualitative_method_1 || $form.qualitative_method_2 || $form.qualitative_method_3 || $form.qualitative_method_4 || $form.qualitative_method_5} open{/if}">Add up to 5 own methods (max 140 chars.) <b></b></th>
+                                        </tr>
+                                        <tr style="display:{if $form.qualitative_method_1 || $form.qualitative_method_2 || $form.qualitative_method_3 || $form.qualitative_method_4 || $form.qualitative_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#1</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="qualitative_method_1" value="{$form.qualitative_method_1}" />
+                                                    <span class="counter">{$form.qualitative_method_1|count_characters:true}</span>
+                                                    <input type="hidden" name="qualitative_method_value_1" value="{if $form.qualitative_method_value_1}{$form.qualitative_method_value_1}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.qualitative_method_value_1}{$form.qualitative_method_value_1}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:{if $form.qualitative_method_1 || $form.qualitative_method_2 || $form.qualitative_method_3 || $form.qualitative_method_4 || $form.qualitative_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#2</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="qualitative_method_2" value="{$form.qualitative_method_2}" />
+                                                    <span class="counter">{$form.qualitative_method_2|count_characters:true}</span>
+                                                    <input type="hidden" name="qualitative_method_value_2" value="{if $form.qualitative_method_value_2}{$form.qualitative_method_value_2}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.qualitative_method_value_2}{$form.qualitative_method_value_2}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:{if $form.qualitative_method_1 || $form.qualitative_method_2 || $form.qualitative_method_3 || $form.qualitative_method_4 || $form.qualitative_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#3</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="qualitative_method_3" value="{$form.qualitative_method_3}" />
+                                                    <span class="counter">{$form.qualitative_method_3|count_characters:true}</span>
+                                                    <input type="hidden" name="qualitative_method_value_3" value="{if $form.qualitative_method_value_3}{$form.qualitative_method_value_3}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.qualitative_method_value_3}{$form.qualitative_method_value_3}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:{if $form.qualitative_method_1 || $form.qualitative_method_2 || $form.qualitative_method_3 || $form.qualitative_method_4 || $form.qualitative_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#4</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="qualitative_method_4" value="{$form.qualitative_method_4}" />
+                                                    <span class="counter">{$form.qualitative_method_4|count_characters:true}</span>
+                                                    <input type="hidden" name="qualitative_method_value_4" value="{if $form.qualitative_method_value_4}{$form.qualitative_method_value_4}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.qualitative_method_value_4}{$form.qualitative_method_value_4}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:{if $form.qualitative_method_1 || $form.qualitative_method_2 || $form.qualitative_method_3 || $form.qualitative_method_4 || $form.qualitative_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#5</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="qualitative_method_5" value="{$form.qualitative_method_5}" />
+                                                    <span class="counter">{$form.qualitative_method_5|count_characters:true}</span>
+                                                    <input type="hidden" name="qualitative_method_value_5" value="{if $form.qualitative_method_value_5}{$form.qualitative_method_value_5}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.qualitative_method_value_5}{$form.qualitative_method_value_5}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <h3>Q1b: Please indicate the <i>quantitative</i> methods used by/in the study.</h3>
+
+                            <div class="table-wrapper">
+                                <table class="methods">
+                                    <col />
+                                    <col style="width:104px" />
+                                    <thead>
+                                        <tr>
+                                            <th class="t-l">Method type</th>
+                                            <th>Quantity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="benchmarking" value="{if $form.benchmarking}{$form.benchmarking}{else}0{/if}"{if $form.benchmarking} checked="checked"{/if} />
+                                                    Benchmarking
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.benchmarking}{$form.benchmarking}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="bibliometrics" value="{if $form.bibliometrics}{$form.bibliometrics}{else}0{/if}"{if $form.bibliometrics} checked="checked"{/if} />
+                                                    Bibliometrics
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.bibliometrics}{$form.bibliometrics}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="extrapolation" value="{if $form.extrapolation}{$form.extrapolation}{else}0{/if}"{if $form.extrapolation} checked="checked"{/if} />
+                                                    Extrapolation
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.extrapolation}{$form.extrapolation}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="indicators" value="{if $form.indicators}{$form.indicators}{else}0{/if}"{if $form.indicators} checked="checked"{/if} />
+                                                    Indicators/Index
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.indicators}{$form.indicators}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="impact_analysis" value="{if $form.impact_analysis}{$form.impact_analysis}{else}0{/if}"{if $form.impact_analysis} checked="checked"{/if} />
+                                                    Impact Analysis
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.impact_analysis}{$form.impact_analysis}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="patent_analysis" value="{if $form.patent_analysis}{$form.patent_analysis}{else}0{/if}"{if $form.patent_analysis} checked="checked"{/if} />
+                                                    Patent Analysis
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.patent_analysis}{$form.patent_analysis}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="regression_analysis" value="{if $form.regression_analysis}{$form.regression_analysis}{else}0{/if}"{if $form.regression_analysis} checked="checked"{/if} />
+                                                    Regression analysis (econometrics)
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.regression_analysis}{$form.regression_analysis}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="rulebased_forecasting" value="{if $form.rulebased_forecasting}{$form.rulebased_forecasting}{else}0{/if}"{if $form.rulebased_forecasting} checked="checked"{/if} />
+                                                    Rule-based forecasting
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.rulebased_forecasting}{$form.rulebased_forecasting}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="segmentation" value="{if $form.segmentation}{$form.segmentation}{else}0{/if}"{if $form.segmentation} checked="checked"{/if} />
+                                                    Segmentation (productive chain)
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.segmentation}{$form.segmentation}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="social_network_analysis" value="{if $form.social_network_analysis}{$form.social_network_analysis}{else}0{/if}"{if $form.social_network_analysis} checked="checked"{/if} />
+                                                    Social Network analysis (SNA)
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.social_network_analysis}{$form.social_network_analysis}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="system_dynamics" value="{if $form.system_dynamics}{$form.system_dynamics}{else}0{/if}"{if $form.system_dynamics} checked="checked"{/if} />
+                                                    System dynamics/simulation
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.system_dynamics}{$form.system_dynamics}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2" class="addrows-open{if $form.quantitative_method_1 || $form.quantitative_method_2 || $form.quantitative_method_3 || $form.quantitative_method_4 || $form.quantitative_method_5} open{/if}">Add up to 5 own methods (max 140 chars.) <b></b></th>
+                                        </tr>
+                                        <tr style="display:{if $form.quantitative_method_1 || $form.quantitative_method_2 || $form.quantitative_method_3 || $form.quantitative_method_4 || $form.quantitative_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#1</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="quantitative_method_1" value="{$form.quantitative_method_1}" />
+                                                    <span class="counter">{$form.quantitative_method_1|count_characters:true}</span>
+                                                    <input type="hidden" name="quantitative_method_value_1" value="{if $form.quantitative_method_value_1}{$form.quantitative_method_value_1}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.quantitative_method_value_1}{$form.quantitative_method_value_1}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:{if $form.quantitative_method_1 || $form.quantitative_method_2 || $form.quantitative_method_3 || $form.quantitative_method_4 || $form.quantitative_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#2</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="quantitative_method_2" value="{$form.quantitative_method_2}" />
+                                                    <span class="counter">{$form.quantitative_method_2|count_characters:true}</span>
+                                                    <input type="hidden" name="quantitative_method_value_2" value="{if $form.quantitative_method_value_2}{$form.quantitative_method_value_2}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.quantitative_method_value_2}{$form.quantitative_method_value_2}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:{if $form.quantitative_method_1 || $form.quantitative_method_2 || $form.quantitative_method_3 || $form.quantitative_method_4 || $form.quantitative_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#3</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="quantitative_method_3" value="{$form.quantitative_method_3}" />
+                                                    <span class="counter">{$form.quantitative_method_3|count_characters:true}</span>
+                                                    <input type="hidden" name="quantitative_method_value_3" value="{if $form.quantitative_method_value_3}{$form.quantitative_method_value_3}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.quantitative_method_value_3}{$form.quantitative_method_value_3}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:{if $form.quantitative_method_1 || $form.quantitative_method_2 || $form.quantitative_method_3 || $form.quantitative_method_4 || $form.quantitative_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#4</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="quantitative_method_4" value="{$form.quantitative_method_4}" />
+                                                    <span class="counter">{$form.quantitative_method_4|count_characters:true}</span>
+                                                    <input type="hidden" name="quantitative_method_value_4" value="{if $form.quantitative_method_value_4}{$form.quantitative_method_value_4}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.quantitative_method_value_4}{$form.quantitative_method_value_4}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:{if $form.quantitative_method_1 || $form.quantitative_method_2 || $form.quantitative_method_3 || $form.quantitative_method_4 || $form.quantitative_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#5</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="quantitative_method_5" value="{$form.quantitative_method_5}" />
+                                                    <span class="counter">{$form.quantitative_method_5|count_characters:true}</span>
+                                                    <input type="hidden" name="quantitative_method_value_5" value="{if $form.quantitative_method_value_5}{$form.quantitative_method_value_5}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.quantitative_method_value_5}{$form.quantitative_method_value_5}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <h3>Q1c: Please indicate the <i>semi-quantitative</i> methods used by/in the study.</h3>
+
+                            <div class="table-wrapper">
+                                <table class="methods">
+                                    <col />
+                                    <col style="width:104px" />
+                                    <thead>
+                                        <tr>
+                                            <th class="t-l">Method type</th>
+                                            <th>Quantity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="structural_analysis" value="{if $form.structural_analysis}{$form.structural_analysis}{else}0{/if}"{if $form.structural_analysis} checked="checked"{/if} />
+                                                    Cross-impact/Structural Analysis
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.structural_analysis}{$form.structural_analysis}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="probability" value="{if $form.probability}{$form.probability}{else}0{/if}"{if $form.probability} checked="checked"{/if} />
+                                                    Cross-impact probability (SMIC)
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.probability}{$form.probability}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="data_mining" value="{if $form.data_mining}{$form.data_mining}{else}0{/if}"{if $form.data_mining} checked="checked"{/if} />
+                                                    Data/Text mining
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.data_mining}{$form.data_mining}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="delphi_survey" value="{if $form.delphi_survey}{$form.delphi_survey}{else}0{/if}"{if $form.delphi_survey} checked="checked"{/if} />
+                                                    Delphi survey
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.delphi_survey}{$form.delphi_survey}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="critical_technologies" value="{if $form.critical_technologies}{$form.critical_technologies}{else}0{/if}"{if $form.critical_technologies} checked="checked"{/if} />
+                                                    Key/Critical technologies
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.critical_technologies}{$form.critical_technologies}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="multi_criteria_analysis" value="{if $form.multi_criteria_analysis}{$form.multi_criteria_analysis}{else}0{/if}"{if $form.multi_criteria_analysis} checked="checked"{/if} />
+                                                    Multi-criteria analysis
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.multi_criteria_analysis}{$form.multi_criteria_analysis}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="voting" value="{if $form.voting}{$form.voting}{else}0{/if}"{if $form.voting} checked="checked"{/if} />
+                                                    Polling/Voting
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.voting}{$form.voting}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="prediction_market" value="{if $form.prediction_market}{$form.prediction_market}{else}0{/if}"{if $form.prediction_market} checked="checked"{/if} />
+                                                    Prediction market
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.prediction_market}{$form.prediction_market}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="roadmapping" value="{if $form.roadmapping}{$form.roadmapping}{else}0{/if}"{if $form.roadmapping} checked="checked"{/if} />
+                                                    Roadmapping
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.roadmapping}{$form.roadmapping}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="stakeholder_analysis" value="{if $form.stakeholder_analysis}{$form.stakeholder_analysis}{else}0{/if}"{if $form.stakeholder_analysis} checked="checked"{/if} />
+                                                    Stakeholder Analysis/MACTOR
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.stakeholder_analysis}{$form.stakeholder_analysis}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>
+                                                    <input type="checkbox" name="web_based_crowdsourcing" value="{if $form.web_based_crowdsourcing}{$form.web_based_crowdsourcing}{else}0{/if}"{if $form.web_based_crowdsourcing} checked="checked"{/if} />
+                                                    Web-based crowdsourcing
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.web_based_crowdsourcing}{$form.web_based_crowdsourcing}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2" class="addrows-open{if $form.semi_method_1 || $form.semi_method_2 || $form.semi_method_3 || $form.semi_method_4 || $form.semi_method_5} open{/if}">Add up to 5 own methods (max 140 chars.) <b></b></th>
+                                        </tr>
+                                        <tr style="display:{if $form.semi_method_1 || $form.semi_method_2 || $form.semi_method_3 || $form.semi_method_4 || $form.semi_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#1</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="semi_method_1" value="{$form.semi_method_1}" />
+                                                    <span class="counter">{$form.semi_method_1|count_characters:true}</span>
+                                                    <input type="hidden" name="semi_method_value_1" value="{if $form.semi_method_value_1}{$form.semi_method_value_1}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.semi_method_value_1}{$form.semi_method_value_1}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:{if $form.semi_method_1 || $form.semi_method_2 || $form.semi_method_3 || $form.semi_method_4 || $form.semi_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#2</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="semi_method_2" value="{$form.semi_method_2}" />
+                                                    <span class="counter">{$form.semi_method_2|count_characters:true}</span>
+                                                    <input type="hidden" name="semi_method_value_2" value="{if $form.semi_method_value_2}{$form.semi_method_value_2}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.semi_method_value_2}{$form.semi_method_value_2}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:{if $form.semi_method_1 || $form.semi_method_2 || $form.semi_method_3 || $form.semi_method_4 || $form.semi_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#3</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="semi_method_3" value="{$form.semi_method_3}" />
+                                                    <span class="counter">{$form.semi_method_3|count_characters:true}</span>
+                                                    <input type="hidden" name="semi_method_value_3" value="{if $form.semi_method_value_3}{$form.semi_method_value_3}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.semi_method_value_3}{$form.semi_method_value_3}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:{if $form.semi_method_1 || $form.semi_method_2 || $form.semi_method_3 || $form.semi_method_4 || $form.semi_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#4</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="semi_method_4" value="{$form.semi_method_4}" />
+                                                    <span class="counter">{$form.semi_method_4|count_characters:true}</span>
+                                                    <input type="hidden" name="semi_method_value_4" value="{if $form.semi_method_value_4}{$form.semi_method_value_4}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.semi_method_value_4}{$form.semi_method_value_4}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:{if $form.semi_method_1 || $form.semi_method_2 || $form.semi_method_3 || $form.semi_method_4 || $form.semi_method_5}table-row{else}none{/if};">
+                                            <td>
+                                                <label>
+                                                    <span style="color:#888;padding:0 2px 0 3px">#5</span>
+                                                    <input type="text" style="width:490px;margin-top:4px;font-size:14px" maxlength="140" class="additional" name="semi_method_5" value="{$form.semi_method_5}" />
+                                                    <span class="counter">{$form.semi_method_5|count_characters:true}</span>
+                                                    <input type="hidden" name="semi_method_value_5" value="{if $form.semi_method_value_5}{$form.semi_method_value_5}{else}0{/if}" />
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <b style="font-size:14px;padding:0 6px">{if $form.semi_method_value_5}{$form.semi_method_value_5}{else}0{/if}</b>
+                                                <a class="xbutton plus" href="javascript:;">&plus;</a>
+                                                <a class="xbutton minus" href="javascript:;">&minus;</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+{if isset($form.save) || isset($form.submit)}
+                        <div class="oracle-form hide-if-js" id="form2">
+                            <h3>Methods Assessment</h3>
+    {foreach from=$filled_methods item=row name=methods}
+        {assign var=i value=$smarty.foreach.methods.iteration}
+        {assign var=supported value="supported_`$i`"}
+        {assign var=scoping value="scoping_`$i`"}
+        {assign var=mobilising value="mobilising_`$i`"}
+        {assign var=anticipating value="anticipating_`$i`"}
+        {assign var=recommending value="recommending_`$i`"}
+        {assign var=transforming value="transforming_`$i`"}
+        {assign var=file value="file_`$i`"}
+        {assign var=strenghts value="strenghts_`$i`"}
+        {assign var=weaknesses value="weaknesses_`$i`"}
+                            <div class="table-wrapper" style="margin-bottom:1em">
+                                <table>
+                                    <col style="width:82px" />
+                                    <col span="5" style="width:59px" />
+                                    <col />
+                                    <thead>
+                                        <tr>
+                                            <th>Order</th>
+                                            <th colspan="5" class="t-l">Method</th>
+                                            <th class="t-l">Supported by</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="6" class="t-c" style="padding-left:0">
+                                                <b style="font-size:13px;padding:0 4px">{$i}</b>
+                                            </td>
+                                            <td colspan="5" style="font-size:14px;font-weight:bold">{$row}</td>
+                                            <td>
+                                                <select name="{$supported}" class="additional" style="min-width:280px">
+                                                    <option value="0"> -- </option>
+        {foreach from=$filled_methods item=row2 name=methods2}
+            {if $i != $smarty.foreach.methods2.iteration}
+                                                    <option value="{$smarty.foreach.methods2.iteration}"{if $form.$supported == $smarty.foreach.methods2.iteration} selected="selected"{/if}>{$row2}</option>
+            {/if}
+        {/foreach}
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="5">FLA Phases supported</th>
+                                            <th rowspan="2" class="t-l">Upload file</th>
+                                        </tr>
+                                        <tr class="smarrt">
+                                            <th><div style="width:58px"><div style="padding-left:24px;background:#FFFEA1"><b>S</b><span class="v-h" style="color:#666">coping Futures</span></div></div></th>
+                                            <th><div style="width:58px"><div style="padding-left:24px;background:#FBE1FE"><b>M</b><span class="v-h" style="color:#666">obilising Futures</span></div></div></th>
+                                            <th><div style="width:58px"><div style="padding-left:24px;background:#B0EDFF"><b>A</b><span class="v-h" style="color:#666">nticipating Futures</span></div></div></th>
+                                            <th><div style="width:58px"><div style="padding-left:24px;background:#91FFFE"><b>R</b><span class="v-h" style="color:#666">ecommending Futures</span></div></div></th>
+                                            <th><div style="width:58px"><div style="padding-left:24px;background:#50D3FF"><b>T</b><span class="v-h" style="color:#666">ransforming Futures</span></div></div></th>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" name="{$scoping}" value="1"{if $form.$scoping} checked="checked"{/if} /></td>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" name="{$mobilising}" value="1"{if $form.$mobilising} checked="checked"{/if} /></td>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" name="{$anticipating}" value="1"{if $form.$anticipating} checked="checked"{/if} /></td>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" name="{$recommending}" value="1"{if $form.$recommending} checked="checked"{/if} /></td>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" name="{$transforming}" value="1"{if $form.$transforming} checked="checked"{/if} /></td>
+                                            <td class="t-c">
+                                                <span class="o-h">
+        {if $form.$file}
+                                                    <a href="{$FILES}{$form.$file}">{$form.$file}</a>{if $user_id && !isset($form.submit)} <a href="?delete={$file}" class="delete">delete</a>{/if}
+                                                    <input type="hidden" name="{$file}" value="{$form.$file}" />
+        {else}
+                                                    <input type="file" name="{$file}" />
+        {/if}
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="5" class="t-l">Strenghts (describe, max 140 chars.) <span class="counter counter1">{$form.$strenghts|count_characters:true}</span></th>
+                                            <th class="t-l">Weaknesses (describe, max 140 chars.) <span class="counter counter2">{$form.$weaknesses|count_characters:true}</span></th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="objective"><input type="text" class="additional2 counter1" name="{$strenghts}" value="{$form.$strenghts}" maxlength="140" style="font-size:12px;width:282px" /></td>
+                                            <td class="objective"><input type="text" class="additional2 counter2" name="{$weaknesses}" value="{$form.$weaknesses}" maxlength="140" style="font-size:12px;width:282px" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+    {/foreach}
+                            <h3>Work Plan / Q1: List up to 15 core activities (work packages) of the study. Core activities (also known as work packages) are the main building
+                                blocks of foresight and forward-looking activities. Activities are often, but not necessarily, built around methods.</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:32px" />
+                                    <col style="width:320px" />
+                                    <col />
+                                    <col style="width:136px" />
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Activity/work package</th>
+                                            <th>Leader/Responsible</th>
+                                            <th>Work package URL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>1</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_1" value="{$form.activity_name_1}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_1" value="{$form.activity_leader_1}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_1" value="{$form.activity_url_1}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>2</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_2" value="{$form.activity_name_2}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_2" value="{$form.activity_leader_2}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_2" value="{$form.activity_url_2}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>3</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_3" value="{$form.activity_name_3}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_3" value="{$form.activity_leader_3}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_3" value="{$form.activity_url_3}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>4</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_4" value="{$form.activity_name_4}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_4" value="{$form.activity_leader_4}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_4" value="{$form.activity_url_4}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>5</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_5" value="{$form.activity_name_5}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_5" value="{$form.activity_leader_5}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_5" value="{$form.activity_url_5}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>6</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_6" value="{$form.activity_name_6}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_6" value="{$form.activity_leader_6}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_6" value="{$form.activity_url_6}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>7</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_7" value="{$form.activity_name_7}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_7" value="{$form.activity_leader_7}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_7" value="{$form.activity_url_7}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>8</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_8" value="{$form.activity_name_8}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_8" value="{$form.activity_leader_8}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_8" value="{$form.activity_url_8}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>9</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_9" value="{$form.activity_name_9}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_9" value="{$form.activity_leader_9}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_9" value="{$form.activity_url_9}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>10</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_10" value="{$form.activity_name_10}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_10" value="{$form.activity_leader_10}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_10" value="{$form.activity_url_10}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>11</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_11" value="{$form.activity_name_11}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_11" value="{$form.activity_leader_11}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_11" value="{$form.activity_url_11}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>12</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_12" value="{$form.activity_name_12}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_12" value="{$form.activity_leader_12}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_12" value="{$form.activity_url_12}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>13</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_13" value="{$form.activity_name_13}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_13" value="{$form.activity_leader_13}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_13" value="{$form.activity_url_13}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>14</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_14" value="{$form.activity_name_14}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_14" value="{$form.activity_leader_14}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_14" value="{$form.activity_url_14}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>15</b></div></td>
+                                            <td class="objective"><input type="text" name="activity_name_15" value="{$form.activity_name_15}" maxlength="255" style="width:294px" /></td>
+                                            <td class="objective"><input type="text" name="activity_leader_15" value="{$form.activity_leader_15}" maxlength="255" style="width:173px" /></td>
+                                            <td class="t-l"><input type="text" name="activity_url_15" value="{$form.activity_url_15}" maxlength="255" class="reference" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+{/if}
+		                    <script type="text/javascript">
+		                    {literal}
+		                      //<![CDATA[
+		                        function tabs(show,hide,self) {
+		                            var cn = (!!document.getElementById('form' + show) ? document.getElementById('form' + show).className : '');
+		                            show = String(show);
+		                            hide = String(hide);
+		                            !!document.getElementById('form' + hide) && (document.getElementById('form' + hide).style.display = 'none');
+		                            !!document.getElementById('form' + show) && (document.getElementById('form' + show).style.display = '');
+		                            !!document.getElementById('form' + show) && (document.getElementById('form' + show).className = cn.replace(/ hide-if-js/, ''));
+		                            self.className = 'active';
+		                            !!document.getElementById('tab' + hide) && (document.getElementById('tab' + hide).className = '');
+		                            return false;
+		                        }
+		                      //]]>
+		                      {/literal}
+		                    </script>

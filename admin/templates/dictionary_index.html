@@ -1,0 +1,53 @@
+<h1 class="h-dictionary h-dictionary-index">{#dictionary#}</h1>
+{if $user->hasRight(17)}
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=editindex" class="button new">{#new_item#}</a></p>
+{/if}
+<form method="post" action="" class="filter">
+    <fieldset class="filter" class="filter">
+        <legend>{#filter#}</legend>
+        <label for="dictionary_search">{#query#}: </label>
+        <input id="dictionary_search" type="text" name="search" value="{$dictionary_search}" />
+        <label for="dictionary_lang">{#lang#}: </label>
+        <select name="lang" id="dictionary_lang">
+{foreach from=$langs item=lang}
+            <option value="{$lang.lang_id}"{if $dictionary_lang == $lang.lang_id} selected="selected"{/if}>{$lang.name}</option>
+{/foreach}
+        </select>
+        <input type="submit" value="{#filtrate#}" />
+    </fieldset>
+</form>
+<table class="list table-dictionary table-dictionary-index">
+    <thead>
+        <tr>
+            <th class="th-code">{#code#}</th>
+            <th class="th-value">{#value#}</th>
+{if $user->hasRight(17)}
+            <th class="th-action">{#action#}</th>
+{/if}
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editindex&amp;code={$row.code}">{$row.code}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editindex&amp;code={$row.code}">{$row.value|strip_tags|truncate:60}</a></td>
+	{if $user->hasRight(17)}
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=index&amp;code={$row.code}&amp;action=delete" class="delete">{#delete#}</a></td>
+	{/if}
+        </tr>
+{/foreach}
+    </tbody>
+</table>
+{if $user->hasRight(17)}
+<div id="dictionary-import" title="{#import_csv_file#}" class="hidden">
+	<form method="post" action="" enctype="multipart/form-data">
+    	<fieldset>
+    		<label for="import">{#csv_file#}:</label>
+    		<input type="file" name="import" id="import" />
+    		<p>{#dictionary_csv_format#}</p>
+    		<input type="radio" name="type" value="add" id="type_add" checked="checked" /> <label for="type_add" title="{#dictionary_add_hint#}">{#add#}</label>
+            <input type="radio" name="type" value="replace" id="type_replace" /> <label for="type_replace" title="{#dictionary_replace_hint#}">{#replace#}</label>
+    	</fieldset>
+	</form>
+</div>
+{/if}

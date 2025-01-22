@@ -1,0 +1,65 @@
+<h1 class="h-settings h-settings-menu">{#menus#}</h1>
+{if $user->hasRight(12)}
+<p class="navi"><a href="javascript:;" id="item_new" class="button new">{#new_item#}</a></p>
+{/if}
+<table class="list table-settings table-settings-menu">
+    <thead>
+        <tr>
+        	<th class="th-lang">{#lang#}</th>
+            <th class="th-name">{#name#}</th>
+            <th class="th-code">{#code#}</th>
+            <th class="th-status">{#status#}</th>
+{if $user->hasRight(12)}
+            <th class="th-action">{#action#}</th>
+{/if}
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+        	<td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editmenu&amp;id={$row.menu_id}">{$langs[$row.lang_id].name}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editmenu&amp;id={$row.menu_id}">{$row.name}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editmenu&amp;id={$row.menu_id}">{$row.code}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editmenu&amp;id={$row.menu_id}">{if $row.status}{#active#}{else}{#inactive#}{/if}</a></td>
+	{if $user->hasRight(12)}
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=menu&amp;id={$row.menu_id}&amp;action=delete" class="delete">{#delete#}</a></td>
+	{/if}
+        </tr>
+{/foreach}
+    </tbody>
+</table>
+{if $user->hasRight(12)}
+<div id="item-new" title="{#new_item#}" class="hidden">
+	<form method="post" action="">
+    	<fieldset>
+        	<table>
+        	   	<tr>
+        		  	<td class="th-label"><label for="clang">{#lang#}:</label></td>
+        		  	<td>
+        		  		<select name="item[lang_id]" id="clang">
+	{foreach from=$langs item=row}
+							<option value="{$row.lang_id}">{$row.name}</option>
+	{/foreach}
+						</select>
+                	</td>
+            	</tr>
+        	   	<tr>
+        		  	<td class="th-label"><label for="content_name">{#name#}:</label></td>
+        		  	<td>
+				  		<input type="text" name="item[name]" id="content_name" />
+                	</td>
+            	</tr>
+        	   	<tr>
+        		  	<td class="th-label"><label for="content_code">{#code#}:</label></td>
+        		  	<td>
+				  		<input type="text" name="item[code]" id="content_code" />
+                        <input type="hidden" name="item_id" value="0" />
+						<input type="hidden" name="action" value="new_item" />
+                	</td>
+                </tr>
+        	</table>
+        </fieldset>
+	</form>
+</div>
+{/if}
+

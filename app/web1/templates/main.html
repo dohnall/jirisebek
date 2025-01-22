@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="{if $LANG_CODE == 'cz'}cs{else}{$LANG_CODE}{/if}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1">
+  <link rel="stylesheet" href="{$DESIGN}site.css?v=2.0">
+  <title>{$SECTION->get('title')}</title>
+
+  <link rel="icon" href="{$DESIGN}images/favicon.ico?v=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{$DESIGN}slick.css">
+  <link rel="stylesheet" href="{$DESIGN}slick-theme.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="{$JS}slick.min.js"></script>
+  <script src="{$JS}app.js"></script>
+  {if in_array($TEMPLATE, ['service', 'architecture-detail', 'fineart-photo'])}
+  <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+  {/if}
+{if $TEMPLATE == 'index'}
+  <script>
+    $(document).ready(() => {
+      $('#carousel').slick({
+        autoplay: true,
+        dots: true,
+        prevArrow: '<span class="carousel_navs"><a class="carousel_nav_prev"></a></span>',
+        nextArrow:'<span class="carousel_navs"><a class="carousel_nav_next"></a></span>',
+        responsive: [{
+          breakpoint: 576,
+          settings: {
+            arrows: false,
+            infinite: true
+          }
+        }]
+      })
+    })
+  </script>
+{/if}
+{if $TEMPLATE == 'service'}
+  <script>
+    $(document).ready(() => {
+      const preload = []
+      $('#carousel_nav img').each((idx, el) => {
+        const img = new Image()
+        img.src = el.dataset.imgsrc
+        preload.push(img)
+      })
+
+      const $carousel_title = $('#carousel_title')
+      const $carousel_title_txt = $('#carousel_title_txt')
+      const $carousel_image = $('#carousel_image')
+      let $last = $('#carousel_nav > img:first-child')
+
+      function handleSlide() {
+        $last.addClass('active')
+        $carousel_image.attr('src', $last.data('imgsrc'))
+        const title = $last.data('title')
+        if (title) {
+          $carousel_title_txt.text(title)
+          $carousel_title.fadeIn()
+        } else {
+          $carousel_title.fadeOut()
+        }
+      }
+      function slidePrev() {
+        $last.removeClass('active')
+        if ($last.prev().length) {
+          $last = $last.prev()
+        } else {
+          $last = $last.siblings(':last')
+        }
+        handleSlide()
+      }
+      function slideNext() {
+        $last.removeClass('active')
+        if ($last.next().length) {
+          $last = $last.next()
+        } else {
+          $last = $last.siblings(':first')
+        }
+        handleSlide()
+      }
+
+      $('#carousel_nav').on('click', 'img', (event) => {
+        $last.removeClass('active')
+        $last = $(event.currentTarget)
+        handleSlide()
+      })
+      $('.carousel_nav_prev').click(slidePrev)
+      $('.carousel_nav_next').click(slideNext)
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') {
+          slidePrev()
+        }
+        if (event.key === 'ArrowRight') {
+          slideNext()
+        }
+      })
+    })
+  </script>
+{/if}
+{if $TEMPLATE == 'fineart-album'}
+  <script>
+    $(document).ready(() => {
+      $('#gallery_show_all').click(() => {
+        $('#gallery .js_hide').removeClass('js_hide').addClass('js_fadeIn')
+        $('#gallery_show_all').hide()
+      })
+    })
+  </script>
+{/if}
+{if $TEMPLATE == 'fineart-photo'}
+  <script>
+    $(document).ready(() => {
+      const $showDetail = $('#showDetail')
+      const $hideDetail = $('#hideDetail')
+      const $detail = $('#detail')
+      slideUp($detail)
+      $showDetail.click(() => {
+        $showDetail.addClass('js_hide')
+        $hideDetail.removeClass('js_hide')
+        $detail.slideDown('slow')
+      })
+      $hideDetail.click(() => {
+        $hideDetail.addClass('js_hide')
+        $showDetail.removeClass('js_hide')
+        $detail.slideUp('slow')
+      })
+
+      $('#art_form_order').slideUp(0)
+      $('#button_order').click(() => {
+        $('#art_form_order').slideDown('slow')
+      })
+
+      document.addEventListener('keydown', (event) => {
+        let prevPage = $('.carousel_nav_prev').attr('href');
+        let nextPage = $('.carousel_nav_next').attr('href');
+        if (event.key === 'ArrowLeft' && prevPage) {
+          window.location.href = prevPage
+        }
+        if (event.key === 'ArrowRight' && nextPage) {
+          window.location.href = nextPage
+        }
+      })
+    })
+  </script>
+{/if}
+</head>
+<body>
+  <div class="page_section">
+    <div class="page_header">
+      <a href="{$ROOT}"><img src="{$DESIGN}images/logo_jiri-sebek.png" alt="Logo Jiří Šebek" class="page_header_logo" /></a>
+      {include file="menu-top.html" code="main" class="page_nav" last="page_header_lang first"}
+      <nav class="page_nav_mobile">
+        <span class="page_nav_mobile_opener" id="page_nav_mobile_opener"></span>
+        <div id="page_nav_mobile_panel" class="page_nav_mobile_panel js_hide">
+          <div>
+            <span class="page_nav_mobile_closer" id="page_nav_mobile_closer">
+              <span></span>
+            </span>
+            {include file="menu-top.html" code="main" class="page_nav_mobile_links" last="page_header_lang first"}
+          </div>
+          <span class="page_nav_mobile_click_away" id="page_nav_mobile_click_away"></span>
+        </div>
+      </nav>
+    </div>
+{if $TEMPLATE == 'index'}
+    {$carousel = $SECTION->get('file', 'carousel')}
+    {if $carousel}
+    <div class="carousel hp_carousel" id="carousel">
+      {foreach from=$carousel item=row}
+      <div class="slide">
+        <img src="{$FILES}w2000/{$row.file}" />
+      </div>
+      {/foreach}
+    </div>
+    {/if}
+{/if}
+{if $TEMPLATE == 'service'}
+    {$carousel = $SECTION->get('file', 'carousel')}
+    {if $carousel}
+    <div class="carousel carousel_previews">
+      <span class="carousel_navs">
+        <a href="#" class="carousel_nav_prev"></a>
+      </span>
+
+      <div class="carousel_slides">
+        <div class="carousel_slide_title" id="carousel_title">
+          <div id="carousel_title_txt">{$carousel[0].description}</div>
+        </div>
+        <img src="{$FILES}w2000/{$carousel[0].file}" class="carousel_image" id="carousel_image" />
+      </div>
+
+      <span class="carousel_navs">
+        <a href="#" class="carousel_nav_next"></a>
+      </span>
+
+      <div class="carousel_foto_nav" id="carousel_nav">
+        {foreach from=$carousel item=row}
+        <img src="{$FILES}w400/{$row.file}" data-imgsrc="{$FILES}w2000/{$row.file}" data-title="{$row.description}"{if $row@first} class="active"{/if} />
+        {/foreach}
+      </div>
+    </div>
+    {/if}
+{/if}
+{if $TEMPLATE == 'fineart-photo'}
+    {$image = $SECTION->get('file', 'image')}
+    {$nextPage = $SECTION->get('next', true)}
+    {$prevPage = $SECTION->get('previous', true)}
+    <div class="art_nav">
+      <span class="carousel_navs">
+        {if $prevPage}
+        <a href="{$prevPage->get('url')}" class="carousel_nav_prev"></a>
+        {/if}
+      </span>
+      {if $image}
+      <img src="{$FILES}0/{$image[0].file}" alt="{$image[0].alt}" />
+      {/if}
+      <span class="carousel_navs">
+        {if $nextPage}
+        <a href="{$nextPage->get('url')}" class="carousel_nav_next"></a>
+        {/if}
+      </span>
+    </div>
+{/if}
+    <div class="page_content{if $TEMPLATE == 'fineart-photo'} content_text mt56{/if}">
+      {include file=$TEMPLATE_LANG}
+      <footer class="page_footer">
+        <div class="page_footer_head">
+          <img src="{$DESIGN}images/avatar_jiri-sebek.png" width="90">
+
+          <div class="page_footer_info">
+            <p>{#footer_text#}</p>
+            <a href="{$HELPER->section(6)->get('url')}">{#more_about#} &gt;</a>
+          </div>
+          {include file="menu.html" code="footer" class="page_footer_menu"}
+        </div>
+        <div class="page_footer_foot">
+          <a href="{#instagram_url#}" target="_blank" class="page_footer_watch">
+            <span class="ico ico_foto"></span>
+            <div>{#instagram_label#}</div>
+          </a>
+          <div class="page_footer_copy">{#copyright#}</div>
+          <div>{#created_by#}</div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

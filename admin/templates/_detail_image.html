@@ -1,0 +1,60 @@
+<tr>
+    <th class="th-label th-image"><label for="cid_{$type_col.item.code}">{$type_col.item.name}{if $type_col.item.required == 1}&nbsp;*{/if}:</label></th>
+    <td>
+{if $type_col.param.max == 0}
+		<a href="javascript:;" class="nextImage button">{#next#}</a>
+		<input type="hidden" name="code" value="{$type_col.item.code}" />
+{/if}
+		<ol class="gallery{if $type_col.param.max <> 1} sortable{/if}">
+{foreach from=$type_item->get('file', $type_col.item.code, true) item=file key=key name=file}
+			<li>
+				<div class="file"><a href="javascript:;"><img src="{$FILES}120/{$file.file}" alt="" /></a></div>
+				<div class="fileInfo">
+					<input type="hidden" class="fileFile" name="item[file][{$type_col.item.code}][file][]" value="{$file.file}" />
+					<input type="hidden" name="item[file][{$type_col.item.code}][download][]" value="{$file.download}" />
+					<input type="hidden" name="item[file][{$type_col.item.code}][hash][]" value="{$file.hash}" />
+					<input type="file" name="file[{$type_col.item.code}][]" multiple />
+					<label><input type="text" class="fileAlt" name="item[file][{$type_col.item.code}][alt][]" value="{$file.alt}" /> {#alt#}</label>
+					<label><input type="text" class="fileDescription" name="item[file][{$type_col.item.code}][description][]" value="{$file.description}" /> {#description#}</label>
+				</div>
+				<div class="fileControl">
+	{if $type_col.param.max == 0}
+					<a href="javascript:;" class="deleteFile">{#delete#}</a>
+	{else}
+					<a href="javascript:;" class="cleanFile">{#clean#}</a>
+	{/if}
+				</div>
+				<div class="clr"><hr /></div>
+			</li>
+{/foreach}
+{if $type_col.param.max > 0 && $smarty.foreach.file.iteration < $type_col.param.max}
+	{assign var=loop value=$type_col.param.max-$smarty.foreach.file.iteration}
+{elseif $type_col.param.max == 0 && $smarty.foreach.file.iteration < 1}
+	{assign var=loop value=1}
+{else}
+	{assign var=loop value=0}
+{/if}
+{section name=file2 loop=$loop}
+			<li>
+				<div class="file"><a href="javascript:;"><img src="{$DESIGN}noimage.png" alt="" /></a></div>
+				<div class="fileInfo">
+					<input type="hidden" class="fileFile" name="item[file][{$type_col.item.code}][file][]" value="" />
+					<input type="hidden" name="item[file][{$type_col.item.code}][download][]" value="0" />
+					<input type="hidden" name="item[file][{$type_col.item.code}][hash][]" value="" />
+					<input type="file" name="file[{$type_col.item.code}][]" multiple />
+					<label><input type="text" class="fileAlt" name="item[file][{$type_col.item.code}][alt][]" value="" /> {#alt#}</label>
+					<label><input type="text" class="fileDescription" name="item[file][{$type_col.item.code}][description][]" value="" /> {#description#}</label>
+				</div>
+				<div class="fileControl">
+	{if $type_col.param.max == 0}
+					<a href="javascript:;" class="deleteFile">{#delete#}</a>
+	{else}
+					<a href="javascript:;" class="cleanFile">{#clean#}</a>
+	{/if}
+				</div>
+				<div class="clr"><hr /></div>
+			</li>
+{/section}
+		</ol>
+	</td>
+</tr>

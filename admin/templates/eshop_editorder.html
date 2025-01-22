@@ -1,0 +1,151 @@
+<h1 class="h-user h-user-profile">{if $item_id}Objednávka č. {$item_id}{else}{#new_item#}{/if}</h1>
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=order" class="button back">{#back_to_list#}</a></p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table>
+        <tr>
+            <th class="th-label th-user_id"><label for="user_id">Zákazník</label>:</th>
+            <td>
+                <select name="user_id" id="user_id">
+                    <option value="0">== vyberte ==</option>
+{foreach from=$customers item=row}
+					<option value="{$row.user_id}"{if $data.user_id == $row.user_id} selected="selected"{/if}>{$row.lname} {$row.fname}</option>
+{/foreach}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th class="th-label th-fname"><label for="fname">{#fname#}</label>:</th>
+            <td><input type="text" name="fname" id="fname" value="{$data.fname}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-lname"><label for="lname">{#lname#}</label>:</th>
+            <td><input type="text" name="lname" id="lname" value="{$data.lname}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-email"><label for="email">{#email#}</label>:</th>
+            <td><input type="text" name="email" id="email" value="{$data.email}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-phone"><label for="phone">Telefon</label>:</th>
+            <td><input type="text" name="phone" id="phone" value="{$data.phone}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-street"><label for="street">Ulice</label>:</th>
+            <td><input type="text" name="street" id="street" value="{$data.street}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-city"><label for="city">Město</label>:</th>
+            <td><input type="text" name="city" id="city" value="{$data.city}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-zip"><label for="zip">PSČ</label>:</th>
+            <td><input type="text" name="zip" id="zip" value="{$data.zip}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-company"><label for="company_buy">Nakupuji na firmu</label>:</th>
+            <td><input type="checkbox" name="company_buy" id="company_buy" value="1"{if $data.company_buy} checked="checked"{/if} /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-company"><label for="company">Firma</label>:</th>
+            <td><input type="text" name="company" id="company" value="{$data.company}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-company"><label for="ico">IČ</label>:</th>
+            <td><input type="text" name="ico" id="ico" value="{$data.ico}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-company"><label for="dic">DIČ</label>:</th>
+            <td><input type="text" name="dic" id="dic" value="{$data.dic}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-company"><label for="deliveryaddress">Jiná dodací adresa</label>:</th>
+            <td><input type="checkbox" name="deliveryaddress" id="deliveryaddress" value="1"{if $data.deliveryaddress} checked="checked"{/if} /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-company"><label for="dcompany">Firma</label>:</th>
+            <td><input type="text" name="dcompany" id="dcompany" value="{$data.dcompany}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-fname"><label for="dfname">Doručovací jméno</label>:</th>
+            <td><input type="text" name="dfname" id="dfname" value="{$data.dfname}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-lname"><label for="dlname">Doručovací příjmení</label>:</th>
+            <td><input type="text" name="dlname" id="dlname" value="{$data.dlname}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-street"><label for="dstreet">Doručovací ulice</label>:</th>
+            <td><input type="text" name="dstreet" id="dstreet" value="{$data.dstreet}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-city"><label for="dcity">Doručovací město</label>:</th>
+            <td><input type="text" name="dcity" id="dcity" value="{$data.dcity}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-zip"><label for="dzip">Doručovací PSČ</label>:</th>
+            <td><input type="text" name="dzip" id="dzip" value="{$data.dzip}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-delivery"><label for="delivery">Doprava</label>:</th>
+            <td><input type="text" name="delivery" id="delivery" value="{$data.delivery}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-payment"><label for="payment">Platba</label>:</th>
+            <td><input type="text" name="payment" id="payment" value="{$data.payment}" size="50" /></td>
+        </tr>
+        <!--tr>
+            <th class="th-label th-price"><label for="weight">Váha (g)</label>:</th>
+            <td><input type="text" name="weight" id="weight" value="{$data.weight}" size="50" /></td>
+        </tr-->
+        <!--tr>
+            <th class="th-label th-price"><label for="sale">Sleva (%)</label>:</th>
+            <td><input type="text" name="sale" id="sale" value="{$data.sale}" size="50" /></td>
+        </tr-->
+        <tr>
+            <th class="th-label th-price"><label for="delivery_price">Cena za dopravu</label>:</th>
+            <td><input type="text" name="delivery_price" id="delivery_price" value="{$data.delivery_price}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-price"><label for="price">Cena v Kč</label>:</th>
+            <td><input type="text" name="price" id="price" value="{$data.price}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-status"><label for="status">Stav</label>:</th>
+            <td>
+                <select name="status" id="status">
+                    <option value="1"{if $data.status == 1} selected="selected"{/if}>přijatá</option>
+                    <option value="2"{if $data.status == 2} selected="selected"{/if}>vyřizuje se</option>
+                    <option value="3"{if $data.status == 3} selected="selected"{/if}>uzavřeno</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="hidden" name="item_id" value="{$item_id}" />
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+    </table>
+</form>
+<h2>Položky objednávky</h2>
+<table>
+	<tr>
+		<th>Název</th>
+		<th>Cena za ks</th>
+		<th>Ks</th>
+		<th>Cena</th>
+	</tr>
+{foreach from=$data.items item=row}
+	{$item = $HELPER->section($row.product_id)}
+	{$parent = $HELPER->section($item->get('section', 'parent_id'))}
+	<tr>
+		<td><a href="{$parent->get('url')}">{$row.name}</a></td>
+		<td>{$row.price}</td>
+		<td>{$row.amount}</td>
+		<td>{$row.price * $row.amount}</td>
+	</tr>
+{/foreach}
+</table>
+

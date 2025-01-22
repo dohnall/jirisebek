@@ -1,0 +1,29 @@
+<h1 class="h-user h-user-user">Zákazníci</h1>
+<table class="list table-user table-user-user">
+    <thead>
+        <tr>
+            <th class="th-email" width="250"><a href="{$ROOT}?module={$MODULE}&amp;submodule=customer&amp;order=email&amp;sort={if $order=='email' && $sort=='asc'}desc{else}asc{/if}">{#email#}</a></th>
+			<th class="th-fname"><a href="{$ROOT}?module={$MODULE}&amp;submodule=customer&amp;order=fname&amp;sort={if $order=='fname' && $sort=='asc'}desc{else}asc{/if}">{#fname#}</a></th>
+            <th class="th-lname"><a href="{$ROOT}?module={$MODULE}&amp;submodule=customer&amp;order=lname&amp;sort={if $order=='lname' && $sort=='asc'}desc{else}asc{/if}">{#lname#}</a></th>
+            <th class="th-status"><a href="{$ROOT}?module={$MODULE}&amp;submodule=customer&amp;order=status&amp;sort={if $order=='status' && $sort=='asc'}desc{else}asc{/if}">{#status#}</a></th>
+            <th class="th-inserted"><a href="{$ROOT}?module={$MODULE}&amp;submodule=customer&amp;order=inserted&amp;sort={if $order=='inserted' && $sort=='asc'}desc{else}asc{/if}">{#inserted#}</a></th>
+			<th class="th-newsletter">Newsletter</th>
+            <th>{#action#}</th>
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcustomer&amp;id={$row.user_id}">{$row.email}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcustomer&amp;id={$row.user_id}">{$row.fname}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcustomer&amp;id={$row.user_id}">{$row.lname}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcustomer&amp;id={$row.user_id}">{if $row.status == 1}{#active#}{else}{#inactive#}{/if}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcustomer&amp;id={$row.user_id}">{$row.inserted|date_format:"%d.%m.%Y %H:%M:%S"}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcustomer&amp;id={$row.user_id}">{if $row.newsletter == 1}{#yes#}{/if}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=customer&amp;delete={$row.user_id}" class="delete">{#delete#}</a></td>
+        </tr>
+{/foreach}
+    </tbody>
+</table>
+
+

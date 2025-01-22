@@ -1,0 +1,18 @@
+<div id="tree">
+    <ul>
+{foreach from=$projects item=row}
+		<li>
+			<a href="javascript:;" class="ui-icon {if $project_id == $row->section_id}ui-icon-circlesmall-minus{else}ui-icon-circlesmall-plus{/if}"></a><a href="javascript:;"{if $project_id == $row->section_id} class="active"{/if}>{$row->get('text', 'name')}</a>
+			<ul{if $project_id != $row->section_id} class="hidden"{/if}>
+				<li><a href="{$ROOT}?module={$MODULE}&amp;submodule=horizon_scanning&amp;project={$row->section_id}"{if $project_id == $row->section_id && $SUBMODULE == 'horizon_scanning'} class="active"{/if}>Horizon scanning</a></li>
+				<li><a href="{$ROOT}?module={$MODULE}&amp;submodule=scenarion_generation&amp;project={$row->section_id}"{if $project_id == $row->section_id && $SUBMODULE == 'scenarion_generation'} class="active"{/if}>Scenario generation</a></li>
+				<li><a href="{$ROOT}?module={$MODULE}&amp;submodule=workforce_modelling&amp;project={$row->section_id}"{if $project_id == $row->section_id && $SUBMODULE == 'workforce_modelling'} class="active"{/if}>Workforce modelling</a></li>
+				<li><a href="{$ROOT}?module={$MODULE}&amp;submodule=policy_analysis&amp;project={$row->section_id}"{if $project_id == $row->section_id && $SUBMODULE == 'policy_analysis'} class="active"{/if}>Policy analysis</a></li>
+			</ul>
+		</li>
+{/foreach}
+    </ul>
+</div>
+<div id="content">
+    {include file="`$MODULE`_`$SUBMODULE`.html"}
+</div>

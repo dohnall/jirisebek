@@ -1,0 +1,99 @@
+<fieldset id="content-search" class="filter">
+    <legend>{#filter#}</legend>
+    {include file="pager.html"}
+	<form method="post" action="" class="filter">
+		<div>
+		    <label for="search">{#query#}: </label>
+		    <input id="search" type="text" name="search[]" value="{$search[0]}" />
+		    <input type="submit" name="filter" value="{#filtrate#}" />
+		</div>
+	</form>
+</fieldset>
+<table class="list table-ajax-content table-ajax-content-list">
+	<thead>
+		<tr>
+			<th class="th-boxes">&nbsp;</th>
+			<th class="th-rank">{#rank#}</th>
+{if $item->get('section', 'template') == 'products'}
+			<th class="th-image">Obrázek</th>
+{/if}
+			<th class="th-name">{#name#}</th>
+			<th class="th-created-by">{#created_by#}</th>
+			<th class="th-inserted">{#inserted#}</th>
+			<th class="th-updated">{#updated#}</th>
+			<th class="th-status">{#status#}</th>
+			<th class="th-action">{#action#}</th>
+		</tr>
+{if $item->get('section', 'parent_id') > 0 && $user->hasSection($item->get('section', 'parent_id'))}
+	    <tr>
+	        <td colspan="{if $item->get('section', 'template') == 'products'}7{else}6{/if}"><a href="{$ROOT}?module=content&amp;id={$item->get('section', 'parent_id')}">[..]</a></td>
+	        <td>&nbsp;</td>
+	    </tr>
+{/if}
+	</thead>
+{if $children}
+	<tbody{if $user->hasRight(41) && !$search[0]} class="sortable sortable_content"{/if}>
+	{foreach from=$children key=row_id item=row}
+	    <tr class="{cycle values='odd,even'}{if $row->get('text', 'default_lang') == 1} default_lang{/if}{if $row->get('text', 'status') == '0'} inactive{/if}">
+	        <td><input type="checkbox" name="check[]" value="{$row->get('section', 'section_id')}" class="checkall" /></td>
+	        <td>
+			    <select name="rank[{$row->section_id}]" id="rank_{$row->section_id}" class="content_list_rank"{if !$user->hasRight(41) || $search[0]} disabled="disabled"{/if}>
+			    {section name=rank loop=$count+1 start=1 step=1}
+			        <option value="{$smarty.section.rank.index}"{if $row->get('section', 'rank') == $smarty.section.rank.index} selected="selected"{/if}>{$smarty.section.rank.index}</option>
+			    {/section}
+			    </select>
+			</td>
+	{if $item->get('section', 'template') == 'products'}
+		{$image = $row->get('file', 'image')}
+			<td>
+				<a href="{$ROOT}?module=content&amp;id={$row->get('section', 'section_id')}">
+		{if $image}
+					<img src="{$FILES}w100/{$image[0].file}" alt="">
+		{/if}
+				</a>
+			</td>
+	{/if}
+			<td><a href="{$ROOT}?module=content&amp;id={$row->get('section', 'section_id')}"{if $row->get('section', 'deleted')} class="deleted"{/if}>{$row->get('text', 'name')}</a></td>
+			{$created = $HELPER->user($row->get('text', 'user_id'))}
+			<td><a href="{$ROOT}?module=content&amp;id={$row->get('section', 'section_id')}">{$created->nickname}</a></td>
+			<td><a href="{$ROOT}?module=content&amp;id={$row->get('section', 'section_id')}">{$row->get('text', 'inserted')|date_format:"%d.%m.%y %H:%M"}</a></td>
+			<td><a href="{$ROOT}?module=content&amp;id={$row->get('section', 'section_id')}">{$row->get('text', 'updated')|date_format:"%d.%m.%y %H:%M"}</a></td>
+			<td><a href="{$ROOT}?module=content&amp;id={$row->get('section', 'section_id')}">{if $row->get('text', 'status')}{#active#}{else}{#inactive#}{/if}</a></td>
+	        <td class="action">
+		{if $user->hasRight(24) && $row->get('section', 'removable')}
+				<a href="{$ROOT}?module=content&amp;id={$row->get('section', 'section_id')}&amp;action=delete" class="delete" title="{#delete#}"><span class="ui-icon ui-icon-trash"></span></a>
+		{/if}
+		{if $user->hasRight(25)}
+			{if $row->get('text', 'status')}
+				<a href="{$ROOT}?module=content&amp;id={$row->get('section', 'section_id')}&amp;action=deactivate" title="{#deactivate#}"><span class="ui-icon ui-icon-pause"></span></a>
+			{else}
+				<a href="{$ROOT}?module=content&amp;id={$row->get('section', 'section_id')}&amp;action=activate" title="{#activate#}"><span class="ui-icon ui-icon-play"></span></a>
+			{/if}
+		{/if}
+		{if $user->hasRight(26)}
+				<a href="{$ROOT}?module=content&amp;id={$row->get('section', 'section_id')}&amp;action=copy" title="{#create_copy#}"><span class="ui-icon ui-icon-copy"></span></a>
+		{/if}
+			</td>
+	    </tr>
+	{/foreach}
+	</tbody>
+{/if}
+	<tfoot>
+	    <tr>
+	        <td><input type="checkbox" name="checkall" value="1" id="checkall" /></td>
+	        <td colspan="{if $item->get('section', 'template') == 'products'}8{else}7{/if}">
+	            <select name="common_action" id="common_action">
+	                <option value="0">{#common_action#}</option>
+{if $user->hasRight(25)}
+	                <option value="1">{#activate#}</option>
+	                <option value="2">{#deactivate#}</option>
+{/if}
+{if $user->hasRight(24)}
+	                <option value="3">{#delete#}</option>
+{/if}
+	            </select>
+	        </td>
+	    </tr>
+	</tfoot>
+</table>
+

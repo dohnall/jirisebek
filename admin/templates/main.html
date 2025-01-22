@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta http-equiv="ImageToolbar" content="no" />
+<title>{$dictionary.$MODULE} | {$dictionary[{"cms_title_`$COMPANY`"}]}</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="{$DESIGN}jquery.ui.all.css" rel="stylesheet" type="text/css" />
+<link href="{$DESIGN}blueprint/screen.css" rel="stylesheet" type="text/css" media="screen,tv,projection" />
+<!--[if lt IE 8]><link href="{$DESIGN}blueprint/ie.css" rel="stylesheet" type="text/css" media="screen,tv,projection" /><![endif]-->
+<link href="{$DESIGN}blueprint/print.css" rel="stylesheet" type="text/css" media="print" />
+<link href="http://fonts.googleapis.com/css?family=Signika:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+<link href="{$DESIGN}select2.min.css" rel="stylesheet" type="text/css" />
+<link href="{$DESIGN}main.css?1" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$JS}jquery.js"></script>
+<script type="text/javascript" src="{$JS}jquery.ui.js"></script>
+<script type="text/javascript" src="{$JS}jquery.timepicker.js"></script>
+{if $user->cmslang != 'en'}
+<script type="text/javascript" src="{$JS}jquery.ui.datepicker-{$user->cmslang}.js"></script>
+{/if}
+<script type="text/javascript" src="{$JS}jquery.tipbox.js"></script>
+<script type="text/javascript" src="{$JS}jquery.cookie.js"></script>
+<script type="text/javascript" src="{$JS}jquery.tinymce.js"></script>
+<script type="text/javascript" src="{$JS}load.php?lang={$user->cmslang}"></script>
+<script type="text/javascript" src="{$JS}swfupload.js"></script>
+<script type="text/javascript" src="{$JS}swfupload.queue.js"></script>
+<script type="text/javascript" src="{$JS}fileprogress.js"></script>
+<script type="text/javascript" src="{$JS}handlers.js"></script>
+<script type="text/javascript" src="{$JS}select2.min.js"></script>
+<script type="text/javascript" src="{$JS}main.js?2"></script>
+{if $MODULE == 'efp_project'}
+<script type="text/javascript" src="{$JS}efp_project.js"></script>
+<link href="{$DESIGN}efp_project.css" rel="stylesheet" type="text/css" />
+{/if}
+{if $MODULE == 'reservation'}
+<link href="{$DESIGN}reservation.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$JS}reservation.js"></script>
+{/if}
+{if $MODULE == 'templates'}
+<link rel="stylesheet" href="{$JS}codemirror/codemirror.css">
+<script src="{$JS}codemirror/codemirror.js"></script>
+<script src="{$JS}codemirror/xml.js"></script>
+<script src="{$JS}codemirror/javascript.js"></script>
+<script src="{$JS}codemirror/css.js"></script>
+<script src="{$JS}codemirror/vbscript.js"></script>
+<script src="{$JS}codemirror/htmlmixed.js"></script>
+<script src="{$JS}codemirror/active-line.js"></script>
+<script src="{$JS}codemirror/searchcursor.js"></script>
+<script src="{$JS}codemirror/search.js"></script>
+<script src="{$JS}codemirror/dialog.js"></script>
+{/if}
+</head>
+<body class="no-js">{literal}
+    <script type="text/javascript">
+      //<![CDATA[
+        document.body.className = document.body.className.replace(/(^| )no-js( |$)/, '$1js$2');
+        if (typeof jQuery === 'function') {
+            for (UA_NAME in jQuery.browser) break;
+            UA_VERSION = parseInt(jQuery.browser.version, 10);
+        }
+        document.body.className += ' ' + (UA_NAME || '') + ' v' + (UA_VERSION || '');
+      //]]>
+    </script>{/literal}
+    <div id="main">
+        <div id="header" class="clearfix">
+            <div id="admin_info" class="clearfix">
+                <a href="{$ROOT}" id="logo"><span>{$dictionary[{"cms_name_`$COMPANY`"}]}</span></a>
+                <form method="post" action="" class="domain">
+                    <div>
+                        <label for="change_domain">{#domain#}:</label>
+                        <select name="change_domain" id="change_domain">
+{foreach from=$DOMAINS item=row}
+                            <option value="{$row.domain_id}"{if $row.domain_id == $DOMAIN} selected="selected"{/if}>{$row.name}</option>
+{/foreach}
+                        </select>
+                    </div>
+                </form>
+                <p class="user">
+                    <span class="logged-user" title="<h4>{#logged_users#}:</h4>{foreach from=$logged_users item=row}{$row.nickname} ({$row.fname} {$row.lname})<br />{/foreach}">{#user#}:</span>
+                    <a href="{$ROOT}?module=user&amp;submodule=profile" title="{#edit_profile#}"><b>{$user->nickname}</b></a> |
+                    <a href="{$ROOT}?module=logout"><span>{#logout#}</span></a> |
+                    <a href="{$ROOT_FRONTEND}"><span>{#open_pages#}</span></a>
+                    <span id="current_time">{$smarty.now|date_format:"%d.%m.%Y %H:%M:%S"}</span>
+                </p>
+            </div>
+            <ul id="modules" class="clearfix">
+{foreach from=$MODULES item=row}
+    {if $row.code != 'logout'}
+        {assign var=module_code value=$row.code}
+        {assign var=module_desc value="`$module_code`_desc"}
+                <li><a href="{$ROOT}?module={$module_code}" title="{$dictionary[$module_desc]}"{if $module_code == $MODULE} class="active"{/if}>{$dictionary[$module_code]}</a></li>
+    {/if}
+{/foreach}
+            </ul>
+        </div>
+        <div id="page">
+            <div class="page-inner clearfix">
+                {include file="`$MODULE`.html"}
+            </div>
+        </div>
+        <div id="footer">
+			<strong>
+				{$dictionary[{"cms_link_`$COMPANY`"}]}
+			</strong>
+			<p>{$dictionary[{"cms_copyright_`$COMPANY`"}]}</p>
+        </div>
+    </div>
+{if $alert}
+    <div id="dialog-message" title="{#notification#}" class="notification {$alert_css_class}" data-message-class="{$alert_css_class}">
+    	<p>{$alert}</p>
+    </div>
+{/if}
+</body>
+</html>

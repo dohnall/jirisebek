@@ -1,0 +1,29 @@
+<h1 class="h-order h-order-order">Objednávky</h1>
+<table class="list table-order table-order-order">
+    <thead>
+        <tr>
+            <th class="th-id" width="250"><a href="{$ROOT}?module={$MODULE}&amp;submodule=order&amp;order=email&amp;sort={if $order=='orders_id' && $sort=='asc'}desc{else}asc{/if}">{#id#}</a></th>
+            <th class="th-lname"><a href="{$ROOT}?module={$MODULE}&amp;submodule=order&amp;order=lname&amp;sort={if $order=='lname' && $sort=='asc'}desc{else}asc{/if}">{#lname#}</a></th>
+            <th class="th-email"><a href="{$ROOT}?module={$MODULE}&amp;submodule=order&amp;order=email&amp;sort={if $order=='email' && $sort=='asc'}desc{else}asc{/if}">{#email#}</a></th>
+            <th class="th-price"><a href="{$ROOT}?module={$MODULE}&amp;submodule=order&amp;order=price&amp;sort={if $order=='price' && $sort=='asc'}desc{else}asc{/if}">Cena</a></th>
+            <th class="th-status"><a href="{$ROOT}?module={$MODULE}&amp;submodule=order&amp;order=status&amp;sort={if $order=='status' && $sort=='asc'}desc{else}asc{/if}">{#status#}</a></th>
+            <th class="th-inserted"><a href="{$ROOT}?module={$MODULE}&amp;submodule=order&amp;order=inserted&amp;sort={if $order=='inserted' && $sort=='asc'}desc{else}asc{/if}">{#inserted#}</a></th>
+            <th>{#action#}</th>
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editorder&amp;id={$row.orders_id}">{$row.orders_id}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editorder&amp;id={$row.orders_id}">{$row.lname}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editorder&amp;id={$row.orders_id}">{$row.email}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editorder&amp;id={$row.orders_id}">{$row.price}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editorder&amp;id={$row.orders_id}">{if $row.status == 1}přijatá{elseif $row.status == 2}vyřizuje se{else}uzavřená{/if}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editorder&amp;id={$row.orders_id}">{$row.inserted|date_format:"%d.%m.%Y %H:%M:%S"}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=order&amp;delete={$row.orders_id}" class="delete">{#delete#}</a></td>
+        </tr>
+{/foreach}
+    </tbody>
+</table>
+
+

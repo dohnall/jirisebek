@@ -1,0 +1,29 @@
+<h1 class="h-settings h-settings-lang">Log rozeslání</h1>
+<fieldset id="content-search" class="filter">
+    <legend>{#filter#}</legend>
+    {include file="pager-nlog.html"}
+	<form method="post" action="" class="filter">
+		<div>
+		    <p>&nbsp;</p>
+		    <p>&nbsp;</p>
+		</div>
+	</form>
+</fieldset>
+<table class="list table-settings table-settings-lang">
+    <thead>
+        <tr>
+            <th>{#newsletter#}</th>
+            <th>{#email#}</th>
+            <th>{#inserted#}</th>
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$records item=record}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="javascript:;">{$record.name}</a></td>
+            <td><a href="javascript:;">{$record.email}</a></td>
+            <td><a href="javascript:;">{$record.inserted}</a></td>
+        </tr>
+{/foreach}
+    </tbody>
+</table>

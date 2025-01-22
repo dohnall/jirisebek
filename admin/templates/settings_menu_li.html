@@ -1,0 +1,34 @@
+{assign var=nm value="kid`$cnt`"}
+	<ol>
+{foreach from=$children item=kid name=$nm}
+		<li>
+			<select name="items[{$kid.item.menu_item_id}][section_id]" class="w150">
+				<option value="0">{#external#}</option>
+		{if $homeId}
+				{include file='settings_menu_option.html' section=$home}
+		{/if}
+			</select>
+			<input type="checkbox" name="items[{$kid.item.menu_item_id}][new_window]" value="1"{if $kid.item.new_window} checked="checked"{/if} />
+			<input type="text" class="w150" name="items[{$kid.item.menu_item_id}][name]" value="{$kid.item.name}" />
+			<input type="text" class="w150" name="items[{$kid.item.menu_item_id}][url]" value="{$kid.item.url}" />
+			<input type="text" class="w150" name="items[{$kid.item.menu_item_id}][title]" value="{$kid.item.title}" />
+	{if $user->hasRight(12)}
+			<input type="hidden" name="items[{$kid.item.menu_item_id}][parent_id]" value="{$parent}" />
+			<input type="hidden" name="items[{$kid.item.menu_item_id}][menu_item_id]" class="menuitemid" value="{$kid.item.menu_item_id}" />
+			<input type="hidden" name="items[{$kid.item.menu_item_id}][rank]" value="{$kid.item.rank}" />
+			<input type="hidden" name="items[{$kid.item.menu_item_id}][menu_id]" value="{$item_id}" />
+			<a href="{$ROOT}?module={$MODULE}&amp;submodule=editmenu&amp;id={$kid.item.menu_item_id}&amp;action=deleteItem" class="delete">{#delete#}</a>
+			<a href="javascript:;" class="newmenuitem">{#new_item#}</a>
+		{if $kid@first === false}
+			<a href="{$ROOT}?module={$MODULE}&amp;submodule=editmenu&amp;id={$kid.item.menu_item_id}&amp;action=moveUp">{#move_up#}</a>
+		{/if}
+		{if $kid@last === false}
+			<a href="{$ROOT}?module={$MODULE}&amp;submodule=editmenu&amp;id={$kid.item.menu_item_id}&amp;action=moveDown">{#move_down#}</a>
+		{/if}
+	{/if}
+		{if isset($kid.children) && $kid.children}
+			{include file='settings_menu_li.html' children=$kid.children parent=$kid.item.menu_item_id cnt=$cnt+1}
+		{/if}
+		</li>
+{/foreach}
+	</ol>

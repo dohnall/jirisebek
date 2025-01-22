@@ -1,0 +1,43 @@
+#
+# Mime types/Content Types for some common file extensions. (Apache style file format)
+#
+
+application/cdr				cdr
+application/msword			doc dot
+application/pdf				pdf
+application/pgp-signature			pgp
+application/postscript				ps ai eps
+application/rtf					rtf
+application/smil				smi smil
+application/vnd.ms-excel			xls xlb
+application/vnd.ms-powerpoint			ppt pps pot
+application/vnd.oasis.opendocument.presentation			odp
+application/vnd.oasis.opendocument.spreadsheet			ods
+application/vnd.oasis.opendocument.text			odt
+application/vnd.openxmlformats			docx pptx xlsx
+application/x-java-archive			jar
+application/x-javascript			js
+application/x-rar-compressed			rar
+application/x-shockwave-flash			swf swfl
+application/zip					zip
+audio/midi					mid midi kar rmi
+audio/mp4					mp4a
+audio/mpeg					mpga mpega mp2 mp3
+audio/ogg					oga ogg spx
+audio/x-pn-realaudio                            ra rm ram
+audio/x-wav					wav
+image/bmp					bmp
+image/gif					gif
+image/jpeg					jpeg jpg jpe
+image/png					png
+image/svg+xml					svg svgz
+image/tiff					tiff tif
+image/vnd.adobe.photoshop			psd
+text/html					htm html xhtml
+text/plain					asc txt text diff log
+text/rtf					rtf
+video/mpeg					mpeg mpg mpe
+video/quicktime					qt mov
+video/x-flv					flv
+video/vnd.rn-realvideo				rv
+

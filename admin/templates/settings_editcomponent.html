@@ -1,0 +1,82 @@
+<h1 class="h-settings h-settings-editcomponent">{if $item.item.receiver}{$item.item.receiver}{else}{#all#}{/if} - {$item.item.template}</h1>
+<p class="navi">
+	<a href="{$ROOT}?module={$MODULE}&amp;submodule=component" class="button back">{#back_to_list#}</a>
+</p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table>
+        <tr>
+            <th class="th-label th-code"><label for="code">{#code#}</label>:</th>
+            <td><input type="text" name="item[code]" id="code" value="{$item.item.code}" size="50" maxlength="20" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-receiver"><label for="receiver">{#receiver#}</label>:</th>
+            <td>
+				<select name="item[receiver]" id="receiver">
+					<option value=""{if $item.item.receiver == ""} selected="selected"{/if}>{#all#}</option>
+{foreach from=$templates item=row}
+                        <option value="{$row.code}"{if $item.item.receiver == $row.code} selected="selected"{/if}>{$row.name}</option>
+{/foreach}
+				</select>
+			</td>
+        </tr>
+        <tr>
+            <th class="th-label th-template"><label for="template">{#template#}</label>:</th>
+            <td>
+				<select name="item[template]" id="template">
+{foreach from=$templates item=row}
+                        <option value="{$row.code}"{if $item.item.template == $row.code} selected="selected"{/if}>{$row.name}</option>
+{/foreach}
+				</select>
+			</td>
+        </tr>
+        <tr title="{#whr_hint#}">
+            <th class="th-label th-whr"><label for="whr">{#whr#}</label>:</th>
+            <td><textarea name="item[whr]" id="whr" rows="5" cols="50">{$item.item.whr}</textarea></td>
+        </tr>
+        <tr>
+            <th class="th-label th-cnt"><label for="cnt">{#cnt#}</label>:</th>
+            <td><input type="text" name="item[cnt]" id="cnt" value="{$item.item.cnt}" size="50" maxlength="10" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-perpage"><label for="perpage">{#perpage#}</label>:</th>
+            <td><input type="text" name="item[perpage]" id="perpage" value="{$item.item.perpage}" size="50" maxlength="10" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-orderby"><label for="orderby">{#orderby#}</label>:</th>
+            <td>
+				<select name="item[orderby]" id="orderby">
+					<option value="t.rank"{if $item.item.orderby == 't.rank'} selected="selected"{/if}>{#rank#}</option>
+					<option value="rand"{if $item.item.orderby == 'rand'} selected="selected"{/if}>{#random#}</option>
+					<option value="" disabled="disabled">-----------</option>
+					<option value="st.inserted"{if $item.item.orderby == 'st.inserted'} selected="selected"{/if}>{#inserted#}</option>
+					<option value="st.updated"{if $item.item.orderby == 'st.updated'} selected="selected"{/if}>{#updated#}</option>
+					<option value="st.name"{if $item.item.orderby == 'st.name'} selected="selected"{/if}>{#name#}</option>
+					<option value="st.views"{if $item.item.orderby == 'st.views'} selected="selected"{/if}>{#views#}</option>
+					<option value="" disabled="disabled">-----------</option>
+{foreach from=$cols item=row}
+					<option value="stv.{$row.item.code}"{if $item.item.orderby == "stv.`$row.item.code`"} selected="selected"{/if}>{$row.item.name}</option>
+{/foreach}
+				</select>
+			</td>
+        </tr>
+        <tr>
+            <th class="th-label th-sort"><label for="sort">{#sort#}</label>:</th>
+            <td>
+				<select name="item[sort]" id="sort">
+					<option value="asc"{if $item.item.sort == "asc"} selected="selected"{/if}>{#ascending#}</option>
+					<option value="desc"{if $item.item.sort == "desc"} selected="selected"{/if}>{#descending#}</option>
+				</select>
+			</td>
+        </tr>
+{if $user->hasRight(16)}
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="hidden" name="item_id" value="{$item_id}" />
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+{/if}
+    </table>
+</form>

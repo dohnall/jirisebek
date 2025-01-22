@@ -1,0 +1,50 @@
+<h1 class="h-user h-user-editgroup">{if isset($item.item.name) && $item.item.name}{$item.item.name}{else}{#new_item#}{/if}</h1>
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=group" class="button back">{#back_to_list#}</a></p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table>
+        <tr>
+            <th class="th-label th-rank"><label for="rank">{#rank#}</label>:</th>
+            <td>
+{if $change}
+                <select name="item[rank]" id="rank">
+    {foreach from=$groupsRank item=rank name=rank}
+                        <option value="{$rank}"{if isset($item.item.rank) && $rank == $item.item.rank} selected="selected"{/if}>{$rank@iteration+1}</option>
+    {/foreach}
+                </select>
+{else}
+                {if isset($item.item.rank)}{$item.item.rank}{else}0{/if}
+                <input type="hidden" name="item[rank]" value="{if isset($item.item.rank)}{$item.item.rank}{else}0{/if}" />
+{/if}
+            </td>
+        </tr>
+        <tr>
+            <th class="th-label th-name"><label for="name">{#name#}</label>:</th>
+            <td><input type="text" name="item[name]" id="name" value="{if isset($item.item.name)}{$item.item.name}{/if}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-description"><label for="description">{#description#}</label>:</th>
+            <td><input type="text" name="item[description]" id="description" value="{if isset($item.item.description)}{$item.item.description}{/if}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-rights">{#rights#}:</th>
+            <td>
+{foreach from=$rights item=row}
+	{if $user->hasRight($row.right_id) || $user->hasGroup(1)}
+		{assign var=right value="right`$row.right_id`"}
+                <input type="checkbox" name="right[{$row.right_id}]" id="right{$row.right_id}" value="{$row.right_id}"{if $group->hasRight($row.right_id)} checked="checked"{/if} /> <label for="right{$row.right_id}">{$dictionary[$right]}</label><br />
+    {/if}
+{/foreach}
+            </td>
+        </tr>
+{if !$user->hasGroup($item_id) || $user->hasGroup(1)}
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="hidden" name="item_id" value="{$item_id}" />
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+{/if}
+    </table>
+</form>

@@ -1,0 +1,979 @@
+.t-r {
+    text-align: right;
+}
+.v-t {
+    vertical-align: top !important;
+}
+abbr {
+    cursor: help;
+}
+.case-item {
+    border: 1px solid #CCC;
+    margin: 1em 0;
+    height: 100px;
+    clear: both;
+    border-radius: 6px;
+    overflow: hidden;
+    padding: .75em;
+    box-shadow: rgba(0,0,0,.1) 1px 1px 2px;
+}
+.case-item img {
+    float: left;
+    margin-right: 1.25em;
+}
+.case-item p {
+    margin: .5em 0;
+    font-size:90%;
+}
+
+.case-item p b {
+    font-size:90%;
+}
+
+.case-item h3 a {
+    padding-right: 24px;
+    background: transparent url('leftmenu_off.gif') right bottom no-repeat;
+}
+.case-item h3 a:hover {
+    background: transparent url('leftmenu_active.gif') right bottom no-repeat;
+}
+.case-detail img {
+    float: left;
+    margin: 0 1em .5em 0;
+    padding: 5px;
+    border: 1px solid #DDD;
+    background: #F8F8F8;
+}
+.case-detail p {
+    margin-bottom: .75em;
+}
+.divider {
+    color: #BBB;
+    padding: 0 2px;
+}
+.relative {
+    position: relative;
+}
+.o-h {
+    overflow: hidden;
+}
+.stars {
+    font-size: 2.1em;
+    line-height: 0;
+    position: relative;
+    top: .4em;
+}
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+
+/* mapping progress */
+
+ul.mapping-progress, ul.mapping-progress li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.mapping-progress li {
+    margin: 6px 0;
+    clear: both;
+}
+ul.mapping-progress li .inner, ul.mapping-progress li.not-applicable .inner:hover {
+    background: #EEE;
+    font-size: 1em;
+    line-height: 1;
+    padding: 4px 12px 0;
+    border-radius: 20px;
+    box-shadow: rgba(0,0,0,.15) 1px 1px 1px;
+    height: 20px;
+    position: relative;
+    clear: both;
+}
+ul.mapping-progress li .inner:hover {
+    box-shadow: rgba(0,0,0,.1) 1px 1px 1px;
+}
+ul.mapping-progress li.not-applicable .inner {
+    background: #CCC !important;
+    color: #222 !important;
+}
+ul.mapping-progress li .inner a {
+    display: block;
+    text-decoration: none !important;
+    width: 100%;
+    height: 24px;
+    position: relative;
+    z-index: 4;
+}
+ul.mapping-progress li, ul.mapping-progress li .inner * {
+    color: #555;
+}
+ul.mapping-progress li, ul.mapping-progress li .inner a:hover * {
+    color: #222;
+}
+ul.mapping-progress li.scoping .scale {
+    background: #FFFEA1;
+}
+ul.mapping-progress li.mobilising .scale {
+    background: #FBE1FE;
+}
+ul.mapping-progress li.anticipating .scale {
+    background: #B0EDFF;
+}
+ul.mapping-progress li.recommending .scale {
+    background: #91FFFE;
+}
+ul.mapping-progress li.transforming .scale {
+    background: #50D3FF;
+}
+ul.mapping-progress li .inner .scale {
+    display: block;
+    height: 24px;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+ul.mapping-progress li.percent-0 .scale {
+    width: 0;
+}
+ul.mapping-progress li.percent-10 .scale {
+    width: 10%;
+}
+ul.mapping-progress li.percent-20 .scale {
+    width: 20%;
+}
+ul.mapping-progress li.percent-30 .scale {
+    width: 30%;
+}
+ul.mapping-progress li.percent-40 .scale {
+    width: 40%;
+}
+ul.mapping-progress li.percent-50 .scale {
+    width: 50%;
+}
+ul.mapping-progress li.percent-60 .scale {
+    width: 60%;
+}
+ul.mapping-progress li.percent-70 .scale {
+    width: 70%;
+}
+ul.mapping-progress li.percent-80 .scale {
+    width: 80%;
+}
+ul.mapping-progress li.percent-90 .scale {
+    width: 90%;
+}
+ul.mapping-progress li.percent-100 .scale {
+    width: 100%;
+}
+ul.mapping-progress li .inner span {
+    display: block;
+    float: left;
+    position: relative;
+    z-index: 3;
+}
+ul.mapping-progress li .inner .progress {
+    float: right;
+}
+ul.mapping-progress li ul.leftmenu a {
+    background-position: 216px 3px !important;
+}
+ul.mapping-progress li ul.leftmenu {
+    padding-bottom: 2px;
+}
+.js ul.mapping-progress li ul.leftmenu {
+    display: none;
+}
+div.globalbox-content ul.mapping-progress ul.leftmenu a.done {
+    background-image: url('leftmenu_done.gif');
+}
+div.globalbox-content ul.mapping-progress ul.leftmenu a:hover,
+div.globalbox-content ul.mapping-progress ul.leftmenu a.active {
+    background-image: url('leftmenu_active.gif');
+}
+div.globalbox-content ul.mapping-progress ul.leftmenu a.done:hover,
+div.globalbox-content ul.mapping-progress ul.leftmenu a.done.active {
+    background-image: url('leftmenu_done_active.gif');
+}
+.no-h-pad {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+
+/* tabs */
+.tabs {
+    position: relative;
+}
+.tabs ul, .tabs li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.tabs li {
+    float: left;
+    margin: 0 1px 0 3px;
+}
+.tabs li a {
+    display: block;
+    border: 2px solid #CCC;
+    border-width: 1px 1px 0;
+    padding: 6px 20px 4px;
+    position: relative;
+    top: 6px;
+    background: #F2F2F2;
+    border-radius: 4px 4px 0 0;
+    box-shadow: rgba(0,0,0,.15) 1px 1px 3px;
+    background-image: linear-gradient(bottom, rgb(240,240,240) 15%, rgb(254,254,254) 58%);
+    background-image: -o-linear-gradient(bottom, rgb(240,240,240) 15%, rgb(254,254,254) 58%);
+    background-image: -moz-linear-gradient(bottom, rgb(240,240,240) 15%, rgb(254,254,254) 58%);
+    background-image: -webkit-linear-gradient(bottom, rgb(240,240,240) 15%, rgb(254,254,254) 58%);
+    background-image: -ms-linear-gradient(bottom, rgb(240,240,240) 15%, rgb(254,254,254) 58%);
+    background-image: -webkit-gradient(
+    	linear,
+    	left bottom,
+    	left top,
+    	color-stop(0.15, rgb(240,240,240)),
+    	color-stop(0.58, rgb(254,254,254))
+    );
+    color: #777;
+    text-decoration: none !important;
+    text-shadow: #FFF 1px 1px 0;
+    outline: 0 !important;
+}
+.tabs li a:hover {
+    border-color: #AAA;
+    color: #666;
+    top: 5px;
+}
+.tabs li a.active,
+.tabs li a.active:hover {
+    padding: 7px 20px 8px;
+    border-color: #AAA;
+    border-bottom: 2px solid #FFF;
+    top: 2px;
+    background: #FFF;
+    color: #666;
+    box-shadow: rgba(0,0,0,.15) 1px 1px 4px;
+}
+.tabs ul {
+    float: left;
+    border-bottom: 2px solid #BBB;
+    width: 100%;
+    margin: 1em 0;
+}
+.tabs .mask {
+    background: #FFF;
+    height: 5px;
+    width: 100%;
+    z-index: 200;
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+}
+.tabs li a b {
+    padding-right: 2px;
+}
+
+
+/* oracle form */
+
+.oracle-form {
+    padding: 0 0 1em;
+    margin-top: -1em;
+    width: 700px;
+}
+h6 {
+    margin-bottom: 2px;
+    font-size: 15px;
+}
+.oracle-form h2 {
+    margin-top: 1.25em;
+    margin-bottom: -0.5em;
+    padding-bottom: 0.25em;
+    border-bottom: 3px double #DDD;
+}
+.oracle-form h3 {
+    font-size: 15px;
+    border-bottom: 1px solid #DDD;
+    margin: 1.5em 0 1em;
+    padding-bottom: 3px;
+}
+p.submit-block {
+    margin: 1.75em 0 .5em;
+    padding: 1.75em;
+    text-align: center;
+    border: 1px solid #DDD;
+    background: #F7F7F7;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(0,0,0,.1) 1px 1px 2px;
+    background: #FAFAFA;
+    background-image: linear-gradient(bottom, rgb(255,255,255) 15%, rgb(246,246,246) 58%);
+    background-image: -o-linear-gradient(bottom, rgb(255,255,255) 15%, rgb(246,246,246) 58%);
+    background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 15%, rgb(246,246,246) 58%);
+    background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 15%, rgb(246,246,246) 58%);
+    background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 15%, rgb(246,246,246) 58%);
+    background-image: -webkit-gradient(
+    	linear,
+    	left bottom,
+    	left top,
+    	color-stop(0.15, rgb(255,255,255)),
+    	color-stop(0.58, rgb(246,246,246))
+    );
+}
+p.submit-block input[type="submit"],
+p.oracle-search input[type="submit"] {
+    margin: 0 auto;
+    padding: 9px 77px;
+    text-align: center;
+    border: 1px solid #BBB;
+    background: #F2F2F2;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,.2) 1px 1px 3px;
+    background-image: linear-gradient(bottom, rgb(231,231,231) 15%, rgb(249,249,249) 58%);
+    background-image: -o-linear-gradient(bottom, rgb(231,231,231) 15%, rgb(249,249,249) 58%);
+    background-image: -moz-linear-gradient(bottom, rgb(231,231,231) 15%, rgb(249,249,249) 58%);
+    background-image: -webkit-linear-gradient(bottom, rgb(231,231,231) 15%, rgb(249,249,249) 58%);
+    background-image: -ms-linear-gradient(bottom, rgb(231,231,231) 15%, rgb(249,249,249) 58%);
+    background-image: -webkit-gradient(
+    	linear,
+    	left bottom,
+    	left top,
+    	color-stop(0.15, rgb(231,231,231)),
+    	color-stop(0.58, rgb(249,249,249))
+    );
+    color: #777;
+    text-shadow: #FFF 1px 1px 0;
+}
+p.submit-block input[type="submit"]:hover,
+p.oracle-search input[type="submit"]:hover {
+    color: #444;
+    border-color: #AAA;
+    box-shadow: rgba(0,0,0,.4) 1px 1px 5px;
+}
+p.oracle-search input[type="submit"] {
+    padding: 6px 26px 7px;
+    padding: 6px 26px 6px\9;
+    font-size: 13px;
+    font-weight: bold;
+    position: relative;
+    top: -2px;
+    left: 2px;
+    color: #FFF !important;
+    text-shadow: rgba(0,0,0,.3) 1px 1px 1px !important;
+    background: #357DEB;
+    background-image: linear-gradient(bottom, rgb(33,105,227) 15%, rgb(77,150,245) 58%);
+    background-image: -o-linear-gradient(bottom, rgb(33,105,227) 15%, rgb(77,150,245) 58%);
+    background-image: -moz-linear-gradient(bottom, rgb(33,105,227) 15%, rgb(77,150,245) 58%);
+    background-image: -webkit-linear-gradient(bottom, rgb(33,105,227) 15%, rgb(77,150,245) 58%);
+    background-image: -ms-linear-gradient(bottom, rgb(33,105,227) 15%, rgb(77,150,245) 58%);
+    background-image: -webkit-gradient(
+    	linear,
+    	left bottom,
+    	left top,
+    	color-stop(0.15, rgb(33,105,227)),
+    	color-stop(0.58, rgb(77,150,245))
+    );
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    p.oracle-search input[type="submit"] {
+        padding: 7px 26px 7px; /* Safari + Chrome only */
+        top: -1px;
+    }
+}
+@-moz-document url-prefix() {
+    p.oracle-search input[type="submit"] {
+        padding: 6px 26px 6px; /* FF only */
+    }
+}
+.oracle-search input[type="checkbox"] {
+    position: relative;
+    top: 1px;
+    left: -1px;
+}
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+    head~body .oracle-search input[type="checkbox"] {
+        top: 0; /* Opera only */
+    }
+}
+.oracle-form table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+   /* box-shadow: rgba(0,0,0,.1) 1px 1px 2px;*/
+}
+.oracle-form .table-wrapper {
+    box-shadow: rgba(0,0,0,.1) 1px 1px 3px;
+}
+.oracle-form table td, .oracle-form table th {
+    border: 1px solid #DDD;
+    padding: 6px;
+    vertical-align: middle;
+}
+.oracle-form table th {
+    background: #F9F9F9;
+    font-size: 11px;
+    color: #888;
+    text-shadow: #FFF 1px 1px 0;
+}
+.oracle-form table .disabled *, .oracle-form table .disabled td .counter, .oracle-form table td .counter.disabled, .oracle-form table input[disabled] {
+    color: #CCC !important;
+}
+.oracle-form table tr:hover td,
+.oracle-form table tr.rowspan:hover + tr td {
+    background: #F6FCFD;
+}
+.oracle-form table.horizon-years tr:hover td {
+    background: #FFF;
+}
+.oracle-form table.horizon-years tr td:hover {
+    background: #F6FCFD;
+}
+.oracle-form table tr.disabled td,
+.oracle-form table tr.disabled.rowspan + tr td {
+    background: #FAFAFA;
+}
+.oracle-form table tr:hover input[type="text"] {
+    background: #F6FCFD !important;
+}
+.oracle-form table tr input[type="text"].by-cell {
+    width: 90% !important;
+}
+.oracle-form table tr input[type="text"].by-cell.thin {
+    width: 84% !important;
+}
+.oracle-form table tr input[type="text"].by-cell.thinner {
+    width: 74% !important;
+}
+.oracle-form table td label,
+.oracle-form table td label * {
+    font-size: 14px;
+}
+.oracle-form table td label {
+    display: block;
+    cursor: pointer;
+}
+.oracle-form table .disabled td label,
+.oracle-form table .disabled td label label {
+    cursor: default;
+}
+.oracle-form table td label label {
+    display: inline;
+    cursor: default;
+}
+.oracle-form table td .semi-label,
+.oracle-form table td .semi-label *,
+.oracle-form table th .semi-label,
+.oracle-form table th .semi-label * {
+    font-size: 14px;
+}
+.oracle-form table tr td input[type="text"].additional,
+.oracle-form table tr td textarea.additional,
+.oracle-search input[type="text"].searching {
+    width: 340px;
+    border: 1px solid #CCC;
+    border-color: #CCC #BBB #BBB #CCC;
+    background: #FBFBFB !important;
+    padding: 3px;
+    font-size: 12px;
+    color: #666;
+}
+.oracle-form table select.additional {
+    min-width: 170px;
+    min-width: 168px\9;
+    cursor: pointer;
+    padding: 2px;
+    border: 1px solid #CCC;
+    border-color: #CCC #BBB #BBB #CCC;
+    background: #FFF !important;
+    font-size: 12px;
+    color: #555;
+}
+.oracle-form table td input[type="text"].additional:hover,
+.oracle-form table td input[type="text"].additional:active,
+.oracle-form table td input[type="text"].additional:focus,
+.oracle-form table td textarea.additional:hover,
+.oracle-form table td textarea.additional:active,
+.oracle-form table td textarea.additional:focus,
+.oracle-form table select.additional:hover,
+.oracle-search input[type="text"].searching:hover,
+.oracle-search input[type="text"].searching:active,
+.oracle-search input[type="text"].searching:focus {
+    border-color: #AAA #999 #999 #AAA;
+}
+.oracle-form table td input[type="text"].additional:focus,
+.oracle-form table td textarea.additional:focus,
+.oracle-form table select.additional:active,
+.oracle-form table select.additional:focus,
+.oracle-search input[type="text"].searching:active,
+.oracle-search input[type="text"].searching:focus {
+    background: #FFF !important;
+    border-color: #27AAE7 #008FD3 #008FD3 #27AAE7;
+    color: #008FD3 !important;
+}
+.oracle-form table td input[type="text"].additional[disabled],
+.oracle-form table td input[type="checkbox"][disabled] {
+    border-color: #DDD !important;
+    cursor: default !important;
+}
+.oracle-search input[type="text"].searching {
+    border-color: #AAA #999 #999 #AAA;
+}
+.oracle-search input[type="text"].searching:hover {
+    border-color: #27AAE7 #008FD3 #008FD3 #27AAE7;
+}
+.oracle-form table select.additional:active,
+.oracle-form table select.additional:focus {
+    color: #555 !important;
+}
+.oracle-form table td .counter,
+.oracle-form table th .counter {
+    font-size: 11px !important;
+    color: #888 !important;
+    font-weight: normal;
+}
+.oracle-form table th .counter {
+    padding-left: 6px;
+}
+.oracle-form table th.notice {
+    font-weight: normal;
+    color: #777;
+    text-shadow: none;
+    font-size: 12px;
+    line-height: 16px;
+}
+.oracle-form table input.number {
+    width: 12px;
+    border: none !important;
+    background: #FFF !important;
+}
+.oracle-form table span.number-select {
+    display: none;
+    position: absolute;
+    left: 18px;
+    top: -50px;
+    border: 2px solid #ABC;
+    box-shadow: rgba(0,0,0,.2) 1px 1px 6px;
+    z-index: 200;
+    background: #FAFAFA;
+}
+.oracle-form table span.number-select span.s {
+    display: block;
+    cursor: pointer;
+    color: #008FD3;
+    padding: 2px 6px;
+    text-align: left;
+    white-space: nowrap;
+}
+.oracle-form table span.number-select span.s:first-child {
+    padding-top: 4px;
+}
+.oracle-form table span.number-select span.s + span.s + span.s + span.s + span.s,
+.oracle-form table span.number-select.vsf span.s + span.s + span.s {
+    padding-bottom: 4px;
+}
+.oracle-form table span.number-select.frascati span.s {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+.oracle-form table span.number-select span.s:hover {
+    background: #9AB;
+    color: #FFF;
+}
+.oracle-form table td.nb, .oracle-form table td.nb input {
+    cursor: pointer;
+}
+.oracle-form table td.nb:hover, .oracle-form table td.nb:hover input {
+    background: #9AB !important;
+    color: #FFF !important;
+}
+.oracle-form table td.nb:hover span.number-select {
+    display: block;
+}
+.oracle-form table span.number-select.frascati {
+    max-height: 200px;
+    width: 360px;
+    overflow: auto;
+    top: -120px;
+    left: 26px;
+}
+.oracle-form table span.number-select.frascati span.sl {
+    cursor: default;
+    color: #567;
+    font-size: 14px;
+    border-bottom: 1px solid #ABC;
+    margin: 4px 0;
+    background: #FFF !important;
+}
+.oracle-form table span.number-select.vsf b {
+    display: inline-block;
+    width: .75em;
+    text-align: center;
+}
+.oracle-form table span.number-select.vsf {
+    top: -28px;
+    font-size: 15px;
+    left: 27px;
+}
+.oracle-form table span.number-select.vsf * {
+    font-size: 15px;
+}
+.oracle-form table input.vsf {
+    font-size: 14px;
+    color: #666;
+    width: 22px;
+}
+.oracle-form table td.country-select {
+    padding: 0;
+    vertical-align: top;
+    background: #FFF !important;
+}
+.oracle-form table td.country-select select {
+    border: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.oracle-form table td.country-select:hover select {
+    width: 170%;
+    position: relative;
+    z-index: 9999;
+    box-shadow: 2px 2px 13px rgba(0,0,0,.3);
+}
+.oracle-form table td.country-select:hover + td {
+    opacity: .4;
+}
+.oracle-form table td.country-select select option {
+    color: #555;
+    padding: 0 2px 0 3px;
+    width: 98%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.oracle-form .table-wrapper small {
+    font-size: 11px;
+    position: relative;
+    top: -2px;
+    color: #999;
+}
+.oracle-form table.append-bottom {
+    margin-bottom: 1.5em;
+}
+tr.smarrt th b {
+    color: #555;
+    font-size: 13px;
+}
+tr.smarrt th {
+    background: #FFF;
+    padding: 0;
+    text-shadow: none;
+}
+tr.smarrt th div {
+    position: relative;
+    overflow: hidden;
+    width: 29px;
+    height: 29px;
+    border-right: 1px solid #DDD;
+    z-index: 1;
+}
+tr.smarrt th div div {
+    background: #F9F9F9;
+    padding: 6px 8px;
+    width: auto;
+    height: 19px;
+    white-space: nowrap;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+}
+tr.smarrt th div .v-h {
+    visibility: hidden;
+}
+tr.smarrt th div:hover .v-h {
+    visibility: visible;
+}
+tr.smarrt th div:hover {
+    overflow: visible;
+    z-index: 9;
+}
+tr.smarrt th div:hover div {
+    overflow: visible;
+    box-shadow: rgba(0,0,0,.25) 1px 1px 2px;
+    border: 1px solid #DDD;
+    top: -2px;
+    left: -1px;
+    padding-top: 7px;
+}
+.oracle-form table td.objective,
+.oracle-form table td.initiative {
+    padding: 0;
+}
+.oracle-form table td.objective input,
+.oracle-form table td.initiative input {
+    font-size: 14px;
+    color: #555;
+    padding: 6px;
+    width: 320px;
+    border: 0;
+}
+.oracle-form table td.initiative input {
+    width: 290px;
+}
+.oracle-form table td.objective input:focus,
+.oracle-form table td.initiative input:focus,
+.oracle-form table td input.reference:focus {
+    color: #008FD3;
+}
+.oracle-form table td.radio {
+    padding: 6px 3px;
+}
+.oracle-form table td.radio input {
+    cursor: pointer;
+}
+.oracle-form table input.reference {
+    width: 116px;
+    border: none !important;
+    background: #FFF !important;
+    color: #666;
+}
+.oracle-form table input.ref2 {
+    width: 80px;
+}
+.oracle-form table th.br2,
+.oracle-form table td.br2 {
+    border-right-width: 2px;
+    border-right-color: #D0D0D0;
+}
+.oracle-form table th.image-label,
+.oracle-form table td.image-label {
+    vertical-align: bottom;
+    height: 80px;
+}
+.oracle-form table .image-label span {
+    display: block;
+    position: relative;
+    -o-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    text-align: left;
+    white-space: nowrap;
+    font-size: 11px;
+    text-shadow: none;
+    color: #999;
+    width: 80px\9;
+    top: -64px\9;
+    *top: 0;
+    *zoom: 1;
+}
+.oracle-form table th {
+    text-align: center;
+}
+.oracle-form input.reference {
+    font-size: 11px;
+}
+.oracle-form table td span.o-h {
+    display: block;
+    text-align: left;
+}
+.oracle-form table td:hover span.o-h {
+    overflow: visible;
+    *position:relative;
+    *height:1%;    
+}
+.oracle-form table td input[type="file"] {
+    border: 1px solid #BBB\9;
+}
+.oracle-form table td:hover span.o-h input[type="file"] {
+    *position:absolute;
+    *top:0;    
+    *right:0;    
+}
+table#a-1-2-q-2-b td.initiative + td,
+table#a-1-2-q-2-b td.initiative + td + td {
+    background: #F3F3F3;
+}
+table#a-1-2-q-2-b td.initiative + td + td + td,
+table#a-1-2-q-2-b td.initiative + td + td + td + td,
+table#a-1-2-q-2-b td.initiative + td + td + td + td + td {
+    background: #FCFCFC;
+}
+table#a-1-2-q-2-b tr:hover td {
+    background: #F6FCFD !important;
+}
+table#a-1-1-q-2 input.reference {
+    width: 170px;
+}
+table#a-1-1-q-2 td.initiative input {
+    width: 380px;
+}
+.oracle-form table td.comment-open b:after,
+.oracle-form table th.addrows-open b:after {
+    content: '+';
+    line-height: 0;
+    font-size: 24px;
+    font-weight: normal;
+    position: relative;
+    top: 5px;
+    color: #9CA;
+}
+.oracle-form table td.comment-open.open b:after,
+.oracle-form table th.addrows-open.open b:after {
+    content: '\2212';
+    color: #E99;
+}
+.oracle-form table th.addrows-open b {
+    position: relative;
+    top: -1px;
+    padding-left: 3px;
+}
+.oracle-form table th.addrows-open:hover {
+    color: #008FD3;
+}
+.oracle-form table td.comment-open,
+.oracle-form table th.addrows-open {
+    cursor: pointer;
+}
+.oracle-form table td.group-subcat label {
+    display: block;
+    padding-left: 1em;
+    font-size: 12px;
+}
+.oracle-form table td.group-subcat label:hover {
+    color: #008FD3;
+}
+.oracle-form table td.group-subcat input {
+    position: relative;
+    top: 2px;
+}
+.oracle-form table tr th.smart {
+    text-shadow: none;
+    color: #444;
+    font-size: 12px;
+}
+.oracle-form table.methods label input {
+    position: relative;
+    top: 1px;
+}
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+    head~body .oracle-form table td.group-subcat input,
+    head~body .oracle-form table.methods label input {
+        top: 0; /* Opera only */
+    }
+}
+.oracle-form table a.xbutton {
+    padding: 1px 9px;
+    text-align: center;
+    border: 1px solid #BBB;
+    background: #F2F2F2;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,.2) 1px 1px 3px;
+    background-image: linear-gradient(bottom, rgb(231,231,231) 15%, rgb(249,249,249) 58%);
+    background-image: -o-linear-gradient(bottom, rgb(231,231,231) 15%, rgb(249,249,249) 58%);
+    background-image: -moz-linear-gradient(bottom, rgb(231,231,231) 15%, rgb(249,249,249) 58%);
+    background-image: -webkit-linear-gradient(bottom, rgb(231,231,231) 15%, rgb(249,249,249) 58%);
+    background-image: -ms-linear-gradient(bottom, rgb(231,231,231) 15%, rgb(249,249,249) 58%);
+    background-image: -webkit-gradient(
+    	linear,
+    	left bottom,
+    	left top,
+    	color-stop(0.15, rgb(231,231,231)),
+    	color-stop(0.58, rgb(249,249,249))
+    );
+    color: #777;
+    text-shadow: #FFF 1px 1px 0;
+    font-size: 14px;
+    text-decoration: none !important;
+    outline: 0 !important;
+}
+.oracle-form table a.xbutton:hover {
+    color: #444;
+    border-color: #AAA !important;
+}
+
+input.login-textarea {
+    margin-right: 1px !important;
+}
+
+form label , .rating input , .rating-star {
+    cursor: pointer;
+}
+.not-visible {
+    visibility: hidden;
+}
+div.rating {
+    position: relative;
+    text-align: center;
+	height: 23px;
+	overflow: hidden;
+}
+.rating-star {
+    position: absolute;
+    z-index: 99;
+    width: 24px;
+    height: 23px;
+    left: 30px;
+    top: -3px;
+    background: transparent url('rating_stars.png') no-repeat -3px -34px;
+}
+
+.star-na {
+    left: 6px;
+    background: transparent url('star-na.png') no-repeat 0 0;
+}
+
+.star-0 {
+    left: 30px;
+    background-position: -3px -34px;
+}
+.star-1 {
+    left: 54px;
+    background-position: -33px -34px;
+}
+.star-2 {
+    left: 78px;
+    background-position: -63px -34px;
+}
+.star-3 {
+    left: 102px;
+    background-position: -93px -34px;
+}
+.star-4 {
+    left: 126px;
+    background-position: -123px -34px;
+}
+
+.active-star .star-na, .use-checked-status .checked-star .star-na {
+    left: 6px;
+    background: transparent url('star-na-active.png') no-repeat 0 0;
+}
+.active-star .star-0, .use-checked-status .checked-star .star-0 {
+    left: 30px;
+    background-position: -3px -4px !important;
+}
+.active-star .star-1, .use-checked-status .checked-star .star-1 {
+    left: 54px;
+    background-position: -33px -4px;
+}
+.active-star .star-2, .use-checked-status .checked-star .star-2 {
+    left: 78px;
+    background-position: -63px -4px;
+}
+.active-star .star-3, .use-checked-status .checked-star .star-3 {
+    left: 102px;
+    background-position: -93px -4px;
+}
+.active-star .star-4, .use-checked-status .checked-star .star-4 {
+    left: 126px;
+    background-position: -123px -4px;
+}
+
+/* end of document */

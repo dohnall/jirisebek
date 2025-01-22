@@ -1,0 +1,82 @@
+<h1 class="h-codelist h-codelist-item">{$codelist.item.name}</h1>
+{if $user->hasRight(47)}
+<p class="navi">
+    <a href="{$ROOT}?module={$MODULE}&amp;submodule=index&amp;id={$codelist_id}&amp;action=export" class="button export">{#export#}</a>
+    <a href="javascript:;" id="item_import" class="button import">{#import#}</a>
+    <a href="javascript:;" id="item_new" class="button new">{#new_item#}</a>
+</p>
+{/if}
+<form method="post" action="" class="filter">
+    <fieldset class="filter">
+        <legend>{#filter#}</legend>
+        <label for="codelist_lang">{#lang#}: </label>
+        <select name="lang" id="codelist_lang">
+{foreach from=$langs item=lang}
+            <option value="{$lang.lang_id}"{if $codelist_lang == $lang.lang_id} selected="selected"{/if}>{$lang.name}</option>
+{/foreach}
+        </select>
+        <input type="submit" value="{#change#}" />
+    </fieldset>
+</form>
+<table class="list table-codelist table-codelist-index">
+    <thead>
+        <tr>
+        	<th class="th-value">{#name#}</th>
+            <th class="th-code">{#code#}</th>
+            <th class="th-action">{#action#}</th>
+        </tr>
+    </thead>
+    <tbody class="sortable sortable_codelist_record">
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+        	<td>
+        		<input type="hidden" name="crid" value="{$row->id}" />
+				<a href="{$ROOT}?module={$MODULE}&amp;submodule=editindex&amp;id={$codelist_id}&amp;code={$row->get('item', 'code')}">{$row->get('item', 'name')}</a>
+			</td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editindex&amp;id={$codelist_id}&amp;code={$row->get('item', 'code')}">{$row->get('item', 'code')}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=index&amp;id={$codelist_id}&amp;code={$row->get('item', 'code')}&amp;action=delete" class="delete">{#delete#}</a></td>
+        </tr>
+{/foreach}
+    </tbody>
+</table>
+{if $user->hasRight(47)}
+<div id="item-new" title="{#new_item#}" class="hidden">
+	<form method="post" action="">
+    	<fieldset>
+        	<table>
+        	    <tr>
+        		  	<td class="th-label"><label for="content_code">{#code#}:</label></td>
+        		  	<td>
+				  		<input type="text" name="item[code]" id="content_code" />
+                        <input type="hidden" name="codelist_id" value="{$codelist_id}" />
+						<input type="hidden" name="action" value="new_item" />
+                	</td>
+                </tr>
+{foreach from=$langs item=row}
+        		<tr>
+        		  	<td class="th-label"><label for="content_name_{$row.code}">{#name#} ({$row.code}):</label></td>
+        		  	<td>
+				  		<input type="text" name="item[name][{$row.lang_id}]" id="content_name_{$row.code}" />
+                	</td>
+            	</tr>
+{/foreach}
+        	</table>
+        </fieldset>
+	</form>
+</div>
+<div id="item-import" title="{#import#}" class="hidden">
+    <form method="post" action="" enctype="multipart/form-data">
+        <fieldset>
+            <table>
+                <tr>
+                    <td class="th-label"><label>{#csv_file#}:</label></td>
+                    <td>
+                        <input type="file" name="import" />
+                        <input type="hidden" name="action" value="import" />
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</div>
+{/if}

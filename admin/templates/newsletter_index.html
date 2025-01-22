@@ -1,0 +1,26 @@
+<h1 class="h-settings h-settings-lang">{#newsletters#}</h1>
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=editnewsletter" class="button new">{#new_item#}</a></p>
+<table class="list table-settings table-settings-lang">
+    <thead>
+        <tr>
+            <th>{#name#}</th>
+            <th>{#subject#}</th>
+            <th>{#prepared#}</th>
+            <th>{#inserted#}</th>
+            <th>{#sent#}</th>
+            <th>{#action#}</th>
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$records item=record}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editnewsletter&amp;id={$record.newsletter_id}">{$record.name}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editnewsletter&amp;id={$record.newsletter_id}">{$record.subject}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editnewsletter&amp;id={$record.newsletter_id}">{if $record.prepared==1}{#yes#}{else}{#no#}{/if}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editnewsletter&amp;id={$record.newsletter_id}">{$record.inserted}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editnewsletter&amp;id={$record.newsletter_id}">{if $record.sent > '0000-00-00 00:00:00'}{$record.sent}{else}{#never#}{/if}</a></td>
+            <td>{if $record.prepared != 1 && $record.sent == '0000-00-00 00:00:00'}<a href="{$ROOT}?module={$MODULE}&amp;submodule=index&amp;id={$record.newsletter_id}&amp;action=delete" class="delete">{#delete#}</a>{/if}</td>
+        </tr>
+{/foreach}
+    </tbody>
+</table>

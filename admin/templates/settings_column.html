@@ -1,0 +1,58 @@
+<h1 class="h-settings h-settings-columns">{#columns#}</h1>
+{if $user->hasRight(14)}
+<p class="navi"><a href="javascript:;" id="item_new" class="button new">{#new_item#}</a></p>
+{/if}
+<table class="list table-settings table-settings-column">
+    <thead>
+        <tr>
+            <th class="th-name">{#name#}</th>
+            <th class="th-code">{#code#}</th>
+            <th class="th-type">{#type#}</th>
+{if $user->hasRight(14)}
+            <th class="th-action">{#action#}</th>
+{/if}
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcolumn&amp;id={$row.column_id}">{$row.name}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcolumn&amp;id={$row.column_id}">{$row.code}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editcolumn&amp;id={$row.column_id}">{$row.type}</a></td>
+	{if $user->hasRight(14)}
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=column&amp;id={$row.column_id}&amp;action=delete" class="delete">{#delete#}</a></td>
+	{/if}
+        </tr>
+{/foreach}
+    </tbody>
+</table>
+{if $user->hasRight(14)}
+<div id="item-new" title="{#new_item#}" class="hidden">
+	<form method="post" action="">
+    	<fieldset>
+        	<table>
+				<tr>
+        		  	<td class="th-label"><label for="content_name">{#name#}:</label></td>
+        		  	<td><input type="text" name="item[name]" id="content_name" /></td>
+                </tr>
+				<tr>
+        		  	<td class="th-label"><label for="content_code">{#code#}:</label></td>
+        		  	<td><input type="text" name="item[code]" id="content_code" /></td>
+                </tr>
+				<tr>
+        		  	<td class="th-label"><label for="content_type">{#type#}:</label></td>
+        		  	<td>
+						<select name="item[type]" id="content_type">
+	{foreach from=$dataTypes item=row}
+							<option value="{$row}">{$row}</option>
+	{/foreach}
+						</select>
+                        <input type="hidden" name="item_id" value="0" />
+						<input type="hidden" name="action" value="new_item" />
+					</td>
+                </tr>
+        	</table>
+        </fieldset>
+	</form>
+</div>
+{/if}

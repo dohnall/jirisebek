@@ -1,0 +1,27 @@
+
+/* REZERVACE */
+#rezervace-week {position:relative; float:right; width:360px; height:30px; /*background-color:#1F1F1F;*/ border: solid #666 0px;}
+
+#rezervace-week .previous {float:left; width:146px; height:18px; text-align:right; font-weight:bold; padding: 9px 12px; background: url('rezervace-previous-out.png') top left no-repeat; border: solid #666 0px; margin-right:10px;}
+#rezervace-week .next {float:left; width:146px; height:18px; text-align:left; font-weight:bold; padding: 9px 12px; background: url('rezervace-next-out.png') top left no-repeat; border: solid #666 0px;}
+#rezervace-week .previous:hover, #rezervace-week .next:hover {color:#FFF; text-decoration:none;}
+#rezervace-week .actual {float:left; width:150px; height:20px; text-align:center; font-weight:bold; padding: 8px;  /*background-color:#1F1F1F;*/ border: solid #666 0px;}
+
+
+#rezervace-table {position:relative; width:920px; height:390px; /*background-color:#1F1F1F;*/ border: solid #666 0px; float:left;}
+
+#rezervace-table .hours {width:910px; height:30px; clear:both; border-bottom: solid #666 2px;}
+#rezervace-table .hours .datespace {width:76px; height:30px; float:left; border-right: solid #666 2px;}
+#rezervace-table .hours .item {width:51px; height:20px; padding:5px 0px; float:left; text-align:center; font-weight:bold; border-right: solid #666 1px;}
+
+#rezervace-table .days {position:relative; width:910px; height:50px; clear:both; border-bottom: solid #666 1px;}
+#rezervace-table .days .date {width:66px; height:35px; padding:8px 5px 7px 5px; float:left; text-align:center; font-weight:bold; border-right: solid #666 2px;}
+#rezervace-table .days .actions {position:relative; width:832px; height:50px; float:left; background: url('rezervace-hours-grid.gif') top left repeat; border: solid #FF77FF 0px; z-index:0;}
+#rezervace-table .days .actions .action {position:absolute; top:4px; width:52px; height:34px; padding:3px 0px 3px 0px; float:left; text-align:center; color:#000; font-size:11px; line-height:100%; font-weight:normal; border: solid #000 0px; background: url('rezervace-action-shadow.png') #600 top left repeat-x; z-index:1;}
+
+#rezervace-table .days .actions .action .actionmore {position:absolute; display:none; top:0px; left:0px; width:190px; height:auto; padding:15px; float:left; text-align:left; color:#000; font-size:13px; line-height:150%; font-weight:normal; overflow:hidden; border: solid #FFF 1px; z-index:10!important;}
+#rezervace-table .days .actions .action .actionmore .title {color:#000; font-size:18px; font-weight:normal; clear:both;}
+#rezervace-table .days .actions .action .actionmore strong {display:block; float:left; width:70px; color:#000; font-weight:bold;}
+#rezervace-table .days .actions .action .actionmore .actionbt {display:block; width:190px; height:28px; padding-top:7px; color:#000; font-size:16px; text-align:center; font-weight:bold; background: url('rezervace-actionbt-out.png') top left no-repeat; clear:both;}
+#rezervace-table .days .actions .action .actionmore .actionbt:hover {color:#FFF; text-decoration:none; background: url('rezervace-actionbt-over.png') top left no-repeat;}
+

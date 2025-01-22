@@ -1,0 +1,12 @@
+<div id="menu">
+    <ul>
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=new"{if $SUBMODULE == 'new'} class="active"{/if}>{#forum_new#}</a></li>
+{foreach from=$sections item=row}
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=section&amp;id={$row.section_id}"{if $SUBMODULE == 'section' && $section_id == $row.section_id} class="active"{/if}>{$HELPER->section($row.section_id)->get('text', 'name')}</a></li>
+{/foreach}
+    </ul>
+</div>
+<div id="content">
+    {include file="`$MODULE`_`$SUBMODULE`.html"}
+</div>
+

@@ -1,0 +1,11 @@
+<div id="menu">
+    <ul>
+        <!--li><a{if $SUBMODULE == "index" || $SUBMODULE == "editnewsletter"} class="active"{/if} href="{$ROOT}?module={$MODULE}&amp;submodule=index" title="">{#newsletters#}</a></li-->
+        <!--li><a{if $SUBMODULE == "ngroup"} class="active"{/if} href="{$ROOT}?module={$MODULE}&amp;submodule=ngroup" title="">{#groups#}</a></li-->
+        <li><a{if $SUBMODULE == "nuser" || $SUBMODULE == "editnuser" || $SUBMODULE == "import" || $SUBMODULE == "export"} class="active"{/if} href="{$ROOT}?module={$MODULE}&amp;submodule=nuser" title="">{#nusers#}</a></li>
+        <!--li><a{if $SUBMODULE == "nlog"} class="active"{/if} href="{$ROOT}?module={$MODULE}&amp;submodule=nlog" title="">Log</a></li-->
+    </ul>
+</div>
+<div id="content">
+    {include file="`$MODULE`_`$SUBMODULE`.html"}
+</div>

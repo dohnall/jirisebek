@@ -1,0 +1,21 @@
+<h1 class="h-user h-user-user">Statistika - výpis akcí</h1>
+<table class="list table-user table-user-user">
+    <thead>
+        <tr>
+            <th class="th-name">Název akce</th>
+            <th class="th-capacity">Kapacita</th>
+            <th class="th-filled">Průměrná obsazenost</th>
+            <th class="th-efficiency">Vytíženost</th>
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row key=action_id}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=action&amp;id={$action_id}">{$row.name}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=action&amp;id={$action_id}">{$row.capacity}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=action&amp;id={$action_id}">{$row.filled|string_format:"%.2f"}</a></td>
+			<td><a href="{$ROOT}?module={$MODULE}&amp;submodule=action&amp;id={$action_id}">{$row.efficiency|string_format:"%.2f"}%</a></td>
+        </tr>
+{/foreach}
+    </tbody>
+</table>

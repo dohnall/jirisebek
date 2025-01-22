@@ -1,0 +1,4 @@
+<tr>
+    <th class="th-label th-text"><label for="cid_{$type_col.item.code}">{$type_col.item.name}{if $type_col.item.required == 1}&nbsp;*{/if}:</label></th>
+    <td><input id="cid_{$type_col.item.code}" type="text" name="item[value][{$type_col.item.code}]" value="{$type_value}"{if $type_col.param.size} size="{$type_col.param.size}"{/if}{if $type_col.param.maxlength} maxlength="{$type_col.param.maxlength}"{/if}{if $type_col.item.readonly == 1} readonly="readonly"{/if}{if $type_col.param.disabled == 1} disabled="disabled"{/if} />{if $type_col.item.hint} {$type_col.item.hint}{/if}</td>
+</tr>

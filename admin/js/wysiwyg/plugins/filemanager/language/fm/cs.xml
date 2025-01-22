@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language-pack>
+  <!--
+		This language file gets loaded if TinyMCE is in developer mode. This XML is used to generate all <code>.js/<code_dlg>.js files.
+		Consult the Wiki for more details: http://wiki.moxiecode.com/index.php/TinyMCE:Creating_Language
+	-->
+    
+    <header>
+        <author>Moxiecode Systems AB</author>
+        <version major="" minor="0" releasedate="2010-11-22" />
+        <description>Toto je český jazykový balíček pro MCFileManager.</description>
+    </header>
+    <language code="cs" title="Czech" dir="ltr">
+	<group target="error">
+		<item name="tofile_exists">Soubor již existuje.</item>
+		<item name="no_from_file">Zdrojový soubor neexistuje.</item>
+		<item name="demo">Tato akce je v demu zakázána.</item>
+		<item name="invalid_filename">Název souboru není platný.</item>
+		<item name="no_write_access">Složka/soubor nemá práva na zápis.</item>
+		<item name="copy_failed">Kopírování se nezdařilo.</item>
+		<item name="move_failed">Přesouvání se nezdařilo.</item>
+		<item name="template_missing">Vybraná šablona neexistuje.</item>
+		<item name="createdoc_failed">Vytvoření dokumentu se nezdařilo.</item>
+		<item name="no_access">Nemáš oprávnění provádět tuto akci.</item>
+		<item name="file_exists">Soubor s tímto názvem již existuje.</item>
+		<item name="upload_failed">Nahrávání selhalo, zkontroluj práva na zápis pro tuto složku.</item>
+		<item name="error_to_large">Soubor, který se snažíte nahrát, je příliš veliký.</item>
+		<item name="file_not_exists">Soubor neexistuje.</item>
+		<item name="delete_failed">Není možné smazat soubor(y).</item>
+		<item name="folder_exists">Složka s tímto názvem již existuje.</item>
+		<item name="no_filesystem">Neexistuje systém souborů.</item>
+		<item name="createdir_failed">Nepodařilo se vytvořit složku.</item>
+		<item name="createzip_failed">Nepodařilo se vytvořit zip soubor.</item>
+		<item name="rename_failed">Přejmenování se nezdařilo.</item>
+		<item name="savecontent_failed">Nepodařilo se uložit obsah.</item>
+
+		<!-- server response -->
+		<item name="server_response">Komunikace se serverem se nezdařila. Zkuste to prosím ještě jednou.</item>
+		<item name="error">Chyba</item>
+	</group>
+	<group target="message">
+		<item name="zip_success">Zipování bylo úspěšné.</item>
+		<item name="copy_success">Kopírování se zdařilo.</item>
+		<item name="move_success">Přesouvání se zdařilo.</item>
+		<item name="createdoc_success">Dokument byl úspěšně vytvořen.</item>
+		<item name="delete_success">Mazání se zdařilo.</item>
+		<item name="directory_ok">Složka byla vytvořena.</item>
+		<item name="keepalive">Udrž naživu</item>
+		<item name="upload_ok">Nahrávání se zdařilo.</item>
+		<item name="confirm_cut">Opravdu chceš vyjmout označené soubory?</item>
+		<item name="confirm_copy">Opravdu chceš kopírovat označené soubory?</item>
+		<item name="confirm_paste">Opravdu chceš vložit kopírované soubory sem?</item>
+		<item name="confirm_delete">Opravdu chceš smazat označené soubory?</item>
+		<item name="insert">Nahrávám data, moment prosím...</item>
+		<item name="paste_in_progress">Vkládám data, moment prosím...</item>
+	</group>
+
+	<group target="common">
+		<item name="createdir">Vytvořit složku</item>
+		<item name="createfile">Nový soubor</item>
+		<item name="help">Nápověda</item>
+		<item name="refresh">Obnovit</item>
+		<item name="upload">Nahrát</item>
+		<item name="directory">Vybraná složka</item>
+		<item name="imagemanager">Správce obrázků</item>
+		<item name="title">Správce souborů</item>
+		<item name="alert_ok">OK</item>
+		<item name="confirm_yes">Ano</item>
+		<item name="confirm_no">Ne</item>
+	</group>
+
+	<group target="button">
+		<item name="create">Vytvořit</item>
+		<item name="cancel">Zrušit</item>
+		<item name="save">Uložit</item>
+	</group>
+	<group target="panel">
+		<item name="categories">Kategorie</item>
+		<item name="preview">Náhled</item>
+
+		<!-- Legacy items -->
+		<item name="favorites">Oblíbené</item>
+		<item name="history">Historie</item>
+	</group>
+
+	<group target="edit">
+			<item name="title">Upravit soubor</item>
+			<item name="description">Editovat obsah souboru.</item>
+			<item name="loading_wait">Obsah je nahráván, prosím počkejte.</item>
+			<item name="saving_wait">Obsah se ukládá, prosím počkejte.</item>
+			<item name="file_path">Cesta:</item>
+		</group>
+
+
+	<group target="actions">
+		<item name="insert">Vybrat</item>
+		<item name="download">Stáhnout</item>
+		<item name="rename">Přejmenovat</item>
+		<item name="cut">Vyjmout</item>
+		<item name="copy">Kopírovat</item>
+		<item name="paste">Vložit</item>
+		<item name="deleteit">Smazat</item>
+		<item name="edit">Upravit</item>
+		<item name="zip">Zip</item>
+		<item name="view">Zobrazit</item>
+		<item name="select_all">Označit vše</item>
+		<item name="unselect_all">Neoznačit nic</item>
+		
+		<!-- Legacy items -->
+		<item name="addfavorites">Přidat k oblíbeným</item>
+		<item name="removefavorites">Smazat oblíbené</item>
+	</group>
+
+	<group target="filelist">
+		<item name="filename">Název</item>
+		<item name="size">Velikost</item>
+		<item name="type">Typ</item>
+		<item name="modified">Datum úpravy</item>
+		<item name="with_selected">S označeným:</item>
+		<item name="info_dirs">Složky:</item>
+		<item name="info_files">Soubory:</item>
+		<item name="info_size">Velikost souborů:</item>
+		<item name="info_access">Přístup:</item>
+		<item name="loading">Nahrávám...</item>
+		<item name="file_can_be_chosen_by_doubleclick">Soubor lze přímo vybrat dvojklikem</item>
+	</group>
+
+	<group target="createdir">
+		<item name="title">Vytvořit složku</item>
+		<item name="description">Vlož jméno složky, kterou chceš vytvořit.</item>
+		<item name="template">Šablona:</item>
+		<item name="select_template">-- Vybrat šablonu --</item>
+		<item name="directory_name">Název složky:</item>
+		<item name="create_in">Vytvořit v:</item>
+		<item name="progress">Vytvářím složku, moment prosím...</item>
+	</group>
+
+	<group target="createdoc">
+		<item name="title">Vytvořit soubor</item>
+		<item name="description">Vlož jméno souboru, který chceš vytvořit ze šablony.</item>
+		<item name="template">Šablona:</item>
+		<item name="select_template">-- Vybrat šablonu --</item>
+		<item name="name">Jméno</item>
+		<item name="path">Cesta</item>
+		<item name="preview">Náhled</item>
+		<item name="preview_title">Náhled: {file}</item>
+	</group>
+
+	<group target="upload">
+		<item name="title">Nahrávání</item>
+		<item name="description">Formulář pro nahrání souborů.</item>
+		<item name="valid_extensions">Povolené přípony:</item>
+		<item name="max_upload_size">Maximální velikost:</item>
+		<item name="file_to_upload">Soubor pro nahrání:</item>
+		<item name="as_file_name">Jméno:</item>
+		<item name="path">Cesta: </item>
+		<item name="button_upload">Nahraj</item>
+		<item name="browse">Přidat soubor(y)</item>
+		<item name="progress">Nahrávám...</item>
+		<item name="upload_warn">Soubory jsou nahrávány, jste si jist, že chcete zrušit nahrávání?</item>
+		<item name="statusrow">Máte {files} souborů (celkem {size}) čekajících na nahrání na server.</item>
+		<item name="progressinfo">{loaded} z {total} nahráno na server rychlostí {speed}/s.</item>
+		<item name="abort">Zrušit nahrávání</item>
+		<item name="add_more">Přidat další?</item>
+		<item name="upload_to_server">Nahrát na server</item>
+		<item name="cancelled">Nahrávání na server bylo přerušeno.</item>
+		<item name="choose_files">Vyberte soubory</item>
+		<item name="basic_upload">Pokud máte potíže s nahráváním na server, můžete použít {a}základní nahrávání souborů{/a}.</item>
+		<item name="remove">Odstranit</item>
+		<item name="file">Soubor</item>
+		<item name="size">Velikost</item>
+		<item name="status">Stav</item>
+		<item name="no_valid_files">Nebyly vybrány platné soubory, zkuste to znova prosím.</item>
+	</group>
+
+	<group target="createzip">
+		<item name="title">Vytvořit zip</item>
+		<item name="description">Vlož jméno zip souboru, který chceš vytvořit.</item>
+		<item name="name">Jméno:</item>
+		<item name="path">Cesta</item>
+	</group>
+
+	<group target="tinymce">
+		<item name="insertfile_desc">Vložit soubor</item>
+	</group>
+
+	<group target="favorites">
+		<item name="special_folder_title">Oblíbené položky</item>
+		<item name="addfavorites">Přidat do oblíbených</item>
+		<item name="removefavorites">Vymazat z oblíbených</item>
+		<item name="confirm_remove_favorite">Opravdu vymazat položku z oblíbených?</item>
+		<item name="remove_favorite_failed">Vymazání z oblíbených se nepodařilo.</item>
+	</group>
+
+	<group target="history">
+		<item name="special_folder_title">Historie</item>
+	</group>
+
+	<group target="uploaded">
+		<item name="special_folder_title">Nahrané soubory</item>
+	</group>
+
+    </language>
+</language-pack>

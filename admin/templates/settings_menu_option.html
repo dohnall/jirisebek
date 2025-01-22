@@ -1,0 +1,8 @@
+{*if $config->hasTemplateChildren($section->get('section', 'template'))*}
+				<option value="{$section->section_id}"{if isset($kid.item.section_id) && $section->section_id == $kid.item.section_id} selected="selected"{/if}>{'--'|str_repeat:($section->get('section', 'depth')-1)} {$section->get('text', 'name')}</option>
+	{if $section->get('children', true)}
+		{foreach from=$section->get('children') item=child}
+				{include file='settings_menu_option.html' section=$child}
+		{/foreach}
+	{/if}
+{*/if*}

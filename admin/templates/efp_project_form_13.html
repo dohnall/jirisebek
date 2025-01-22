@@ -1,0 +1,201 @@
+                    <h6>Annexe 1.13: Mobilising Futures (6/7)</h6>
+                    <h1><b>Participation Scale</b></h1>
+                    <div class="oracle-form">
+                        <form action="" method="post">
+                            <h3>Q1: Please indicate the number of participants and level of stakeholder engagement in each of the core activities (methods) conducted during the project.</h3>
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="" />
+                                    <col style="width:16%" />
+                                    <col style="width:6%" />
+                                    <col style="width:24%" />
+                                    <tr>
+                                        <th>Method</th>
+                                        <th>Number of Participants</th>
+                                        <th colspan="2">Stakeholder Engagement&nbsp;*<br />low&nbsp;›&nbsp;high</th>
+                                    </tr>
+{foreach from=$filled_methods item=row name=methods}
+    {assign var=i value=$smarty.foreach.methods.iteration}
+    {assign var=participants value="participants_`$i`"}
+    {assign var=pu value="pu_`$i`"}
+    {assign var=re value="re_`$i`"}
+    {assign var=pr value="pr_`$i`"}
+    {assign var=eu value="eu_`$i`"}
+    {assign var=io value="io_`$i`"}
+    {assign var=ng value="ng_`$i`"}
+    {assign var=me value="me_`$i`"}
+    {assign var=cs value="cs_`$i`"}
+    {assign var=other value="other_`$i`"}
+                                    <tr>
+                                        <td rowspan="9"><h4>{$row}</h4></td>
+                                        <td rowspan="9" class="t-c">
+                                            <select name="participants_{$i}">
+                                                <option value="1"{if $form.$participants == 1} selected="selected"{/if}>1 - 10</option>
+                                                <option value="2"{if $form.$participants == 2} selected="selected"{/if}>11 - 20</option>
+                                                <option value="3"{if $form.$participants == 3} selected="selected"{/if}>21 - 30</option>
+                                                <option value="4"{if $form.$participants == 4} selected="selected"{/if}>31 - 40</option>
+                                                <option value="5"{if $form.$participants == 5} selected="selected"{/if}>41 - 50</option>
+                                                <option value="6"{if $form.$participants == 6} selected="selected"{/if}>51 - 60</option>
+                                                <option value="7"{if $form.$participants == 7} selected="selected"{/if}>61 - 70</option>
+                                                <option value="8"{if $form.$participants == 8} selected="selected"{/if}>71 - 80</option>
+                                                <option value="9"{if $form.$participants == 9} selected="selected"{/if}>81 - 90</option>
+                                                <option value="10"{if $form.$participants == 10} selected="selected"{/if}>91 - 100</option>
+                                                <option value="11"{if $form.$participants == 11} selected="selected"{/if}>101 - 200</option>
+                                                <option value="12"{if $form.$participants == 12} selected="selected"{/if}>201 - 300</option>
+                                                <option value="13"{if $form.$participants == 13} selected="selected"{/if}>301 - 400</option>
+                                                <option value="14"{if $form.$participants == 14} selected="selected"{/if}>401 - 500</option>
+                                                <option value="15"{if $form.$participants == 15} selected="selected"{/if}>501 - 600</option>
+                                                <option value="16"{if $form.$participants == 16} selected="selected"{/if}>601 - 700</option>
+                                                <option value="17"{if $form.$participants == 17} selected="selected"{/if}>701 - 800</option>
+                                                <option value="18"{if $form.$participants == 18} selected="selected"{/if}>801 - 900</option>
+                                                <option value="19"{if $form.$participants == 19} selected="selected"{/if}>901 - 1000</option>
+                                                <option value="20"{if $form.$participants == 20} selected="selected"{/if}>over 1000</option>
+                                            </select>
+                                        </td>
+                                        <th title="Public organisations">PU</th>
+                                        <td>
+                                            <div class="rating">
+                                                <input type="radio" value="0" name="pu_{$i}"{if $form.$pu == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="pu_{$i}"{if $form.$pu == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="pu_{$i}"{if $form.$pu == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="pu_{$i}"{if $form.$pu == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="pu_{$i}"{if $form.$pu == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="pu_{$i}"{if $form.$pu == 5} checked="checked"{/if} />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th title="Research and education organisations">RE</th>
+                                        <td>
+                                            <div class="rating">
+                                                <input type="radio" value="0" name="re_{$i}"{if $form.$re == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="re_{$i}"{if $form.$re == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="re_{$i}"{if $form.$re == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="re_{$i}"{if $form.$re == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="re_{$i}"{if $form.$re == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="re_{$i}"{if $form.$re == 5} checked="checked"{/if} />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th title="Private organisations">PR</th>
+                                        <td>
+                                            <div class="rating">
+                                                <input type="radio" value="0" name="pr_{$i}"{if $form.$pr == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="pr_{$i}"{if $form.$pr == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="pr_{$i}"{if $form.$pr == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="pr_{$i}"{if $form.$pr == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="pr_{$i}"{if $form.$pr == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="pr_{$i}"{if $form.$pr == 5} checked="checked"{/if} />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th title="European Union">EU</th>
+                                        <td>
+                                            <div class="rating">
+                                                <input type="radio" value="0" name="eu_{$i}"{if $form.$eu == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="eu_{$i}"{if $form.$eu == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="eu_{$i}"{if $form.$eu == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="eu_{$i}"{if $form.$eu == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="eu_{$i}"{if $form.$eu == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="eu_{$i}"{if $form.$eu == 5} checked="checked"{/if} />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th title="International organisations">IO</th>
+                                        <td>
+                                            <div class="rating">
+                                                <input type="radio" value="0" name="io_{$i}"{if $form.$io == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="io_{$i}"{if $form.$io == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="io_{$i}"{if $form.$io == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="io_{$i}"{if $form.$io == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="io_{$i}"{if $form.$io == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="io_{$i}"{if $form.$io == 5} checked="checked"{/if} />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th title="Non-governmental, not for profit, organisations">NG</th>
+                                        <td>
+                                            <div class="rating">
+                                                <input type="radio" value="0" name="ng_{$i}"{if $form.$ng == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="ng_{$i}"{if $form.$ng == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="ng_{$i}"{if $form.$ng == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="ng_{$i}"{if $form.$ng == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="ng_{$i}"{if $form.$ng == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="ng_{$i}"{if $form.$ng == 5} checked="checked"{/if} />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th title="Media">ME</th>
+                                        <td>
+                                            <div class="rating">
+                                                <input type="radio" value="0" name="me_{$i}"{if $form.$me == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="me_{$i}"{if $form.$me == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="me_{$i}"{if $form.$me == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="me_{$i}"{if $form.$me == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="me_{$i}"{if $form.$me == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="me_{$i}"{if $form.$me == 5} checked="checked"{/if} />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th title="Civil society">CS</th>
+                                        <td>
+                                            <div class="rating">
+                                                <input type="radio" value="0" name="cs_{$i}"{if $form.$cs == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="cs_{$i}"{if $form.$cs == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="cs_{$i}"{if $form.$cs == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="cs_{$i}"{if $form.$cs == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="cs_{$i}"{if $form.$cs == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="cs_{$i}"{if $form.$cs == 5} checked="checked"{/if} />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th title="Others">O</th>
+                                        <td>
+                                            <div class="rating">
+                                                <input type="radio" value="0" name="other_{$i}"{if $form.$other == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="other_{$i}"{if $form.$other == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="other_{$i}"{if $form.$other == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="other_{$i}"{if $form.$other == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="other_{$i}"{if $form.$other == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="other_{$i}"{if $form.$other == 5} checked="checked"{/if} />
+                                            </div>
+                                        </td>
+                                    </tr>
+{foreachelse}
+                                    <tr>
+                                        <td colspan="4">No methods yet</td>
+                                    </tr>
+{/foreach}
+                                    <tr>
+                                        <th colspan="4" class="t-l notice">
+                                            <div class="f-l" style="padding-right:18px">
+                                                <b>*</b> Use 1 to 5 stars to rate how the method<br />
+                                                    helped to engage these stakeholders:<br />
+                                                <span class="stars">*</span> = none/very low<br />
+                                                <span class="stars">**</span> = low<br />
+                                                <span class="stars">***</span> = moderate<br />
+                                                <span class="stars">****</span> = high<br />
+                                                <span class="stars">*****</span> = very high
+                                            </div>
+                                            <div class="f-l" style="padding-right:18px">
+                                                <b>PU</b> = Public organisations<br />
+                                                <b>RE</b> = Research and education organisations<br />
+                                                <b>PR</b> = Private organisations<br />
+                                                <b>EU</b> = European Union<br />
+                                                <b>IO</b> = International organisations<br />
+                                                <b>NG</b> = Non-governmental, not for profit, organisations<br />
+                                                <b>ME</b> = Media<br />
+                                                <b>CS</b> = Civil society<br />
+                                                <b>O</b> = Others
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>

@@ -1,0 +1,90 @@
+{$image = $SECTION->get('file', 'image')}
+<div class="section_heading section_heading_left">
+    <span class="section_heading_text">{$SECTION->get('value', 'header')}</span>
+</div>
+
+<div class="col2_box mt40">
+    <div class="content_text">{$SECTION->get('value', 'content')}</div>
+    <div class="tac">
+        {if $image}
+        <img src="{$FILES}0/{$image[0].file}" width="320">
+        {/if}
+    </div>
+</div>
+<div class="col_cards mt56 card_html">
+    <div>{$SECTION->get('value', 'content_left')}</div>
+    <div>{$SECTION->get('value', 'content_right')}</div>
+</div>
+
+<div class="section_subheading mt56">{#personal_projects#}</div>
+<p class="content_text mt24">{$SECTION->get('value', 'projects_description')}</p>
+
+<div class="gallery_cube gallery_cube_3 mt32">
+    {foreach from=$COMPONENTS.bio_art item=row}
+    {$image = $row->get('file', 'image')}
+    <a href="{$row->get('url')}" class="gallery_cube_link">
+        {if $image}
+        <img src="{$FILES}w600/{$image[0].file}" alt="" />
+        {/if}
+        <span>{$row->get('section', 'name')}</span>
+    </a>
+    {/foreach}
+</div>
+
+<div class="section_subheading mt56">{#exhibitions#}</div>
+
+<div class="gallery_cube gallery_cube_3 mt32">
+    {foreach from=$HELPER->codebook('exhibitions') item=row}
+    {$image = $row->get('file', 'image')}
+    {if $row->get('value', 'url')}
+    <a href="{$row->get('value', 'url')}" class="gallery_cube_link">
+        {if $image}
+        <img src="{$FILES}w600/{$image[0].file}" alt="" />
+        {/if}
+        <span>
+            {$row->get('item', 'name')}
+            <span class="gallery_group">{$row->get('value', 'info')}</span>
+        </span>
+    </a>
+    {else}
+    <span class="gallery_cube_link">
+        {if $image}
+        <img src="{$FILES}w600/{$image[0].file}" alt="" />
+        {/if}
+        <span>
+            {$row->get('item', 'name')}
+            <span class="gallery_group">{$row->get('value', 'info')}</span>
+        </span>
+    </span>
+    {/if}
+    {/foreach}
+</div>
+
+<div class="section_subheading mt56">{#publications#}</div>
+
+<div class="gallery_cube gallery_cube_3 mt32">
+    {foreach from=$HELPER->codebook('publications') item=row}
+    {$image = $row->get('file', 'image')}
+    {if $row->get('value', 'url')}
+    <a href="{$row->get('value', 'url')}" class="gallery_cube_link">
+        {if $image}
+        <img src="{$FILES}w600/{$image[0].file}" alt="" />
+        {/if}
+        <span>
+            {$row->get('item', 'name')}
+            <span class="gallery_group">{$row->get('value', 'info')}</span>
+        </span>
+    </a>
+    {else}
+    <span class="gallery_cube_link">
+        {if $image}
+        <img src="{$FILES}w600/{$image[0].file}" alt="" />
+        {/if}
+        <span>
+            {$row->get('item', 'name')}
+            <span class="gallery_group">{$row->get('value', 'info')}</span>
+        </span>
+    </span>
+    {/if}
+    {/foreach}
+</div>

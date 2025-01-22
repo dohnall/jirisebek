@@ -1,0 +1,10 @@
+<div id="menu">
+    <ul>
+        <li><a{if $SUBMODULE == "weddings"} class="active"{/if} href="{$ROOT}?module={$MODULE}&amp;submodule=weddings" title="">Svatební obřady</a></li>
+        <li><a{if $SUBMODULE == "bookings"} class="active"{/if} href="{$ROOT}?module={$MODULE}&amp;submodule=bookings" title="">Sportoviště a griloviště</a></li>
+    </ul>
+</div>
+<div id="content">
+    {include file="`$MODULE`_`$SUBMODULE`.html"}
+</div>
+

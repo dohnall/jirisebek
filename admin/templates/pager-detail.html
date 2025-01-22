@@ -1,0 +1,8 @@
+<div class="pager_detail">
+{if $item->get('previous')}
+	<a href="{$ROOT}?module={$MODULE}&amp;id={$item->get('previous')}" class="button">{#previous#}</a>
+{/if}
+{if $item->get('next')}
+	<a href="{$ROOT}?module={$MODULE}&amp;id={$item->get('next')}" class="button">{#next#}</a>
+{/if}
+</div>

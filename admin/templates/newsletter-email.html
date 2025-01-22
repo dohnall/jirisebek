@@ -1,0 +1,40 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>{$subject}</title>
+</head>
+<body>
+	<!-- -->
+	<table cellspacing="0" cellpadding="0" width="100%" bgcolor="#ebebeb">
+		<tbody>
+			<tr>
+				<td align="center" valign="top"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table cellspacing="0" cellpadding="0" width="100%" bgcolor="#ebebeb">
+		<tbody>
+			<tr>
+			<!-- HEADER -->
+				<table style="font-family: sans-serif;" cellspacing="0" cellpadding="0" width="604">
+					<tr><td style="background-color: #ebebeb; border-top: 0px solid #000000; text-align: center; height: 50px;" align="center"><span style="font-size: 11px; color: #575757; line-height: 200%; text-decoration: none;">Máte problémy s vyobrazením tohoto emailu? <a href="{$SERVICE}newsletter-online.php?newsletter=###NEWSLETTER###" style="font-size: 11px; color: #575757; line-height: 200%; text-decoration: none; font-weight: bold;">Zobrazte jej ve Vašem vyhledávači.</a></span></td></tr>
+				</table>
+				<table style="border-top: 2px solid #eac997; border-left: 2px solid #eac997; border-right: 2px solid #eac997; font-family: sans-serif;" cellspacing="0" cellpadding="0" width="604">
+					<tr><td style="background-color: #ffffff; border-top: 0px solid #333333; border-bottom: 10px solid #FFFFFF;"" align="left" valign="”middle"><a href="#"><img src="{$DESIGN}email-header.jpg" border="0" alt="Divadlo Jana Kašky Zbraslav" align="center" /></a></td></tr>
+				</table>
+				<!-- CONTENT -->
+				{$content}
+				<!-- FOOTER -->
+				<table style="padding: 12px 25px; font-family: sans-serif;" cellspacing="0" cellpadding="10" width="604" border="0">
+					<tr>
+						<td><span style="font-size: 11px; color: #575757; line-height: 150%; text-decoration: none;">Nepřejete si již dostávat od nás email?<br /><a href="{$SERVICE}unsubscribe.php?id=###HASH###" style="font-size: 11px; color: #575757; line-height: 150%; text-decoration: none; font-weight: bold;">Odhlašte se ZDE</a></span></td>
+						<td align="right"><span style="font-size: 11px; color: #575757; line-height: 150%; text-decoration: none; text-align:right;"><a href="https://www.facebook.com/divadlozbraslav" style="font-size: 11px; color: #575757; line-height: 150%; text-decoration: none; font-weight: bold; align:right;">Následujte naše divadlo<br /> také na Facebooku</a></span></td>
+						<td width="38"><a href="https://www.facebook.com/divadlozbraslav"><img src="{$DESIGN}email-icon-facebook.jpg" border="0" alt="Facebook" align="center" width="38" /></a></td>
+					</tr>
+				</table>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<div class="section_heading">
+    <span class="section_heading_text">{$SECTION->get('value', 'header')}</span>
+</div>
+
+<p class="section_text mt32">{$SECTION->get('value', 'anotation')}</p>
+
+<div class="gallery_wide mt32">
+{foreach from=$COMPONENTS.architecture_list item=row}
+    {$image = $row->get('file', 'image')}
+    <a href="{$row->get('url')}" class="gallery_wide_link">
+        {if $image}
+        <img src="{$FILES}w600/{$image[0].file}" alt="{$image[0].alt}">
+        {/if}
+        <span class="gallery_wide_hover">
+            <span class="gallery_wide_title">{$row->get('section', 'name')}</span>
+            <span class="gallery_wide_desc">{$row->get('value', 'architect')}</span>
+        </span>
+    </a>
+{/foreach}
+</div>
+
+<div class="gallery_paging mt40">
+    {include file="pager-architecture.html" pager=$PAGERS.architecture_list}
+    <div class="contact_block content_text">
+        <div class="section_subheading">{#call_for_action_header#}</div>
+        <div>{#call_for_action_text#}</div>
+        <div class="contact_block_links">
+            <span class="contact_phone">{#phone_number#}</span></a>
+            {mailto address=$DICTIONARY.email_address encode="javascript_charcode" extra='class="contact_mail"'}
+        </div>
+    </div>
+</div>

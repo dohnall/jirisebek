@@ -1,0 +1,13 @@
+{if $pager.last > 1}
+            <div class="pager">
+                <ul>
+                    <li><a href="{$SECTION->get('url')}">&laquo;</a></li>
+					<li><a href="{$SECTION->get('url')}{if $pager.previous > 1}page-{$pager.previous}/{/if}">&lt;</a></li>
+    {foreach from=$pager.pages item=number}
+                    <li><a href="{$SECTION->get('url')}{if $number > 1}page-{$number}/{/if}"{if $pager.page == $number} class="active"{/if}>{$number}</a></li>
+    {/foreach}
+                    <li><a href="{$SECTION->get('url')}page-{$pager.next}/">&gt;</a></li>
+                    <li><a href="{$SECTION->get('url')}page-{$pager.last}/">&raquo;</a></li>
+                </ul>
+            </div>
+{/if}

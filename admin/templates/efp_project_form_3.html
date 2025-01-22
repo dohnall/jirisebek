@@ -1,0 +1,1407 @@
+                    <h6>Annexe 1.3: Scoping Futures (3/7)</h6>
+                    <h1><b>Context and Domain Coverage</b></h1>
+
+                    <div class="oracle-form">
+                        <form action="" method="post">
+
+
+                            <h3>Q1: Please indicate which of the following contexts best describe the study?</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="description" id="input-1-3-1-1" value="1"{if isset($form.description) && $form.description == 1} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-1-1">European Commission Framework Programme (EC FP) for Research and Innovation</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="description" id="input-1-3-1-2" value="2"{if isset($form.description) && $form.description == 2} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-1-2">European study detached from the EC FP</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="description" id="input-1-3-1-3" value="3"{if isset($form.description) && $form.description == 3} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-1-3">National study attached to a foresight or forward-looking programme</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="description" id="input-1-3-1-4" value="4"{if isset($form.description) && $form.description == 4} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-1-4">National study detached from a foresight or forward-looking programme</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="description" id="input-1-3-1-5" value="5"{if isset($form.description) && $form.description == 5} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-1-5">International FLA</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="description" id="input-1-3-1-6" value="6"{if isset($form.description) && $form.description == 6} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-1-6">Sub-national FLA</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="description" id="input-1-3-1-7" value="7"{if isset($form.description) && $form.description == 7} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-1-7">Corporate FLA</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="description" id="input-1-3-1-8" value="8"{if isset($form.description) && $form.description == 8} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-1-8-1">Other, briefly specify (max 140 chars.):
+                                                <input type="text" class="additional" maxlength="140" name="description_other" value="{$form.description_other}" id="input-1-3-1-8-1" />
+                                                <span class="counter">{$form.description_other|count_characters:true}</span></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <h3>Q2: For FLA in the context of EC FP, indicate the type of instrument that ‘best’ fit the study?</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="instrument" id="input-1-3-2-1" value="1"{if isset($form.instrument) && $form.instrument == 1} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-2-1">Collaborative Projects (CP)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="instrument" id="input-1-3-2-2" value="2"{if isset($form.instrument) && $form.instrument == 2} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-2-2">Networks of Excellence (NoE)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="instrument" id="input-1-3-2-3" value="3"{if isset($form.instrument) && $form.instrument == 3} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-2-3">Joint Programming Initiatives (JPI)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="instrument" id="input-1-3-2-4" value="4"{if isset($form.instrument) && $form.instrument == 4} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-2-4">Support for Frontier Research (ERC)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="instrument" id="input-1-3-2-5" value="5"{if isset($form.instrument) && $form.instrument == 5} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-2-5">Coordination and Support Actions (CSA)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="instrument" id="input-1-3-2-6" value="6"{if isset($form.instrument) && $form.instrument == 6} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-2-6">Research for the Benefit of Specific Groups (e.g. SME, SICA, CSO)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="instrument" id="input-1-3-2-7" value="7"{if isset($form.instrument) && $form.instrument == 7} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-2-7">Support for Training and Career Development of Researchers (e.g. Marie Curie)</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="instrument" id="input-1-3-2-8" value="8"{if isset($form.instrument) && $form.instrument == 8} checked="checked"{/if} /></td>
+                                            <td><label for="input-1-3-2-8-1">Other, briefly specify (max 140 chars.):
+                                                <input type="text" class="additional" maxlength="140" name="instrument_other" value="{$form.instrument_other}" id="input-1-3-2-8-1" />
+                                                <span class="counter">{$form.instrument_other|count_characters:true}</span></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <h3>Q3: Use 1 to 5 stars (<span class="stars">*****</span>) to indicate how the EC FP thematic areas relate to the study?</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:30px" />
+                                    <col />
+                                    <col style="width:160px" />
+                                    <thead>
+                                        <tr>
+                                            <th>No.</th>
+                                            <th class="t-l">Thematic Area</th>
+                                            <th>Relev. &nbsp;worst <span class="divider">&rsaquo;</span> best</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>1</b></div></td>
+                                            <td><div class="semi-label">Health</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="theme1"{if isset($form.theme1) && $form.theme1 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="theme1"{if isset($form.theme1) && $form.theme1 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="theme1"{if isset($form.theme1) && $form.theme1 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="theme1"{if isset($form.theme1) && $form.theme1 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="theme1"{if isset($form.theme1) && $form.theme1 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="theme1"{if isset($form.theme1) && $form.theme1 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>2</b></div></td>
+                                            <td><div class="semi-label">Food, agriculture and fisheries, and biotechnology (KBBE)</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="theme2"{if isset($form.theme2) && $form.theme2 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="theme2"{if isset($form.theme2) && $form.theme2 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="theme2"{if isset($form.theme2) && $form.theme2 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="theme2"{if isset($form.theme2) && $form.theme2 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="theme2"{if isset($form.theme2) && $form.theme2 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="theme2"{if isset($form.theme2) && $form.theme2 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>3</b></div></td>
+                                            <td><div class="semi-label">Information and communication technologies (ICT)</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="theme3"{if isset($form.theme3) && $form.theme3 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="theme3"{if isset($form.theme3) && $form.theme3 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="theme3"{if isset($form.theme3) && $form.theme3 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="theme3"{if isset($form.theme3) && $form.theme3 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="theme3"{if isset($form.theme3) && $form.theme3 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="theme3"{if isset($form.theme3) && $form.theme3 == 5} checked="checked"{/if}/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>4</b></div></td>
+                                            <td><div class="semi-label">Nanosciences, nanotechnologies, materials and new production technologies</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="theme4"{if isset($form.theme4) && $form.theme4 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="theme4"{if isset($form.theme4) && $form.theme4 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="theme4"{if isset($form.theme4) && $form.theme4 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="theme4"{if isset($form.theme4) && $form.theme4 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="theme4"{if isset($form.theme4) && $form.theme4 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="theme4"{if isset($form.theme4) && $form.theme4 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>5</b></div></td>
+                                            <td><div class="semi-label">Engineering and Technology</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="theme5"{if isset($form.theme5) && $form.theme5 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="theme5"{if isset($form.theme5) && $form.theme5 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="theme5"{if isset($form.theme5) && $form.theme5 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="theme5"{if isset($form.theme5) && $form.theme5 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="theme5"{if isset($form.theme5) && $form.theme5 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="theme5"{if isset($form.theme5) && $form.theme5 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>6</b></div></td>
+                                            <td><div class="semi-label">Environment (including climate change)</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="theme6"{if isset($form.theme6) && $form.theme6 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="theme6"{if isset($form.theme6) && $form.theme6 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="theme6"{if isset($form.theme6) && $form.theme6 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="theme6"{if isset($form.theme6) && $form.theme6 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="theme6"{if isset($form.theme6) && $form.theme6 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="theme6"{if isset($form.theme6) && $form.theme6 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>7</b></div></td>
+                                            <td><div class="semi-label">Transport (including aeronautics)</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="theme7"{if isset($form.theme7) && $form.theme7 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="theme7"{if isset($form.theme7) && $form.theme7 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="theme7"{if isset($form.theme7) && $form.theme7 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="theme7"{if isset($form.theme7) && $form.theme7 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="theme7"{if isset($form.theme7) && $form.theme7 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="theme7"{if isset($form.theme7) && $form.theme7 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>8</b></div></td>
+                                            <td><div class="semi-label">Socio-economic sciences and the humanities (SSH)</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="theme8"{if isset($form.theme8) && $form.theme8 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="theme8"{if isset($form.theme8) && $form.theme8 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="theme8"{if isset($form.theme8) && $form.theme8 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="theme8"{if isset($form.theme8) && $form.theme8 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="theme8"{if isset($form.theme8) && $form.theme8 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="theme8"{if isset($form.theme8) && $form.theme8 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>9</b></div></td>
+                                            <td><div class="semi-label">Space</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="theme9"{if isset($form.theme9) && $form.theme9 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="theme9"{if isset($form.theme9) && $form.theme9 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="theme9"{if isset($form.theme9) && $form.theme9 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="theme9"{if isset($form.theme9) && $form.theme9 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="theme9"{if isset($form.theme9) && $form.theme9 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="theme9"{if isset($form.theme9) && $form.theme9 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>10</b></div></td>
+                                            <td><div class="semi-label">Security</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="theme10"{if isset($form.theme10) && $form.theme10 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="theme10"{if isset($form.theme10) && $form.theme10 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="theme10"{if isset($form.theme10) && $form.theme10 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="theme10"{if isset($form.theme10) && $form.theme10 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="theme10"{if isset($form.theme10) && $form.theme10 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="theme10"{if isset($form.theme10) && $form.theme10 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+
+                            <h3>Q4: Use 1 to 5 stars (<span class="stars">*****</span>) to indicate how the FRASCATI categories relate to the study?</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:30px" />
+                                    <col />
+                                    <col style="width:160px" />
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th class="t-l">FRASCATI Category Name</th>
+                                            <th>Relev. &nbsp;worst <span class="divider">&rsaquo;</span> best</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr id="collapse_natural" class="collapse{if !isset($form.natural) || $form.natural == 0} collapsed{/if}">
+                                            <td class="t-r v-t"><div class="semi-label"><b>A</b></div></td>
+                                            <td><div class="semi-label"><b>Natural sciences</b></div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                    <input type="radio" value="0" name="natural"{if isset($form.natural) && $form.natural == 0} checked="checked"{/if} />
+                                                    <input type="radio" value="1" name="natural"{if isset($form.natural) && $form.natural == 1} checked="checked"{/if} />
+                                                    <input type="radio" value="2" name="natural"{if isset($form.natural) && $form.natural == 2} checked="checked"{/if} />
+                                                    <input type="radio" value="3" name="natural"{if isset($form.natural) && $form.natural == 3} checked="checked"{/if} />
+                                                    <input type="radio" value="4" name="natural"{if isset($form.natural) && $form.natural == 4} checked="checked"{/if} />
+                                                    <input type="radio" value="5" name="natural"{if isset($form.natural) && $form.natural == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_natural">
+                                            <td rowspan="6">&nbsp;</td>
+                                            <td><div class="semi-label">(A01) Mathematical science</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="natural1"{if isset($form.natural1) && $form.natural1 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="natural1"{if isset($form.natural1) && $form.natural1 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="natural1"{if isset($form.natural1) && $form.natural1 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="natural1"{if isset($form.natural1) && $form.natural1 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="natural1"{if isset($form.natural1) && $form.natural1 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="natural1"{if isset($form.natural1) && $form.natural1 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_natural">
+                                            <td><div class="semi-label">(A02) Information, computing and communication science</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="natural2"{if isset($form.natural2) && $form.natural2 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="natural2"{if isset($form.natural2) && $form.natural2 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="natural2"{if isset($form.natural2) && $form.natural2 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="natural2"{if isset($form.natural2) && $form.natural2 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="natural2"{if isset($form.natural2) && $form.natural2 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="natural2"{if isset($form.natural2) && $form.natural2 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_natural">
+                                            <td><div class="semi-label">(A03) Physical science</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="natural3"{if isset($form.natural3) && $form.natural3 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="natural3"{if isset($form.natural3) && $form.natural3 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="natural3"{if isset($form.natural3) && $form.natural3 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="natural3"{if isset($form.natural3) && $form.natural3 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="natural3"{if isset($form.natural3) && $form.natural3 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="natural3"{if isset($form.natural3) && $form.natural3 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_natural">
+                                            <td><div class="semi-label">(A04) Chemical science</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="natural4"{if isset($form.natural4) && $form.natural4 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="natural4"{if isset($form.natural4) && $form.natural4 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="natural4"{if isset($form.natural4) && $form.natural4 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="natural4"{if isset($form.natural4) && $form.natural4 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="natural4"{if isset($form.natural4) && $form.natural4 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="natural4"{if isset($form.natural4) && $form.natural4 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_natural">
+                                            <td><div class="semi-label">(A05) Earth sciences</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="natural5"{if isset($form.natural5) && $form.natural5 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="natural5"{if isset($form.natural5) && $form.natural5 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="natural5"{if isset($form.natural5) && $form.natural5 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="natural5"{if isset($form.natural5) && $form.natural5 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="natural5"{if isset($form.natural5) && $form.natural5 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="natural5"{if isset($form.natural5) && $form.natural5 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_natural">
+                                            <td><div class="semi-label">(A06) Biological sciences</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="natural6"{if isset($form.natural6) && $form.natural6 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="natural6"{if isset($form.natural6) && $form.natural6 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="natural6"{if isset($form.natural6) && $form.natural6 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="natural6"{if isset($form.natural6) && $form.natural6 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="natural6"{if isset($form.natural6) && $form.natural6 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="natural6"{if isset($form.natural6) && $form.natural6 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse{if !isset($form.energy) || $form.energy == 0} collapsed{/if}" id="collapse_energy">
+                                            <td class="t-r v-t"><div class="semi-label"><b>B</b></div></td>
+                                            <td><div class="semi-label"><b>Energy</b></div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                    <input type="radio" value="0" name="energy"{if isset($form.energy) && $form.energy == 0} checked="checked"{/if} />
+                                                    <input type="radio" value="1" name="energy"{if isset($form.energy) && $form.energy == 1} checked="checked"{/if} />
+                                                    <input type="radio" value="2" name="energy"{if isset($form.energy) && $form.energy == 2} checked="checked"{/if} />
+                                                    <input type="radio" value="3" name="energy"{if isset($form.energy) && $form.energy == 3} checked="checked"{/if} />
+                                                    <input type="radio" value="4" name="energy"{if isset($form.energy) && $form.energy == 4} checked="checked"{/if} />
+                                                    <input type="radio" value="5" name="energy"{if isset($form.energy) && $form.energy == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td rowspan="15">&nbsp;</td>
+                                            <td><div class="semi-label">(B01) Architecture, urban and building</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy1"{if isset($form.energy1) && $form.energy1 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy1"{if isset($form.energy1) && $form.energy1 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy1"{if isset($form.energy1) && $form.energy1 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy1"{if isset($form.energy1) && $form.energy1 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy1"{if isset($form.energy1) && $form.energy1 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy1"{if isset($form.energy1) && $form.energy1 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B02) Industrial Biotechnology and Food Sciences</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy2"{if isset($form.energy2) && $form.energy2 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy2"{if isset($form.energy2) && $form.energy2 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy2"{if isset($form.energy2) && $form.energy2 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy2"{if isset($form.energy2) && $form.energy2 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy2"{if isset($form.energy2) && $form.energy2 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy2"{if isset($form.energy2) && $form.energy2 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B03) Aerospace Engineering</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy3"{if isset($form.energy3) && $form.energy3 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy3"{if isset($form.energy3) && $form.energy3 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy3"{if isset($form.energy3) && $form.energy3 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy3"{if isset($form.energy3) && $form.energy3 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy3"{if isset($form.energy3) && $form.energy3 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy3"{if isset($form.energy3) && $form.energy3 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B04) Manufacturing Engineering</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy4"{if isset($form.energy4) && $form.energy4 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy4"{if isset($form.energy4) && $form.energy4 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy4"{if isset($form.energy4) && $form.energy4 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy4"{if isset($form.energy4) && $form.energy4 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy4"{if isset($form.energy4) && $form.energy4 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy4"{if isset($form.energy4) && $form.energy4 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B05) Chemical Engineering</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy5"{if isset($form.energy5) && $form.energy5 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy5"{if isset($form.energy5) && $form.energy5 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy5"{if isset($form.energy5) && $form.energy5 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy5"{if isset($form.energy5) && $form.energy5 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy5"{if isset($form.energy5) && $form.energy5 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy5"{if isset($form.energy5) && $form.energy5 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B06) Resources Engineering</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy6"{if isset($form.energy6) && $form.energy6 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy6"{if isset($form.energy6) && $form.energy6 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy6"{if isset($form.energy6) && $form.energy6 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy6"{if isset($form.energy6) && $form.energy6 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy6"{if isset($form.energy6) && $form.energy6 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy6"{if isset($form.energy6) && $form.energy6 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B07) Civil Engineering</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy7"{if isset($form.energy7) && $form.energy7 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy7"{if isset($form.energy7) && $form.energy7 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy7"{if isset($form.energy7) && $form.energy7 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy7"{if isset($form.energy7) && $form.energy7 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy7"{if isset($form.energy7) && $form.energy7 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy7"{if isset($form.energy7) && $form.energy7 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B08) Geomatic Engineering</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy8"{if isset($form.energy8) && $form.energy8 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy8"{if isset($form.energy8) && $form.energy8 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy8"{if isset($form.energy8) && $form.energy8 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy8"{if isset($form.energy8) && $form.energy8 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy8"{if isset($form.energy8) && $form.energy8 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy8"{if isset($form.energy8) && $form.energy8 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B09) Environmental Engineering</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy9"{if isset($form.energy9) && $form.energy9 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy9"{if isset($form.energy9) && $form.energy9 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy9"{if isset($form.energy9) && $form.energy9 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy9"{if isset($form.energy9) && $form.energy9 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy9"{if isset($form.energy9) && $form.energy9 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy9"{if isset($form.energy9) && $form.energy9 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B10) Materials Engineering</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy10"{if isset($form.energy10) && $form.energy10 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy10"{if isset($form.energy10) && $form.energy10 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy10"{if isset($form.energy10) && $form.energy10 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy10"{if isset($form.energy10) && $form.energy10 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy10"{if isset($form.energy10) && $form.energy10 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy10"{if isset($form.energy10) && $form.energy10 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B11) Biomedical Engineering</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy11"{if isset($form.energy11) && $form.energy11 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy11"{if isset($form.energy11) && $form.energy11 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy11"{if isset($form.energy11) && $form.energy11 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy11"{if isset($form.energy11) && $form.energy11 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy11"{if isset($form.energy11) && $form.energy11 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy11"{if isset($form.energy11) && $form.energy11 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B12) Electrical and Electronic Engineering</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy12"{if isset($form.energy12) && $form.energy12 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy12"{if isset($form.energy12) && $form.energy12 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy12"{if isset($form.energy12) && $form.energy12 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy12"{if isset($form.energy12) && $form.energy12 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy12"{if isset($form.energy12) && $form.energy12 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy12"{if isset($form.energy12) && $form.energy12 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B13) Communications Technologies</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy13"{if isset($form.energy13) && $form.energy13 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy13"{if isset($form.energy13) && $form.energy13 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy13"{if isset($form.energy13) && $form.energy13 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy13"{if isset($form.energy13) && $form.energy13 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy13"{if isset($form.energy13) && $form.energy13 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy13"{if isset($form.energy13) && $form.energy13 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B14) Interdisciplinary Engineering</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy14"{if isset($form.energy14) && $form.energy14 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy14"{if isset($form.energy14) && $form.energy14 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy14"{if isset($form.energy14) && $form.energy14 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy14"{if isset($form.energy14) && $form.energy14 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy14"{if isset($form.energy14) && $form.energy14 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy14"{if isset($form.energy14) && $form.energy14 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_energy">
+                                            <td><div class="semi-label">(B15) Other Engineering and Technology</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="energy15"{if isset($form.energy15) && $form.energy15 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="energy15"{if isset($form.energy15) && $form.energy15 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="energy15"{if isset($form.energy15) && $form.energy15 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="energy15"{if isset($form.energy15) && $form.energy15 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="energy15"{if isset($form.energy15) && $form.energy15 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="energy15"{if isset($form.energy15) && $form.energy15 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse{if !isset($form.medical) || $form.medical == 0} collapsed{/if}" id="collapse_medical">
+                                            <td class="t-r v-t"><div class="semi-label"><b>C</b></div></td>
+                                            <td><div class="semi-label"><b>Medical sciences</b></div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                    <input type="radio" value="0" name="medical"{if isset($form.medical) && $form.medical == 0} checked="checked"{/if} />
+                                                    <input type="radio" value="1" name="medical"{if isset($form.medical) && $form.medical == 1} checked="checked"{/if} />
+                                                    <input type="radio" value="2" name="medical"{if isset($form.medical) && $form.medical == 2} checked="checked"{/if} />
+                                                    <input type="radio" value="3" name="medical"{if isset($form.medical) && $form.medical == 3} checked="checked"{/if} />
+                                                    <input type="radio" value="4" name="medical"{if isset($form.medical) && $form.medical == 4} checked="checked"{/if} />
+                                                    <input type="radio" value="5" name="medical"{if isset($form.medical) && $form.medical == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td rowspan="15">&nbsp;</td>
+                                            <td><div class="semi-label">(C01) Medicine general</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical1"{if isset($form.medical1) && $form.medical1 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical1"{if isset($form.medical1) && $form.medical1 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical1"{if isset($form.medical1) && $form.medical1 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical1"{if isset($form.medical1) && $form.medical1 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical1"{if isset($form.medical1) && $form.medical1 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical1"{if isset($form.medical1) && $form.medical1 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C02) Immunology</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical2"{if isset($form.medical2) && $form.medical2 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical2"{if isset($form.medical2) && $form.medical2 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical2"{if isset($form.medical2) && $form.medical2 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical2"{if isset($form.medical2) && $form.medical2 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical2"{if isset($form.medical2) && $form.medical2 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical2"{if isset($form.medical2) && $form.medical2 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C03) Medical Biochemistry and Clinical Chemistry</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical3"{if isset($form.medical3) && $form.medical3 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical3"{if isset($form.medical3) && $form.medical3 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical3"{if isset($form.medical3) && $form.medical3 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical3"{if isset($form.medical3) && $form.medical3 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical3"{if isset($form.medical3) && $form.medical3 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical3"{if isset($form.medical3) && $form.medical3 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C04) Medical Microbiology</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical4"{if isset($form.medical4) && $form.medical4 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical4"{if isset($form.medical4) && $form.medical4 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical4"{if isset($form.medical4) && $form.medical4 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical4"{if isset($form.medical4) && $form.medical4 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical4"{if isset($form.medical4) && $form.medical4 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical4"{if isset($form.medical4) && $form.medical4 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C05) Pharmacology and Pharmaceutical Sciences</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical5"{if isset($form.medical5) && $form.medical5 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical5"{if isset($form.medical5) && $form.medical5 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical5"{if isset($form.medical5) && $form.medical5 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical5"{if isset($form.medical5) && $form.medical5 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical5"{if isset($form.medical5) && $form.medical5 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical5"{if isset($form.medical5) && $form.medical5 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C06) Medical Physiology</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical6"{if isset($form.medical6) && $form.medical6 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical6"{if isset($form.medical6) && $form.medical6 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical6"{if isset($form.medical6) && $form.medical6 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical6"{if isset($form.medical6) && $form.medical6 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical6"{if isset($form.medical6) && $form.medical6 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical6"{if isset($form.medical6) && $form.medical6 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C07) Neurosciences</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical7"{if isset($form.medical7) && $form.medical7 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical7"{if isset($form.medical7) && $form.medical7 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical7"{if isset($form.medical7) && $form.medical7 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical7"{if isset($form.medical7) && $form.medical7 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical7"{if isset($form.medical7) && $form.medical7 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical7"{if isset($form.medical7) && $form.medical7 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C08) Dentistry</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical8"{if isset($form.medical8) && $form.medical8 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical8"{if isset($form.medical8) && $form.medical8 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical8"{if isset($form.medical8) && $form.medical8 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical8"{if isset($form.medical8) && $form.medical8 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical8"{if isset($form.medical8) && $form.medical8 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical8"{if isset($form.medical8) && $form.medical8 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C09) Optometry</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical9"{if isset($form.medical9) && $form.medical9 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical9"{if isset($form.medical9) && $form.medical9 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical9"{if isset($form.medical9) && $form.medical9 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical9"{if isset($form.medical9) && $form.medical9 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical9"{if isset($form.medical9) && $form.medical9 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical9"{if isset($form.medical9) && $form.medical9 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C10) Clinical Sciences</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical10"{if isset($form.medical10) && $form.medical10 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical10"{if isset($form.medical10) && $form.medical10 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical10"{if isset($form.medical10) && $form.medical10 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical10"{if isset($form.medical10) && $form.medical10 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical10"{if isset($form.medical10) && $form.medical10 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical10"{if isset($form.medical10) && $form.medical10 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C11) Nursing</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical11"{if isset($form.medical11) && $form.medical11 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical11"{if isset($form.medical11) && $form.medical11 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical11"{if isset($form.medical11) && $form.medical11 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical11"{if isset($form.medical11) && $form.medical11 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical11"{if isset($form.medical11) && $form.medical11 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical11"{if isset($form.medical11) && $form.medical11 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C12) Public Health and Health Services</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical12"{if isset($form.medical12) && $form.medical12 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical12"{if isset($form.medical12) && $form.medical12 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical12"{if isset($form.medical12) && $form.medical12 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical12"{if isset($form.medical12) && $form.medical12 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical12"{if isset($form.medical12) && $form.medical12 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical12"{if isset($form.medical12) && $form.medical12 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C13) Complementary/alternative Medicine</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical13"{if isset($form.medical13) && $form.medical13 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical13"{if isset($form.medical13) && $form.medical13 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical13"{if isset($form.medical13) && $form.medical13 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical13"{if isset($form.medical13) && $form.medical13 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical13"{if isset($form.medical13) && $form.medical13 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical13"{if isset($form.medical13) && $form.medical13 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C14) Human Movement and Sports Science</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical14"{if isset($form.medical14) && $form.medical14 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical14"{if isset($form.medical14) && $form.medical14 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical14"{if isset($form.medical14) && $form.medical14 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical14"{if isset($form.medical14) && $form.medical14 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical14"{if isset($form.medical14) && $form.medical14 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical14"{if isset($form.medical14) && $form.medical14 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_medical">
+                                            <td><div class="semi-label">(C15) Other Medical and Health Sciences</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="medical15"{if isset($form.medical15) && $form.medical15 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="medical15"{if isset($form.medical15) && $form.medical15 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="medical15"{if isset($form.medical15) && $form.medical15 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="medical15"{if isset($form.medical15) && $form.medical15 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="medical15"{if isset($form.medical15) && $form.medical15 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="medical15"{if isset($form.medical15) && $form.medical15 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse{if !isset($form.agricultural) || $form.agricultural == 0} collapsed{/if}" id="collapse_agricultural">
+                                            <td class="t-r v-t"><div class="semi-label"><b>D</b></div></td>
+                                            <td><div class="semi-label"><b>Agricultural sciences</b></div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                    <input type="radio" value="0" name="agricultural"{if isset($form.agricultural) && $form.agricultural == 0} checked="checked"{/if} />
+                                                    <input type="radio" value="1" name="agricultural"{if isset($form.agricultural) && $form.agricultural == 1} checked="checked"{/if} />
+                                                    <input type="radio" value="2" name="agricultural"{if isset($form.agricultural) && $form.agricultural == 2} checked="checked"{/if} />
+                                                    <input type="radio" value="3" name="agricultural"{if isset($form.agricultural) && $form.agricultural == 3} checked="checked"{/if} />
+                                                    <input type="radio" value="4" name="agricultural"{if isset($form.agricultural) && $form.agricultural == 4} checked="checked"{/if} />
+                                                    <input type="radio" value="5" name="agricultural"{if isset($form.agricultural) && $form.agricultural == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_agricultural">
+                                            <td rowspan="8">&nbsp;</td>
+                                            <td><div class="semi-label">(D01) Crop and Pasture Production</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="agricultural1"{if isset($form.agricultural1) && $form.agricultural1 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="agricultural1"{if isset($form.agricultural1) && $form.agricultural1 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="agricultural1"{if isset($form.agricultural1) && $form.agricultural1 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="agricultural1"{if isset($form.agricultural1) && $form.agricultural1 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="agricultural1"{if isset($form.agricultural1) && $form.agricultural1 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="agricultural1"{if isset($form.agricultural1) && $form.agricultural1 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_agricultural">
+                                            <td><div class="semi-label">(D02) Horticulture</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="agricultural2"{if isset($form.agricultural2) && $form.agricultural2 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="agricultural2"{if isset($form.agricultural2) && $form.agricultural2 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="agricultural2"{if isset($form.agricultural2) && $form.agricultural2 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="agricultural2"{if isset($form.agricultural2) && $form.agricultural2 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="agricultural2"{if isset($form.agricultural2) && $form.agricultural2 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="agricultural2"{if isset($form.agricultural2) && $form.agricultural2 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_agricultural">
+                                            <td><div class="semi-label">(D03) Animal Production</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="agricultural3"{if isset($form.agricultural3) && $form.agricultural3 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="agricultural3"{if isset($form.agricultural3) && $form.agricultural3 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="agricultural3"{if isset($form.agricultural3) && $form.agricultural3 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="agricultural3"{if isset($form.agricultural3) && $form.agricultural3 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="agricultural3"{if isset($form.agricultural3) && $form.agricultural3 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="agricultural3"{if isset($form.agricultural3) && $form.agricultural3 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_agricultural">
+                                            <td><div class="semi-label">(D04) Veterinary Sciences</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="agricultural4"{if isset($form.agricultural4) && $form.agricultural4 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="agricultural4"{if isset($form.agricultural4) && $form.agricultural4 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="agricultural4"{if isset($form.agricultural4) && $form.agricultural4 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="agricultural4"{if isset($form.agricultural4) && $form.agricultural4 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="agricultural4"{if isset($form.agricultural4) && $form.agricultural4 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="agricultural4"{if isset($form.agricultural4) && $form.agricultural4 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_agricultural">
+                                            <td><div class="semi-label">(D05) Forestry Sciences</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="agricultural5"{if isset($form.agricultural5) && $form.agricultural5 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="agricultural5"{if isset($form.agricultural5) && $form.agricultural5 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="agricultural5"{if isset($form.agricultural5) && $form.agricultural5 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="agricultural5"{if isset($form.agricultural5) && $form.agricultural5 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="agricultural5"{if isset($form.agricultural5) && $form.agricultural5 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="agricultural5"{if isset($form.agricultural5) && $form.agricultural5 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_agricultural">
+                                            <td><div class="semi-label">(D06) Fisheries Sciences</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="agricultural6"{if isset($form.agricultural6) && $form.agricultural6 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="agricultural6"{if isset($form.agricultural6) && $form.agricultural6 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="agricultural6"{if isset($form.agricultural6) && $form.agricultural6 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="agricultural6"{if isset($form.agricultural6) && $form.agricultural6 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="agricultural6"{if isset($form.agricultural6) && $form.agricultural6 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="agricultural6"{if isset($form.agricultural6) && $form.agricultural6 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_agricultural">
+                                            <td><div class="semi-label">(D07) Land, Parks and Agriculture Management</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="agricultural7"{if isset($form.agricultural7) && $form.agricultural7 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="agricultural7"{if isset($form.agricultural7) && $form.agricultural7 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="agricultural7"{if isset($form.agricultural7) && $form.agricultural7 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="agricultural7"{if isset($form.agricultural7) && $form.agricultural7 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="agricultural7"{if isset($form.agricultural7) && $form.agricultural7 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="agricultural7"{if isset($form.agricultural7) && $form.agricultural7 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_agricultural">
+                                            <td><div class="semi-label">(D08) Other Agricultural, Veterinary and Environmental Sciences</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="agricultural8"{if isset($form.agricultural8) && $form.agricultural8 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="agricultural8"{if isset($form.agricultural8) && $form.agricultural8 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="agricultural8"{if isset($form.agricultural8) && $form.agricultural8 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="agricultural8"{if isset($form.agricultural8) && $form.agricultural8 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="agricultural8"{if isset($form.agricultural8) && $form.agricultural8 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="agricultural8"{if isset($form.agricultural8) && $form.agricultural8 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse{if !isset($form.social) || $form.social == 0} collapsed{/if}" id="collapse_social">
+                                            <td class="t-r v-t"><div class="semi-label"><b>E</b></div></td>
+                                            <td><div class="semi-label"><b>Social sciences</b></div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                    <input type="radio" value="0" name="social"{if isset($form.social) && $form.social == 0} checked="checked"{/if} />
+                                                    <input type="radio" value="1" name="social"{if isset($form.social) && $form.social == 1} checked="checked"{/if} />
+                                                    <input type="radio" value="2" name="social"{if isset($form.social) && $form.social == 2} checked="checked"{/if} />
+                                                    <input type="radio" value="3" name="social"{if isset($form.social) && $form.social == 3} checked="checked"{/if} />
+                                                    <input type="radio" value="4" name="social"{if isset($form.social) && $form.social == 4} checked="checked"{/if} />
+                                                    <input type="radio" value="5" name="social"{if isset($form.social) && $form.social == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_social">
+                                            <td rowspan="7">&nbsp;</td>
+                                            <td><div class="semi-label">(E01) Education</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="social1"{if isset($form.social1) && $form.social1 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="social1"{if isset($form.social1) && $form.social1 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="social1"{if isset($form.social1) && $form.social1 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="social1"{if isset($form.social1) && $form.social1 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="social1"{if isset($form.social1) && $form.social1 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="social1"{if isset($form.social1) && $form.social1 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_social">
+                                            <td><div class="semi-label">(E02) Economics</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="social2"{if isset($form.social2) && $form.social2 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="social2"{if isset($form.social2) && $form.social2 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="social2"{if isset($form.social2) && $form.social2 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="social2"{if isset($form.social2) && $form.social2 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="social2"{if isset($form.social2) && $form.social2 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="social2"{if isset($form.social2) && $form.social2 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_social">
+                                            <td><div class="semi-label">(E03) Commerce, management, tourism and services</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="social3"{if isset($form.social3) && $form.social3 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="social3"{if isset($form.social3) && $form.social3 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="social3"{if isset($form.social3) && $form.social3 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="social3"{if isset($form.social3) && $form.social3 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="social3"{if isset($form.social3) && $form.social3 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="social3"{if isset($form.social3) && $form.social3 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_social">
+                                            <td><div class="semi-label">(E04) Policy and Political Science</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="social4"{if isset($form.social4) && $form.social4 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="social4"{if isset($form.social4) && $form.social4 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="social4"{if isset($form.social4) && $form.social4 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="social4"{if isset($form.social4) && $form.social4 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="social4"{if isset($form.social4) && $form.social4 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="social4"{if isset($form.social4) && $form.social4 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_social">
+                                            <td><div class="semi-label">(E05) Studies in human society</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="social5"{if isset($form.social5) && $form.social5 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="social5"{if isset($form.social5) && $form.social5 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="social5"{if isset($form.social5) && $form.social5 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="social5"{if isset($form.social5) && $form.social5 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="social5"{if isset($form.social5) && $form.social5 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="social5"{if isset($form.social5) && $form.social5 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_social">
+                                            <td><div class="semi-label">(E06) Behavioural and cognitive sciences</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="social6"{if isset($form.social6) && $form.social6 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="social6"{if isset($form.social6) && $form.social6 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="social6"{if isset($form.social6) && $form.social6 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="social6"{if isset($form.social6) && $form.social6 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="social6"{if isset($form.social6) && $form.social6 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="social6"{if isset($form.social6) && $form.social6 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_social">
+                                            <td><div class="semi-label">(E07) Law, justice and law enforcement</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="social7"{if isset($form.social7) && $form.social7 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="social7"{if isset($form.social7) && $form.social7 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="social7"{if isset($form.social7) && $form.social7 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="social7"{if isset($form.social7) && $form.social7 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="social7"{if isset($form.social7) && $form.social7 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="social7"{if isset($form.social7) && $form.social7 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse{if !isset($form.humanities) || $form.humanities == 0} collapsed{/if}" id="collapse_humanities">
+                                            <td class="t-r v-t"><div class="semi-label"><b>F</b></div></td>
+                                            <td><div class="semi-label"><b>Humanities</b></div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                    <input type="radio" value="0" name="humanities"{if isset($form.humanities) && $form.humanities == 0} checked="checked"{/if} />
+                                                    <input type="radio" value="1" name="humanities"{if isset($form.humanities) && $form.humanities == 1} checked="checked"{/if} />
+                                                    <input type="radio" value="2" name="humanities"{if isset($form.humanities) && $form.humanities == 2} checked="checked"{/if} />
+                                                    <input type="radio" value="3" name="humanities"{if isset($form.humanities) && $form.humanities == 3} checked="checked"{/if} />
+                                                    <input type="radio" value="4" name="humanities"{if isset($form.humanities) && $form.humanities == 4} checked="checked"{/if} />
+                                                    <input type="radio" value="5" name="humanities"{if isset($form.humanities) && $form.humanities == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_humanities">
+                                            <td rowspan="5">&nbsp;</td>
+                                            <td><div class="semi-label">(F01) Journalism and curatorial studies</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="humanities1"{if isset($form.humanities1) && $form.humanities1 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="humanities1"{if isset($form.humanities1) && $form.humanities1 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="humanities1"{if isset($form.humanities1) && $form.humanities1 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="humanities1"{if isset($form.humanities1) && $form.humanities1 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="humanities1"{if isset($form.humanities1) && $form.humanities1 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="humanities1"{if isset($form.humanities1) && $form.humanities1 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_humanities">
+                                            <td><div class="semi-label">(F02) The arts</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="humanities2"{if isset($form.humanities2) && $form.humanities2 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="humanities2"{if isset($form.humanities2) && $form.humanities2 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="humanities2"{if isset($form.humanities2) && $form.humanities2 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="humanities2"{if isset($form.humanities2) && $form.humanities2 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="humanities2"{if isset($form.humanities2) && $form.humanities2 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="humanities2"{if isset($form.humanities2) && $form.humanities2 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_humanities">
+                                            <td><div class="semi-label">(F03) Language and culture</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="humanities3"{if isset($form.humanities3) && $form.humanities3 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="humanities3"{if isset($form.humanities3) && $form.humanities3 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="humanities3"{if isset($form.humanities3) && $form.humanities3 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="humanities3"{if isset($form.humanities3) && $form.humanities3 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="humanities3"{if isset($form.humanities3) && $form.humanities3 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="humanities3"{if isset($form.humanities3) && $form.humanities3 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_humanities">
+                                            <td><div class="semi-label">(F04) History and archaeology</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="humanities4"{if isset($form.humanities4) && $form.humanities4 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="humanities4"{if isset($form.humanities4) && $form.humanities4 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="humanities4"{if isset($form.humanities4) && $form.humanities4 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="humanities4"{if isset($form.humanities4) && $form.humanities4 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="humanities4"{if isset($form.humanities4) && $form.humanities4 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="humanities4"{if isset($form.humanities4) && $form.humanities4 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="collapse_humanities">
+                                            <td><div class="semi-label">(F05) Philosophy and religion</div></td>
+                                            <td class="v-t">
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="humanities5"{if isset($form.humanities5) && $form.humanities5 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="humanities5"{if isset($form.humanities5) && $form.humanities5 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="humanities5"{if isset($form.humanities5) && $form.humanities5 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="humanities5"{if isset($form.humanities5) && $form.humanities5 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="humanities5"{if isset($form.humanities5) && $form.humanities5 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="humanities5"{if isset($form.humanities5) && $form.humanities5 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3>Q5: Use 1 to 5 stars (<span class="stars">*****</span>) to indicate how the NACE categories relate to the study?</h3>
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:30px" />
+                                    <col />
+                                    <col style="width:160px" />
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th class="t-l">NACE Category Name</th>
+                                            <th>Relev. &nbsp;worst <span class="divider">&rsaquo;</span> best</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>A</b></div></td>
+                                            <td><div class="semi-label">Agriculture, forestry and fishing</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories1"{if isset($form.categories1) && $form.categories1 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories1"{if isset($form.categories1) && $form.categories1 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories1"{if isset($form.categories1) && $form.categories1 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories1"{if isset($form.categories1) && $form.categories1 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories1"{if isset($form.categories1) && $form.categories1 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories1"{if isset($form.categories1) && $form.categories1 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>B</b></div></td>
+                                            <td><div class="semi-label">Mining and quarrying</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories2"{if isset($form.categories2) && $form.categories2 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories2"{if isset($form.categories2) && $form.categories2 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories2"{if isset($form.categories2) && $form.categories2 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories2"{if isset($form.categories2) && $form.categories2 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories2"{if isset($form.categories2) && $form.categories2 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories2"{if isset($form.categories2) && $form.categories2 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>C</b></div></td>
+                                            <td><div class="semi-label">Manufacturing</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories3"{if isset($form.categories3) && $form.categories3 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories3"{if isset($form.categories3) && $form.categories3 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories3"{if isset($form.categories3) && $form.categories3 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories3"{if isset($form.categories3) && $form.categories3 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories3"{if isset($form.categories3) && $form.categories3 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories3"{if isset($form.categories3) && $form.categories3 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>D</b></div></td>
+                                            <td><div class="semi-label">Electricity, gas, steam and air conditioning supply</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories4"{if isset($form.categories4) && $form.categories4 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories4"{if isset($form.categories4) && $form.categories4 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories4"{if isset($form.categories4) && $form.categories4 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories4"{if isset($form.categories4) && $form.categories4 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories4"{if isset($form.categories4) && $form.categories4 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories4"{if isset($form.categories4) && $form.categories4 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>E</b></div></td>
+                                            <td><div class="semi-label">Water supply; sewerage; waste management and remediation activities</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories5"{if isset($form.categories5) && $form.categories5 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories5"{if isset($form.categories5) && $form.categories5 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories5"{if isset($form.categories5) && $form.categories5 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories5"{if isset($form.categories5) && $form.categories5 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories5"{if isset($form.categories5) && $form.categories5 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories5"{if isset($form.categories5) && $form.categories5 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>F</b></div></td>
+                                            <td><div class="semi-label">Construction</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories6"{if isset($form.categories6) && $form.categories6 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories6"{if isset($form.categories6) && $form.categories6 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories6"{if isset($form.categories6) && $form.categories6 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories6"{if isset($form.categories6) && $form.categories6 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories6"{if isset($form.categories6) && $form.categories6 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories6"{if isset($form.categories6) && $form.categories6 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>G</b></div></td>
+                                            <td><div class="semi-label">Wholesale and retail trade; repair of motor vehicles and motorcycles</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories7"{if isset($form.categories7) && $form.categories7 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories7"{if isset($form.categories7) && $form.categories7 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories7"{if isset($form.categories7) && $form.categories7 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories7"{if isset($form.categories7) && $form.categories7 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories7"{if isset($form.categories7) && $form.categories7 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories7"{if isset($form.categories7) && $form.categories7 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>H</b></div></td>
+                                            <td><div class="semi-label">Transporting and storage</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories8"{if isset($form.categories8) && $form.categories8 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories8"{if isset($form.categories8) && $form.categories8 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories8"{if isset($form.categories8) && $form.categories8 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories8"{if isset($form.categories8) && $form.categories8 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories8"{if isset($form.categories8) && $form.categories8 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories8"{if isset($form.categories8) && $form.categories8 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>I</b></div></td>
+                                            <td><div class="semi-label">Accommodation and food service activities</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories9"{if isset($form.categories9) && $form.categories9 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories9"{if isset($form.categories9) && $form.categories9 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories9"{if isset($form.categories9) && $form.categories9 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories9"{if isset($form.categories9) && $form.categories9 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories9"{if isset($form.categories9) && $form.categories9 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories9"{if isset($form.categories9) && $form.categories9 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>J</b></div></td>
+                                            <td><div class="semi-label">Information and communication</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories10"{if isset($form.categories10) && $form.categories10 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories10"{if isset($form.categories10) && $form.categories10 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories10"{if isset($form.categories10) && $form.categories10 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories10"{if isset($form.categories10) && $form.categories10 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories10"{if isset($form.categories10) && $form.categories10 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories10"{if isset($form.categories10) && $form.categories10 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>K</b></div></td>
+                                            <td><div class="semi-label">Financial and insurance activities</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories11"{if isset($form.categories11) && $form.categories11 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories11"{if isset($form.categories11) && $form.categories11 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories11"{if isset($form.categories11) && $form.categories11 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories11"{if isset($form.categories11) && $form.categories11 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories11"{if isset($form.categories11) && $form.categories11 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories11"{if isset($form.categories11) && $form.categories11 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>L</b></div></td>
+                                            <td><div class="semi-label">Real estate activities</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories12"{if isset($form.categories12) && $form.categories12 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories12"{if isset($form.categories12) && $form.categories12 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories12"{if isset($form.categories12) && $form.categories12 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories12"{if isset($form.categories12) && $form.categories12 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories12"{if isset($form.categories12) && $form.categories12 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories12"{if isset($form.categories12) && $form.categories12 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>M</b></div></td>
+                                            <td><div class="semi-label">Professional, scientific and technical activities</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories13"{if isset($form.categories13) && $form.categories13 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories13"{if isset($form.categories13) && $form.categories13 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories13"{if isset($form.categories13) && $form.categories13 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories13"{if isset($form.categories13) && $form.categories13 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories13"{if isset($form.categories13) && $form.categories13 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories13"{if isset($form.categories13) && $form.categories13 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>N</b></div></td>
+                                            <td><div class="semi-label">Administrative and support service activities</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories14"{if isset($form.categories14) && $form.categories14 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories14"{if isset($form.categories14) && $form.categories14 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories14"{if isset($form.categories14) && $form.categories14 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories14"{if isset($form.categories14) && $form.categories14 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories14"{if isset($form.categories14) && $form.categories14 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories14"{if isset($form.categories14) && $form.categories14 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>O</b></div></td>
+                                            <td><div class="semi-label">Public administration and defence; compulsory social security</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories15"{if isset($form.categories15) && $form.categories15 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories15"{if isset($form.categories15) && $form.categories15 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories15"{if isset($form.categories15) && $form.categories15 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories15"{if isset($form.categories15) && $form.categories15 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories15"{if isset($form.categories15) && $form.categories15 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories15"{if isset($form.categories15) && $form.categories15 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>P</b></div></td>
+                                            <td><div class="semi-label">Education</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories16"{if isset($form.categories16) && $form.categories16 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories16"{if isset($form.categories16) && $form.categories16 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories16"{if isset($form.categories16) && $form.categories16 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories16"{if isset($form.categories16) && $form.categories16 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories16"{if isset($form.categories16) && $form.categories16 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories16"{if isset($form.categories16) && $form.categories16 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>Q</b></div></td>
+                                            <td><div class="semi-label">Human health and social work activities</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories17"{if isset($form.categories17) && $form.categories17 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories17"{if isset($form.categories17) && $form.categories17 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories17"{if isset($form.categories17) && $form.categories17 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories17"{if isset($form.categories17) && $form.categories17 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories17"{if isset($form.categories17) && $form.categories17 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories17"{if isset($form.categories17) && $form.categories17 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>R</b></div></td>
+                                            <td><div class="semi-label">Arts, entertainment and recreation</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories18"{if isset($form.categories18) && $form.categories18 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories18"{if isset($form.categories18) && $form.categories18 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories18"{if isset($form.categories18) && $form.categories18 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories18"{if isset($form.categories18) && $form.categories18 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories18"{if isset($form.categories18) && $form.categories18 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories18"{if isset($form.categories18) && $form.categories18 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>S</b></div></td>
+                                            <td><div class="semi-label">Other services activities</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories19"{if isset($form.categories19) && $form.categories19 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories19"{if isset($form.categories19) && $form.categories19 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories19"{if isset($form.categories19) && $form.categories19 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories19"{if isset($form.categories19) && $form.categories19 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories19"{if isset($form.categories19) && $form.categories19 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories19"{if isset($form.categories19) && $form.categories19 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>T</b></div></td>
+                                            <td><div class="semi-label">Activities of households as employers producing activities of households for own use</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories20"{if isset($form.categories20) && $form.categories20 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories20"{if isset($form.categories20) && $form.categories20 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories20"{if isset($form.categories20) && $form.categories20 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories20"{if isset($form.categories20) && $form.categories20 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories20"{if isset($form.categories20) && $form.categories20 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories20"{if isset($form.categories20) && $form.categories20 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>U</b></div></td>
+                                            <td><div class="semi-label">Activities of extraterritorial organisations and bodies</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="categories21"{if isset($form.categories21) && $form.categories21 == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="categories21"{if isset($form.categories21) && $form.categories21 == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="categories21"{if isset($form.categories21) && $form.categories21 == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="categories21"{if isset($form.categories21) && $form.categories21 == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="categories21"{if isset($form.categories21) && $form.categories21 == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="categories21"{if isset($form.categories21) && $form.categories21 == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>

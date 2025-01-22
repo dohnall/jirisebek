@@ -1,0 +1,45 @@
+{include file="pager-detail.html"}
+<form method="post" action="" id="relations">
+{if $user->hasRight(37)}
+	<a href="javascript:;" class="button" id="relation_new">{#add_relation#}</a>
+{/if}
+	<table class="list">
+		<tr>
+			<th class="th-section">{#section#}</th>
+			<th class="th-main">{#main#}</th>
+{if $user->hasRight(37)}
+			<th class="th-action">{#action#}</th>
+{/if}
+		</tr>
+{foreach from=$item->get('relations', true) item=relation}
+		<tr class="{cycle values='odd,even'}">
+			<td><label for="main{$relation->section_id}">{$relation->get('text', 'name')}</label></td>
+			<td><input type="radio" id="main{$relation->section_id}" name="main" value="{$relation->section_id}"{if $relation->get('section', 'main') == '1'} checked="checked"{/if}{if !$user->hasRight(37)} disabled="disabled"{/if} /></td>
+	{if $user->hasRight(37)}
+			<td>{if $relation->get('section', 'main') != '1'}<a href="{$ROOT}?module=content&amp;id={$item->section_id}&amp;relation={$relation->section_id}&amp;action=deleteRelation" class="delete">{#delete#}</a>{/if}</td>
+	{/if}
+		</tr>
+{/foreach}
+	</table>
+</form>
+{if $user->hasRight(37)}
+<div id="relation-new" title="{#new_relation#}" class="hidden">
+	<form method="post" action="">
+    	<fieldset>
+        	<table>
+        	   <tr>
+                    <td><label for="content_section">{#section#}:</label></td>
+                    <td>
+                        <select name="section" id="content_section">
+{if $homeId}
+						{include file='content_relations_option.html' section=$home}
+{/if}
+                        </select>
+                        <input type="hidden" name="action" value="addRelation" />
+                    </td>
+                </tr>
+        	</table>
+        </fieldset>
+	</form>
+</div>
+{/if}

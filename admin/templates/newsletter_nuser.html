@@ -1,0 +1,79 @@
+<h1 class="h-settings h-settings-lang">{#nusers#}</h1>
+<p class="navi">
+	<a href="{$ROOT}?module={$MODULE}&amp;submodule=editnuser" class="button new">{#new_item#}</a>
+	<a href="{$ROOT}?module={$MODULE}&amp;submodule=export" class="button export">{#export#}</a>
+	<a href="javascript:;" id="item_new" class="button import">{#import#}</a>
+</p>
+<fieldset id="content-search" class="filter">
+    <legend>{#filter#}</legend>
+    {include file="pager-nuser.html"}
+	<form method="post" action="" class="filter">
+		<div>
+		    <p>&nbsp;</p>
+		    <p>&nbsp;</p>
+		</div>
+	</form>
+</fieldset>
+<form method="post" action="">
+<table class="list table-settings table-settings-lang">
+    <thead>
+        <tr>
+            <th>{#email#}</th>
+            <th>{#fname#}</th>
+            <th>{#lname#}</th>
+{foreach from=$groups item=row}
+            <th class="vertical"><div>{$row.name}</div></th>
+{/foreach}
+            <th>{#status#}</th>
+            <th>{#inserted#}</th>
+            <th>{#action#}</th>
+        </tr>
+        <tr>
+            <th><input type="text" name="filter[email]" value="{$filter.email}" style="width:200px;"></th>
+            <th><input type="text" name="filter[fname]" value="{$filter.fname}" style="width:200px;"></th>
+            <th><input type="text" name="filter[lname]" value="{$filter.lname}" style="width:200px;"></th>
+{foreach from=$groups item=row}
+            <th><input type="checkbox" name="filter[group][{$row.ngroup_id}]" value="{$row.ngroup_id}"{if in_array($row.ngroup_id, $filter.group)} checked="checked"{/if}></th>
+{/foreach}
+            <th colspan="3">
+				<input type="hidden" name="action" value="filter">
+				<input type="submit" class="button" value="{#filtrate#}">
+				<input type="submit" class="button" name="reset" value="Reset">
+			</th>
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$records item=record}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editnuser&amp;id={$record.nuser_id}">{$record.email}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editnuser&amp;id={$record.nuser_id}">{$record.fname}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editnuser&amp;id={$record.nuser_id}">{$record.lname}</a></td>
+	{foreach from=$groups item=row}
+			<td><input type="checkbox" class="nuser_ngroup" value="{$record.nuser_id}_{$row.ngroup_id}"{if in_array($row.ngroup_id, $ngroup[$record.nuser_id])} checked="checked"{/if}></td>
+	{/foreach}
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editnuser&amp;id={$record.nuser_id}">{if $record.status == 2}{#confirm#}{elseif $record.status == 1}{#active#}{else}{#inactive#}{/if}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editnuser&amp;id={$record.nuser_id}">{$record.inserted}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=nuser&amp;id={$record.nuser_id}&amp;action=delete" class="delete">{#delete#}</a></td>
+        </tr>
+{/foreach}
+    </tbody>
+</table>
+</form>
+<div id="item-new" title="{#import#}" class="hidden">
+	<form method="post" action="" enctype="multipart/form-data">
+    	<fieldset>
+        	<table>
+        		<tr>
+					<td colspan="2">POZOR!<br />Před importem raději současnou databázi zazálohujte (vyexportujte)!<br />Import smaže současná data a nahradí je novými.</td>
+				</tr>
+        	   	<tr>
+                    <td class="th-label"><label for="csv">{#csv_file#}:</label></td>
+                    <td>
+						<input type="file" name="csv" id="csv" />
+                        <input type="hidden" name="action" value="import" />
+					</td>
+        	   </tr>
+        	</table>
+        </fieldset>
+	</form>
+</div>

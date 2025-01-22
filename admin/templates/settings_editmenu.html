@@ -1,0 +1,92 @@
+<h1 class="h-settings h-settings-editmenu">{if $item.item.name}{$item.item.name}{else}{#new_item#}{/if}</h1>
+<p class="navi">
+	<a href="{$ROOT}?module={$MODULE}&amp;submodule=menu" class="button back">{#back_to_list#}</a>
+{if $item.item.name && $user->hasRight(12)}
+	<input type="hidden" name="menuitemid" class="menuitemid" value="0" />
+	<a href="javascript:;" class="button newmenuitem">{#add_main_item#}</a>
+{/if}
+</p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table>
+        <tr>
+            <th class="th-label th-name"><label for="name">{#name#}</label>:</th>
+            <td><input type="text" name="item[name]" id="name" value="{$item.item.name}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-code"><label for="code">{#code#}</label>:</th>
+            <td><input type="text" name="item[code]" id="code" value="{$item.item.code}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-status"><label for="status">{#status#}</label>:</th>
+            <td><input type="checkbox" name="item[status]" id="status" value="1"{if $item.item.status} checked="checked"{/if} /></td>
+        </tr>
+{if $user->hasRight(12)}
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="hidden" name="item_id" value="{$item_id}" />
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+{/if}
+    </table>
+</form>
+{if isset($item.items) && $item.items}
+<form method="post" action="">
+	<fieldset>
+		<legend>{#items#}</legend>
+		<table style="width:475px; margin:0 0 0 25px;" cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="w150">{#items#}</td>
+				<td class="w25" title="{#new_window#}">?</td>
+				<td class="w150">{#name#}</td>
+				<td class="w150">{#url#}</td>
+				<td class="w150">{#title#}</td>
+			</tr>
+		</table>
+		{include file='settings_menu_li.html' children=$item.items parent=0 cnt=1}
+	{if $user->hasRight(12)}
+		<input type="submit" class="button" name="saveItems" value="{#save#}" />
+	{/if}
+	</fieldset>
+</form>
+{/if}
+{if $user->hasRight(12)}
+<div id="item-new" title="{#new_item#}" class="hidden">
+	<form method="post" action="">
+    	<fieldset>
+        	<table>
+        	   	<tr>
+        		  	<td class="th-label"><label for="content_section">{#section#}:</label></td>
+        		  	<td>
+					  	<select name="section_id" id="content_section">
+							<option value="0">{#external#}</option>
+	{if $homeId}
+							{include file='settings_menu_option.html' section=$home}
+	{/if}
+						</select>
+					</td>
+                </tr>
+        	   	<tr>
+        		  	<td class="th-label"><label for="content_name">{#name#}:</label></td>
+        		  	<td><input type="text" name="name" id="content_name" /></td>
+                </tr>
+        	   	<tr>
+        		  	<td class="th-label"><label for="content_url">{#url#}:</label></td>
+        		  	<td><input type="text" name="url" id="content_url" /></td>
+                </tr>
+        	   	<tr>
+        		  	<td class="th-label"><label for="content_title">{#title#}:</label></td>
+        		  	<td>
+				  		<input type="text" name="title" id="content_title" />
+                        <input type="hidden" name="parent_id" id="parent_id" value="0" />
+                        <input type="hidden" name="menu_id" value="{$item_id}" />
+						<input type="hidden" name="action" value="addItem" />
+                	</td>
+                </tr>
+        	</table>
+        </fieldset>
+	</form>
+</div>
+{/if}

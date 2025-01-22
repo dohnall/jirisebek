@@ -1,0 +1,114 @@
+<h1 class="h-settings h-settings-edittemplate">{if $item.item.name}{$item.item.name}{else}{#new_item#}{/if}</h1>
+<p class="navi">
+	<a href="{$ROOT}?module={$MODULE}&amp;submodule=template" class="button back">{#back_to_list#}</a>
+{if $user->hasRight(10)}
+	{if $item.item.name}<a href="javascript:;" id="item_new" class="button new">{#add_tab#}</a>{/if}
+{/if}
+</p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table class="table-settings table-settings-edittemplate">
+        <tr>
+            <th class="th-label th-name"><label for="name">{#name#}</label>:</th>
+            <td><input type="text" name="item[name]" id="name" value="{$item.item.name}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-code"><label for="code">{#code#}</label>:</th>
+            <td><input type="text" name="item[code]" id="code" value="{$item.item.code}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-content"><label for="cntnt">{#content#}</label>:</th>
+            <td><input type="checkbox" name="item[content]" id="cntnt" value="1"{if $item.item.content} checked="checked"{/if} /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-children"><label for="children">{#children#}</label>:</th>
+            <td><input type="checkbox" name="item[children]" id="children" value="1"{if $item.item.children} checked="checked"{/if} /></td>
+        </tr>
+{if $user->hasRight(10)}
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="hidden" name="item_id" value="{$item_id}" />
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+{/if}
+    </table>
+</form>
+{if $item.tab}
+<h2>{#tabs#}</h2>
+<div id="accordion">
+	{foreach from=$item.tab key=tab_id item=row}
+	<h3><a href="#tab{$tab_id}"><strong>{$row.name}</strong></a> <a href="{$ROOT}?module={$MODULE}&amp;submodule=edittemplate&amp;id={$item_id}&amp;tab={$tab_id}&amp;action=deleteTab" class="delete">smazat</a></h3>
+	<table>
+		<tr>
+			<td>
+				<form method="post" action="">
+					<p>
+						{#add_field#}:
+						<select name="col">
+							<option value="0">{#select#}</option>
+		{foreach from=$cols item=col}
+							<option value="{$col.column_id}"{if isset($row.column[$col.column_id])} class="b"{/if}>{$col.name} - {$col.code} - {$col.type}</option>
+		{/foreach}
+						</select>
+		{if $user->hasRight(10)}
+						<input type="hidden" name="tab_id" value="{$tab_id}" />
+						<input type="hidden" name="action" value="addCol" />
+						<input type="submit" class="button" value="{#add#}" />
+		{/if}
+					</p>
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="table-sortable table-sortable-template list">
+					<thead>
+						<tr>
+							<th class="th-name">{#name#}</th>
+							<th class="th-code">{#code#}</th>
+							<th class="th-type">{#type#}</th>
+		{if $user->hasRight(10)}
+							<th class="th-action">{#action#}</th>
+		{/if}
+						</tr>
+					</thead>
+		{if isset($row.column)}
+					<tbody class="{if $user->hasRight(10)}sortable sortable_template{/if}">
+					{foreach from=$row.column item=col}
+						<tr class="{cycle values='odd,even'}">
+							<td><input type="hidden" name="ttcid" value="{$col.template_tab_column_id}" />{$col.name}</td>
+							<td>{$col.code}</td>
+							<td>{$col.type}</td>
+						{if $user->hasRight(10)}
+							<td><a href="{$ROOT}?module={$MODULE}&amp;submodule=edittemplate&amp;id={$col.template_tab_column_id}&amp;action=deleteCol" class="delete">{#delete#}</a></td>
+						{/if}
+						</tr>
+					{/foreach}
+					</tbody>
+		{/if}
+				</table>
+			</td>
+		</tr>
+	</table>
+	{/foreach}
+</div>
+{/if}
+{if $user->hasRight(10)}
+<div id="item-new" title="{#add_tab#}" class="hidden">
+	<form method="post" action="">
+    	<fieldset>
+        	<table>
+        	   <tr>
+        		  	<td class="th-label"><label for="content_name">{#name#}:</label></td>
+        		  	<td>
+				  		<input type="text" name="name" id="content_name" />
+                        <input type="hidden" name="action" value="addTab" />
+                	</td>
+                </tr>
+        	</table>
+        </fieldset>
+	</form>
+</div>
+{/if}

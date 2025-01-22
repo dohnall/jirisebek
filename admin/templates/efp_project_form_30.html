@@ -1,0 +1,153 @@
+                    <h6>Annexe 1.30: Transforming (3/6)</h6>
+                    <h1><b>Paradigms and current visions</b></h1>
+                    <div class="oracle-form">
+                        <form action="" method="post">
+
+                            <h3>Q1: Did the initiative/project lead to NEW PARADIGMS/VISIONS?</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="newpv" value="1"{if $form.newpv == 1} checked="checked"{/if} id="newpv1" onchange="nextVis('newpv_yes',this,true);" /></td>
+                                            <td><label for="newpv1"><b style="font-size:15px">Yes</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="newpv" value="0"{if $form.newpv == 0 || !$form.newpv} checked="checked"{/if} checked="checked" id="newpv0" onchange="nextVis('newpv_yes',this,false);" /></td>
+                                            <td><label for="newpv0"><b style="font-size:15px">No</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="newpv" value="2"{if $form.newpv == 2} checked="checked"{/if} id="newpv2" onchange="nextVis('newpv_yes',this,false);" /></td>
+                                            <td><label for="newpv2"><b style="font-size:15px">Too early to tell</b></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div id="newpv_yes" style="display:{if $form.newpv == 1}block{else}none{/if};">
+
+                                <h3>Q2: If Yes, please specify up to 5 NEW PARADIGMS/VISIONS</h3>
+
+                                <div class="table-wrapper">
+                                    <table>
+                                        <col style="width:28px" />
+                                        <col style="width:75%" />
+                                        <col style="" />
+                                        <tr>
+                                            <th>No.</th>
+                                            <th>Description</th>
+                                            <th>Type</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>1</b></div></td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:none">Summary:</small>
+                                                    <textarea class="additional" cols="10" rows="2" style="width:460px;margin-bottom:4px;padding:2px;margin:0;color:#777;max-height:300px" name="summary_1">{$form.summary_1}</textarea>
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td class="t-r nb">
+                                                <span class="relative">
+                                                    <input type="text" class="number vsf" maxlength="1" name="type_1" value="{$form.type_1}" />
+                                                    <span class="number-select vsf">
+                                                        <span class="s"><b>P</b> &ndash; Paradigm</span>
+                                                        <span class="s"><b>V</b> &ndash; Vision</span>
+                                                    </span>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>2</b></div></td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:none">Summary:</small>
+                                                    <textarea class="additional" cols="10" rows="2" style="width:460px;margin-bottom:4px;padding:2px;margin:0;color:#777;max-height:300px" name="summary_2">{$form.summary_2}</textarea>
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td class="t-r nb">
+                                                <span class="relative">
+                                                    <input type="text" class="number vsf" maxlength="1" name="type_2" value="{$form.type_2}" />
+                                                    <span class="number-select vsf">
+                                                        <span class="s"><b>P</b> &ndash; Paradigm</span>
+                                                        <span class="s"><b>V</b> &ndash; Vision</span>
+                                                    </span>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>3</b></div></td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:none">Summary:</small>
+                                                    <textarea class="additional" cols="10" rows="2" style="width:460px;margin-bottom:4px;padding:2px;margin:0;color:#777;max-height:300px" name="summary_3">{$form.summary_3}</textarea>
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td class="t-r nb">
+                                                <span class="relative">
+                                                    <input type="text" class="number vsf" maxlength="1" name="type_3" value="{$form.type_3}" />
+                                                    <span class="number-select vsf">
+                                                        <span class="s"><b>P</b> &ndash; Paradigm</span>
+                                                        <span class="s"><b>V</b> &ndash; Vision</span>
+                                                    </span>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>4</b></div></td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:none">Summary:</small>
+                                                    <textarea class="additional" cols="10" rows="2" style="width:460px;margin-bottom:4px;padding:2px;margin:0;color:#777;max-height:300px" name="summary_4">{$form.summary_4}</textarea>
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td class="t-r nb">
+                                                <span class="relative">
+                                                    <input type="text" class="number vsf" maxlength="1" name="type_4" value="{$form.type_4}" />
+                                                    <span class="number-select vsf">
+                                                        <span class="s"><b>P</b> &ndash; Paradigm</span>
+                                                        <span class="s"><b>V</b> &ndash; Vision</span>
+                                                    </span>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r"><div class="semi-label"><b>5</b></div></td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:none">Summary:</small>
+                                                    <textarea class="additional" cols="10" rows="2" style="width:460px;margin-bottom:4px;padding:2px;margin:0;color:#777;max-height:300px" name="summary_5">{$form.summary_5}</textarea>
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td class="t-r nb">
+                                                <span class="relative">
+                                                    <input type="text" class="number vsf" maxlength="1" name="type_5" value="{$form.type_5}" />
+                                                    <span class="number-select vsf">
+                                                        <span class="s"><b>P</b> &ndash; Paradigm</span>
+                                                        <span class="s"><b>V</b> &ndash; Vision</span>
+                                                    </span>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <script type="text/javascript">
+                              //<![CDATA[
+                                function nextVis(id,elm,visible) {
+                                    var tg = document.getElementById(id);
+                                    if (!tg || !elm.checked) {
+                                        return;
+                                    }
+                                    tg.style.display = (visible ? 'block' : 'none');
+                                }
+                              //]]>
+                            </script>

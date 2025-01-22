@@ -1,0 +1,1028 @@
+                   <h6>Annexe 1.28: Transforming (1/6)</h6>
+                    <h1><b>Priorities and strategies</b></h1>
+                    <div class="oracle-form">
+                        <form action="" method="post">
+
+                            <h3>Q1: Did the initiative/project lead to NEW PRIORITIES?</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="new_priority" value="1"{if $form.new_priority == 1} checked="checked"{/if} id="new_priority_1" onchange="nextVis('new_priority_show',this,true);" /></td>
+                                            <td><label for="new_priority_1"><b style="font-size:15px">Yes</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="new_priority" value="0"{if !isset($form.new_priority) || $form.new_priority == 0} checked="checked"{/if} id="new_priority_2" onchange="nextVis('new_priority_show',this,false);" /></td>
+                                            <td><label for="new_priority_2"><b style="font-size:15px">No</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="new_priority" value="2"{if $form.new_priority == 2} checked="checked"{/if} id="new_priority_3" onchange="nextVis('new_priority_show',this,false);" /></td>
+                                            <td><label for="new_priority_3"><b style="font-size:15px">Too early to tell</b></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div id="new_priority_show" style="display:{if $form.new_priority == 1}block{else}none{/if};">
+
+                                <br />
+
+                                <div class="table-wrapper">
+                                    <table>
+                                        <col style="width:28px" />
+                                        <col />
+                                        <col style="width:100px" />
+                                        <tr>
+                                            <th class="t-c">No.</th>
+                                            <th class="t-l">Name (max. 140 characters)<br />Please specify (max. 140 characters)</th>
+                                            <th class="t-l">Type</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>1</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_name_1" value="{$form.new_priority_name_1}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_desc_1" value="{$form.new_priority_desc_1}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_priority_type_1">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_priority_type_1 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_priority_type_1 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_priority_type_1 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_priority_type_1 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_priority_type_1 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_priority_type_1 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_priority_type_1 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>2</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_name_2" value="{$form.new_priority_name_2}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_desc_2" value="{$form.new_priority_desc_2}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_priority_type_2">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_priority_type_2 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_priority_type_2 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_priority_type_2 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_priority_type_2 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_priority_type_2 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_priority_type_2 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_priority_type_2 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>3</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_name_3" value="{$form.new_priority_name_3}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_desc_3" value="{$form.new_priority_desc_3}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_priority_type_3">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_priority_type_3 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_priority_type_3 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_priority_type_3 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_priority_type_3 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_priority_type_3 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_priority_type_3 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_priority_type_3 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>4</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_name_4" value="{$form.new_priority_name_4}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_desc_4" value="{$form.new_priority_desc_4}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_priority_type_4">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_priority_type_4 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_priority_type_4 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_priority_type_4 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_priority_type_4 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_priority_type_4 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_priority_type_4 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_priority_type_4 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>5</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_name_5" value="{$form.new_priority_name_5}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_desc_5" value="{$form.new_priority_desc_5}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_priority_type_5">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_priority_type_5 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_priority_type_5 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_priority_type_5 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_priority_type_5 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_priority_type_5 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_priority_type_5 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_priority_type_5 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>6</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_name_6" value="{$form.new_priority_name_6}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_desc_6" value="{$form.new_priority_desc_6}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_priority_type_6">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_priority_type_6 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_priority_type_6 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_priority_type_6 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_priority_type_6 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_priority_type_6 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_priority_type_6 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_priority_type_6 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>7</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_name_7" value="{$form.new_priority_name_7}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_desc_7" value="{$form.new_priority_desc_7}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_priority_type_7">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_priority_type_7 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_priority_type_7 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_priority_type_7 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_priority_type_7 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_priority_type_7 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_priority_type_7 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_priority_type_7 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>8</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_name_8" value="{$form.new_priority_name_8}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_desc_8" value="{$form.new_priority_desc_8}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_priority_type_8">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_priority_type_8 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_priority_type_8 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_priority_type_8 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_priority_type_8 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_priority_type_8 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_priority_type_8 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_priority_type_8 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>9</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_name_9" value="{$form.new_priority_name_9}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_desc_9" value="{$form.new_priority_desc_9}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_priority_type_9">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_priority_type_9 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_priority_type_9 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_priority_type_9 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_priority_type_9 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_priority_type_9 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_priority_type_9 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_priority_type_9 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>10</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_name_10" value="{$form.new_priority_name_10}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_priority_desc_10" value="{$form.new_priority_desc_10}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_priority_type_10">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_priority_type_10 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_priority_type_10 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_priority_type_10 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_priority_type_10 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_priority_type_10 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_priority_type_10 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_priority_type_10 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <br />
+
+                            <h3>Q2: Did the initiative/project lead to NEW STRATEGIES?</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="new_strategy" value="1"{if $form.new_strategy == 1} checked="checked"{/if} id="new_strategy_1" onchange="nextVis('new_strategy_show',this,true);" /></td>
+                                            <td><label for="new_strategy_1"><b style="font-size:15px">Yes</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="new_strategy" value="0"{if !isset($form.new_strategy) || $form.new_strategy == 0} checked="checked"{/if} id="new_strategy_2" onchange="nextVis('new_strategy_show',this,false);" /></td>
+                                            <td><label for="new_strategy_2"><b style="font-size:15px">No</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="new_strategy" value="2"{if $form.new_strategy == 2} checked="checked"{/if} id="new_strategy_3" onchange="nextVis('new_strategy_show',this,false);" /></td>
+                                            <td><label for="new_strategy_3"><b style="font-size:15px">Too early to tell</b></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div id="new_strategy_show" style="display:{if $form.new_strategy == 1}block{else}none{/if};">
+
+                                <br />
+
+                                <div class="table-wrapper">
+                                    <table>
+                                        <col style="width:28px" />
+                                        <col />
+                                        <col style="width:100px" />
+                                        <tr>
+                                            <th class="t-c">No.</th>
+                                            <th class="t-l">Name (max. 140 characters)<br />Please specify (max. 140 characters)</th>
+                                            <th class="t-l">Type</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>1</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_name_1" value="{$form.new_strategy_name_1}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_desc_1" value="{$form.new_strategy_desc_1}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_strategy_type_1">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_strategy_type_1 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_strategy_type_1 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_strategy_type_1 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_strategy_type_1 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_strategy_type_1 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_strategy_type_1 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_strategy_type_1 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>2</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_name_2" value="{$form.new_strategy_name_2}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_desc_2" value="{$form.new_strategy_desc_2}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_strategy_type_2">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_strategy_type_2 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_strategy_type_2 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_strategy_type_2 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_strategy_type_2 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_strategy_type_2 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_strategy_type_2 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_strategy_type_2 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>3</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_name_3" value="{$form.new_strategy_name_3}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_desc_3" value="{$form.new_strategy_desc_3}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_strategy_type_3">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_strategy_type_3 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_strategy_type_3 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_strategy_type_3 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_strategy_type_3 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_strategy_type_3 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_strategy_type_3 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_strategy_type_3 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>4</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_name_4" value="{$form.new_strategy_name_4}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_desc_4" value="{$form.new_strategy_desc_4}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_strategy_type_4">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_strategy_type_4 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_strategy_type_4 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_strategy_type_4 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_strategy_type_4 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_strategy_type_4 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_strategy_type_4 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_strategy_type_4 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>5</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_name_5" value="{$form.new_strategy_name_5}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_desc_5" value="{$form.new_strategy_desc_5}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_strategy_type_5">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_strategy_type_5 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_strategy_type_5 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_strategy_type_5 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_strategy_type_5 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_strategy_type_5 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_strategy_type_5 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_strategy_type_5 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>6</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_name_6" value="{$form.new_strategy_name_6}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_desc_6" value="{$form.new_strategy_desc_6}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_strategy_type_6">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_strategy_type_6 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_strategy_type_6 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_strategy_type_6 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_strategy_type_6 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_strategy_type_6 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_strategy_type_6 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_strategy_type_6 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>7</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_name_7" value="{$form.new_strategy_name_7}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_desc_7" value="{$form.new_strategy_desc_7}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_strategy_type_7">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_strategy_type_7 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_strategy_type_7 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_strategy_type_7 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_strategy_type_7 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_strategy_type_7 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_strategy_type_7 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_strategy_type_7 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>8</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_name_8" value="{$form.new_strategy_name_8}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_desc_8" value="{$form.new_strategy_desc_8}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_strategy_type_8">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_strategy_type_8 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_strategy_type_8 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_strategy_type_8 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_strategy_type_8 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_strategy_type_8 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_strategy_type_8 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_strategy_type_8 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>9</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_name_9" value="{$form.new_strategy_name_9}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_desc_9" value="{$form.new_strategy_desc_9}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_strategy_type_9">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_strategy_type_9 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_strategy_type_9 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_strategy_type_9 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_strategy_type_9 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_strategy_type_9 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_strategy_type_9 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_strategy_type_9 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-r">
+                                                <div class="semi-label">
+                                                    <b>10</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Name:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_name_10" value="{$form.new_strategy_name_10}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                                <label>
+                                                    <small style="display:block; width:80px; float:left; margin-top:7px;">Description:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:400px;margin-bottom:4px;font-size:14px;font-weight:bold" name="new_strategy_desc_10" value="{$form.new_strategy_desc_10}" />
+                                                    <span class="counter">0</span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <select name="new_strategy_type_10">
+                                                    <option value="0"></option>
+                                                    <option value="1"{if $form.new_strategy_type_10 == 1} selected="selected"{/if}>Area</option>
+                                                    <option value="2"{if $form.new_strategy_type_10 == 2} selected="selected"{/if}>Challenge</option>
+                                                    <option value="3"{if $form.new_strategy_type_10 == 3} selected="selected"{/if}>Policy</option>
+                                                    <option value="4"{if $form.new_strategy_type_10 == 4} selected="selected"{/if}>Sector</option>
+                                                    <option value="5"{if $form.new_strategy_type_10 == 5} selected="selected"{/if}>Technology</option>
+                                                    <option value="6"{if $form.new_strategy_type_10 == 6} selected="selected"{/if}>Topic</option>
+                                                    <option value="7"{if $form.new_strategy_type_10 == 7} selected="selected"{/if}>Other</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <br />
+
+                            <h3>Q3: Did the initiative/project support to EXISTING Innovation STRATEGIES?</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="existing_priority" value="1"{if $form.existing_priority == 1} checked="checked"{/if} id="existing_priority_1" onchange="nextVis('existing_priority_show',this,true);" /></td>
+                                            <td><label for="existing_priority_1"><b style="font-size:15px">Yes</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="existing_priority" value="0"{if !isset($form.existing_priority) || $form.existing_priority == 0} checked="checked"{/if} id="existing_priority_2" onchange="nextVis('existing_priority_show',this,false);" /></td>
+                                            <td><label for="existing_priority_2"><b style="font-size:15px">No</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="existing_priority" value="2"{if $form.existing_priority == 2} checked="checked"{/if} id="existing_priority_3" onchange="nextVis('existing_priority_show',this,false);" /></td>
+                                            <td><label for="existing_priority_3"><b style="font-size:15px">Too early to tell</b></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div id="existing_priority_show" style="display:{if $form.existing_priority == 1}block{else}none{/if};">
+
+                                <br />
+
+                                <div class="table-wrapper">
+                                    <table>
+                                        <col style="width:36px" />
+                                        <col style="width:36px" />
+                                        <col />
+                                        <tr>
+                                            <td><input type="checkbox" name="existing_strategy_1" value="1" id="existing_strategy_1"{if isset($form.existing_strategy_1)} checked="checked"{/if} /></td>
+                                            <td colspan="2"><label for="existing_strategy_1">Mapping against iKnow Innovation Strategies</label></td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_1)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_1_1" value="1" id="existing_strategy_1_1"{if !isset($form.existing_strategy_1)} disabled="disabled"{/if}{if isset($form.existing_strategy_1_1)} checked="checked"{/if} /></td>
+                                            <td>
+                                                <span class="relative">
+                                                    <span class="number-select">
+                                                        <span class="t">Addressing the problem of effective knowledge management (e.g. impact of climate change on cities, consequences of ageing population for workforce skills, etc.).</span>
+                                                        <span class="t">Addressing the problem of interactions between various GCs (e.g. impact of climate change on water and food security, impacts of ageing on migration).</span>
+                                                        <span class="t">Addressing the problem of information overload, with studies at various levels of granularity, and considerable controversy in many topics.</span>
+                                                        <span class="t">Addressing the problem that GCs are NOT just “big problems”. They represent agendas for RTD, innovation and the development of conducive environments for adoption of innovations.</span>
+                                                        <span class="t">Addressing the problem of classifying GCs in terms of: (a) Geographical relevance; (b) Knowledge domain and RTD relevance; (c) Feasibility as an economic or social investment</span>
+                                                    </span>
+                                                </span>
+                                                <label for="existing_strategy_1_1">Addressing global and social challenges</label>
+                                            </td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_1)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_1_2" value="1" id="existing_strategy_1_2"{if !isset($form.existing_strategy_1)} disabled="disabled"{/if}{if isset($form.existing_strategy_1_2)} checked="checked"{/if} /></td>
+                                            <td>
+                                                <span class="relative">
+                                                    <span class="number-select">
+                                                        <span class="t">Promoting interdisciplinary knowledge development</span>
+                                                        <span class="t">Promoting multi-stakeholder contributions to and applications of this knowledge base</span>
+                                                        <span class="t">Promoting a policy mix of actions (developing a policy roadmap that spans several traditionally distinct policy domains).</span>
+                                                    </span>
+                                                </span>
+                                                <label for="existing_strategy_1_2">Addressing grand responses</label>
+                                            </td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_1)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_1_3" value="1" id="existing_strategy_1_3"{if !isset($form.existing_strategy_1)} disabled="disabled"{/if}{if isset($form.existing_strategy_1_3)} checked="checked"{/if} /></td>
+                                            <td>
+                                                <span class="relative">
+                                                    <span class="number-select">
+                                                        <span class="t">Applying horizon scanning & issue mapping</span>
+                                                        <span class="t">Mapping issues against GCs and GRs</span>
+                                                        <span class="t">Assessing factors shaping the trajectories of GCs & GRs</span>
+                                                        <span class="t">Paying particular attention to (a) Seeds of change (aka “weak signals”) and (b) Potential surprises (aka “wild cards”)</span>
+                                                        <span class="t">Promoting bottom-up approaches (e.g. surveys, citizen panels and web-based crowdsourcing) for the analysis of emerging issues relevant to GCs & GRs)</span>
+                                                    </span>
+                                                </span>
+                                                <label for="existing_strategy_1_3">Addressing emerging issues</label>
+                                            </td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_1)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_1_4" value="1" id="existing_strategy_1_4"{if !isset($form.existing_strategy_1)} disabled="disabled"{/if}{if isset($form.existing_strategy_1_4)} checked="checked"{/if} /></td>
+                                            <td>
+                                                <span class="relative">
+                                                    <span class="number-select">
+                                                        <span class="t">Overcoming language barriers, cultural differences, competition and fragmentation of knowledge across disciplines, professions, and localities.</span>
+                                                        <span class="t">Exploiting creative environments, commercialisation, standardisation and innovations (technological & social)</span>
+                                                        <span class="t">Improving access/location of codified knowledge</span>
+                                                        <span class="t">Promoting validation/evaluation of knowledge</span>
+                                                        <span class="t">Assessing implications of existing knowledge for action (both present and future)</span>
+                                                        <span class="t">Locating and interconnecting knowledge communities</span>
+                                                        <span class="t">Enabling better communication and networking between experts and stakeholders of different types</span>
+                                                    </span>
+                                                </span>
+                                                <label for="existing_strategy_1_4">Addressing knowledge governance</label>
+                                            </td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_1)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_1_5" value="1" id="existing_strategy_1_5"{if !isset($form.existing_strategy_1)} disabled="disabled"{/if}{if isset($form.existing_strategy_1_5)} checked="checked"{/if} /></td>
+                                            <td>
+                                                <span class="relative">
+                                                    <span class="number-select">
+                                                        <span class="t">Identifying key features of different worldviews</span>
+                                                        <span class="t">Enabling direct comparison of 'worldviews' around specific points</span>
+                                                        <span class="t">Identifying key limitations of 'worldviews' abilities to grasp major problems and solutions</span>
+                                                        <span class="t">Identifying key points of potential agreements about gaps in knowledge (though not necessarily about how to most effectively resolve these).</span>
+                                                        <span class="t">Identifying key “boundary objects”  for potential agreement about key features of a phenomenon, and alignment in terms of action without necessarily achieving consensus about many other things</span>
+                                                    </span>
+                                                </span>
+                                                <label for="existing_strategy_1_5">Applying a ‘worldviews’ approach</label>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox" name="existing_strategy_2" value="1" id="existing_strategy_2"{if isset($form.existing_strategy_2)} checked="checked"{/if} /></td>
+                                            <td colspan="2"><label for="existing_strategy_2">Mapping against OECD Innovation Strategies</label></td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_2)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_2_1" value="1" id="existing_strategy_2_1"{if !isset($form.existing_strategy_2)} disabled="disabled"{/if}{if isset($form.existing_strategy_2_1)} checked="checked"{/if} /></td>
+                                            <td><label for="existing_strategy_2_1">Empowering people to innovate</label></td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_2)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_2_2" value="1" id="existing_strategy_2_2"{if !isset($form.existing_strategy_2)} disabled="disabled"{/if}{if isset($form.existing_strategy_2_2)} checked="checked"{/if} /></td>
+                                            <td><label for="existing_strategy_2_2">Unleashing innovation in firms</label></td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_2)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_2_3" value="1" id="existing_strategy_2_3"{if !isset($form.existing_strategy_2)} disabled="disabled"{/if}{if isset($form.existing_strategy_2_3)} checked="checked"{/if} /></td>
+                                            <td><label for="existing_strategy_2_3">Unleashing innovation in firms</label></td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_2)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_2_4" value="1" id="existing_strategy_2_4"{if !isset($form.existing_strategy_2)} disabled="disabled"{/if}{if isset($form.existing_strategy_2_4)} checked="checked"{/if} /></td>
+                                            <td><label for="existing_strategy_2_4">Addressing global and social challenges</label></td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_2)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_2_5" value="1" id="existing_strategy_2_5"{if !isset($form.existing_strategy_2)} disabled="disabled"{/if}{if isset($form.existing_strategy_2_5)} checked="checked"{/if} /></td>
+                                            <td><label for="existing_strategy_2_5">Improving the governance and measurement _x000B_of policies for innovation</label></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox" name="existing_strategy_3" value="1" id="existing_strategy_3"{if isset($form.existing_strategy_3)} checked="checked"{/if} /></td>
+                                            <td colspan="2"><label for="existing_strategy_3">Mapping against Horizon 2020 Innovation Strategies</label></td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_3)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_3_1" value="1" id="existing_strategy_3_1"{if !isset($form.existing_strategy_3)} disabled="disabled"{/if}{if isset($form.existing_strategy_3_1)} checked="checked"{/if} /></td>
+                                            <td>
+                                                <span class="relative">
+                                                    <span class="number-select">
+                                                        <span class="t">Improving its performance in frontier research,</span>
+                                                        <span class="t">Stimulating future and emerging technologies,</span>
+                                                        <span class="t">Encouraging cross-border training and career development, and</span>
+                                                        <span class="t">Supporting research infrastructures</span>
+                                                    </span>
+                                                </span>
+                                                <label for="existing_strategy_3_1">Strengthening Europe's science base</label>
+                                            </td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_3)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_3_2" value="1" id="existing_strategy_3_2"{if !isset($form.existing_strategy_3)} disabled="disabled"{/if}{if isset($form.existing_strategy_3_2)} checked="checked"{/if} /></td>
+                                            <td>
+                                                <span class="relative">
+                                                    <span class="number-select">
+                                                        <span class="t">Stimulating leadership in enabling and industrial technologies,</span>
+                                                        <span class="t">Improving access to risk finance, and</span>
+                                                        <span class="t">Stimulating innovation in SMEs</span>
+                                                    </span>
+                                                </span>
+                                                <label for="existing_strategy_3_2">Boosting Europe's industrial leadership and competitiveness</label>
+                                            </td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_3)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_3_3" value="1" id="existing_strategy_3_3"{if !isset($form.existing_strategy_3)} disabled="disabled"{/if}{if isset($form.existing_strategy_3_3)} checked="checked"{/if} /></td>
+                                            <td><label for="existing_strategy_3_3">Increasing the contribution of R&I to the resolution of key societal challenges</label></td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_3)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_3_4" value="1" id="existing_strategy_3_4"{if !isset($form.existing_strategy_3)} disabled="disabled"{/if}{if isset($form.existing_strategy_3_4)} checked="checked"{/if} /></td>
+                                            <td><label for="existing_strategy_3_4">Providing customer-driven scientific and technical support to Union policies</label></td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_3)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_3_5" value="1" id="existing_strategy_3_5"{if !isset($form.existing_strategy_3)} disabled="disabled"{/if}{if isset($form.existing_strategy_3_5)} checked="checked"{/if} /></td>
+                                            <td><label for="existing_strategy_3_5">Helping to better integrate the knowledge triangle – by combining<br />(a) research, (b) researcher training and (c) innovation</label></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td><input type="checkbox" name="existing_strategy_4" value="1" id="existing_strategy_4"{if isset($form.existing_strategy_4)} checked="checked"{/if} /></td>
+                                            <td colspan="2"><label for="existing_strategy_4">Mapping against EU Innovation Strategies</label></td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_4)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_4_1" value="1" id="existing_strategy_4_1"{if !isset($form.existing_strategy_4)} disabled="disabled"{/if}{if isset($form.existing_strategy_4_1)} checked="checked"{/if} /></td>
+                                            <td>
+                                                <span class="relative">
+                                                    <span class="number-select">
+                                                        <span class="t">Making Europe more robust against the crisis (i.e. resilience)</span>
+                                                        <span class="t">Reforming national research and innovation systems</span>
+                                                        <span class="t">More and better EU funding for research and innovation</span>
+                                                        <span class="t">Working in partnership to address societal challenges</span>
+                                                        <span class="t">Maximising social and territorial cohesion</span>
+                                                    </span>
+                                                </span>
+                                                <label for="existing_strategy_4_1">Delivering growth and jobs through Innovation</label>
+                                            </td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_4)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_4_2" value="1" id="existing_strategy_4_2"{if !isset($form.existing_strategy_4)} disabled="disabled"{/if}{if isset($form.existing_strategy_4_2)} checked="checked"{/if} /></td>
+                                            <td>
+                                                <span class="relative">
+                                                    <span class="number-select">
+                                                        <span class="t">Getting top talent for Europe (i.e. education & training systems)</span>
+                                                        <span class="t">Delivering the European Research Area (e.g. EU Funding Instruments)</span>
+                                                        <span class="t">European Institute of Innovation and Technology</span>
+                                                    </span>
+                                                </span>
+                                                <label for="existing_strategy_4_2">Strengthening the knowledge base & reducing fragmentation</label>
+                                            </td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_4)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_4_3" value="1" id="existing_strategy_4_3"{if !isset($form.existing_strategy_4)} disabled="disabled"{/if}{if isset($form.existing_strategy_4_3)} checked="checked"{/if} /></td>
+                                            <td>
+                                                <span class="relative">
+                                                    <span class="number-select">
+                                                        <span class="t">Access to finance for innovation companies</span>
+                                                        <span class="t">Protecting & enhancing the value of intellectual property & boosting creativity</span>
+                                                        <span class="t">Accelerating and modernising standard-setting</span>
+                                                        <span class="t">Putting the power of the public purse (i.e. public procurement) to innovation</span>
+                                                    </span>
+                                                </span>
+                                                <label for="existing_strategy_4_3">Getting good ideas to market</label>
+                                            </td>
+                                        </tr>
+                                        <tr{if !isset($form.existing_strategy_4)} class="disabled"{/if}>
+                                            <td></td>
+                                            <td><input type="checkbox" name="existing_strategy_4_4" value="1" id="existing_strategy_4_4"{if !isset($form.existing_strategy_4)} disabled="disabled"{/if}{if isset($form.existing_strategy_4_4)} checked="checked"{/if} /></td>
+                                            <td>
+                                                <span class="relative">
+                                                    <span class="number-select">
+                                                        <span class="t">Pooling forces to achieve breakthroughs: European Innovation Partnerships (e.g. India, China and USA)</span>
+                                                    </span>
+                                                </span>
+                                                <label for="existing_strategy_4_4">Leveraging EU policies externally</label>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <script type="text/javascript">
+                              //<![CDATA[
+                                $('#existing_priority_show input:checkbox').click(function() {
+                                    var id = $(this).attr('id');
+                                    if($(this).attr('checked') == 'checked') {
+                                        $('[id^="'+id+'"]').not(this).attr('disabled', false);
+                                        $('[id^="'+id+'"]').not(this).parents('tr').removeClass('disabled');
+                                    } else {
+                                        $('[id^="'+id+'"]').not(this).attr('disabled', true);
+                                        $('[id^="'+id+'"]').not(this).parents('tr').addClass('disabled');
+                                    }
+                                });
+                              //]]>
+                            </script>
+
+                            <style type="text/css">
+                                .oracle-form table span.number-select {
+                                    height: auto;
+                                    top: auto;
+                                    bottom: 20px;
+                                }
+                                .oracle-form table span.number-select span.t {
+                                    display: block;
+                                    width: 500px;
+                                    padding: 2px 6px;
+                                }
+                            </style>
+
+                            <script type="text/javascript">
+                              //<![CDATA[
+                                $('#existing_priority_show span.relative').parent().bind('mouseover',function() {
+                                    if (!$(this).parent().hasClass('disabled')) {
+                                        $(this).find('.number-select').css({ 'display':'block' });
+                                    }
+                                });
+                                $('#existing_priority_show span.relative').parent().bind('mouseout',function() {
+                                    $(this).find('.number-select').css({ 'display':'none' });
+                                });
+                              //]]>
+                            </script>
+
+                            <script type="text/javascript">
+                              //<![CDATA[
+                                function nextVis(id,elm,visible) {
+                                    var tg = document.getElementById(id);
+                                    if (!tg || !elm.checked) {
+                                        return;
+                                    }
+                                    tg.style.display = (visible ? 'block' : 'none');
+                                }
+                              //]]>
+                            </script>

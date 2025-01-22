@@ -1,0 +1,358 @@
+                    <h6>Annexe 1.32: Transforming (5/6)</h6>
+                    <h1><b>Socio-economic and STI systems</b></h1>
+                    <div class="oracle-form">
+                        <form action="" method="post">
+
+                            <h3>Q1: Did the results of the initiative/project transform the socio-economic/industrial system by...?</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="socioeconomic" value="1"{if $form.socioeconomic == 1} checked="checked"{/if} id="socioeconomic1" onchange="nextVis('socioeconomic_yes',this,true);" /></td>
+                                            <td><label for="socioeconomic1"><b style="font-size:15px">Yes</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="socioeconomic" value="0"{if $form.socioeconomic == 0 || !$form.socioeconomic} checked="checked"{/if} id="socioeconomic0" onchange="nextVis('socioeconomic_yes',this,false);" /></td>
+                                            <td><label for="socioeconomic0"><b style="font-size:15px">No</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="socioeconomic" value="2"{if $form.socioeconomic == 2} checked="checked"{/if} id="socioeconomic2" onchange="nextVis('socioeconomic_yes',this,false);" /></td>
+                                            <td><label for="socioeconomic2"><b style="font-size:15px">Too early to tell</b></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div id="socioeconomic_yes" style="display:{if $form.socioeconomic == 1}block{else}none{/if};">
+
+                                <br />
+
+                                <div class="table-wrapper">
+                                    <table>
+                                        <col style="width:36px" />
+                                        <col style="" />
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_1" value="1"{if isset($form.socioeconomic_1) && $form.socioeconomic_1 == 1} checked="checked"{/if} id="socioeconomic_1" /></td>
+                                            <td><label for="socioeconomic_1">Replacing products and services being phased out</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_1) && $form.socioeconomic_1 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_1" id="socioeconomic_desc_1" class="additional" style="width:94%" value="{$form.socioeconomic_desc_1}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_2" value="1"{if isset($form.socioeconomic_2) && $form.socioeconomic_2 == 1} checked="checked"{/if} id="socioeconomic_2" /></td>
+                                            <td><label for="socioeconomic_2">Improving products and sevices quality</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_2) && $form.socioeconomic_2 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_2" id="socioeconomic_desc_2" class="additional" style="width:94%" value="{$form.socioeconomic_desc_2}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_3" value="1"{if isset($form.socioeconomic_3) && $form.socioeconomic_3 == 1} checked="checked"{/if} id="socioeconomic_3" /></td>
+                                            <td><label for="socioeconomic_3">Extending products and services range</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_3) && $form.socioeconomic_3 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_3" id="socioeconomic_desc_3" class="additional" style="width:94%" value="{$form.socioeconomic_desc_3}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_4" value="1"{if isset($form.socioeconomic_4) && $form.socioeconomic_4 == 1} checked="checked"{/if} id="socioeconomic_4" /></td>
+                                            <td><label for="socioeconomic_4">Maintaining traditional market share</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_4) && $form.socioeconomic_4 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_4" id="socioeconomic_desc_4" class="additional" style="width:94%" value="{$form.socioeconomic_desc_4}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_5" value="1"{if isset($form.socioeconomic_5) && $form.socioeconomic_5 == 1} checked="checked"{/if} id="socioeconomic_5" /></td>
+                                            <td><label for="socioeconomic_5">Creating new markets</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_5) && $form.socioeconomic_5 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_5" id="socioeconomic_desc_5" class="additional" style="width:94%" value="{$form.socioeconomic_desc_5}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_6" value="1"{if isset($form.socioeconomic_6) && $form.socioeconomic_6 == 1} checked="checked"{/if} id="socioeconomic_6" /></td>
+                                            <td><label for="socioeconomic_6">Ensuring compliance with modern standards</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_6) && $form.socioeconomic_6 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_6" id="socioeconomic_desc_6" class="additional" style="width:94%" value="{$form.socioeconomic_desc_6}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_7" value="1"{if isset($form.socioeconomic_7) && $form.socioeconomic_7 == 1} checked="checked"{/if} id="socioeconomic_7" /></td>
+                                            <td><label for="socioeconomic_7">Increasing flexibility of production</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_7) && $form.socioeconomic_7 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_7" id="socioeconomic_desc_7" class="additional" style="width:94%" value="{$form.socioeconomic_desc_7}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_8" value="1"{if isset($form.socioeconomic_8) && $form.socioeconomic_8 == 1} checked="checked"{/if} id="socioeconomic_8" /></td>
+                                            <td><label for="socioeconomic_8">Increasing industrial capacities</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_8) && $form.socioeconomic_8 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_8" id="socioeconomic_desc_8" class="additional" style="width:94%" value="{$form.socioeconomic_desc_8}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_9" value="1"{if isset($form.socioeconomic_9) && $form.socioeconomic_9 == 1} checked="checked"{/if} id="socioeconomic_9" /></td>
+                                            <td><label for="socioeconomic_9">Reducing labour costs</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_9) && $form.socioeconomic_9 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_9" id="socioeconomic_desc_9" class="additional" style="width:94%" value="{$form.socioeconomic_desc_9}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_10" value="1"{if isset($form.socioeconomic_10) && $form.socioeconomic_10 == 1} checked="checked"{/if} id="socioeconomic_10" /></td>
+                                            <td><label for="socioeconomic_10">Reducing materials costs</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_10) && $form.socioeconomic_10 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_10" id="socioeconomic_desc_10" class="additional" style="width:94%" value="{$form.socioeconomic_desc_10}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_11" value="1"{if isset($form.socioeconomic_11) && $form.socioeconomic_11 == 1} checked="checked"{/if} id="socioeconomic_11" /></td>
+                                            <td><label for="socioeconomic_11">Reducing energy costs</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_11) && $form.socioeconomic_11 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_11" id="socioeconomic_desc_11" class="additional" style="width:94%" value="{$form.socioeconomic_desc_11}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_12" value="1"{if isset($form.socioeconomic_12) && $form.socioeconomic_12 == 1} checked="checked"{/if} id="socioeconomic_12" /></td>
+                                            <td><label for="socioeconomic_12">Reducing environmental damage</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_12) && $form.socioeconomic_12 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_12" id="socioeconomic_desc_12" class="additional" style="width:94%" value="{$form.socioeconomic_desc_12}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_13" value="1"{if isset($form.socioeconomic_13) && $form.socioeconomic_13 == 1} checked="checked"{/if} id="socioeconomic_13" /></td>
+                                            <td><label for="socioeconomic_13">Improving working conditions</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_13) && $form.socioeconomic_13 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_13" id="socioeconomic_desc_13" class="additional" style="width:94%" value="{$form.socioeconomic_desc_13}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="socioeconomic_14" value="1"{if isset($form.socioeconomic_14) && $form.socioeconomic_14 == 1} checked="checked"{/if} id="socioeconomic_14" /></td>
+                                            <td><label for="socioeconomic_14">Other, please specify (max 140 chars.)</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.socioeconomic_14) && $form.socioeconomic_14 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="socioeconomic_desc_14" id="socioeconomic_desc_14" class="additional" style="width:94%" value="{$form.socioeconomic_desc_14}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <h3>Q2: Did the results of the initiative/project transform the STI system by...?</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="sti" value="1"{if $form.sti == 1} checked="checked"{/if} id="sti1" onchange="nextVis('sti_yes',this,true);" /></td>
+                                            <td><label for="sti1"><b style="font-size:15px">Yes</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="sti" value="0"{if $form.sti == 0 || !$form.sti} checked="checked"{/if} id="sti0" onchange="nextVis('sti_yes',this,false);" /></td>
+                                            <td><label for="sti0"><b style="font-size:15px">No</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="sti" value="2"{if $form.sti == 2} checked="checked"{/if} id="sti2" onchange="nextVis('sti_yes',this,false);" /></td>
+                                            <td><label for="sti2"><b style="font-size:15px">Too early to tell</b></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div id="sti_yes" style="display:{if $form.sti == 1}block{else}none{/if};">
+
+                                <br />
+
+                                <div class="table-wrapper">
+                                    <table>
+                                        <col style="width:36px" />
+                                        <col style="" />
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="sti_1" value="1"{if isset($form.sti_1) && $form.sti_1 == 1} checked="checked"{/if} id="sti_1" /></td>
+                                            <td><label for="sti_1">Forecasting TEEPSE events/developments</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.sti_1) && $form.sti_1 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="sti_desc_1" id="sti_desc_1" class="additional" style="width:94%" value="{$form.sti_desc_1}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="sti_2" value="1"{if isset($form.sti_2) && $form.sti_2 == 1} checked="checked"{/if} id="sti_2" /></td>
+                                            <td><label for="sti_2">Orienting policy and strategy development</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.sti_2) && $form.sti_2 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="sti_desc_2" id="sti_desc_2" class="additional" style="width:94%" value="{$form.sti_desc_2}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="sti_3" value="1"{if isset($form.sti_3) && $form.sti_3 == 1} checked="checked"{/if} id="sti_3" /></td>
+                                            <td><label for="sti_3">Recognising drivers/impacts of TEEPSE changes</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.sti_3) && $form.sti_3 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="sti_desc_3" id="sti_desc_3" class="additional" style="width:94%" value="{$form.sti_desc_3}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="sti_4" value="1"{if isset($form.sti_4) && $form.sti_4 == 1} checked="checked"{/if} id="sti_4" /></td>
+                                            <td><label for="sti_4">Engaging key stakeholders and decision-shapers</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.sti_4) && $form.sti_4 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="sti_desc_4" id="sti_desc_4" class="additional" style="width:94%" value="{$form.sti_desc_4}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="sti_5" value="1"{if isset($form.sti_5) && $form.sti_5 == 1} checked="checked"{/if} id="sti_5" /></td>
+                                            <td><label for="sti_5">Supporting STI priority-setting and governance</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.sti_5) && $form.sti_5 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="sti_desc_5" id="sti_desc_5" class="additional" style="width:94%" value="{$form.sti_desc_5}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="sti_6" value="1"{if isset($form.sti_6) && $form.sti_6 == 1} checked="checked"{/if} id="sti_6" /></td>
+                                            <td><label for="sti_6">Identifying key/emerging TEEPSE issues</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.sti_6) && $form.sti_6 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="sti_desc_6" id="sti_desc_6" class="additional" style="width:94%" value="{$form.sti_desc_6}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="sti_7" value="1"{if isset($form.sti_7) && $form.sti_7 == 1} checked="checked"{/if} id="sti_7" /></td>
+                                            <td><label for="sti_7">Generating (shared) visions and scenarios</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.sti_7) && $form.sti_7 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="sti_desc_7" id="sti_desc_7" class="additional" style="width:94%" value="{$form.sti_desc_7}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="sti_8" value="1"{if isset($form.sti_8) && $form.sti_8 == 1} checked="checked"{/if} id="sti_8" /></td>
+                                            <td><label for="sti_8">Harmonising (STI) supply and demand needs</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.sti_8) && $form.sti_8 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="sti_desc_8" id="sti_desc_8" class="additional" style="width:94%" value="{$form.sti_desc_8}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="sti_9" value="1"{if isset($form.sti_9) && $form.sti_9 == 1} checked="checked"{/if} id="sti_9" /></td>
+                                            <td><label for="sti_9">Transforming/absorbing capacities and methodology</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.sti_9) && $form.sti_9 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="sti_desc_9" id="sti_desc_9" class="additional" style="width:94%" value="{$form.sti_desc_9}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="sti_10" value="1"{if isset($form.sti_10) && $form.sti_10 == 1} checked="checked"{/if} id="sti_10" /></td>
+                                            <td><label for="sti_10">Identifying risks, grand challenges and opportunities</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.sti_10) && $form.sti_10 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="sti_desc_10" id="sti_desc_10" class="additional" style="width:94%" value="{$form.sti_desc_10}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="sti_11" value="1"{if isset($form.sti_11) && $form.sti_11 == 1} checked="checked"{/if} id="sti_11" /></td>
+                                            <td><label for="sti_11">Networking and international cooperation</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.sti_11) && $form.sti_11 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="sti_desc_11" id="sti_desc_11" class="additional" style="width:94%" value="{$form.sti_desc_11}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="sti_12" value="1"{if isset($form.sti_12) && $form.sti_12 == 1} checked="checked"{/if} id="sti_12" /></td>
+                                            <td><label for="sti_12">Generating bridges between science and policy</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.sti_12) && $form.sti_12 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="sti_desc_12" id="sti_desc_12" class="additional" style="width:94%" value="{$form.sti_desc_12}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="sti_13" value="1"{if isset($form.sti_13) && $form.sti_13 == 1} checked="checked"{/if} id="sti_13" /></td>
+                                            <td><label for="sti_13">Other, please specify (max 140 chars.)</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.sti_13) && $form.sti_13 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="sti_desc_13" id="sti_desc_13" class="additional" style="width:94%" value="{$form.sti_desc_13}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <script type="text/javascript">
+                              //<![CDATA[
+                                function nextVis(id,elm,visible) {
+                                    var tg = document.getElementById(id);
+                                    if (!tg || !elm.checked) {
+                                        return;
+                                    }
+                                    tg.style.display = (visible ? 'block' : 'none');
+                                }
+                              //]]>
+                            </script>

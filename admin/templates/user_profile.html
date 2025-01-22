@@ -1,0 +1,58 @@
+<h1 class="h-user h-user-profile">{if $data.user.nickname}{$data.user.nickname}{else}{#new_item#}{/if}</h1>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table>
+        <tr>
+            <th class="th-label th-nickname"><label for="nickname">{#nickname#}</label>:</th>
+            <td><input type="text" name="user[nickname]" id="nickname" value="{$data.user.nickname}" size="50" /></td>
+        </tr>
+        <tr title="{#fill_for_change_only#}">
+            <th class="th-label th-password"><label for="passwd">{#password#}</label>:</th>
+            <td><input type="password" name="user[passwd]" id="passwd" value="" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-repassword"><label for="repasswd">{#repassword#}</label>:</th>
+            <td><input type="password" name="user[repasswd]" id="repasswd" value="" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-fname"><label for="fname">{#fname#}</label>:</th>
+            <td><input type="text" name="user[fname]" id="fname" value="{$data.user.fname}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-lname"><label for="lname">{#lname#}</label>:</th>
+            <td><input type="text" name="user[lname]" id="lname" value="{$data.user.lname}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-email"><label for="email">{#email#}</label>:</th>
+            <td><input type="text" name="user[email]" id="email" value="{$data.user.email}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-cmslang"><label for="cmslang">{#cmslang#}</label>:</th>
+            <td>
+                <select name="user[cmslang]" id="cmslang">
+{foreach from=$cmslang item=lang}
+                    <option value="{$lang}"{if $lang == $data.user.cmslang} selected="selected"{/if}>{$lang}</option>
+{/foreach}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th class="th-label th-timezone"><label for="timezone">{#timezone#}</label>:</th>
+            <td>
+                <select name="user[timezone]" id="timezone">
+{foreach from=$timezones item=timezone}
+                    <option value="{$timezone}"{if $timezone == $data.user.timezone} selected="selected"{/if}>{$timezone}</option>
+{/foreach}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="hidden" name="item_id" value="{$item_id}" />
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+    </table>
+</form>
+

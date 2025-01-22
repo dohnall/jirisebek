@@ -1,0 +1,134 @@
+<h1 class="h-user h-user-profile">{if $data.user.nickname}{$data.user.nickname}{else}{#new_item#}{/if}</h1>
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=customer" class="button back">{#back_to_list#}</a></p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table>
+        <tr>
+            <th class="th-label th-nickname"><label for="nickname">{#nickname#}</label>:</th>
+            <td><input type="text" name="user[nickname]" id="nickname" value="{$data.user.nickname}" size="50" /></td>
+        </tr>
+        <tr title="{#fill_for_change_only#}">
+            <th class="th-label th-password"><label for="passwd">{#password#}</label>:</th>
+            <td><input type="password" name="user[passwd]" id="passwd" value="" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-repassword"><label for="repasswd">{#repassword#}</label>:</th>
+            <td><input type="password" name="user[repasswd]" id="repasswd" value="" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-fname"><label for="fname">{#fname#}</label>:</th>
+            <td><input type="text" name="user[fname]" id="fname" value="{$data.user.fname}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-lname"><label for="lname">{#lname#}</label>:</th>
+            <td><input type="text" name="user[lname]" id="lname" value="{$data.user.lname}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-email"><label for="email">{#email#}</label>:</th>
+            <td><input type="text" name="user[email]" id="email" value="{$data.user.email}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-phone"><label for="phone">Telefon</label>:</th>
+            <td><input type="text" name="value[phone]" id="phone" value="{$data.value.phone}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-street"><label for="street">Ulice</label>:</th>
+            <td><input type="text" name="value[street]" id="street" value="{$data.value.street}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-city"><label for="city">Město</label>:</th>
+            <td><input type="text" name="value[city]" id="city" value="{$data.value.city}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-zip"><label for="zip">PSČ</label>:</th>
+            <td><input type="text" name="value[zip]" id="zip" value="{$data.value.zip}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-company"><label for="company_buy">Nakupuji na firmu</label>:</th>
+            <td><input type="checkbox" name="value[company_buy]" id="company_buy" value="1"{if $data.value.company_buy} checked="checked"{/if} /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-company"><label for="company">Firma</label>:</th>
+            <td><input type="text" name="value[company]" id="company" value="{$data.value.company}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-company"><label for="ico">IČ</label>:</th>
+            <td><input type="text" name="value[ico]" id="ico" value="{$data.value.ico}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-company"><label for="dic">DIČ</label>:</th>
+            <td><input type="text" name="value[dic]" id="dic" value="{$data.value.dic}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-company"><label for="deliveryaddress">Jiná dodací adresa</label>:</th>
+            <td><input type="checkbox" name="value[deliveryaddress]" id="deliveryaddress" value="1"{if $data.value.deliveryaddress} checked="checked"{/if} /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-company"><label for="dcompany">Dodací firma</label>:</th>
+            <td><input type="text" name="value[dcompany]" id="dcompany" value="{$data.value.dcompany}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-fname"><label for="dfname">Dodací jméno</label>:</th>
+            <td><input type="text" name="user[dfname]" id="dfname" value="{$data.user.dfname}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-lname"><label for="dlname">Dodací příjmení</label>:</th>
+            <td><input type="text" name="user[dlname]" id="dlname" value="{$data.user.dlname}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-street"><label for="dstreet">Dodací ulice</label>:</th>
+            <td><input type="text" name="value[dstreet]" id="dstreet" value="{$data.value.dstreet}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-city"><label for="city">Dodací město</label>:</th>
+            <td><input type="text" name="value[dcity]" id="dcity" value="{$data.value.dcity}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-zip"><label for="dzip">Dodací PSČ</label>:</th>
+            <td><input type="text" name="value[dzip]" id="dzip" value="{$data.value.dzip}" size="50" /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-delivery"><label for="delivery">Doprava</label>:</th>
+            <td>
+                <select name="value[delivery]" id="delivery">
+                    <option value="0"{if !$data.value.delivery} selected="selected"{/if}>== vyberte ==</option>
+{foreach from=$HELPER->codebook('delivery') item=row}
+                    <option value="{$row->get('item', 'code')}"{if $data.value.delivery == $row->get('item', 'code')} selected="selected"{/if}>{$row->get('item', 'name')}{if $row->get('value', 'info')} ( {$row->get('value', 'info')} ){/if}</option>
+{/foreach}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th class="th-label th-payment"><label for="payment">Platba</label>:</th>
+            <td>
+                <select name="value[payment]" id="payment">
+                    <option value="0"{if !$data.value.payment} selected="selected"{/if}>== vyberte ==</option>
+{foreach from=$HELPER->codebook('payment') item=row}
+                    <option value="{$row->get('item', 'code')}"{if $data.value.payment == $row->get('item', 'code')} selected="selected"{/if}>{$row->get('item', 'name')}{if $row->get('value', 'info')} ( {$row->get('value', 'info')} ){/if}</option>
+{/foreach}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th class="th-label th-company"><label for="newsletter">Souhlasím se zasíláním newsletteru</label>:</th>
+            <td><input type="checkbox" name="value[newsletter]" id="newsletter" value="1"{if $data.value.newsletter} checked="checked"{/if} /></td>
+        </tr>
+        <tr>
+            <th class="th-label th-status"><label for="status">Stav</label>:</th>
+            <td>
+                <select name="user[status]" id="status">
+                    <option value="0"{if !$data.user.status} selected="selected"{/if}>{#inactive#}</option>
+                    <option value="1"{if $data.user.status == 1} selected="selected"{/if}>{#active#}</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="hidden" name="item_id" value="{$item_id}" />
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+    </table>
+</form>
+

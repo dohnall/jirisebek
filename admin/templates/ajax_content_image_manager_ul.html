@@ -1,0 +1,7 @@
+<ul>
+{foreach from=$files item=file}
+	<li><a href="javascript:;"><img src="{$FILES}120/{$file}" alt="{$file}" title="{$file}" /></a></li>
+{foreachelse}
+	<li>{#no_files#}</li>
+{/foreach}
+</ul>

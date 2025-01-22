@@ -1,0 +1,32 @@
+<h1 class="h-dictionary h-dictionary-editindex">{if $code}{$code}{else}{#new_item#}{/if}</h1>
+<p class="navi"><a href="{$ROOT}?module={$MODULE}" class="button back">{#back_to_list#}</a></p>
+<div class="clr"><hr /></div>
+<form method="post" action="">
+    <table>
+        <tr title="{#dictionary_code_hint#}">
+            <th class="th-label th-code"><label for="code">{#code#}:</label></th>
+            <td>
+    {if $code}
+                {$code}
+                <input type="hidden" name="code" value="{$code}" />
+    {else}
+                <input type="text" name="code" id="code" value="" size="50" maxlength="50" />
+    {/if}
+            </td>
+        </tr>
+{foreach from=$langs item=lang}
+        <tr>
+            <th class="th-label th-lang"><label for="value{$lang.lang_id}">{$lang.name}:</label></th>
+            <td><textarea name="value[{$lang.lang_id}]" id="value{$lang.lang_id}" rows="5" cols="50">{if isset($items[$lang.lang_id].value)}{$items[$lang.lang_id].value}{/if}</textarea></td>
+        </tr>
+{/foreach}
+{if $user->hasRight(17)}
+        <tr>
+            <th class="th-submit">&nbsp;</th>
+            <td>
+                <input type="submit" name="save" value="{#save#}" />
+            </td>
+        </tr>
+{/if}
+    </table>
+</form>

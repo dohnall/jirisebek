@@ -1,0 +1,6 @@
+<tr>
+    <td colspan="2">
+        <p><label for="cid_{$type_col.item.code}">{$type_col.item.name}{if $type_col.item.required == 1}&nbsp;*{/if}:</label></p>
+        <textarea id="cid_{$type_col.item.code}" class="html" name="item[value][{$type_col.item.code}]" style="width:{if $type_col.param.width}{$type_col.param.width}{else}100%{/if}; height:{if $type_col.param.height}{$type_col.param.height}{else}100px{/if};">{$type_value}</textarea>
+    </td>
+</tr>

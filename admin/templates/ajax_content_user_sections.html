@@ -1,0 +1,12 @@
+<ul>
+{foreach from=$item->get('children', true) item=child}
+    <li>
+    {if $child->hasChildren()}
+        <a href="javascript:;" id="i_{$child->section_id}_{$child->domain_id}_{$child->lang_id}"><span class="ui-icon ui-icon-circlesmall-plus"></span></a>
+    {else}
+        <span class="ui-icon ui-icon-document"></span>
+    {/if}
+        <input type="checkbox" name="section[{$child->domain_id}][{$child->section_id}]" id="section_{$child->domain_id}_{$child->section_id}" class="domain_{$child->domain_id}" value="{$child->section_id}" /> <label for="section_{$child->domain_id}_{$child->section_id}">{$child->get('text', 'name')}</label>
+    </li>
+{/foreach}
+</ul>

@@ -1,0 +1,56 @@
+<div class="section_heading">
+    <span class="section_heading_text">{$SECTION->get('value', 'header')}</span>
+</div>
+
+<p class="section_text mt32">{$SECTION->get('value', 'anotation')}</p>
+
+<div class="gallery_wide mt32">
+    {foreach from=$COMPONENTS.hp_architecture item=row}
+    {$image = $row->get('file', 'image')}
+    <a href="{$row->get('url')}" class="gallery_wide_link">
+        {if $image}
+        <img src="{$FILES}w600/{$image[0].file}" alt="{$image[0].alt}" />
+        {/if}
+        <span class="gallery_wide_hover">
+            <span class="gallery_wide_title">{$row->get('section', 'name')}</span>
+            <span class="gallery_wide_desc">{$row->get('value', 'architect')}</span>
+        </span>
+    </a>
+    {/foreach}
+</div>
+
+<div class="flexed_center hp_more_projects">
+    <a href="{$HELPER->section(2)->get('url')}" class="button_primary">{#more_projects#}</a>
+</div>
+
+<div class="section_heading">
+    <span class="section_heading_text">{#services#}</span>
+</div>
+
+<div class="gallery_cube gallery_cube_4 mt32">
+    {foreach from=$COMPONENTS.hp_services item=row}
+    {$image = $row->get('file', 'image')}
+    <a href="{$row->get('url')}" class="gallery_cube_link">
+        {if $image}
+        <img src="{$FILES}w600/{$image[0].file}" alt="{$image[0].alt}" />
+        {/if}
+        <span>{$row->get('section', 'name')}</span>
+    </a>
+    {/foreach}
+</div>
+
+<div class="section_heading mt32">
+    <span class="section_heading_text">{#personal_projects#}</span>
+</div>
+
+<div class="gallery_cube gallery_cube_3 mt32">
+    {foreach from=$COMPONENTS.hp_art item=row}
+    {$image = $row->get('file', 'image')}
+    <a href="{$row->get('url')}" class="gallery_cube_link">
+        {if $image}
+        <img src="{$FILES}w600/{$image[0].file}" alt="{$image[0].alt}" />
+        {/if}
+        <span>{$row->get('section', 'name')}</span>
+    </a>
+    {/foreach}
+</div>

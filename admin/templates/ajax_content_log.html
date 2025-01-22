@@ -1,0 +1,15 @@
+{include file="pager-detail.html"}
+<table class="list">
+	<tr>
+		<th class="th-section">{#user#}</th>
+		<th class="th-main">{#inserted#}</th>
+		<th class="th-action">{#action#}</th>
+	</tr>
+{foreach from=$item->get('log') item=log}
+	<tr class="{cycle values='odd,even'}">
+		<td>{$log.nickname} ({$log.fname} {$log.lname})</td>
+		<td>{$log.inserted|date_format:"%d.%m.%Y %H:%M:%S"}</td>
+		<td>UPDATE</td>
+	</tr>
+{/foreach}
+</table>

@@ -1,0 +1,16 @@
+<tr>
+    <th class="th-label th-cid-{$type_col.item.code}">
+        <label for="cid_{$type_col.item.code}">{$type_col.item.name}{if $type_col.item.required == 1}&nbsp;*{/if}:</label>
+    </th>
+    <td>
+        <input type="hidden" name="item[value][{$type_col.item.code}]" value="">
+        <select class="select2" style="float:left;" name="item[value][{$type_col.item.code}]{if $type_col.param.multiselect == 1}[]{/if}" id="cid_{$type_col.item.code}"{if $type_col.param.disabled == 1 || $type_col.item.readonly == 1} disabled="disabled"{/if}{if $type_col.param.size > 0} size="{$type_col.param.size}"{/if}{if $type_col.param.multiselect == 1} multiple="multiple"{/if} data-placeholder="{#select#}">
+{foreach from=$type_options key=k item=v}
+            <option value="{$k}"{if $k == $type_value || (is_array($type_value) && in_array($k, $type_value))} selected="selected"{/if}>{$v}</option>
+{/foreach}
+        </select>
+        {if $type_col.param.disabled == 1 || $type_col.item.readonly == 1}<input type="hidden" name="item[value][{$type_col.item.code}]" value="{$type_value}" />{/if}
+        {if preg_match('/[1-f0-9]{3,6}/', $type_value)}<span style="display:block; margin:3px 0 0 10px; width:20px; height:20px; border:solid 1px #000; float:left; background-color:#{$type_value};"></span>{/if}
+		{if $type_col.item.hint} {$type_col.item.hint}{/if}
+    </td>
+</tr>

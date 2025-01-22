@@ -1,0 +1,22 @@
+<h1 class="h-user h-user-user">Statistika - termíny akce - {$action->get('value', 'fullname')}</h1>
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=stats" class="button back">Zpět na výpis akcí</a></p>
+<table class="list table-user table-user-user">
+    <thead>
+        <tr>
+            <th class="th-name">Datum a čas představení</th>
+            <th class="th-capacity">Kapacita</th>
+            <th class="th-filled">Rezervací</th>
+            <th class="th-efficiency">Účastníků</th>
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=course&amp;id={$row.course_id}">{$row.start|date_format:"%d.%m.%Y %H:%M"}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=course&amp;id={$row.course_id}">{$action->get('value', 'capacity')}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=course&amp;id={$row.course_id}">{$row.applied}</a></td>
+			<td><a href="{$ROOT}?module={$MODULE}&amp;submodule=course&amp;id={$row.course_id}">{$row.confirmed}</a></td>
+        </tr>
+{/foreach}
+    </tbody>
+</table>

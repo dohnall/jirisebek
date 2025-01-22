@@ -1,0 +1,27 @@
+<h1 class="h-settings h-settings-right">{#rights#}</h1>
+{if $user->hasRight(8)}
+<p class="navi"><a href="{$ROOT}?module={$MODULE}&amp;submodule=editright" class="button new">{#new_item#}</a></p>
+{/if}
+<table class="list table-settings table-settings-right">
+    <thead>
+        <tr>
+            <th class="th-id">{#id#}</th>
+            <th class="th-name">{#name#}</th>
+{if $user->hasRight(8)}
+            <th class="th-action">{#action#}</th>
+{/if}
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$items item=row}
+        <tr class="{cycle values='odd,even'}">
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editright&amp;id={$row.right_id}">{$row.right_id}</a></td>
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=editright&amp;id={$row.right_id}">{$row.name}</a></td>
+	{if $user->hasRight(8)}
+            <td><a href="{$ROOT}?module={$MODULE}&amp;submodule=right&amp;id={$row.right_id}&amp;action=delete" class="delete">{#delete#}</a></td>
+	{/if}
+        </tr>
+{/foreach}
+    </tbody>
+</table>
+

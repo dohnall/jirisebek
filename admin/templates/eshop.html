@@ -1,0 +1,10 @@
+<div id="menu">
+    <ul>
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=customer"{if $SUBMODULE == 'customer' || $SUBMODULE == 'editcustomer'} class="active"{/if}>Zákazníci</a></li>
+        <li><a href="{$ROOT}?module={$MODULE}&amp;submodule=order"{if $SUBMODULE == 'order' || $SUBMODULE == 'editorder'} class="active"{/if}>Objednávky</a></li>
+    </ul>
+</div>
+<div id="content">
+    {include file="`$MODULE`_`$SUBMODULE`.html"}
+</div>
+

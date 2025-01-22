@@ -1,0 +1,657 @@
+                    <h6>Annexe 1.27: Recommending Futures (6/6)</h6>
+                    <h1><b>(FHS) Research</b></h1>
+                    <div class="oracle-form">
+                        <form action="" method="post">
+                            <h3>Q1: Did the study recommended new <i>(FHS) Research</i>?</h3>
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="anticipate" value="1"{if $form.anticipate == 1} checked="checked"{/if} id="input-1-15-1-1" onchange="nextVis('a-1-15-q-2',this,true);" /></td>
+                                            <td><label for="input-1-15-1-1"><b style="font-size:15px">Yes</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="anticipate" value="0"{if $form.anticipate < 1} checked="checked"{/if} id="input-1-15-1-2" onchange="nextVis('a-1-15-q-2',this,false);" /></td>
+                                            <td><label for="input-1-15-1-2"><b style="font-size:15px">No</b></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="a-1-15-q-2" style="display:{if $form.anticipate < 1}none{else}block{/if};">
+                                <h3>Q2: If Yes, please list up to 5 new <i>(FHS) Research</i> recommended by the study.</h3>
+                                <div class="table-wrapper" style="margin-bottom:1em">
+                                    <table>
+                                        <col style="width:28px" />
+                                        <col style="width:46px" />
+                                        <col />
+                                        <col style="width:36px" />
+                                        <col style="width:36px" />
+                                        <col style="width:36px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <thead>
+                                            <tr>
+                                                <th class="t-c" rowspan="2">No.</th>
+                                                <th class="t-c" rowspan="2">Issue Type</th>
+                                                <th class="t-l" rowspan="2">Short Name (max. 140) and Objective (max. 700)</th>
+                                                <th class="t-c" colspan="3">FRASCATI Sub-Areas</th>
+                                                <th class="t-c" colspan="6">TEEPSE Relevance (select&nbsp;up&nbsp;to&nbsp;3)</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="t-c">#1</th>
+                                                <th class="t-c">#2</th>
+                                                <th class="t-c">#3</th>
+                                                <th class="t-c no-h-pad">Tec</th>
+                                                <th class="t-c no-h-pad">Eco</th>
+                                                <th class="t-c no-h-pad">Env</th>
+                                                <th class="t-c no-h-pad">Pol</th>
+                                                <th class="t-c no-h-pad">Soc</th>
+                                                <th class="t-c no-h-pad">Eth</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="rowspan">
+                                                <td class="t-r" rowspan="7"><div class="semi-label"><b>1</b></div></td>
+                                                <td class="t-r nb" rowspan="7">
+                                                    <span class="relative">
+                                                        <input type="text" class="number vsf" style="width:35px;" maxlength="3" name="type_1" value="{$form.type_1}" />
+                                                        <span class="number-select vsf" style="left:36px;">
+                                                            <span class="s"><b style="width:2.2em;">F</b> &ndash; Further Foresight</span>
+                                                            <span class="s"><b style="width:2.2em;">HS</b> &ndash; Further Horizon Scanning</span>
+                                                            <span class="s"><b style="width:2.2em;">RE</b> &ndash; Further Research</span>
+                                                            <span class="s"><b style="width:2.2em;">O</b> &ndash; Other</span>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <label>
+                                                        <small style="display:none">Name:</small>
+                                                        <input type="text" class="additional" maxlength="140" style="width:274px;margin-bottom:4px;font-size:14px;font-weight:bold" name="name_1" value="{$form.name_1}" />
+                                                        <span class="counter">{$form.name_1|count_characters:true}</span>
+                                                    </label>
+                                                    <label>
+                                                        <small style="display:none">Objective:</small>
+                                                        <textarea class="additional" cols="10" rows="3" style="width:274px;margin-bottom:4px;padding:2px;margin:0;color:#777;max-height:300px" name="objective_1">{$form.objective_1}</textarea>
+                                                        <span class="counter">{$form.objective_1|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_1_1" value="{$form.frascati_1_1}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_2_1" value="{$form.frascati_2_1}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_3_1" value="{$form.frascati_3_1}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="technological_1" value="1"{if $form.technological_1 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="economic_1" value="1"{if $form.economic_1 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="environmental_1" value="1"{if $form.environmental_1 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="political_1" value="1"{if $form.political_1 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="social_1" value="1"{if $form.social_1 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="ethical_1" value="1"{if $form.ethical_1 == 1} checked="checked"{/if} /></td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Expected Impact (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_1" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_1}</textarea>
+                                                        <span class="counter">{$form.importance_1|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Importance for Europe (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_eu_1" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_eu_1}</textarea>
+                                                        <span class="counter">{$form.importance_eu_1|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Importance for {if $USER && $USER->get('value', 'country')}{$USER->get('value', 'country')}{else}Your country{/if} (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_yc_1" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_yc_1}</textarea>
+                                                        <span class="counter">{$form.importance_yc_1|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-wrapper" style="margin-bottom:1em">
+                                    <table>
+                                        <col style="width:28px" />
+                                        <col style="width:46px" />
+                                        <col />
+                                        <col style="width:36px" />
+                                        <col style="width:36px" />
+                                        <col style="width:36px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <thead>
+                                            <tr>
+                                                <th class="t-c" rowspan="2">No.</th>
+                                                <th class="t-c" rowspan="2">Issue Type</th>
+                                                <th class="t-l" rowspan="2">Short Name (max. 140) and Objective (max. 700)</th>
+                                                <th class="t-c" colspan="3">FRASCATI Sub-Areas</th>
+                                                <th class="t-c" colspan="6">TEEPSE Relevance (select&nbsp;up&nbsp;to&nbsp;3)</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="t-c">#1</th>
+                                                <th class="t-c">#2</th>
+                                                <th class="t-c">#3</th>
+                                                <th class="t-c no-h-pad">Tec</th>
+                                                <th class="t-c no-h-pad">Eco</th>
+                                                <th class="t-c no-h-pad">Env</th>
+                                                <th class="t-c no-h-pad">Pol</th>
+                                                <th class="t-c no-h-pad">Soc</th>
+                                                <th class="t-c no-h-pad">Eth</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="rowspan">
+                                                <td class="t-r" rowspan="7"><div class="semi-label"><b>2</b></div></td>
+                                                <td class="t-r nb" rowspan="7">
+                                                    <span class="relative">
+                                                        <input type="text" class="number vsf" style="width:35px;" maxlength="3" name="type_2" value="{$form.type_2}" />
+                                                        <span class="number-select vsf" style="left:36px;">
+                                                            <span class="s"><b style="width:2.2em;">F</b> &ndash; Further Foresight</span>
+                                                            <span class="s"><b style="width:2.2em;">HS</b> &ndash; Further Horizon Scanning</span>
+                                                            <span class="s"><b style="width:2.2em;">RE</b> &ndash; Further Research</span>
+                                                            <span class="s"><b style="width:2.2em;">O</b> &ndash; Other</span>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <label>
+                                                        <small style="display:none">Name:</small>
+                                                        <input type="text" class="additional" maxlength="140" style="width:274px;margin-bottom:4px;font-size:14px;font-weight:bold" name="name_2" value="{$form.name_2}" />
+                                                        <span class="counter">{$form.name_2|count_characters:true}</span>
+                                                    </label>
+                                                    <label>
+                                                        <small style="display:none">Objective:</small>
+                                                        <textarea class="additional" cols="10" rows="3" style="width:274px;margin-bottom:4px;padding:2px;margin:0;color:#777;max-height:300px" name="objective_2">{$form.objective_2}</textarea>
+                                                        <span class="counter">{$form.objective_2|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_1_2" value="{$form.frascati_1_2}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_2_2" value="{$form.frascati_2_2}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_3_2" value="{$form.frascati_3_2}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="technological_2" value="1"{if $form.technological_2 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="economic_2" value="1"{if $form.economic_2 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="environmental_2" value="1"{if $form.environmental_2 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="political_2" value="1"{if $form.political_2 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="social_2" value="1"{if $form.social_2 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="ethical_2" value="1"{if $form.ethical_2 == 1} checked="checked"{/if} /></td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Expected Impact (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_2" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_2}</textarea>
+                                                        <span class="counter">{$form.importance_2|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Importance for Europe (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_eu_2" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_eu_2}</textarea>
+                                                        <span class="counter">{$form.importance_eu_2|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Importance for {if $USER && $USER->get('value', 'country')}{$USER->get('value', 'country')}{else}Your country{/if} (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_yc_2" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_yc_2}</textarea>
+                                                        <span class="counter">{$form.importance_yc_2|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-wrapper" style="margin-bottom:1em">
+                                    <table>
+                                        <col style="width:28px" />
+                                        <col style="width:46px" />
+                                        <col />
+                                        <col style="width:36px" />
+                                        <col style="width:36px" />
+                                        <col style="width:36px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <thead>
+                                            <tr>
+                                                <th class="t-c" rowspan="2">No.</th>
+                                                <th class="t-c" rowspan="2">Issue Type</th>
+                                                <th class="t-l" rowspan="2">Short Name (max. 140) and Objective (max. 700)</th>
+                                                <th class="t-c" colspan="3">FRASCATI Sub-Areas</th>
+                                                <th class="t-c" colspan="6">TEEPSE Relevance (select&nbsp;up&nbsp;to&nbsp;3)</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="t-c">#1</th>
+                                                <th class="t-c">#2</th>
+                                                <th class="t-c">#3</th>
+                                                <th class="t-c no-h-pad">Tec</th>
+                                                <th class="t-c no-h-pad">Eco</th>
+                                                <th class="t-c no-h-pad">Env</th>
+                                                <th class="t-c no-h-pad">Pol</th>
+                                                <th class="t-c no-h-pad">Soc</th>
+                                                <th class="t-c no-h-pad">Eth</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="rowspan">
+                                                <td class="t-r" rowspan="7"><div class="semi-label"><b>3</b></div></td>
+                                                <td class="t-r nb" rowspan="7">
+                                                    <span class="relative">
+                                                        <input type="text" class="number vsf" style="width:35px;" maxlength="3" name="type_3" value="{$form.type_3}" />
+                                                        <span class="number-select vsf" style="left:36px;">
+                                                            <span class="s"><b style="width:2.2em;">F</b> &ndash; Further Foresight</span>
+                                                            <span class="s"><b style="width:2.2em;">HS</b> &ndash; Further Horizon Scanning</span>
+                                                            <span class="s"><b style="width:2.2em;">RE</b> &ndash; Further Research</span>
+                                                            <span class="s"><b style="width:2.2em;">O</b> &ndash; Other</span>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <label>
+                                                        <small style="display:none">Name:</small>
+                                                        <input type="text" class="additional" maxlength="140" style="width:274px;margin-bottom:4px;font-size:14px;font-weight:bold" name="name_3" value="{$form.name_3}" />
+                                                        <span class="counter">{$form.name_3|count_characters:true}</span>
+                                                    </label>
+                                                    <label>
+                                                        <small style="display:none">Objective:</small>
+                                                        <textarea class="additional" cols="10" rows="3" style="width:274px;margin-bottom:4px;padding:2px;margin:0;color:#777;max-height:300px" name="objective_3">{$form.objective_3}</textarea>
+                                                        <span class="counter">{$form.objective_3|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_1_3" value="{$form.frascati_1_3}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_2_3" value="{$form.frascati_2_3}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_3_3" value="{$form.frascati_3_3}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="technological_3" value="1"{if $form.technological_3 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="economic_3" value="1"{if $form.economic_3 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="environmental_3" value="1"{if $form.environmental_3 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="political_3" value="1"{if $form.political_3 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="social_3" value="1"{if $form.social_3 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="ethical_3" value="1"{if $form.ethical_3 == 1} checked="checked"{/if} /></td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Expected Impact (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_3" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_3}</textarea>
+                                                        <span class="counter">{$form.importance_3|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Importance for Europe (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_eu_3" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_eu_3}</textarea>
+                                                        <span class="counter">{$form.importance_eu_3|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Importance for {if $USER && $USER->get('value', 'country')}{$USER->get('value', 'country')}{else}Your country{/if} (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_yc_3" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_yc_3}</textarea>
+                                                        <span class="counter">{$form.importance_yc_3|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-wrapper" style="margin-bottom:1em">
+                                    <table>
+                                        <col style="width:28px" />
+                                        <col style="width:46px" />
+                                        <col />
+                                        <col style="width:36px" />
+                                        <col style="width:36px" />
+                                        <col style="width:36px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <thead>
+                                            <tr>
+                                                <th class="t-c" rowspan="2">No.</th>
+                                                <th class="t-c" rowspan="2">Issue Type</th>
+                                                <th class="t-l" rowspan="2">Short Name (max. 140) and Objective (max. 700)</th>
+                                                <th class="t-c" colspan="3">FRASCATI Sub-Areas</th>
+                                                <th class="t-c" colspan="6">TEEPSE Relevance (select&nbsp;up&nbsp;to&nbsp;3)</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="t-c">#1</th>
+                                                <th class="t-c">#2</th>
+                                                <th class="t-c">#3</th>
+                                                <th class="t-c no-h-pad">Tec</th>
+                                                <th class="t-c no-h-pad">Eco</th>
+                                                <th class="t-c no-h-pad">Env</th>
+                                                <th class="t-c no-h-pad">Pol</th>
+                                                <th class="t-c no-h-pad">Soc</th>
+                                                <th class="t-c no-h-pad">Eth</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="rowspan">
+                                                <td class="t-r" rowspan="7"><div class="semi-label"><b>4</b></div></td>
+                                                <td class="t-r nb" rowspan="7">
+                                                    <span class="relative">
+                                                        <input type="text" class="number vsf" style="width:35px;" maxlength="3" name="type_4" value="{$form.type_4}" />
+                                                        <span class="number-select vsf" style="left:36px;">
+                                                            <span class="s"><b style="width:2.2em;">F</b> &ndash; Further Foresight</span>
+                                                            <span class="s"><b style="width:2.2em;">HS</b> &ndash; Further Horizon Scanning</span>
+                                                            <span class="s"><b style="width:2.2em;">RE</b> &ndash; Further Research</span>
+                                                            <span class="s"><b style="width:2.2em;">O</b> &ndash; Other</span>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <label>
+                                                        <small style="display:none">Name:</small>
+                                                        <input type="text" class="additional" maxlength="140" style="width:274px;margin-bottom:4px;font-size:14px;font-weight:bold" name="name_4" value="{$form.name_4}" />
+                                                        <span class="counter">{$form.name_4|count_characters:true}</span>
+                                                    </label>
+                                                    <label>
+                                                        <small style="display:none">Objective:</small>
+                                                        <textarea class="additional" cols="10" rows="3" style="width:274px;margin-bottom:4px;padding:2px;margin:0;color:#777;max-height:300px" name="objective_4">{$form.objective_4}</textarea>
+                                                        <span class="counter">{$form.objective_4|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_1_4" value="{$form.frascati_1_4}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_2_4" value="{$form.frascati_2_4}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_3_4" value="{$form.frascati_3_4}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="technological_4" value="1"{if $form.technological_4 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="economic_4" value="1"{if $form.economic_4 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="environmental_4" value="1"{if $form.environmental_4 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="political_4" value="1"{if $form.political_4 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="social_4" value="1"{if $form.social_4 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="ethical_4" value="1"{if $form.ethical_4 == 1} checked="checked"{/if} /></td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Expected Impact (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_4" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_4}</textarea>
+                                                        <span class="counter">{$form.importance_4|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Importance for Europe (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_eu_4" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_eu_4}</textarea>
+                                                        <span class="counter">{$form.importance_eu_4|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Importance for {if $USER && $USER->get('value', 'country')}{$USER->get('value', 'country')}{else}Your country{/if} (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_yc_4" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_yc_4}</textarea>
+                                                        <span class="counter">{$form.importance_yc_4|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="table-wrapper" style="margin-bottom:1em">
+                                    <table>
+                                        <col style="width:28px" />
+                                        <col style="width:46px" />
+                                        <col />
+                                        <col style="width:36px" />
+                                        <col style="width:36px" />
+                                        <col style="width:36px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <col style="width:28px" />
+                                        <thead>
+                                            <tr>
+                                                <th class="t-c" rowspan="2">No.</th>
+                                                <th class="t-c" rowspan="2">Issue Type</th>
+                                                <th class="t-l" rowspan="2">Short Name (max. 140) and Objective (max. 700)</th>
+                                                <th class="t-c" colspan="3">FRASCATI Sub-Areas</th>
+                                                <th class="t-c" colspan="6">TEEPSE Relevance (select&nbsp;up&nbsp;to&nbsp;3)</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="t-c">#1</th>
+                                                <th class="t-c">#2</th>
+                                                <th class="t-c">#3</th>
+                                                <th class="t-c no-h-pad">Tec</th>
+                                                <th class="t-c no-h-pad">Eco</th>
+                                                <th class="t-c no-h-pad">Env</th>
+                                                <th class="t-c no-h-pad">Pol</th>
+                                                <th class="t-c no-h-pad">Soc</th>
+                                                <th class="t-c no-h-pad">Eth</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="rowspan">
+                                                <td class="t-r" rowspan="7"><div class="semi-label"><b>5</b></div></td>
+                                                <td class="t-r nb" rowspan="7">
+                                                    <span class="relative">
+                                                        <input type="text" class="number vsf" style="width:35px;" maxlength="3" name="type_5" value="{$form.type_5}" />
+                                                        <span class="number-select vsf" style="left:36px;">
+                                                            <span class="s"><b style="width:2.2em;">F</b> &ndash; Further Foresight</span>
+                                                            <span class="s"><b style="width:2.2em;">HS</b> &ndash; Further Horizon Scanning</span>
+                                                            <span class="s"><b style="width:2.2em;">RE</b> &ndash; Further Research</span>
+                                                            <span class="s"><b style="width:2.2em;">O</b> &ndash; Other</span>
+                                                        </span>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <label>
+                                                        <small style="display:none">Name:</small>
+                                                        <input type="text" class="additional" maxlength="140" style="width:274px;margin-bottom:4px;font-size:14px;font-weight:bold" name="name_5" value="{$form.name_5}" />
+                                                        <span class="counter">{$form.name_5|count_characters:true}</span>
+                                                    </label>
+                                                    <label>
+                                                        <small style="display:none">Objective:</small>
+                                                        <textarea class="additional" cols="10" rows="3" style="width:274px;margin-bottom:4px;padding:2px;margin:0;color:#777;max-height:300px" name="objective_5">{$form.objective_5}</textarea>
+                                                        <span class="counter">{$form.objective_5|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_1_5" value="{$form.frascati_1_5}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_2_5" value="{$form.frascati_2_5}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-r nb">
+                                                    <span class="relative">
+                                                        <input type="text" class="number" maxlength="1" name="frascati_3_5" value="{$form.frascati_3_5}" style="width:22px" />
+                                                        {include file="frascati.html"}
+                                                    </span>
+                                                </td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="technological_5" value="1"{if $form.technological_5 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="economic_5" value="1"{if $form.economic_5 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="environmental_5" value="1"{if $form.environmental_5 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="political_5" value="1"{if $form.political_5 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="social_5" value="1"{if $form.social_5 == 1} checked="checked"{/if} /></td>
+                                                <td class="t-c"><input type="checkbox" style="margin:0" name="ethical_5" value="1"{if $form.ethical_5 == 1} checked="checked"{/if} /></td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Expected Impact (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_5" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_5}</textarea>
+                                                        <span class="counter">{$form.importance_5|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Importance for Europe (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_eu_5" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_eu_5}</textarea>
+                                                        <span class="counter">{$form.importance_eu_5|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="10" class="t-l">Importance for {if $USER && $USER->get('value', 'country')}{$USER->get('value', 'country')}{else}Your country{/if} (max. 700 characters)</th>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="10">
+                                                    <label>
+                                                        <small style="display:none">Summary:</small>
+                                                        <textarea name="importance_yc_5" class="additional" cols="10" rows="3" style="width:554px;margin-bottom:4px;padding:2px;margin:0;color:#777;height:49px;height:36px;max-height:300px">{$form.importance_yc_5}</textarea>
+                                                        <span class="counter">{$form.importance_yc_5|count_characters:true}</span>
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <script type="text/javascript">
+                            {literal}
+                              //<![CDATA[
+                                function nextVis(id,elm,visible) {
+                                    var tg = document.getElementById(id);
+                                    if (!tg || !elm.checked) {
+                                        return;
+                                    }
+                                    tg.style.display = (visible ? 'block' : 'none');
+                                }
+                              //]]>
+                            {/literal}
+                            </script>

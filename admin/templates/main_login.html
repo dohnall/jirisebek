@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta http-equiv="ImageToolbar" content="no" />
+<title>{$dictionary.$MODULE} | {$dictionary[{"cms_title_`$COMPANY`"}]}</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="{$DESIGN}jquery.ui.all.css" rel="stylesheet" type="text/css" />
+<link href="{$DESIGN}blueprint/screen.css" rel="stylesheet" type="text/css" media="screen,tv,projection" />
+<!--[if lt IE 8]><link href="{$DESIGN}blueprint/ie.css" rel="stylesheet" type="text/css" media="screen,tv,projection" /><![endif]-->
+<link href="{$DESIGN}blueprint/print.css" rel="stylesheet" type="text/css" media="print" />
+<link href="http://fonts.googleapis.com/css?family=Signika:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+<link href="{$DESIGN}main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$JS}jquery.js"></script>
+<script type="text/javascript" src="{$JS}login.js"></script>
+</head>
+<body class="login no-js">{literal}
+    <script type="text/javascript">
+      //<![CDATA[
+        document.body.className = document.body.className.replace(/(^| )no-js( |$)/, '$1js$2');
+        if (typeof jQuery === 'function') {
+            for (UA_NAME in jQuery.browser) break;
+            UA_VERSION = parseInt(jQuery.browser.version, 10);
+        }
+        document.body.className += ' ' + (UA_NAME || '') + ' v' + (UA_VERSION || '');
+      //]]>
+    </script>{/literal}
+    </script>
+    <div id="main">
+        <div class="login-module hide-if-js" id="login-module">
+            {include file="`$MODULE`_`$SUBMODULE`.html"}
+        </div>
+        {if $alert}
+            <div id="alert" class="notification {$alert_css_class}">{$alert}</div>
+        {/if}
+    </div>
+    <div class="footer">
+        &copy; {$dictionary[{"cms_copyright_`$COMPANY`"}]}, {#author#}: {mailto address=$dictionary[{"author_contact_`$COMPANY`"}] encode="hex"}
+    </div>
+</body>
+</html>

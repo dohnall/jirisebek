@@ -1,0 +1,548 @@
+                    <h6>Annexe 1.29: Transforming (2/6)</h6>
+                    <h1><b>Capacities and skills</b></h1>
+                    <div class="oracle-form">
+                        <form action="" method="post">
+
+                            <h3>Q1: Did the initiative/project lead to NEW know-how capabilities on...?</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="capability" value="1"{if $form.capability == 1} checked="checked"{/if} id="capability1" onchange="nextVis('capability_yes',this,true);" /></td>
+                                            <td><label for="capability1"><b style="font-size:15px">Yes</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="capability" value="0"{if $form.capability == 0 || !$form.capability} checked="checked"{/if} id="capability0" onchange="nextVis('capability_yes',this,false);" /></td>
+                                            <td><label for="capability0"><b style="font-size:15px">No</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="capability" value="2"{if $form.capability == 2} checked="checked"{/if} id="capability2" onchange="nextVis('capability_yes',this,false);" /></td>
+                                            <td><label for="capability2"><b style="font-size:15px">Too early to tell</b></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div id="capability_yes" style="display:{if $form.capability == 1}block{else}none{/if};">
+
+                                <br />
+
+                                <div class="table-wrapper">
+                                    <table>
+                                        <col style="width:36px" />
+                                        <col style="" />
+                                        <tr>
+                                            <th colspan="2" class="t-l">Capacities</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="capacity_1"{if isset($form.capacity_1) && $form.capacity_1 == 1} checked="checked"{/if} value="1" id="capacity_1" /></td>
+                                            <td><label for="capacity_1">Phase 1 of FLA: scoping futures</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.capacity_1) && $form.capacity_1 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="capacity_desc_1" id="capacity_desc_1" class="additional" style="width:94%" value="{$form.capacity_desc_1}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="capacity_2"{if isset($form.capacity_2) && $form.capacity_2 == 1} checked="checked"{/if} value="1" id="capacity_2" /></td>
+                                            <td><label for="capacity_2">Phase 2 of FLA: mobilising futures</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.capacity_2) && $form.capacity_2 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="capacity_desc_2" id="capacity_desc_2" class="additional" style="width:94%" value="{$form.capacity_desc_2}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="capacity_3"{if isset($form.capacity_3) && $form.capacity_3 == 1} checked="checked"{/if} value="1" id="capacity_3" /></td>
+                                            <td><label for="capacity_3">Phase 3 of FLA: anticipating futures</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.capacity_3) && $form.capacity_3 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="capacity_desc_3" id="capacity_desc_3" class="additional" style="width:94%" value="{$form.capacity_desc_3}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="capacity_4"{if isset($form.capacity_4) && $form.capacity_4 == 1} checked="checked"{/if} value="1" id="capacity_4" /></td>
+                                            <td><label for="capacity_4">Phase 4 of FLA: recommending futures</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.capacity_4) && $form.capacity_4 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="capacity_desc_4" id="capacity_desc_4" class="additional" style="width:94%" value="{$form.capacity_desc_4}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="capacity_5"{if isset($form.capacity_5) && $form.capacity_5 == 1} checked="checked"{/if} value="1" id="capacity_5" /></td>
+                                            <td><label for="capacity_5">Phase 5 of FLA: transforming futures</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.capacity_5) && $form.capacity_5 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="capacity_desc_5" id="capacity_desc_5" class="additional" style="width:94%" value="{$form.capacity_desc_5}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="capacity_6"{if isset($form.capacity_6) && $form.capacity_6 == 1} checked="checked"{/if} value="1" id="capacity_6" /></td>
+                                            <td><label for="capacity_6">Phase 5* of FLA: evaluating futures</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.capacity_6) && $form.capacity_6 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="capacity_desc_6" id="capacity_desc_6" class="additional" style="width:94%" value="{$form.capacity_desc_6}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="capacity_7"{if isset($form.capacity_7) && $form.capacity_7 == 1} checked="checked"{/if} value="1" id="capacity_7" /></td>
+                                            <td><label for="capacity_7">Phase 5** of FLA: renewing futures</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.capacity_7) && $form.capacity_7 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="capacity_desc_7" id="capacity_desc_7" class="additional" style="width:94%" value="{$form.capacity_desc_7}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <h3>Q2: Did the initiative/project lead to NEW WAYS of...?</h3>
+
+                            <div class="table-wrapper">
+                                <table>
+                                    <col style="width:36px" />
+                                    <col />
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="radio" name="newway" value="1"{if $form.newway == 1} checked="checked"{/if} id="newway1" onchange="nextVis('newway_yes',this,true);" /></td>
+                                            <td><label for="newway1"><b style="font-size:15px">Yes</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="newway" value="0"{if $form.newway == 0 || !$form.newway} checked="checked"{/if} id="newway0" onchange="nextVis('newway_yes',this,false);" /></td>
+                                            <td><label for="newway0"><b style="font-size:15px">No</b></label></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="radio" name="newway" value="2"{if $form.newway == 2} checked="checked"{/if} id="newway2" onchange="nextVis('newway_yes',this,false);" /></td>
+                                            <td><label for="newway2"><b style="font-size:15px">Too early to tell</b></label></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div id="newway_yes" style="display:{if $form.newway == 1}block{else}none{/if};">
+
+                                <br />
+
+                                <div class="table-wrapper">
+                                    <table>
+                                        <col style="width:36px" />
+                                        <col style="" />
+                                        <tr>
+                                            <th class="t-l" colspan="2">Skills</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="group-subcat" colspan="2">
+                                                <b style="font-size:14px;line-height:22px">Management</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="management_1"{if isset($form.management_1) && $form.management_1 == 1} checked="checked"{/if} value="1" id="management_1" /></td>
+                                            <td class="group-subcat"><label for="management_1">delegating activities/tasks</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.management_1) && $form.management_1 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="management_desc_1" id="management_desc_1" class="additional" style="width:94%" value="{$form.management_desc_1}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="management_2"{if isset($form.management_2) && $form.management_2 == 1} checked="checked"{/if} value="1" id="management_2" /></td>
+                                            <td class="group-subcat"><label for="management_2">making decisions</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.management_2) && $form.management_2 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="management_desc_2" id="management_desc_2" class="additional" style="width:94%" value="{$form.management_desc_2}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="management_3"{if isset($form.management_3) && $form.management_3 == 1} checked="checked"{/if} value="1" id="management_3" /></td>
+                                            <td class="group-subcat"><label for="management_3">managing crises</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.management_3) && $form.management_3 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="management_desc_3" id="management_desc_3" class="additional" style="width:94%" value="{$form.management_desc_3}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="management_4"{if isset($form.management_4) && $form.management_4 == 1} checked="checked"{/if} value="1" id="management_4" /></td>
+                                            <td class="group-subcat"><label for="management_4">managing financial resources</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.management_4) && $form.management_4 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="management_desc_4" id="management_desc_4" class="additional" style="width:94%" value="{$form.management_desc_4}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="management_5"{if isset($form.management_5) && $form.management_5 == 1} checked="checked"{/if} value="1" id="management_5" /></td>
+                                            <td class="group-subcat"><label for="management_5">managing meetings</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.management_5) && $form.management_5 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="management_desc_5" id="management_desc_5" class="additional" style="width:94%" value="{$form.management_desc_5}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="management_6"{if isset($form.management_6) && $form.management_6 == 1} checked="checked"{/if} value="1" id="management_6" /></td>
+                                            <td class="group-subcat"><label for="management_6">managing projects</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.management_6) && $form.management_6 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="management_desc_6" id="management_desc_6" class="additional" style="width:94%" value="{$form.management_desc_6}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="management_7"{if isset($form.management_7) && $form.management_7 == 1} checked="checked"{/if} value="1" id="management_7" /></td>
+                                            <td class="group-subcat"><label for="management_7">managing specific foresight/FLA methods</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.management_7) && $form.management_7 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="management_desc_7" id="management_desc_7" class="additional" style="width:94%" value="{$form.management_desc_7}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="management_8"{if isset($form.management_8) && $form.management_8 == 1} checked="checked"{/if} value="1" id="management_8" /></td>
+                                            <td class="group-subcat"><label for="management_8">managing teams</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.management_8) && $form.management_8 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="management_desc_8" id="management_desc_8" class="additional" style="width:94%" value="{$form.management_desc_8}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="management_9"{if isset($form.management_9) && $form.management_9 == 1} checked="checked"{/if} value="1" id="management_9" /></td>
+                                            <td class="group-subcat"><label for="management_9">managing time</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.management_9) && $form.management_9 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="management_desc_9" id="management_desc_9" class="additional" style="width:94%" value="{$form.management_desc_9}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="management_10"{if isset($form.management_10) && $form.management_10 == 1} checked="checked"{/if} value="1" id="management_10" /></td>
+                                            <td class="group-subcat"><label for="management_10">negotiating</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.management_10) && $form.management_10 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="management_desc_10" id="management_desc_10" class="additional" style="width:94%" value="{$form.management_desc_10}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="management_11"{if isset($form.management_11) && $form.management_11 == 1} checked="checked"{/if} value="1" id="management_11" /></td>
+                                            <td class="group-subcat"><label for="management_11">networking</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.management_11) && $form.management_11 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="management_desc_11" id="management_desc_11" class="additional" style="width:94%" value="{$form.management_desc_11}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="management_12"{if isset($form.management_12) && $form.management_12 == 1} checked="checked"{/if} value="1" id="management_12" /></td>
+                                            <td class="group-subcat"><label for="management_12">solving problems</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.management_12) && $form.management_12 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="management_desc_12" id="management_desc_12" class="additional" style="width:94%" value="{$form.management_desc_12}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="group-subcat" colspan="2">
+                                                <b style="font-size:14px;line-height:22px">Knowledge generation</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="knowledge_1"{if isset($form.knowledge_1) && $form.knowledge_1 == 1} checked="checked"{/if} value="1" id="knowledge_1" /></td>
+                                            <td class="group-subcat"><label for="knowledge_1">generating creativity-based knowledge</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.knowledge_1) && $form.knowledge_1 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="knowledge_desc_1" id="knowledge_desc_1" class="additional" style="width:94%" value="{$form.knowledge_desc_1}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="knowledge_2"{if isset($form.knowledge_2) && $form.knowledge_2 == 1} checked="checked"{/if} value="1" id="knowledge_2" /></td>
+                                            <td class="group-subcat"><label for="knowledge_2">generating interaction-based knowledge</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.knowledge_2) && $form.knowledge_2 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="knowledge_desc_2" id="knowledge_desc_2" class="additional" style="width:94%" value="{$form.knowledge_desc_2}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="knowledge_3"{if isset($form.knowledge_3) && $form.knowledge_3 == 1} checked="checked"{/if} value="1" id="knowledge_3" /></td>
+                                            <td class="group-subcat"><label for="knowledge_3">generating evidence-based knowledge</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.knowledge_3) && $form.knowledge_3 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="knowledge_desc_3" id="knowledge_desc_3" class="additional" style="width:94%" value="{$form.knowledge_desc_3}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="knowledge_4"{if isset($form.knowledge_4) && $form.knowledge_4 == 1} checked="checked"{/if} value="1" id="knowledge_4" /></td>
+                                            <td class="group-subcat"><label for="knowledge_4">generating expertise-based knowledge</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.knowledge_4) && $form.knowledge_4 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="knowledge_desc_4" id="knowledge_desc_4" class="additional" style="width:94%" value="{$form.knowledge_desc_4}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="group-subcat" colspan="2">
+                                                <b style="font-size:14px;line-height:22px">Systemic thinking</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="system_1"{if isset($form.system_1) && $form.system_1 == 1} checked="checked"{/if} value="1" id="system_1" /></td>
+                                            <td class="group-subcat"><label for="system_1">understanding key strata of the studied system(s)</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.system_1) && $form.system_1 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="system_desc_1" id="system_desc_1" class="additional" style="width:94%" value="{$form.system_desc_1}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="system_2"{if isset($form.system_2) && $form.system_2 == 1} checked="checked"{/if} value="1" id="system_2" /></td>
+                                            <td class="group-subcat"><label for="system_2">understanding key strata borders of the studied system(s)</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.system_2) && $form.system_2 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="system_desc_2" id="system_desc_2" class="additional" style="width:94%" value="{$form.system_desc_2}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="system_3"{if isset($form.system_3) && $form.system_3 == 1} checked="checked"{/if} value="1" id="system_3" /></td>
+                                            <td class="group-subcat"><label for="system_3">understanding key linkages of the studied system(s)</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.system_3) && $form.system_3 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="system_desc_3" id="system_desc_3" class="additional" style="width:94%" value="{$form.system_desc_3}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="system_4"{if isset($form.system_4) && $form.system_4 == 1} checked="checked"{/if} value="1" id="system_4" /></td>
+                                            <td class="group-subcat"><label for="system_4">understanding key control mechanisms of the studied system(s)</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.system_4) && $form.system_4 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="system_desc_4" id="system_desc_4" class="additional" style="width:94%" value="{$form.system_desc_4}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="group-subcat" colspan="2">
+                                                <b style="font-size:14px;line-height:22px">Data handling</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="handling_1"{if isset($form.handling_1) && $form.handling_1 == 1} checked="checked"{/if} value="1" id="handling_1" /></td>
+                                            <td class="group-subcat"><label for="handling_1">finding key data</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.handling_1) && $form.handling_1 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="handling_desc_1" id="handling_desc_1" class="additional" style="width:94%" value="{$form.handling_desc_1}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="handling_2"{if isset($form.handling_2) && $form.handling_2 == 1} checked="checked"{/if} value="1" id="handling_2" /></td>
+                                            <td class="group-subcat"><label for="handling_2">analysing key data</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.handling_2) && $form.handling_2 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="handling_desc_2" id="handling_desc_2" class="additional" style="width:94%" value="{$form.handling_desc_2}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="handling_3"{if isset($form.handling_3) && $form.handling_3 == 1} checked="checked"{/if} value="1" id="handling_3" /></td>
+                                            <td class="group-subcat"><label for="handling_3">interpreting key data</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.handling_3) && $form.handling_3 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="handling_desc_3" id="handling_desc_3" class="additional" style="width:94%" value="{$form.handling_desc_3}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="handling_4"{if isset($form.handling_4) && $form.handling_4 == 1} checked="checked"{/if} value="1" id="handling_4" /></td>
+                                            <td class="group-subcat"><label for="handling_4">presenting key data</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.handling_4) && $form.handling_4 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="handling_desc_4" id="handling_desc_4" class="additional" style="width:94%" value="{$form.handling_desc_4}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="handling_5"{if isset($form.handling_5) && $form.handling_5 == 1} checked="checked"{/if} value="1" id="handling_5" /></td>
+                                            <td class="group-subcat"><label for="handling_5">exploiting key data</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.handling_5) && $form.handling_5 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="handling_desc_5" id="handling_desc_5" class="additional" style="width:94%" value="{$form.handling_desc_5}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="group-subcat" colspan="2">
+                                                <b style="font-size:14px;line-height:22px">Communication &amp; social skills</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="social_1"{if isset($form.social_1) && $form.social_1 == 1} checked="checked"{/if} value="1" id="social_1" /></td>
+                                            <td class="group-subcat"><label for="social_1">using the right language (e.g. policy, business, research, etc.)</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.social_1) && $form.social_1 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="social_desc_1" id="social_desc_1" class="additional" style="width:94%" value="{$form.social_desc_1}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="social_2"{if isset($form.social_2) && $form.social_2 == 1} checked="checked"{/if} value="1" id="social_2" /></td>
+                                            <td class="group-subcat"><label for="social_2">showing empathy (e.g. presenting multi-stakeholders views)</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.social_2) && $form.social_2 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="social_desc_2" id="social_desc_2" class="additional" style="width:94%" value="{$form.social_desc_2}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="social_3"{if isset($form.social_3) && $form.social_3 == 1} checked="checked"{/if} value="1" id="social_3" /></td>
+                                            <td class="group-subcat"><label for="social_3">sharing key ideas on future activities and plans</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.social_3) && $form.social_3 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="social_desc_3" id="social_desc_3" class="additional" style="width:94%" value="{$form.social_desc_3}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="social_4"{if isset($form.social_4) && $form.social_4 == 1} checked="checked"{/if} value="1" id="social_4" /></td>
+                                            <td class="group-subcat"><label for="social_4">managing expectations</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.social_4) && $form.social_4 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="social_desc_4" id="social_desc_4" class="additional" style="width:94%" value="{$form.social_desc_4}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="social_5"{if isset($form.social_5) && $form.social_5 == 1} checked="checked"{/if} value="1" id="social_5" /></td>
+                                            <td class="group-subcat"><label for="social_5">encouraging and motivating key players (incl. team members)</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.social_5) && $form.social_5 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="social_desc_5" id="social_desc_5" class="additional" style="width:94%" value="{$form.social_desc_5}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="group-subcat" colspan="2">
+                                                <b style="font-size:14px;line-height:22px">Technological</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="technological_1"{if isset($form.technological_1) && $form.technological_1 == 1} checked="checked"{/if} value="1" id="technological_1" /></td>
+                                            <td class="group-subcat"><label for="technological_1">using existing technologies (e.g. social networks)</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.technological_1) && $form.technological_1 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="technological_desc_1" id="technological_desc_1" class="additional" style="width:94%" value="{$form.technological_desc_1}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="technological_2"{if isset($form.technological_2) && $form.technological_2 == 1} checked="checked"{/if} value="1" id="technological_2" /></td>
+                                            <td class="group-subcat"><label for="technological_2">developing new technologies (e.g. IT platforms, software)</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.technological_2) && $form.technological_2 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="technological_desc_2" id="technological_desc_2" class="additional" style="width:94%" value="{$form.technological_desc_2}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="group-subcat" colspan="2">
+                                                <b style="font-size:14px;line-height:22px">Methods usage</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="usage_1"{if isset($form.usage_1) && $form.usage_1 == 1} checked="checked"{/if} value="1" id="usage_1" /></td>
+                                            <td class="group-subcat"><label for="usage_1">applying qualitative methods</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.usage_1) && $form.usage_1 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="usage_desc_1" id="usage_desc_1" class="additional" style="width:94%" value="{$form.usage_desc_1}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="usage_2"{if isset($form.usage_2) && $form.usage_2 == 1} checked="checked"{/if} value="1" id="usage_2" /></td>
+                                            <td class="group-subcat"><label for="usage_2">applying quantitative methods</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.usage_2) && $form.usage_2 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="usage_desc_2" id="usage_desc_2" class="additional" style="width:94%" value="{$form.usage_desc_2}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="t-c"><input type="checkbox" style="margin:0" class="showDesc" name="usage_3"{if isset($form.usage_3) && $form.usage_3 == 1} checked="checked"{/if} value="1" id="usage_3" /></td>
+                                            <td class="group-subcat"><label for="usage_3">applying semi-quantitative methods</label></td>
+                                        </tr>
+                                        <tr style="display:{if isset($form.usage_3) && $form.usage_3 == 1}table-row{else}none{/if};">
+                                            <td colspan="2">
+                                                <input type="text" name="usage_desc_3" id="usage_desc_3" class="additional" style="width:94%" value="{$form.usage_desc_3}" />
+                                                <span class="counter">0</span>
+											</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <script type="text/javascript">
+                              //<![CDATA[
+                                function nextVis(id,elm,visible) {
+                                    var tg = document.getElementById(id);
+                                    if (!tg || !elm.checked) {
+                                        return;
+                                    }
+                                    tg.style.display = (visible ? 'block' : 'none');
+                                }
+                              //]]>
+                            </script>

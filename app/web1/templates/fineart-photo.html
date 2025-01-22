@@ -1,0 +1,175 @@
+{$parent = $HELPER->section($SECTION->get('section', 'parent_id'))}
+{$imageBordered = $SECTION->get('file', 'image_bordered')}
+{$gallery = $SECTION->get('file', 'gallery')}
+{if $ALERT}
+<div class="form_result_wrap">
+    {if $ALERT_TYPE == 'success'}
+    <span class="form_result form_success">{#order_sent#}</span>
+    {else}
+    <span class="form_result form_error">{#order_failed#}</span>
+    {/if}
+</div>
+{/if}
+<div class="section_subheading{if $ALERT} mt40{/if}">{$SECTION->get('section', 'name')}</div>
+<div class="col2_text_icon mt40">
+    <div class="content_text">{$SECTION->get('value', 'anotation')}</div>
+    <a href="{$parent->get('url')}" class="ico_wrap">
+        <span class="ico ico_grid"></span>
+        <strong>{$parent->get('section', 'name')}</strong>
+    </a>
+</div>
+
+<div class="art_detail mt40">
+    <div class="tac">
+        <div class="art_detail_title">{#fineart_label#}</div>
+        <div class="art_detail_price">{#fineart_price_from#}</div>
+        {if $imageBordered}
+        <img src="{$FILES}w2000/{$imageBordered[0].file}" class="art_detail_image" alt="{$imageBordered[0].alt}" />
+        {/if}
+        <div>
+            <a class="button_primary button_open" id="showDetail">{#more_info#}</a>
+            <a class="button_primary button_close js_hide" id="hideDetail">{#less_info#}</a>
+        </div>
+    </div>
+
+    <div id="detail" class="js_hide">
+        <div class="wysiwyg_html mt40">
+            {if $SECTION->get('value', 'more_info')}
+            {$SECTION->get('value', 'more_info')}
+            {elseif $LANG_CODE == 'en'}
+            <h3>Limited edition 10 pcs</h3>
+            <ul>
+                <li>The photo can be purchased in a strictly limited edition of 10 pieces.</li>
+                <li>Each photo is hand-signed and numbered.</li>
+                <li>Together with the photo you will receive a certificate confirming the original copyright work.</li>
+            </ul>
+
+            <h3>Fineart print</h3>
+            <p>The photos are made by archival pigment printing on museum quality paper with high grammage.</p>
+
+            <table>
+                <tr>
+                    <td>Small 50×50 cm</td>
+                    <td>Edition 3 pcs</td>
+                    <td>5 500 CZK</td>
+                </tr>
+                <tr>
+                    <td>Medium 70×70 cm</td>
+                    <td>Edition 3 pcs</td>
+                    <td>7 000 CZK</td>
+                </tr>
+                <tr>
+                    <td>Large 100×100 cm</td>
+                    <td>Edition 3 pcs</td>
+                    <td>10 000 CZK</td>
+                </tr>
+                <tr>
+                    <td>One 120×120 cm</td>
+                    <td>Edition 1 pcs</td>
+                    <td>17 000 CZK</td>
+                </tr>
+            </table>
+
+            <h3>Fineart picture</h3>
+            <p>Framed photos in precisely crafted frames made of wood or aluminium.<br/>
+                The frames are chosen exactly to measure and a price quote will be prepared for you.</p>
+            {else}
+            <h3>Limitovaná edice 10 ks</h3>
+            <ul>
+                <li>Fotografii je možné zakoupit ve striktně limitované edici 10 ks.</li>
+                <li>Každá fotografie je ručně signována a očíslována.</li>
+                <li>Spolu s fotografií obdržíte certifikát, potvrzující originální autorské dílo.</li>
+            </ul>
+
+            <h3>Fineart print</h3>
+            <p>Fotografie jsou zhotoveny archivním pigmentovým tiskem na papír muzejní kvality vysokou gramáží.</p>
+
+            <table>
+                <tr>
+                    <td>Malá 50×50 cm</td>
+                    <td>Edice 3 ks</td>
+                    <td>5 500 Kč</td>
+                </tr>
+                <tr>
+                    <td>Střední 70×70 cm</td>
+                    <td>Edice 3 ks</td>
+                    <td>7 000 Kč</td>
+                </tr>
+                <tr>
+                    <td>Velká 100×100 cm</td>
+                    <td>Edice 3 ks</td>
+                    <td>10 000 Kč</td>
+                </tr>
+                <tr>
+                    <td>One 120×120 cm</td>
+                    <td>Edice 1 ks</td>
+                    <td>17 000 Kč</td>
+                </tr>
+            </table>
+
+            <h3>Fineart obraz</h3>
+            <p>Zarámovaná fotografie do precizně zpracovaných rámů ze dřeva či hliníku.<br/>
+                Rámy jsou voleny přesně na míru a bude vám sestavena cenová kalkulace.</p>
+            {/if}
+        </div>
+
+        <div class="art_order mt40">
+            <a class="button_primary button_big" id="button_order">{#order#}</a>
+
+            <div>
+                <span class="contact_phone">{#phone_number#}</span></span>
+                {mailto address=$DICTIONARY.email_address encode="javascript_charcode" extra='class="contact_mail"'}
+            </div>
+        </div>
+
+        <form action="" method="post" class="form_contact art_form_order content_text" id="art_form_order">
+            <label for="inp_name">{#name#}</label>
+            <div>
+                <input type="text" id="inp_name" name="name" />
+            </div>
+
+            <label for="inp_email">{#email#} *</label>
+            <div>
+                <input id="inp_email" name="email" type="email" />
+            </div>
+
+            <label for="inp_message">{#message#} *</label>
+            <div>
+                <textarea id="inp_message" name="message" rows="6"></textarea>
+            </div>
+
+            <span></span>
+            <div>
+                <button type="submit" name="submit" class="button_primary" style="white-space: normal;">{#send_order#}</button>
+            </div>
+        </form>
+        {if $gallery}
+        <div class="gallery_cube gallery_cube_2 mt56">
+            {foreach from=$gallery item=row}
+            <a href="{$FILES}w2000/{$row.file}" class="gallery_cube_link" data-nanogallery2-lightbox>
+                <img src="{$FILES}w600/{$row.file}" alt="{$row.alt}" />
+            </a>
+            {/foreach}
+        </div>
+        {/if}
+    </div>
+</div>
+
+<div class="section_label mt56">
+    {#next_photo_from_set#} <strong>{$parent->get('section', 'name')}</strong>
+</div>
+{if $otherPhotos}
+<div class="gallery_tiles mt40">
+    {foreach from=$otherPhotos item=row}
+    {$image = $row->get('file', 'image')}
+    <a href="{$row->get('url')}">
+        <span class="gallery_tiles_wrap">
+            {if $image}
+            <img src="{$FILES}w600/{$image[0].file}" alt="{$image[0].alt}" />
+            {/if}
+        </span>
+        <span class="gallery_tiles_label">{$row->get('section', 'name')}</span>
+    </a>
+    {/foreach}
+</div>
+{/if}

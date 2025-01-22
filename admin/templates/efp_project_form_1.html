@@ -1,0 +1,333 @@
+                    <h6>Annexe 1.1: Scoping Futures (1/7)</h6>
+                    <h1><b>Aims and Objectives</b></h1>
+                    <div class="oracle-form">
+                        <form action="" method="post">
+                            <h3>Q1: What are the aims of the study? Please refer to the stated aims in the proposal or the description of the project (website or other presentation).
+                                Aims are changes/transformations to be achieved as a result of the study. How would you describe the relevance of the following options to the aims of the study?</h3>
+                            <div class="table-wrapper">
+                                <table>
+                                    <col />
+                                    <col style="width:160px" />
+                                    <col style="width:50px" />
+                                    <thead>
+                                        <tr>
+                                            <th class="t-l">Thematic Area</th>
+                                            <th>Relev. &nbsp;low <span class="divider">&rsaquo;</span> high</th>
+                                            <th><span title="Comment">Comm.</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div class="semi-label">To transform capacities and skills</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                    <input type="radio" value="0" name="capacities_skills"{if $form.capacities_skills == 0} checked="checked"{/if} />
+                                                    <input type="radio" value="1" name="capacities_skills"{if $form.capacities_skills == 1} checked="checked"{/if} />
+                                                    <input type="radio" value="2" name="capacities_skills"{if $form.capacities_skills == 2} checked="checked"{/if} />
+                                                    <input type="radio" value="3" name="capacities_skills"{if $form.capacities_skills == 3} checked="checked"{/if} />
+                                                    <input type="radio" value="4" name="capacities_skills"{if $form.capacities_skills == 4} checked="checked"{/if} />
+                                                    <input type="radio" value="5" name="capacities_skills"{if $form.capacities_skills == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                            <td class="t-c comment-open{if $form.capacities_skills_comment} open{/if}"><b></b></td>
+                                        </tr>
+                                        <tr style="display:{if $form.capacities_skills_comment}table-row{else}none{/if};">
+                                            <td colspan="3" style="background:#F0F0F0">
+                                                <label>
+                                                    <small>Comment:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:560px;margin-bottom:4px;" name="capacities_skills_comment" value="{$form.capacities_skills_comment}" />
+                                                    <span class="counter">{$form.capacities_skills_comment|count_characters:true}</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="semi-label">To transform strategies and priorities</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="strategies_priorities"{if $form.strategies_priorities == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="strategies_priorities"{if $form.strategies_priorities == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="strategies_priorities"{if $form.strategies_priorities == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="strategies_priorities"{if $form.strategies_priorities == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="strategies_priorities"{if $form.strategies_priorities == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="strategies_priorities"{if $form.strategies_priorities == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                            <td class="t-c comment-open{if $form.strategies_priorities_comment} open{/if}"><b></b></td>
+                                        </tr>
+                                        <tr style="display:{if $form.strategies_priorities_comment}table-row{else}none{/if};">
+                                            <td colspan="3" style="background:#F0F0F0">
+                                                <label>
+                                                    <small>Comment:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:560px;margin-bottom:4px;" name="strategies_priorities_comment" value="{$form.strategies_priorities_comment}" />
+                                                    <span class="counter">{$form.strategies_priorities_comment|count_characters:true}</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="semi-label">To transform paradigms and current visions</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="paradigms_visions"{if $form.paradigms_visions == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="paradigms_visions"{if $form.paradigms_visions == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="paradigms_visions"{if $form.paradigms_visions == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="paradigms_visions"{if $form.paradigms_visions == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="paradigms_visions"{if $form.paradigms_visions == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="paradigms_visions"{if $form.paradigms_visions == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                            <td class="t-c comment-open{if $form.paradigms_visions_comment} open{/if}"><b></b></td>
+                                        </tr>
+                                        <tr style="display:{if $form.paradigms_visions_comment}table-row{else}none{/if};">
+                                            <td colspan="3" style="background:#F0F0F0">
+                                                <label>
+                                                    <small>Comment:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:560px;margin-bottom:4px;" name="paradigms_visions_comment" value="{$form.paradigms_visions_comment}" />
+                                                    <span class="counter">{$form.paradigms_visions_comment|count_characters:true}</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="semi-label">To transform socio-economic and <abbr title="science, technology and innovation">STI</abbr> systems</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="socio_sti"{if $form.socio_sti == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="socio_sti"{if $form.socio_sti == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="socio_sti"{if $form.socio_sti == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="socio_sti"{if $form.socio_sti == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="socio_sti"{if $form.socio_sti == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="socio_sti"{if $form.socio_sti == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                            <td class="t-c comment-open{if $form.socio_sti_comment} open{/if}"><b></b></td>
+                                        </tr>
+                                        <tr style="display:{if $form.socio_sti_comment}table-row{else}none{/if};">
+                                            <td colspan="3" style="background:#F0F0F0">
+                                                <label>
+                                                    <small>Comment:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:560px;margin-bottom:4px;" name="socio_sti_comment" value="{$form.socio_sti_comment}" />
+                                                    <span class="counter">{$form.socio_sti_comment|count_characters:true}</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="semi-label">To transform behaviour, attitudes and lifestyles</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="behaviour_lifestyles"{if $form.behaviour_lifestyles == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="behaviour_lifestyles"{if $form.behaviour_lifestyles == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="behaviour_lifestyles"{if $form.behaviour_lifestyles == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="behaviour_lifestyles"{if $form.behaviour_lifestyles == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="behaviour_lifestyles"{if $form.behaviour_lifestyles == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="behaviour_lifestyles"{if $form.behaviour_lifestyles == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                            <td class="t-c comment-open{if $form.behaviour_lifestyles_comment} open{/if}"><b></b></td>
+                                        </tr>
+                                        <tr style="display:{if $form.behaviour_lifestyles_comment}table-row{else}none{/if};">
+                                            <td colspan="3" style="background:#F0F0F0">
+                                                <label>
+                                                    <small>Comment:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:560px;margin-bottom:4px;" name="behaviour_lifestyles_comment" value="{$form.behaviour_lifestyles_comment}" />
+                                                    <span class="counter">{$form.behaviour_lifestyles_comment|count_characters:true}</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="semi-label">To transform knowledge-based products and services</div></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="knowledge_products"{if $form.knowledge_products == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="knowledge_products"{if $form.knowledge_products == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="knowledge_products"{if $form.knowledge_products == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="knowledge_products"{if $form.knowledge_products == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="knowledge_products"{if $form.knowledge_products == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="knowledge_products"{if $form.knowledge_products == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                            <td class="t-c comment-open{if $form.knowledge_products_comment} open{/if}"><b></b></td>
+                                        </tr>
+                                        <tr style="display:{if $form.knowledge_products_comment}table-row{else}none{/if};">
+                                            <td colspan="3" style="background:#F0F0F0">
+                                                <label>
+                                                    <small>Comment:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:560px;margin-bottom:4px;" name="knowledge_products_comment" value="{$form.knowledge_products_comment}" />
+                                                    <span class="counter">{$form.knowledge_products_comment|count_characters:true}</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="input-1-1-1-7-1">Other, briefly specify (max 140 chars.):
+                                                <br /><input type="text" name="other_name" class="additional" maxlength="140" id="input-1-1-1-7-1" style="width:420px;margin-top:4px" value="{$form.other_name}" />
+                                                <span class="counter">{$form.other_name|count_characters:true}</span></label></td>
+                                            <td>
+                                                <div class="rating">
+                                                <input type="radio" value="0" name="other_rate"{if $form.other_rate == 0} checked="checked"{/if} />
+                                                <input type="radio" value="1" name="other_rate"{if $form.other_rate == 1} checked="checked"{/if} />
+                                                <input type="radio" value="2" name="other_rate"{if $form.other_rate == 2} checked="checked"{/if} />
+                                                <input type="radio" value="3" name="other_rate"{if $form.other_rate == 3} checked="checked"{/if} />
+                                                <input type="radio" value="4" name="other_rate"{if $form.other_rate == 4} checked="checked"{/if} />
+                                                <input type="radio" value="5" name="other_rate"{if $form.other_rate == 5} checked="checked"{/if} />
+                                                </div>
+                                            </td>
+                                            <td class="t-c comment-open{if $form.other_comment} open{/if}"><b></b></td>
+                                        </tr>
+                                        <tr style="display:{if $form.other_comment}table-row{else}none{/if};">
+                                            <td colspan="3" style="background:#F0F0F0">
+                                                <label>
+                                                    <small>Comment:</small>
+                                                    <input type="text" class="additional" maxlength="140" style="width:560px;margin-bottom:4px;" name="other_comment" value="{$form.other_comment}" />
+                                                    <span class="counter">{$form.other_comment|count_characters:true}</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="3" class="t-l notice">
+                                                <div style="float:left">
+                                                <span class="stars">*</span> = none/very low<br />
+                                                <span class="stars">**</span> = low<br />
+                                                <span class="stars">***</span> = moderate<br />
+                                                <span class="stars">****</span> = high<br />
+                                                <span class="stars">*****</span> = very high
+                                                </div>
+                                                <div style="margin-left:110px">
+                                                    <b>STI</b> = science, technology and innovation
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <h3>Q2: What are the objectives of the study? Objectives are desired targets contributing toward the achievement of the aims.</h3>
+
+                            <div class="table-wrapper">
+                                <table id="a-1-1-q-2">
+                                    <col style="width:24px" />
+                                    <col />
+                                    <col style="width:30px" />
+                                    <col style="width:30px" />
+                                    <col style="width:190px" />
+                                    <thead>
+                                        <tr>
+                                            <th rowspan="2" colspan="2" class="t-l notice"><div>Here you can map up to five project objectives (as they appear in the documents/websites)
+                                                and use a scale of 1 to 5 to assess the objectives relevancy for EU / {if isset($USER->country)}{$USER->country}{else}Your country{/if}.</div></th>
+                                            <th colspan="2">Relevant for EU / {if isset($USER->country)}{$USER->country}{else}Your country{/if}</th>
+                                            <th rowspan="2">Reference URL</th>
+                                        </tr>
+                                        <tr>
+                                            <th>EU</th>
+                                            <th style="white-space: nowrap">{if isset($USER->code)}{$USER->code}{else}Y/C{/if}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><div class="semi-label"><b>1</b></div></td>
+                                            <td class="objective"><input type="text" maxlength="255" name="objective_1" value="{$form.objective_1}" /></td>
+                                            <td class="t-r nb"><span class="relative"><input type="text" class="number" maxlength="1" name="objective_1_relevance_eu" value="{$form.objective_1_relevance_eu}" /><span class="number-select">
+                                                    <span class="s">5 &ndash; very high</span>
+                                                    <span class="s">4 &ndash; high</span>
+                                                    <span class="s">3 &ndash; moderate</span>
+                                                    <span class="s">2 &ndash; low</span>
+                                                    <span class="s">1 &ndash; none/very low</span>
+                                                </span></span></td>
+                                            <td class="t-r nb"><span class="relative"><input type="text" class="number" maxlength="1" name="objective_1_relevance_yc" value="{$form.objective_1_relevance_yc}" /><span class="number-select">
+                                                    <span class="s">5 &ndash; very high</span>
+                                                    <span class="s">4 &ndash; high</span>
+                                                    <span class="s">3 &ndash; moderate</span>
+                                                    <span class="s">2 &ndash; low</span>
+                                                    <span class="s">1 &ndash; none/very low</span>
+                                                </span></span></td>
+                                            <td class="t-l"><input type="text" class="reference" maxlength="255" name="objective_1_url" value="{$form.objective_1_url}" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="semi-label"><b>2</b></div></td>
+                                            <td class="objective"><input type="text" maxlength="255" name="objective_2" value="{$form.objective_2}" /></td>
+                                            <td class="t-r nb"><span class="relative"><input type="text" class="number" maxlength="1" name="objective_2_relevance_eu" value="{$form.objective_2_relevance_eu}" /><span class="number-select">
+                                                    <span class="s">5 &ndash; very high</span>
+                                                    <span class="s">4 &ndash; high</span>
+                                                    <span class="s">3 &ndash; moderate</span>
+                                                    <span class="s">2 &ndash; low</span>
+                                                    <span class="s">1 &ndash; none/very low</span>
+                                                </span></span></td>
+                                            <td class="t-r nb"><span class="relative"><input type="text" class="number" maxlength="1" name="objective_2_relevance_yc" value="{$form.objective_2_relevance_yc}" /><span class="number-select">
+                                                    <span class="s">5 &ndash; very high</span>
+                                                    <span class="s">4 &ndash; high</span>
+                                                    <span class="s">3 &ndash; moderate</span>
+                                                    <span class="s">2 &ndash; low</span>
+                                                    <span class="s">1 &ndash; none/very low</span>
+                                                </span></span></td>
+                                            <td class="t-l"><input type="text" class="reference" maxlength="255" name="objective_2_url" value="{$form.objective_2_url}" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="semi-label"><b>3</b></div></td>
+                                            <!--td><div class="semi-label">Objective 3</div></td-->
+                                            <td class="objective"><input type="text" maxlength="255" name="objective_3" value="{$form.objective_3}" /></td>
+                                            <td class="t-r nb"><span class="relative"><input type="text" class="number" maxlength="1" name="objective_3_relevance_eu" value="{$form.objective_3_relevance_eu}" /><span class="number-select">
+                                                    <span class="s">5 &ndash; very high</span>
+                                                    <span class="s">4 &ndash; high</span>
+                                                    <span class="s">3 &ndash; moderate</span>
+                                                    <span class="s">2 &ndash; low</span>
+                                                    <span class="s">1 &ndash; none/very low</span>
+                                                </span></span></td>
+                                            <td class="t-r nb"><span class="relative"><input type="text" class="number" maxlength="1" name="objective_3_relevance_yc" value="{$form.objective_3_relevance_yc}" /><span class="number-select">
+                                                    <span class="s">5 &ndash; very high</span>
+                                                    <span class="s">4 &ndash; high</span>
+                                                    <span class="s">3 &ndash; moderate</span>
+                                                    <span class="s">2 &ndash; low</span>
+                                                    <span class="s">1 &ndash; none/very low</span>
+                                                </span></span></td>
+                                            <td class="t-l"><input type="text" class="reference" maxlength="255" name="objective_3_url" value="{$form.objective_3_url}" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="semi-label"><b>4</b></div></td>
+                                            <td class="objective"><input type="text" maxlength="255" name="objective_4" value="{$form.objective_4}" /></td>
+                                            <td class="t-r nb"><span class="relative"><input type="text" class="number" maxlength="1" name="objective_4_relevance_eu" value="{$form.objective_4_relevance_eu}" /><span class="number-select">
+                                                    <span class="s">5 &ndash; very high</span>
+                                                    <span class="s">4 &ndash; high</span>
+                                                    <span class="s">3 &ndash; moderate</span>
+                                                    <span class="s">2 &ndash; low</span>
+                                                    <span class="s">1 &ndash; none/very low</span>
+                                                </span></span></td>
+                                            <td class="t-r nb"><span class="relative"><input type="text" class="number" maxlength="1" name="objective_4_relevance_yc" value="{$form.objective_4_relevance_yc}" /><span class="number-select">
+                                                    <span class="s">5 &ndash; very high</span>
+                                                    <span class="s">4 &ndash; high</span>
+                                                    <span class="s">3 &ndash; moderate</span>
+                                                    <span class="s">2 &ndash; low</span>
+                                                    <span class="s">1 &ndash; none/very low</span>
+                                                </span></span></td>
+                                            <td class="t-l"><input type="text" class="reference" maxlength="255" name="objective_4_url" value="{$form.objective_4_url}" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><div class="semi-label"><b>5</b></div></td>
+                                            <td class="objective"><input type="text" maxlength="255" name="objective_5" value="{$form.objective_5}" /></td>
+                                            <td class="t-r nb"><span class="relative"><input type="text" class="number" maxlength="1" name="objective_5_relevance_eu" value="{$form.objective_5_relevance_eu}" /><span class="number-select">
+                                                    <span class="s">5 &ndash; very high</span>
+                                                    <span class="s">4 &ndash; high</span>
+                                                    <span class="s">3 &ndash; moderate</span>
+                                                    <span class="s">2 &ndash; low</span>
+                                                    <span class="s">1 &ndash; none/very low</span>
+                                                </span></span></td>
+                                            <td class="t-r nb"><span class="relative"><input type="text" class="number" maxlength="1" name="objective_5_relevance_yc" value="{$form.objective_5_relevance_yc}" /><span class="number-select">
+                                                    <span class="s">5 &ndash; very high</span>
+                                                    <span class="s">4 &ndash; high</span>
+                                                    <span class="s">3 &ndash; moderate</span>
+                                                    <span class="s">2 &ndash; low</span>
+                                                    <span class="s">1 &ndash; none/very low</span>
+                                                </span></span></td>
+                                            <td class="t-l"><input type="text" class="reference" maxlength="255" name="objective_5_url" value="{$form.objective_5_url}" /></td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="5" class="t-l notice">
+                                                <div style="float:left">
+                                                    <b>1</b> = none/very low<br />
+                                                    <b>2</b> = low<br />
+                                                    <b>3</b> = moderate<br />
+                                                    <b>4</b> = high<br />
+                                                    <b>5</b> = very high
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>

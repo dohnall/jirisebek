@@ -1,0 +1,25 @@
+<table class="table-file-list list">
+    <thead>
+        <tr>
+            <th class="icon">&nbsp;</th>
+            <th class="name">{#name#}</th>
+            <th class="type">{#type#}</th>
+            <th class="size">{#size#}</th>
+            <th class="date">{#inserted#}</th>
+        </tr>
+    </thead>
+    <tbody>
+{foreach from=$files item=file}
+    	<tr data-file="{$file->filename}">
+            <td><span class="icon">&nbsp;</span></td>
+            <td><a href="javascript:;">{$file->filename}</a></td>
+            <td>{$file->getExt()|upper}</td>
+            <td>{$file->getSize()}</td>
+            <td>{$file->getUploadTime()}</td>
+        </tr>
+{foreachelse}
+	<tr>
+        <td colspan="5">{#no_files#}</td>
+{/foreach}
+    </tbody>
+</table>

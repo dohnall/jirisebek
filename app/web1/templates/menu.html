@@ -1,0 +1,37 @@
+{*
+usage:
+code - menu code
+id - menu main ul id
+class - menu main ul class
+liclass - all li class
+first - class of first li
+last - class of last li
+{include file="menu.html" code=main id=menu1 class=menu liclass=nav-item aclass=nav-link first=first last=last max=6 flat=false}
+*}
+
+{if $code && isset($MENUS.$code) && $MENUS.$code}
+	{assign var=items value=$MENUS.$code.items}
+	{assign var=level value=1}
+{elseif isset($children) && $children}
+	{assign var=items value=$children}
+	{assign var=level value=$level+1}
+{else}
+	{assign var=level value=1}
+{/if}
+{assign var=mlevel value="menu`$level`"}
+{if isset($items) && $items}
+<ul{if isset($id) && $id} id="{$id}"{/if}{if isset($class) && $class} class="{$class}"{/if}>
+	{foreach from=$items item=menu name=$mlevel}
+		{if ($max && $max >= $menu@iteration) || !$max}
+		{if $menu.item.section_id == 0 || ($menu.item.section_id > 0 && $menu.item.section->isActive())}
+	<li class="{$liclass}{if $menu@first && $first} {$first}{/if}{if $menu@last == true && $last} {$last}{/if}">
+		<a class="{$aclass}{if in_array($menu.item.section_id, array_keys($SECTION->get('path'))) && ($menu.item.section_id != $HOME->section_id || $SECTION->section_id == $HOME->section_id)} active{/if}"{if $menu.item.new_window} target="_blank"{/if} href="{if $menu.item.section && $menu.item.section->get('value', 'redirect')}{$menu.item.section->get('value', 'redirect')}{elseif $menu.item.url}{$menu.item.url}{else}{$menu.item.section->get('url')}{/if}">{if $menu.item.name}{$menu.item.name}{else}{$menu.item.section->get('text', 'name')}{/if}</a>
+			{if isset($menu.children) && $menu.children && !$flat}
+			{include file="menu.html" children=$menu.children level=$level code="" id="" class="" liclass=$liclass aclass=$aclass first="" last=""}
+			{/if}
+		{/if}
+		{/if}
+	</li>
+	{/foreach}
+</ul>
+{/if}

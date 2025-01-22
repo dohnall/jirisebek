@@ -1,0 +1,26 @@
+{$count = 12}
+<div class="section_heading">
+    <span class="section_heading_text">{$SECTION->get('value', 'header')}</span>
+</div>
+
+<div class="gallery_tiles mt56" id="gallery">
+{foreach from=$SECTION->get('children', true) item=row}
+    {$image = $row->get('file', 'image')}
+    <a href="{$row->get('url')}"{if $row@iteration > $count} class="js_hide"{/if}>
+        <span class="gallery_tiles_wrap">
+            {if $image}
+            <img src="{$FILES}w600/{$image[0].file}" alt="{$image[0].alt}" />
+            {/if}
+        </span>
+        <span class="gallery_tiles_label">{$row->get('section', 'name')}</span>
+    </a>
+{/foreach}
+</div>
+{if count($SECTION->get('children')) > $count}
+<div class="flexed_center mt40">
+    <a class="button_primary" id="gallery_show_all">{#more_photos#}</a>
+</div>
+{/if}
+<div class="content_text sided mt56">
+    {$SECTION->get('value', 'content')}
+</div>
