@@ -26,13 +26,16 @@
     $(document).ready(() => {
       $('#carousel').slick({
         autoplay: true,
-        dots: true,
+        dots: false,
+        autoplaySpeed: 10000,
+        speed: 1000,
         prevArrow: '<span class="carousel_navs"><a class="carousel_nav_prev"></a></span>',
         nextArrow:'<span class="carousel_navs"><a class="carousel_nav_next"></a></span>',
         responsive: [{
           breakpoint: 576,
           settings: {
             arrows: false,
+            dots: true,
             infinite: true
           }
         }]
@@ -151,7 +154,7 @@
   </script>
 {/if}
 </head>
-<body>
+<body id="nano">
   <div class="page_section">
     <div class="page_header">
       <a href="{$ROOT}"><img src="{$DESIGN}images/logo_jiri-sebek.png" alt="Logo Jiří Šebek" class="page_header_logo" /></a>

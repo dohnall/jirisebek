@@ -10,7 +10,6 @@ if(isset($_POST['submit'])) {
         $this->session->data = $_POST;
     } else {
         $data = $_POST;
-
         //if(isset($data['website']) && empty($data['website'])) {
             $mail = new PHPMailer();
             $mail->isHTML(true);
@@ -27,10 +26,11 @@ if(isset($_POST['submit'])) {
             $mail->clearAddresses();
             $mail->addAddress("dohnal@gramonet.com");
             $mail->send();
-
-            $mail->clearAddresses();
-            $mail->addAddress($this->dictionary['contact_receiver']);
-            $mail->send();
+/*
+            $mail->ClearAddresses();
+            $mail->AddAddress($this->dictionary['contact_receiver']);
+            $mail->Send();
+*/
         //}
 
         $this->session->alert = $this->dictionary['contact_sent'];

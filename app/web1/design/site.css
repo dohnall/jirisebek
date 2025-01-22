@@ -286,7 +286,6 @@ img {
     font-size: 18px;
     letter-spacing: 0.05em;
     margin: 0 auto;
-    max-width: 644px;
     text-align: center;
 }
 
@@ -311,8 +310,8 @@ img {
     position: relative;
 }
 .carousel_navs {
-    min-width: 66px;
-    width: 66px
+    min-width: 62px;
+    width: 62px
 }
 .carousel_navs > a {
     background-position: 50% 50%;
@@ -335,6 +334,7 @@ img {
     aspect-ratio: 1.7745;
     flex-grow: 1;
     position: relative;
+    max-height: calc(100dvh - 200px);
 }
 .carousel_slide_title {
     align-items: center;
@@ -361,7 +361,7 @@ img {
     gap: 13px;
 }
 .gallery_wide_link {
-    aspect-ratio: 1.7;
+    aspect-ratio: 1.5;
     position: relative;
 }
 .gallery_wide_link > img {
@@ -378,7 +378,7 @@ img {
 }
 .gallery_wide_hover {
     align-items: center;
-    aspect-ratio: 1.7;
+    aspect-ratio: 1.5;
     background-color: #272727CC;
     color: #fff;
     display: inline-flex;
@@ -465,7 +465,7 @@ a.gallery_cube_link:hover > span {
     font-weight: 400;
 }
 .gallery_cube_link > img {
-    aspect-ratio: 1.3;
+    aspect-ratio: 1.5;
     display: block;
     object-fit: cover;
     transition: transform .2s;
@@ -478,13 +478,13 @@ a.gallery_cube_link:hover > img {
     gap: 39px
 }
 .gallery_cube_2 > img {
-    aspect-ratio: 1.5;
+    aspect-ratio: 1.5; 
 }
 .gallery_cube_3 > img {
     aspect-ratio: 1.5;
 }
 .gallery_cube_4 > img {
-    aspect-ratio: 1.3;
+    aspect-ratio: 1.28;
 }
 
 .gallery_paging {
@@ -537,7 +537,7 @@ a.gallery_cube_link:hover > img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 45px;
+    padding: 33px;
     text-align: center;
     width: 100%;
 }
@@ -551,6 +551,7 @@ a.gallery_cube_link:hover > img {
     object-fit: contain;
 }
 .gallery_tiles_label {
+    color: transparent;
     display: block;
     font-size: 22px;
     font-weight: 300;
@@ -558,7 +559,7 @@ a.gallery_cube_link:hover > img {
     text-align: center;
 }
 .gallery_tiles > a:hover > .gallery_tiles_label {
-    text-shadow: 0 0 0.1px #000;
+    color: #000
 }
 
 .contact_block {
@@ -663,10 +664,12 @@ a.gallery_cube_link:hover > img {
 .hp_more_projects { margin: 43px 0 68px 0 }
 
 .hp_carousel {
-    margin-bottom: 60px !important
+    margin-bottom: 45px;
+    max-height: calc(100dvh - 235px);
 }
 .hp_carousel .slide {
-    aspect-ratio: 1.47;
+    aspect-ratio: 16 / 9;
+    max-height: calc(100dvh - 235px);
 }
 .hp_carousel img {
     height: 100%;
@@ -685,6 +688,9 @@ a.gallery_cube_link:hover > img {
 }
 .arch_gallery_cube {
     margin: 40px 0 50px 0
+}
+.arch_gallery_cube > .gallery_cube_link > img {
+    aspect-ratio: 1;
 }
 
 .form_contact {
@@ -756,6 +762,7 @@ a.gallery_cube_link:hover > img {
     margin-bottom: 110px;
 }
 .carousel_previews .carousel_image {
+    aspect-ratio: 16 / 9;
     height: 100%;
     object-fit: cover;
     width: 100%;
@@ -921,8 +928,27 @@ a.gallery_cube_link:hover > img {
     visibility: hidden;
 }
 .slick-list {
+    aspect-ratio: 16 / 9;
     width:100%
 }
+.slick-slide {
+    max-height: calc(100dvh - 235px);
+}
+
+
+/* lightbox override */
+.nGY2Viewer {
+    background-color: #fff !important;
+}
+.nGY2Viewer .toolbar {
+    color: #000 !important;
+    text-shadow: none !important;
+}
+
+.rotateLeftButton, .rotateRightButton, .fullscreenButton, .nGY2Icon-resize-full, .nGY2ViewerToolsTopLeft, .nGY2ViewerAreaNext, .nGY2ViewerAreaPrevious, .nGY2VThumbnailContainer {
+    display: none !important;
+}
+
 
 @keyframes fadeIn {
     0% {
@@ -938,7 +964,7 @@ a.gallery_cube_link:hover > img {
 
 
 @media only screen and (min-width: 576px) {
-    .page_content > .section_heading {
+    .page_content > .section_heading:first-of-type {
         margin-top: 0;
     }
     .page_header {
@@ -947,6 +973,9 @@ a.gallery_cube_link:hover > img {
     .page_content {
         margin-left: 62px;
         margin-right: 62px;
+    }
+    .page_footer_copy {
+        text-align: right;
     }
     .carousel_foto_nav {
         gap: 0;
@@ -994,7 +1023,9 @@ a.gallery_cube_link:hover > img {
         padding: 19px 12px;
     }
     .art_nav > img {
+        object-fit: contain;
         max-width: calc(100dvw - 165px);
+        max-height: calc(100dvh - 200px);
     }
     .col2_text_icon {
         flex-direction: row;
@@ -1057,7 +1088,7 @@ a.gallery_cube_link:hover > img {
         flex-direction: row;
     }
     .arch_info_spec {
-        flex-basis: 400;
+        flex-basis: 400px;
     }
     .contact_block_links {
         flex-direction: row;
