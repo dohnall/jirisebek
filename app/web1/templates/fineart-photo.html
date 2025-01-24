@@ -10,9 +10,12 @@
     {/if}
 </div>
 {/if}
-<div class="section_subheading{if $ALERT} mt40{/if}">{$SECTION->get('section', 'name')}</div>
-<div class="col2_text_icon mt40">
-    <div class="content_text">{$SECTION->get('value', 'anotation')|nl2br}</div>
+<div class="col2_text_icon {if $ALERT} mt40{/if}">
+    <div>
+        <div class="section_subheading">{$SECTION->get('section', 'name')}</div>
+        <div class="content_text mt24">{$SECTION->get('value', 'anotation')|nl2br}</div>
+    </div>
+
     <a href="{$parent->get('url')}" class="ico_wrap">
         <span class="ico ico_grid"></span>
         <strong>{$parent->get('section', 'name')}</strong>
