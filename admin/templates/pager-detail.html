@@ -1,8 +1,24 @@
-<div class="pager_detail">
-{if $item->get('previous')}
-	<a href="{$ROOT}?module={$MODULE}&amp;id={$item->get('previous')}" class="button">{#previous#}</a>
+<div class="pager_detail" style="width: 100%;">
+{if $user->hasRight(27)}
+	<div class="float-left">
+		{if $item->get('section', 'parent_id') != 0 || !$user->hasRight(25)}
+		<input type="submit" name="save" value="{#save#}" />
+		{/if}
+		{if $user->hasRight(25) && $item->get('text', 'status') == 0 || $item->get('section', 'parent_id') == 0}
+		<input type="submit" name="save_publicate" value="{#save_publicate#}" />
+		{/if}
+		{if $user->hasRight(33)}
+		<input type="submit" name="save_version" value="{#save_as_new_version#}" />
+		{/if}
+		<a href="/{$item->get('url')}?action=preview" class="button" target="_blank">{#preview#}</a>
+	</div>
 {/if}
-{if $item->get('next')}
-	<a href="{$ROOT}?module={$MODULE}&amp;id={$item->get('next')}" class="button">{#next#}</a>
-{/if}
+	<div class="float-right">
+		{if $item->get('previous')}
+		<a href="{$ROOT}?module={$MODULE}&amp;id={$item->get('previous')}" class="button">{#previous#}</a>
+		{/if}
+		{if $item->get('next')}
+		<a href="{$ROOT}?module={$MODULE}&amp;id={$item->get('next')}" class="button">{#next#}</a>
+		{/if}
+	</div>
 </div>

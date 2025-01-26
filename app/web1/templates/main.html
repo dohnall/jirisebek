@@ -18,6 +18,7 @@
   <script src="{$JS}slick.min.js"></script>
   <script src="{$JS}app.js?{$timestamp}"></script>
   {if in_array($TEMPLATE, ['service', 'architecture-detail', 'fineart-photo'])}
+  <script src="{$JS}fslightbox.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
   {/if}
@@ -252,11 +253,19 @@
             <span class="ico ico_foto"></span>
             <div>{#instagram_label#}</div>
           </a>
-          <div class="page_footer_copy">{#copyright#}</div>
-          <div>{#created_by#}</div>
+          {include file="menu-top.html" code="footer2" class="page_footer_menu2"}
         </div>
       </footer>
     </div>
+
+    <footer class="page_copyright">
+      <div>
+        {#copyright#}
+      </div>
+      <div>
+        {#created_by#}
+      </div>
+    </footer>
   </div>
 </body>
 

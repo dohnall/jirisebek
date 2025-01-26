@@ -32,15 +32,15 @@
     		<li><a href="{$AJAX}{$MODULE}.php?action=list&amp;id={$item->get('section', 'section_id')}&amp;page={$pager.page}"><span>{#content_list#}</span></a></li>
     {/if}
     		<li><a href="{$AJAX}{$MODULE}.php?action=properties&amp;id={$item->get('section', 'section_id')}{if $version > 0}&amp;version={$version}{/if}"><span>{#content_properties#}</span></a></li>
-	{if $user->hasRight(35)}
-    		<li><a href="{$AJAX}{$MODULE}.php?action=versions&amp;id={$item->get('section', 'section_id')}{if $version > 0}&amp;version={$version}{/if}"><span>{#content_versions#}</span></a></li>
-	{/if}
-	{if $user->hasRight(36) && $item->get('section', 'parent_id') > 0}
-    		<li><a href="{$AJAX}{$MODULE}.php?action=relations&amp;id={$item->get('section', 'section_id')}"><span>{#content_relations#}</span></a></li>
-	{/if}
     {foreach from=$config->getTabs($item->get('section', 'template')) item=row}
     		<li><a href="{$AJAX}{$MODULE}.php?action=tab{$row.template_tab_id}&amp;id={$item->get('section', 'section_id')}{if $version > 0}&amp;version={$version}{/if}"><span>{$row.name}</span></a></li>
     {/foreach}
+    {if $user->hasRight(35)}
+            <li><a href="{$AJAX}{$MODULE}.php?action=versions&amp;id={$item->get('section', 'section_id')}{if $version > 0}&amp;version={$version}{/if}"><span>{#content_versions#}</span></a></li>
+    {/if}
+    {if $user->hasRight(36) && $item->get('section', 'parent_id') > 0}
+            <li><a href="{$AJAX}{$MODULE}.php?action=relations&amp;id={$item->get('section', 'section_id')}"><span>{#content_relations#}</span></a></li>
+    {/if}
     {if $user->hasRight(52)}
             <li><a href="{$AJAX}{$MODULE}.php?action=log&amp;id={$item->section_id}"><span>{#content_log#}</span></a></li>
     {/if}

@@ -71,6 +71,7 @@
                     <td>17 000 CZK</td>
                 </tr>
             </table>
+            <p><small>Prices include 21% VAT.</small></p>
 
             <h3>Fineart picture</h3>
             <p>Framed photos in precisely crafted frames made of wood or aluminium.<br/>
@@ -84,7 +85,7 @@
             </ul>
 
             <h3>Fineart print</h3>
-            <p>Fotografie jsou zhotoveny archivním pigmentovým tiskem na papír muzejní kvality vysokou gramáží.</p>
+            <p>Fotografie jsou zhotoveny archivním pigmentovým tiskem na papír muzejní kvality s vysokou gramáží.</p>
 
             <table>
                 <tr>
@@ -108,6 +109,7 @@
                     <td>17 000 Kč</td>
                 </tr>
             </table>
+            <p><small>Ceny jsou uvedeny vč. 21% DPH.</small></p>
 
             <h3>Fineart obraz</h3>
             <p>Zarámovaná fotografie do precizně zpracovaných rámů ze dřeva či hliníku.<br/>
@@ -148,8 +150,8 @@
         {if $gallery}
         <div class="gallery_cube gallery_cube_2 mt56">
             {foreach from=$gallery item=row}
-            <a href="{$FILES}w2000/{$row.file}" class="gallery_cube_link" data-nanogallery2-lightbox>
-                <img src="{$FILES}w600/{$row.file}" alt="{$row.alt}" />
+            <a href="{$FILES}w2000/{$row.file}" class="gallery_cube_link">
+                <img src="{$FILES}w600/{$row.file}" alt="{$row.alt}" data-ngsrc="{$FILES}w2000/{$row.file}" data-nanogallery2-lightbox />
             </a>
             {/foreach}
         </div>
