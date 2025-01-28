@@ -73,7 +73,7 @@ class Content {
 			}
 
 			$this->joinSTV = "LEFT JOIN ".Config::db_table_section_text_value()." stv ON (st.section_text_id = stv.section_text_id AND code='".$col."')";
-			$this->orderby = "stv.".$obj->field."_val ".$sort;
+			$this->orderby = "stv.".$obj->field."_val ".$sort.", t.rank ASC";
 		} else {
 			$this->orderby = $orderby." ".$sort;
 		}
