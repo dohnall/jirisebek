@@ -18,7 +18,6 @@
   <script src="{$JS}slick.min.js"></script>
   <script src="{$JS}app.js?{$timestamp}"></script>
   {if in_array($TEMPLATE, ['service', 'architecture-detail', 'fineart-photo'])}
-  <script src="{$JS}fslightbox.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
   {/if}
@@ -59,6 +58,10 @@
       const $carousel_image = $('#carousel_image')
       let $last = $('#carousel_nav > img:first-child')
 
+      if (!$carousel_title_txt.text()) {
+        $carousel_title_txt.fadeOut(1)
+      }
+
       function handleSlide() {
         $last.addClass('active')
         $carousel_image.attr('src', $last.data('imgsrc'))
@@ -98,6 +101,9 @@
       $('.carousel_nav_next').click(slideNext)
 
       document.addEventListener('keydown', (event) => {
+	if ($('.nGY2').length) {
+	  return
+	}
         if (event.key === 'ArrowLeft') {
           slidePrev()
         }
@@ -142,6 +148,9 @@
       })
 
       document.addEventListener('keydown', (event) => {
+	if ($('.nGY2').length) {
+	  return
+	}
         let prevPage = $('.carousel_nav_prev').attr('href');
         let nextPage = $('.carousel_nav_next').attr('href');
         if (event.key === 'ArrowLeft' && prevPage) {
@@ -154,7 +163,30 @@
     })
   </script>
 {/if}
-</head>
+{if $TEMPLATE == 'fineart-photo'}
+  <script>
+    $(document).ready(() => {
+      let start
+      $('.art_nav').on('touchstart', (evn) => {
+        start = evn.changedTouches[0]
+      })
+      $('.art_nav').on('touchend', (evn) => {
+        let moveX = evn.changedTouches[0].pageX - start.pageX
+        if (moveX > 50 || moveX < 50) {
+          let url
+          if (moveX > 0) {
+            url = $('.carousel_nav_prev').attr('href');
+          } else {
+            url = $('.carousel_nav_next').attr('href');
+          }
+          if (url) {
+            window.location.href = url
+          }
+        }
+      })
+    })
+  </script>
+{/if}</head>
 <body id="nano">
   <div class="page_section">
     <div class="page_header">
@@ -180,9 +212,9 @@
       {foreach from=$carousel item=row}
       <div class="slide">
         {if $row.description}
-        <a href="{$row.description}"><img src="{$FILES}w2000/{$row.file}" alt="{$row.alt}" /></a>
+        <a href="{$row.description}"><img src="{$FILES}0/{$row.file}" alt="{$row.alt}" /></a>
         {else}
-        <img src="{$FILES}w2000/{$row.file}" alt="{$row.alt}" />
+        <img src="{$FILES}0/{$row.file}" alt="{$row.alt}" />
         {/if}
       </div>
       {/foreach}
@@ -201,7 +233,7 @@
         <div class="carousel_slide_title" id="carousel_title">
           <div id="carousel_title_txt">{$carousel[0].description}</div>
         </div>
-        <img src="{$FILES}w2000/{$carousel[0].file}" class="carousel_image" id="carousel_image" />
+        <img src="{$FILES}0/{$carousel[0].file}" class="carousel_image" id="carousel_image" />
       </div>
 
       <span class="carousel_navs">
@@ -210,7 +242,7 @@
 
       <div class="carousel_foto_nav" id="carousel_nav">
         {foreach from=$carousel item=row}
-        <img src="{$FILES}w400/{$row.file}" data-imgsrc="{$FILES}w2000/{$row.file}" data-title="{$row.description}"{if $row@first} class="active"{/if} />
+        <img src="{$FILES}w400/{$row.file}" data-imgsrc="{$FILES}0/{$row.file}" data-title="{$row.description}"{if $row@first} class="active"{/if} />
         {/foreach}
       </div>
     </div>

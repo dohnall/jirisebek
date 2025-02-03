@@ -7,11 +7,11 @@
 <p class="section_text mt24">{$SECTION->get('value', 'anotation')|nl2br}</p>
 
 {if $gallery}
-<div class="gallery_cube gallery_cube_3 mt40">
+<div class="gallery_cube gallery_cube_3 gallery_lightbox mt40">
     {foreach from=$gallery item=row}
-    <a href="{$FILES}w2000/{$row.file}" class="gallery_wide_link">
+    <a href="{$FILES}0/{$row.file}" class="gallery_wide_link">
         <img src="{$FILES}w600/{$row.file}" alt="" />
-        <span class="gallery_wide_hover" src="{$FILES}w600/{$row.file}" data-ngsrc="{$FILES}w2000/{$row.file}" data-nanogallery2-lightbox>
+        <span class="gallery_wide_hover" src="{$FILES}w600/{$row.file}" data-ngsrc="{$FILES}0/{$row.file}" data-nanogallery2-lightbox>
             <span class="gallery_wide_title">{$row.alt}</span>
             <span class="gallery_wide_desc">{$row.description}</span>
         </span>

@@ -27,7 +27,7 @@
         <div class="art_detail_title">{#fineart_label#}</div>
         <div class="art_detail_price">{#fineart_price_from#}</div>
         {if $imageBordered}
-        <img src="{$FILES}w2000/{$imageBordered[0].file}" class="art_detail_image" alt="{$imageBordered[0].alt}" />
+        <img src="{$FILES}0/{$imageBordered[0].file}" class="art_detail_image" alt="{$imageBordered[0].alt}" />
         {/if}
         <div>
             <a class="button_primary button_open" id="showDetail">{#more_info#}</a>
@@ -150,8 +150,8 @@
         {if $gallery}
         <div class="gallery_cube gallery_cube_2 mt56">
             {foreach from=$gallery item=row}
-            <a href="{$FILES}w2000/{$row.file}" class="gallery_cube_link">
-                <img src="{$FILES}w600/{$row.file}" alt="{$row.alt}" data-ngsrc="{$FILES}w2000/{$row.file}" data-nanogallery2-lightbox />
+            <a href="{$FILES}0/{$row.file}" class="gallery_cube_link">
+                <img src="{$FILES}w600/{$row.file}" alt="{$row.alt}" data-ngsrc="{$FILES}0/{$row.file}" data-nanogallery2-lightbox />
             </a>
             {/foreach}
         </div>
